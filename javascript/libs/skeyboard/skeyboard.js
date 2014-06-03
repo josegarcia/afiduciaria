@@ -62,13 +62,15 @@ $(function(){
 
 
 $('#write').on('focus', function() {
-    $('#keyboard').removeClass('hide');
+    $('#keyboard').fadeIn( function() {
+        $(this).removeClass('hide');
+    });
 });
 
 $(document).mouseup(function (event) {
     var container = $("#container");
 
     if (!container.is(event.target)  && container.has(event.target).length === 0) {
-        $('#keyboard').addClass('hide');
+        $('#keyboard').addClass('hide').fadeOut('fast');
     }
 });

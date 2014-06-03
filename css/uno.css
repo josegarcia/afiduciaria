@@ -1559,28 +1559,24 @@ select {
 .heading.primary {
   font: 2.2em / 55px Calibri, Helvetica, Arial, sans-serif;
   color: #444444;
-  background-color: #e5e5e5;
   border-width: 0 0 1px 0;
   border-style: solid;
-  border-color: #dddddd;
+  border-color: #ffffff;
   margin-bottom: 10px;
-  padding: 0 2%;
-  margin-left: -6.16%;
-  padding-left: 6.16%;
-  padding-right: 6.16%;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  padding: 0 2% 0 0;
 }
-@media all and (min-width: 1025px) {
-  .heading.primary {
-    margin-left: -2.09%;
-    padding-left: 2.09%;
-    padding-right: 2.09%;
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-  }
+.heading.primary:before {
+  display: inline-block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  vertical-align: middle;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 .heading.primary i {
   margin-right: 10px;
@@ -2167,7 +2163,12 @@ footer {
   color: #888888;
 }
 .panel.formulary {
-  padding: 0 20%;
+  padding: 14px 0%;
+}
+@media all and (min-width: 800px) {
+  .panel.formulary {
+    padding: 14px 16%;
+  }
 }
 .form.login strong {
   font-size: 1.3em;

@@ -1,0 +1,61 @@
+#keyboard {
+    border:1px solid #ddd;
+    background-color: white;
+    padding: 7px 1% 0;
+    z-index: 2;
+    min-width: 520px;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+            box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+}
+    #keyboard li {
+        border: 1px solid #d8d8d8;
+        margin: 0 1% 1% 0;
+        width: 5.6%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    #keyboard li:hover {
+        border: 1px solid #c8c8c8;
+        top: 1px;
+        cursor: pointer;
+    }
+/*    .capslock, .tab, .left-shift {
+        clear: left;
+    }*/
+    #keyboard .delete {
+        width: 13%;
+    }
+    #keyboard .tab {
+        width: 13%;
+    }
+    #keyboard .capslock {
+        width: 12.5%;
+    }
+    #keyboard .return {
+        width: 11.3%;
+    }
+    #keyboard .left-shift,
+    #keyboard .right-shift {
+        width: 16%;
+    }
+/*        .lastitem {
+        margin-right: 0;
+    }*/
+    .uppercase {
+        text-transform: uppercase;
+    }
+    #keyboard .space {
+        clear: left;
+        width: 60%;
+        margin-left: 50%;
+        left: -30%;
+    }
+    .on {
+        display: none;
+    }

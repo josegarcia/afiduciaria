@@ -1,0 +1,134 @@
+/*
+// Uform
+// ----------------------------------------------------------------------- */
+.uform {
+  text-align: left;
+}
+.uform .addon {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: 0s;
+  z-index: 1;
+}
+.uform .addon + input,
+.uform .addon + select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  z-index: 2;
+}
+.uform .readonly {
+  background-color: #eee;
+  background-image: none;
+}
+.uform .disabled + input,
+.uform .disabled + select,
+.uform .readonly + input,
+.uform .readonly + select {
+  display: none;
+  left: -100%;
+}
+/* select
+// ----------------------------------------- */
+/*.uform .addon + select        { .opacity(1); } */
+.uform .select {
+  padding-right: 32px;
+  position: relative;
+}
+.uform .select:before {
+  top: 50%;
+  margin-top:-16px;
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: transparent url('images/down.png') no-repeat left top;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+.uform .select.disabled {
+  color: #aaa;
+  background-color: #efefef;
+  cursor: default;
+}
+/* radio-checkbox
+// ----------------------------------------- */
+.uform > span {
+  padding-left: 24px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+}
+.uform .option + input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+/* zindex double-check fix */
+.uform .option {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  width: 18px;
+  height: 18px;
+  font-size: 1em;
+  cursor: pointer;
+  background: transparent none no-repeat left top;
+}
+.uform .radio {
+  background-image: url('images/radio.png');
+}
+.uform .checkbox {
+  background-image: url('images/checkbox.png');
+}
+.uform .option:hover {
+  background-position: right top;
+}
+.uform .option.checked {
+  background-position: left bottom;
+}
+.uform .option.checked:hover {
+  background-position: right bottom;
+}
+.uform .option.disabled,
+.uform .option.disabled:hover {
+  background-position: right center;
+  cursor: default;
+}
+.uform .option.disabled + input + span,
+.uform .option.disabled + span {
+  color: #aaa;
+}
+/* file input
+// ----------------------------------------- */
+.uform .file + input {
+  float: right;
+  cursor: pointer;
+  width: 74%;
+}
+.uform .file {
+  background-image: url('images/search.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 0 90px 0 6px;
+  cursor: pointer;
+}
+.uform .file:hover {
+  background-position: right bottom;
+}
+.uform .file.disabled:hover,
+.uform .file.disabled {
+  background-position: right center;
+  color: #aaa;
+  background-color: #efefef;
+  cursor: default;
+}

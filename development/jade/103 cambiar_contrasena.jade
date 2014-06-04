@@ -1,0 +1,15 @@
+include _includes/doctype
+    head
+        include _includes/head
+        include _includes/routines
+        //- stylesheets
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-public
+        include sections/header/100
+        include sections/nav
+        include sections/main/103
+        include sections/footer
+        script(src='../javascript/scripts.js')

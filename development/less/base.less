@@ -1,0 +1,695 @@
+//
+//  Reset
+//  ----------------------------------------------------------------------- //
+
+    *                           { margin: 0; padding: 0; 
+                                  -webkit-box-sizing: border-box; 
+                                     -moz-box-sizing: border-box; 
+                                          box-sizing: border-box; }
+
+    html                        { font: 62.5% Sans-Serif; }
+
+    body                        { line-height: 1.5; text-align: left; }
+
+    address, article, aside, audio, blockquote, canvas, div, dl, dt, dd, embed, fieldset, figcaption, figure,
+    footer, form, header, h1, h2, h3, h4, h5, h6, hr, iframe, label, legend, li, main, nav, ol, pre, section,
+    small, ul, video            { display: block; width: 100%; position: relative; float: left; }
+
+    code, pre                   { font-family: monospace; font-size: 1em; }
+
+    p                           { display: inline-block; width: 100%; text-align: justify; }
+
+    blockquote, q               { quotes: none; }
+
+    em, i                       { font-weight: normal; font-style: normal; }
+
+    h1, h2, h3, h4, h5, h6      { font-size: 1em; font-weight: bold; line-height: 1.2em; text-align: left; }
+
+    h1                          { font-size: 2.4em; } 
+    h2                          { font-size: 2.1em; } 
+    h3                          { font-size: 1.8em; } 
+    h4                          { font-size: 1.5em; } 
+    h5                          { font-size: 1.2em; } 
+
+    li                          { list-style: none inside none; }
+
+    iframe                      { height: 100%; }
+
+    img                         { display: inline-block; border: 0; max-width: 100%; height: auto; -ms-interpolation-mode: bicubic; } // image border inside a IE8/9/10.
+
+    label, textarea             { vertical-align: top; }
+
+    strong                      { font-weight: bold; } // font-weight Firefox 4+, Safari, and Chrome.
+
+    sub, sup                    { position: relative; font-size: 0.8em; line-height: 0; }
+
+    sub                         { bottom: -0.25em; }
+
+    sup                         { top: -0.5em; }
+
+    textarea                    { width: 100%; padding-bottom: 0.6em; resize: vertical; overflow: auto; }
+
+//  ---------------------------/ Selectors /
+
+    :active                     { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+                                     -moz-tap-highlight-color: rgba(0, 0, 0, 0); 
+                                          tap-highlight-color: rgba(0, 0, 0, 0); }
+    
+    a:active, a:hover, a:focus  { outline: 0; }
+
+    abbr[title]                 { border-bottom: 1px dotted; }
+
+    html textarea,
+    select[multiple]            { height: auto; }
+
+    input[type="radio"],
+    input[type="checkbox"]      { width: auto !important; height: auto; cursor: pointer; }
+
+    input[type="file"]          { width: auto; cursor: pointer; }
+
+    svg:not(:root)              { overflow: hidden; } // overflow ie9/10/11
+
+    fieldset,
+    button::-moz-focus-inner,
+    .button::-moz-focus-inner   { border: 0; }//
+// Base Elements
+// ----------------------------------------------------------------------- //
+
+    a, .link { 
+        background-color: transparent;
+        text-decoration: none; 
+        display: inline; 
+        cursor: pointer;
+        width: auto;
+        border: none;
+        min-width: inherit;
+        .transition(all, 0.4s); 
+    }
+
+    .button { 
+        position: relative;
+        display: inline-block;
+        width: auto; 
+        padding: 0 1.2em;
+        border: 0;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: top; 
+        float: none; 
+        cursor: pointer;
+        outline: 0;
+        .transition(all, 0.4s);
+        .has-padding; 
+    }
+
+    blockquote { 
+        padding-left: 1em; 
+    }
+
+    input, .input,
+    select, .select,
+    textarea { 
+        height: 32px; 
+        padding: 0 0.6em; 
+        font-size: 1em;
+        line-height: 30px;
+        width: 100%;
+        color: @hex2; 
+        border: 1px solid @hexc;
+        .transition(all, 0.2s);
+        .has-alerts;
+    }
+
+    .uno .list,
+    ul, ol                      { 
+        & > li                  {  display: list-item; }
+        &.bullet > li           { .list-style(none, '../images/bullet.png'); }
+        &.square > li           { .list-style(square); }
+        &.circle > li           { .list-style(circle); }
+        &.disc > li             { .list-style(disc); }  
+        &.decimal > li          { .list-style(decimal); }
+        &.none > li             { .list-style(none); }
+        &.inherit > li li       { .list-style(inherit); }
+        &.indent > li,
+        &.indent.inherit li     {  padding-left: 10px; }
+    }
+
+    table { 
+        & {
+            min-width: 100%; 
+            table-layout: fixed; 
+            border-collapse: separate; 
+            border-spacing: 0; 
+            float: left; 
+        }
+        & thead tr th,
+        & thead tr th a { 
+            font-weight: bold;
+            text-align: left;  // ie8 text-align
+            vertical-align: bottom;
+        }
+        & tfoot tr td { 
+            text-align: left;  // ie8 text-align
+            vertical-align: top; 
+        }
+        & thead tr th[colspan]  { 
+            text-align: center; 
+        }
+        &.even {
+            .table.tbody-color(@hexe, even);
+        }
+
+        &.striped {
+            .table.tbody-color(@hexe, odd);
+        }
+
+        &.horizontal {
+            .table.border(1px 1px 0, solid, @hexc);
+            .table.cell-border(0 0 1px, solid, @hexc);
+        }
+
+        &.vertical {
+            .table.border(1px 1px 1px 0, solid, @hexc);
+            .table.cell-border(0 0 0 1px, solid, @hexc);
+        }
+
+        &.bordered {
+            .table.border(1px 1px 0 0, solid, @hexc);
+            .table.cell-border(0 0 1px 1px, solid, @hexc);
+        }
+        &.rounded {
+            .table.rounded (5px);
+        }
+    }//
+// Base Components
+// ----------------------------------------------------------------------- //
+
+    .badge                      {
+        &                       { position: absolute; display: block; width: auto; }
+    }
+
+    .breadcrumb                 {
+        & li                    { width: auto; }
+        & li a                  { display: block; }
+    }
+
+    .button-group               {
+        &                       { text-align: right; }
+        & .button               { width: auto; min-width: 100%; }
+        @media only all and (min-width: 480px) { 
+            & .button               { min-width: 21%; margin-left: 0.6em; }
+            & .button:first-child   { margin-left: 0; }
+        }
+    }
+
+    .items-wrapper              {
+        &.horizontal            {
+            .wrap-horizontal(5px, 1px);
+        }
+        &.vertical              {
+            .wrap-vertical(5px, 1px);
+        }
+    }
+
+    .form                       {
+        & label                 { .has-width; }
+        & label label           { display: block; margin: 0 !important; padding: 2px .75em; font-size: .96em; .has-alerts; }
+        & li                    { margin-top: 0; line-height: 1.25; }
+        & li > div              { 
+            &                   { float: right; }
+            & > span            { display: inline-block; float: left; }
+            & label             { margin-bottom: .5em; }
+        }
+
+        & li > strong, 
+        & li > div > span       { padding: .4em .6em .2em .2em; }
+
+        & li > div > label + span       { padding: 0; }
+
+        & li > strong           { .block; }
+        & li > strong span,
+        & li > div label span   { display: block; font-size:.96em; }
+        &.horizontal            {
+            & li                { .strong-div-width(36%, 64%, 640px); .strong-div-width(18%, 82%, 720px); }
+            & li > strong       {  display: block; float: left; }
+            & .split-2 li       { .strong-div-width(36%, 64%, 640px); .strong-div-width(35.6%, 63.4%, 720px); }
+            & .split-3 li       { .strong-div-width(36%, 64%, 640px); .strong-div-width(56%, 44%, 720px); }
+        }
+    }
+    
+    .message                    {
+        & .button.close         {  
+            &                   { .square(28px); padding: 0; .position.right-top(absolute, 0, 0); .back(transparent, @x-img-black, no-repeat, center); border: 0; .opacity(.2); .hide-text; } 
+            &:hover             { .opacity(.4); }
+        }
+    }
+
+    .navbar                     {
+        &                       { .navbar-properties; }
+    }
+
+    .tabset                     {
+        & .summary a            {  display: block; }
+        &.horizontal {
+                .tabs.horizontal;
+        }
+        &.vertical   {
+                .tabs.vertical (27%);
+        }
+        &.left      {
+                .tabs.left (27%);
+        }
+    }//
+// Base Properties
+// ----------------------------------------------------------------------- //
+
+    html .auto              { width: auto; }
+
+    html .clearfix          {
+        &:after             { content: ''; display: table; clear: both; }
+    }
+
+    html .collapse          { margin: 0; }
+
+    html .contract          { padding: 0; }
+
+    html .disabled,
+    html [disabled]         { cursor: default; }
+
+    html .fixed             { position: fixed }
+
+    html .hide,
+    html [hidden]           { display: none; }
+
+    html .invisible         { visibility: hidden; }
+
+    html .left              { margin-left: 0; left: 0; float: left; }
+
+    html .nowrap,
+    html .nowrap a          { white-space: nowrap; }
+
+    html .right             { margin-left: 0; left: 0; float: right; }
+
+    html .show              { display: block; }
+    
+    html .text-center       { text-align: center; }
+    
+    html .text-justify      { text-align: justify; }
+    
+    html .text-left         { text-align: left; }
+    
+    html .text-right        { text-align: right; }
+    
+    html .fastclick         { .transition; }
+    
+    html .uppercase         { text-transform: uppercase; }//
+// Base Extends
+// ----------------------------------------------------------------------- //
+
+    .has-align ()               {
+        &.text-center           { text-align: center; }
+        &.text-left             { text-align: left; }
+        &.text-justify          { text-align: justify; }
+        &.text-right            { text-align: right; }
+    }
+
+    .has-padding ()             {
+        &.looser                { padding: 0 3.6em; }
+        &.loose                 { padding: 0 2.4em; }
+        &                       { padding: 0 1.2em; }
+        &.tight                 { padding: 0 0.6em; }
+        &.tighter               { padding: 0 0.3em; }
+        &.none                  { padding: 0; }
+    }
+
+    .has-width ()               {
+        &.wide                  { width: 100%; }
+        &.medium                { width:  50%; }
+        &.fixed                 { width: 12em; }
+        &.short                 { width:  5em; }
+        &.shorter               { width:  3em; }
+        &.auto                  { width: auto; }
+    }
+
+    .has-alerts ()              {
+        &.error                 { color:#d1302b; background-color: #FDF7F7; border: 1px solid #dd7f7f; }
+        &.warning               { color:#cd7901; background-color: #FCF8F2; border: 1px solid #e9a23c; }
+        &.success               { color:#1e9a20; background-color: #ecfae9; border: 1px solid #78c575; }
+        &.info                  { color:#0990b7; background-color: #F4F8FA; border: 1px solid #11a0ca; }
+    }//
+// Base Grid
+// ----------------------------------------------------------------------- //
+
+    @gutter         :   2%;     // Only percentages
+
+// functions
+// --------------------------------------
+
+    .grid-columns (@span: 1, @total: 1, @gutter: 0, @query: 0, @width: screen) when (@query > 0) and (@width = screen) {
+        @media screen and (min-width: @query) {
+            .grid-columns (@span, @total, @gutter);
+        }
+    }
+
+    .grid-columns (@span: 1, @total: 1, @gutter: 0, @query: 0, @width: screen) when (@query > 0) and (@width = both) {
+        @media all and (min-width: @query) {
+            .grid-columns (@span, @total, @gutter);
+        }
+    }
+
+    .grid-columns (@span: 1, @total: 1, @gutter: 0, @query: 0, @width: screen) when (@query > 0) and (@width = landscape) {
+        @media print and (orientation: landscape), screen and (min-width: @query) {
+            .grid-columns (@span, @total, @gutter);
+        }
+    }
+
+    .grid-columns (@span: 1, @total: 1, @gutter: 0, @query: 0) when (@query = 0) {
+        @colWidth  : (100% + @gutter) / @total;
+        @totWidth  : (@colWidth * @span) - @gutter;
+
+        width:round(@totWidth, 3); margin-left: @gutter;
+    }
+
+    .grid (@span: 1, @total: 1, @gutter: 0) {
+        & > *                         { .grid-columns(@span, @total); }     
+        &.separate > *                { .grid-columns(@span, @total, @gutter); }       
+    }
+
+    .grid-first (@span: 1, @total: 1, @gutter: 0) {
+        & > .linebreak,
+        & > :first-child              { .grid-columns(@span, @total); }
+        &.separate > .linebreak,
+        &.separate > :first-child     { .grid-columns(@span, @total, @gutter); }
+    }
+
+    .grid-span (@span: 1, @total: 1, @gutter: 0) {
+        & > .span-@{span}             { .grid-columns(@span, @total); }       
+        &.separate > .span-@{span}    { .grid-columns(@span, @total, @gutter); }       
+    }
+
+
+// breakpoints
+// --------------------------------------
+    @media print, screen and (min-width: 640px) {
+        .split-2                      { .grid(1, 2, @gutter); }
+        .split-3                      { .grid(1, 2, @gutter); }
+        .split-4                      { .grid(1, 2, @gutter); }
+        .split-5                      { .grid(1, 2, @gutter); }
+        .split-5                      { .grid-first(2, 2, @gutter); }
+        .split-6                      { .grid(1, 2, @gutter); }
+    }
+
+    @media print and (orientation: landscape), screen and (min-width: 720px) {
+        .split-3                      { .grid(1, 3, @gutter); }
+        .split-5                      { .grid(1, 3, @gutter); }
+        .split-5                      { .grid-first(2, 3, @gutter); }
+        .split-6                      { .grid(1, 3, @gutter); }
+
+        .split-3                      { .grid-span(2, 3, @gutter); }
+        .split-5                      { .grid-span(2, 3, @gutter); }
+        .split-6                      { .grid-span(2, 3, @gutter); }
+    }
+
+    @media print and (orientation: landscape), screen and (min-width: 800px) {
+        .split-4                      { .grid(1, 4, @gutter); }
+        .split-5                      { .grid(1, 5, @gutter); }
+        .split-5                      { .grid-first(1, 5, @gutter); }
+        .split-6                      { .grid(1, 6, @gutter); }
+
+        .grid                         { .grid-span(1, 1, 0); }
+        .split-4                      { .grid-span(2, 4, @gutter); }
+        .split-4                      { .grid-span(3, 4, @gutter); }
+        .split-5                      { .grid-span(2, 5, @gutter); }
+        .split-5                      { .grid-span(3, 5, @gutter); }
+        .split-5                      { .grid-span(4, 5, @gutter); }
+        .split-6                      { .grid-span(2, 6, @gutter); }
+        .split-6                      { .grid-span(3, 6, @gutter); }
+        .split-6                      { .grid-span(4, 6, @gutter); }
+        .split-6                      { .grid-span(5, 6, @gutter); }
+    }
+
+
+// line-break
+// --------------------------------------
+    .uno .grid.separate > :first-child,
+    .uno .grid.separate > .linebreak,
+    .uno .grid > :first-child,
+    .uno .grid > .linebreak           { margin-left: 0; clear: left; } // --------------------------------------------------------------- Modals */
+
+    .modal (@width: 95%, @height: 240px, @query: 0) when (@query = 0) {
+              width: @width;
+         min-height: @height;
+        margin-left: (@width / 2) * -1;
+             .align(100px, 50%);
+	}
+
+    .modal (@width: 95%, @height: 240px, @query: 0) when (@query > 0) {
+        @media only screen and (min-width: @query) {
+            &       { .modal(@width, @height); }
+        }
+    }
+
+	.my-popup (@width: 95%, @height: 240px) {
+		&           { 
+			.aligncw(0, 0, 0, 0, fixed);
+            .back(rgba(0, 0, 0, .45), none, repeat, top left);
+		}
+
+		& .container { 
+			.modal(@width, @height);
+		}
+	}
+
+    .modal ()       {
+        .zoom-in    {
+            &       { .transition(0.3s, 0s, opacity, ease-out); opacity: 0; }
+            &.open  { opacity: 0.8; display:block\9; }
+
+            & .container      { .transition(0.2s, 0s, all, ease-in-out); opacity: 0; .scale(0.8); }
+            &.open .container { opacity: 1; .scale(1); }
+
+            .ie8 &                  { display: none; }
+            .ie8 & .container       { display: none; }
+            .ie8 &.open .container  { display: block; }
+        }
+    }//
+// Navbar
+// ----------------------------------------------------------------------- //
+
+    .navbar-properties () {
+        &                       {
+            & li a,
+            & > ul > li         { display: block; }
+        }
+        &.accordion             {
+            & li                { width: 100%; }
+            & li:hover > ul     { display: block; z-index: 2; }
+            & ul ul             { display: none; }
+        }
+        &.dropdown              {
+            & li                { width: auto; }
+            & ul ul             { display: none; position: absolute; top: 100%; left: 0; }
+            & ul ul ul          { position: absolute; top: 0; left: 100%; }
+            & li:hover > ul     { position: absolute; bottom: 0; display: block; z-index: 2; }
+        }
+        &.rightalign            {
+            & li                { width: 100%; }
+            & ul ul             { display: none; position: absolute; top: 0; left: 100%; }
+            & ul ul ul          { position: absolute; top: 0; left: 100%; }
+            & li:hover > ul     { position: absolute; bottom: 0; display: block; z-index: 2; }
+        }
+    }//
+// Base Print
+// ----------------------------------------------------------------------- //
+
+@media print {
+
+    a                       { text-decoration: underline; }
+    
+    html,
+    main,
+    main > section          { .back(null); .spacing; }
+
+    header,
+    main                    { width:100%; }
+
+    div                     { page-break-inside: auto; page-break-after: avoid; }
+
+    .scrollable,
+    .scrollable div         { .overflow(visible); }
+
+    .print-only             { display: block; }
+
+
+// hidden
+// ----------------------------------------- */
+
+    header,
+    nav,
+    footer,
+    .breadcrumb,
+    .buttons,
+    .filters,
+    .message,
+    .no-print               { display: none; }
+ }//
+// Base Scrollable
+// ----------------------------------------------------------------------- //
+
+    .scrollable { 
+        & { 
+            overflow:hidden;
+        }
+        & div { 
+            .overflow(auto);
+        }
+        & div > table {
+        	margin:0;
+        }
+    }
+
+	.scrollable.has-scroll:before {
+	    position:absolute;
+	    top:0;
+	    left:100%;
+	    width:50px;
+	    height:100%;
+        // border-radius:10px 0 0 10px / 50% 0 0 50%;
+	    border-radius:10px 0 0 10px;
+	    box-shadow:-5px 0 7px rgba(0, 0, 0, 0.15);
+	    content:'';
+	    z-index: 1;
+	}
+
+    .scrollable > div::-webkit-scrollbar {
+        height:12px;
+    }
+    
+    .scrollable > div::-webkit-scrollbar-track {
+        box-shadow:0 0 2px rgba(0,0,0,0.15) inset;
+        background:#f0f0f0;
+    }
+
+    .scrollable > div::-webkit-scrollbar-thumb {
+        border-radius:5px;
+        background:#ccc;
+        z-index: 9999
+    }
+
+//
+// Tabs
+// ----------------------------------------------------------------------- //
+
+    .tabs {
+        .horizontal (@summary: 27%) {
+            &                       { text-align: left; }
+            & > .summary            {
+                &                   { display: inline-block; width: auto; text-align: center; float: none; }
+                & a                 { display: block; .ellipsis; }
+                & + .details        { position: absolute; height: 1px; overflow: hidden; border-top: 1px solid transparent; } //  visibility: hidden; display: none;
+                &.active + .details { position: relative; height: auto; overflow: visible; } //  visibility: visible; display: block;
+            }
+        }
+        .vertical (@summary: 27%)   {
+            &                       { padding-right: 100% - @summary; }
+            & > .summary            {
+                &                   { display: inline-block; float: left; }
+                & a                 { display: block; .ellipsis; }
+                & + .details        { position: absolute; height: 1px; overflow: hidden; border-top: 1px solid transparent; } //  visibility: hidden; display: none;
+                &.active + .details { position: absolute; right: 0; height: auto; overflow: visible; width: 100% - @summary; } //  visibility: visible; display: block;
+            }
+        }
+        .left (@left: 27%)   {
+            &                       { padding-left:@left; }
+            & > .summary            {
+                &                   { display: inline-block; width: @left; clear: both; margin-left: -@left; }
+                & a                 { display: block; .ellipsis; }
+                & + .details        { position: absolute; top: 0; height: 1px; overflow: hidden; border-top: 1px solid transparent; } //  visibility: hidden; display: none;
+                
+                &.active + .details { position: relative; overflow: visible; } //  visibility: visible; display: block;
+            }
+        }
+    }//
+// Base Tooltip
+// ----------------------------------------------------------------------- */
+
+    .tooltip                    {  position: relative; }
+
+    .tooltip:before,
+    .tooltip:after              {  position: absolute; content: ''; visibility: hidden; .opacity(0); .translate; .transition(all, 0.3s); z-index: 2; }
+
+    .tooltip:hover:before,
+    .tooltip:hover:after,
+    .tooltip.fixed:before,
+    .tooltip.fixed:after        {  visibility: visible; .opacity(1); }
+
+    .tooltip:after              {  content: attr(data-hint); white-space: nowrap; pointer-events: none; }
+
+    .ie8 .tooltip:before,
+    .ie8 .tooltip:after         {  display: none; }
+
+    .ie8 .tooltip:hover:before,
+    .ie8 .tooltip:hover:after,
+    .ie8 .tooltip.fixed:before,
+    .ie8 .tooltip.fixed:after   {  display: block; }
+
+
+// modifiers
+// -----------------------------------------
+
+    .tooltip.wrap:before,
+    .tooltip.wrap:after         {  text-align: left; white-space: normal; }
+
+    .tooltip.up:before          {  margin-bottom: -8px; }
+    .tooltip.up:after           {  margin-left:   -1em; }
+    .tooltip.up:before, 
+    .tooltip.up:after           {  bottom: 100%; left: 50%; }
+    .tooltip.up:hover:before, 
+    .tooltip.up:hover:after,
+    .tooltip.fixed.up:before,
+    .tooltip.fixed.up:after     { .translate(0, -4px); }
+
+    .tooltip.down:before        {  margin-top:  -8px; }
+    .tooltip.down:after         {  margin-left: -1em; }
+    .tooltip.down:before, 
+    .tooltip.down:after         {  top: 100%; left: 50%; }
+    .tooltip.down:hover:before, 
+    .tooltip.down:hover:after,
+    .tooltip.fixed.down:before,
+    .tooltip.fixed.down:after   { .translate(0, 4px); }
+
+    .tooltip.right:before       {  margin-bottom:  0; margin-left: -8px; }
+    .tooltip.right:after        {  margin-bottom: -1em; }
+    .tooltip.right:before, 
+    .tooltip.right:after        {  left: 100%; bottom: 50%; }
+    .tooltip.right:hover:before, 
+    .tooltip.right:hover:after,
+    .tooltip.fixed.right:before,
+    .tooltip.fixed.right:after  { .translate(6px, 0); }
+
+    .tooltip.left:before        {  margin-bottom:  0; margin-right: -8px; }
+    .tooltip.left:after         {  margin-bottom: -1em; }
+    .tooltip.left:before, 
+    .tooltip.left:after         {  right: 100%; bottom: 50%; }
+    .tooltip.left:hover:before, 
+    .tooltip.left:hover:after,
+    .tooltip.fixed.left:before,
+    .tooltip.fixed.left:after   { .translate(-6px, 0); }//
+// Base Wrapper
+// ----------------------------------------------------------------------- //
+
+    .wrap-horizontal (@radius: 0, @border: 1px) {
+            & .button,
+            & > *                   { display: block; width: auto; border-left-width: 0; margin: 0; .rounded(0); float: left; }
+            & :first-child          { border-left-width: @border; .rounded.left(@radius); }
+            & :last-child,
+            & .last                 { .rounded.right(@radius); }
+    }
+
+    .wrap-vertical (@radius: 0, @border: 1px) {
+            & .button,
+            & > *                   { display: block; width: 100%; border-top-width: 0; margin: 0; .rounded(0); }
+            & :first-child          { border-top-width: @border; .rounded.top(@radius); }
+            & :last-child,
+            & .last                 { .rounded.bottom(@radius); }
+    }

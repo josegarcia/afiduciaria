@@ -1,0 +1,24 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.rar"
+			],
+			"folder_exclude_patterns":
+			[
+				"images"
+			],
+			"follow_symlinks": true,
+			"name": "Alianza",
+			"path": "D:\\Proyectos\\Alianza Fiduciaria\\Alianza Fiduciaria\\development"
+		}
+	],
+	"settings":
+	{
+		"translate_tabs_to_spaces": true,
+		"tab_size": 4,
+        "word_wrap": true
+	}
+}

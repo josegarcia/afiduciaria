@@ -1,0 +1,75 @@
+//-
+//- Routines
+//- --------------------------------------------------------- */
+
+//- Tables
+
+mixin th(items)
+    tr
+        - each item in items
+            th
+                a(href="#")= item
+
+mixin td(length, values)
+    - for (var i = 0; i < length; ++i) {
+        tr
+            - each item in values
+                td= item
+    - }
+
+mixin links(links)
+    - each item in links
+        a(href="#")= item
+
+mixin spans(spans)
+    - each item in spans
+        span= item
+
+//- Form elements
+
+mixin field(col, summary, input, options)
+    li(class=col)
+        strong #{summary}
+        div
+            label
+                mixin input(input, options)
+
+mixin field-read(col, summary, value)
+    li(class=col)
+        strong #{summary}
+        div
+            label
+                input(type="text", readonly="readonly", value=value)
+
+mixin group(group, inputs, options)
+    div(class='group' + '#{group}')
+        - for (var i = 0; i < group; i++)
+            label
+                mixin input(inputs[i], options)
+                    
+//- mixin group('2', ['text', 'select'], [option, option, option])
+
+mixin input(input, options)
+        case input
+            when "text"
+                input(type='#{input}')
+            when "file"
+                input(type='#{input}')
+            when "password"
+                input(type='#{input}')
+            when "checkbox"
+                input(type='#{input}')
+                | #{options}
+            when "radio"
+                input(type='#{input}')
+                | #{options}
+            when "textarea"
+                textarea(rows='4')
+            when "select"
+                select
+                    - each item in options
+                        option= item
+            when "multiple"
+                select(size='4', multiple='multiple')
+                    - each item in options
+                        option= item

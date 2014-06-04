@@ -3,7 +3,7 @@ $(function(){
         shift = false,
         capslock = false;
     
-    $('#keyboard li').click(function(){
+    $('.skeyboard li').click(function(){
         var $this = $(this),
             character = $this.html(); // If it's a lowercase letter, nothing happens to this variable
         
@@ -62,7 +62,7 @@ $(function(){
 
 
 $('#write').on('focus', function() {
-    $('#keyboard').fadeIn( function() {
+    $('.skeyboard').fadeIn( function() {
         $(this).removeClass('hide');
     });
 });
@@ -71,6 +71,6 @@ $(document).mouseup(function (event) {
     var container = $("#container");
 
     if (!container.is(event.target)  && container.has(event.target).length === 0) {
-        $('#keyboard').addClass('hide').fadeOut('fast');
+        $('.skeyboard').addClass('hide').fadeOut('fast');
     }
 });

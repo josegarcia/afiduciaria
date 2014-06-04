@@ -60,7 +60,6 @@
 /* radio-checkbox
 // ----------------------------------------- */
 .uform > span {
-  padding-left: 24px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -71,6 +70,11 @@
   top: 0;
   left: 0;
   z-index: 0;
+}
+.uform .option ~ span {
+  padding-left: 24px;
+  font-size: inherit;
+  float: left;
 }
 /* zindex double-check fix */
 .uform .option {

@@ -10,7 +10,6 @@
   <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
   <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon">
   <link href="../css/uno.css" rel="stylesheet">
-  <link href="../javascript/libs/slider/slider.css" rel="stylesheet">
   <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
   <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
   <script src="../javascript/modernizr.js"></script>
@@ -29,71 +28,55 @@
   </nav>
   <main>
     <section class="text-frame">
-      <h1 class="heading primary">Formulario de registro</h1>
-      <div class="panel formulary">
+      <h1 class="heading primary">Cuestionario</h1>
+      <div class="panel padded">
         <div class="message primary info js-close span-3">
           <p>Usted no aparece registrado como cliente de Alianza lo invitamos a que se comunique con nuestro call center <strong>6447700 </strong> Fiduciaria y <strong>6447730 </strong> Valores</p>
         </div>
         <div class="form primary">
           <ul>
-            <li><strong>Documento de identificación:</strong>
-              <div class="grid split-3 separate">
-                <label>
-                  <select>
-                    <option>CC</option>
-                    <option>CE</option>
-                    <option>NIT</option>
-                  </select><span>tipo de identificación</span>
-                </label>
-                <label class="span-2">
-                  <input type="text"><span>número de identificación</span>
-                </label>
-              </div>
-            </li>
-            <li><strong>Confirmar número de identificación:</strong>
-              <div class="grid split-3 separate">
-                <label></label>
-                <label class="span-2">
-                  <input type="text">
-                </label>
-              </div>
-            </li>
-            <li><strong>Correo electrónico:</strong>
+            <li><strong>1. ¿Usted tiene o ha tenido productos con la entidad bancaria XXX?:</strong>
               <div>
                 <label>
-                  <input type="text">
+                  <input type="radio" name="group1"><span>Uno</span>
+                </label>
+                <label>
+                  <input type="radio" name="group1"><span>Dos</span>
+                </label>
+                <label>
+                  <input type="radio" name="group1"><span>Tres</span>
                 </label>
               </div>
             </li>
-            <li><strong>Confirmar correo electrónico:</strong>
+            <li><strong>2. ¿Usted tiene o ha tenido productos con la entidad bancaria XXX?:</strong>
               <div>
                 <label>
-                  <input type="text">
+                  <input type="radio" name="group2"><span>Uno</span>
+                </label>
+                <label>
+                  <input type="radio" name="group2"><span>Dos</span>
+                </label>
+                <label>
+                  <input type="radio" name="group2"><span>Tres</span>
                 </label>
               </div>
             </li>
-            <li><strong>Deseo activar el control de acceso a direcciones IP</strong>
-              <div class="grid split-4 separate">
-                <label> 
-                  <input type="radio" name="ip_access"><span>Sí</span>
+            <li><strong>3. ¿Usted tiene o ha tenido productos con la entidad bancaria XXX?:</strong>
+              <div>
+                <label>
+                  <input type="radio" name="group3"><span>Uno</span>
                 </label>
-                <label> 
-                  <input type="radio" name="ip_access"><span>No</span>
+                <label>
+                  <input type="radio" name="group3"><span>Dos</span>
+                </label>
+                <label>
+                  <input type="radio" name="group3"><span>Tres</span>
                 </label>
               </div>
             </li>
-              <li> <strong>Desliza para continuar:</strong>
-                <div id="slider2"></div>
-              </li>
           </ul>
           <div class="button-group">
-            <label> 
-              <input type="checkbox"><span>Acepto que soy responsable o el responsable dentro de mi empresa de la administración del Portal Transaccional</span>
-            </label>
-            <label> 
-              <input type="checkbox"><span>He leido y acepto los<a href="#"> Términos y condiciones</a></span>
-            </label>
-            <button type="submit" disabled="disabled" class="button">Continuar</button>
+            <button type="submit" class="button primary">Confirmar</button>
           </div>
         </div>
       </div>
@@ -105,17 +88,5 @@
     </section>
   </footer>
   <script src="../javascript/libs/uform/uform.js"></script>
-  <script src="../javascript/libs/slider/slider.js"></script>
   <script src="../javascript/scripts.js"></script>
-  <script>
-    var s2 = new Slider("slider2",{
-        message: " ",
-        
-        handler: function(){
-          $("button[type='submit']").removeAttr("disabled").addClass("primary");
-          $("#slider2").addClass("disabled");
-        }
-    });
-    s2.init();
-  </script>
 </body>

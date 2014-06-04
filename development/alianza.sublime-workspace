@@ -1,0 +1,1404 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background"
+			],
+			[
+				"t",
+				"type"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"mari",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"span",
+				"span-3"
+			],
+			[
+				"butt",
+				"button"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"c",
+				"checked"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"pa",
+				"padding-right"
+			],
+			[
+				"over",
+				"overflow"
+			],
+			[
+				"elem",
+				"elemType"
+			],
+			[
+				"bore",
+				"border"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"sli",
+				"slideToggle"
+			],
+			[
+				"paddin",
+				"padding-left"
+			],
+			[
+				"slide",
+				"slideUp"
+			],
+			[
+				"ov",
+				"overflow-y"
+			],
+			[
+				"grid",
+				"grid-6"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"TE",
+				"text-align"
+			],
+			[
+				"cr",
+				"cursor"
+			],
+			[
+				"gri",
+				"grid-2"
+			],
+			[
+				"but",
+				"button"
+			],
+			[
+				"f",
+				"focus"
+			],
+			[
+				"maR",
+				"margin-bottom"
+			],
+			[
+				"in",
+				"inputType"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"prima",
+				"primaryLighter"
+			],
+			[
+				"A",
+				"active"
+			],
+			[
+				"fo",
+				"fontsize"
+			],
+			[
+				"gr",
+				"group-2"
+			],
+			[
+				"g",
+				"grid-2"
+			],
+			[
+				"gi",
+				"grid-3"
+			],
+			[
+				"font-f",
+				"font-family"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"col",
+				"col-first"
+			],
+			[
+				"col-",
+				"col-1-3"
+			],
+			[
+				"de",
+				"development"
+			],
+			[
+				"padi",
+				"padding-left"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"this",
+				"thisParent"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"popu",
+				"popup-arl"
+			],
+			[
+				"attach",
+				"attach-sizes"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"pseu",
+				"pseudo-element"
+			],
+			[
+				"time",
+				"timeNow"
+			],
+			[
+				"clas",
+				"classes"
+			],
+			[
+				"val",
+				"val3"
+			],
+			[
+				"va",
+				"val1"
+			],
+			[
+				"te",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "less/theme.less",
+			"settings":
+			{
+				"buffer_size": 8952,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "less/anchor.less",
+			"settings":
+			{
+				"buffer_size": 38883,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"ind",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"i",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package Control Remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"int",
+				"Package Control: Install Package"
+			],
+			[
+				"intl",
+				"Package Control: Install Package"
+			],
+			[
+				"live",
+				"LiveStyle: Apply Patch"
+			],
+			[
+				"liveSty",
+				"LiveStyle: Install WebKit extension"
+			],
+			[
+				"intal",
+				"Package Control: Install Package"
+			],
+			[
+				"inta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inta",
+				"Package Control: Install Package"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) ",
+			"git clone https://github.com/wbond/sublime_package_control.git \"Package Control\"",
+			"cd Packages/",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print('Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/plugins.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/ingreso.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/css/uno.css",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/102.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/000.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/index.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/custom.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/001.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.css",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/modernizr.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/libs/skeyboard.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/layout.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchorII.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/questionario.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/scripts.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/common/head.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/registro.jade",
+		"/D/Proyectos/Certicamara/certiArchivo/development/less/base.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/101.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.css",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/100.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/libs/slider.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/slider/slider.css",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/slider/slider.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/test.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/libs/slider",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project",
+		"/D/Proyectos/CO/CO Visualization/webapp/templates/index/lib/skeyboard.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/common/routines.jade",
+		"/D/Proyectos/CO/CO Visualization/webapp/templates/index/main/main101.jade",
+		"/D/Proyectos/CO/CO Visualization/webapp/templates/document/mixins.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/index.html",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/nav.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/footer.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/variables.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/FontAwesome/fonts/font-awesome.min.css",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/o-keyboard/o-keyboard.css",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/uno.less",
+		"/D/Proyectos/Certicamara/certiArchivo/development/jade/public/main101.jade",
+		"/D/Proyectos/Certicamara/certiArchivo/development/jade/public/main000.jade",
+		"/D/Proyectos/Certicamara/certiArchivo/development/jade/directorio.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/o-keyboard/o-keyboard.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/FontAwesome/fonts/fontawesome-webfont.svg",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/template.jade",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/oskeyboard/styles.css",
+		"/D/Proyectos/Certicamara/certiArchivo/development/less/custom.less",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/oskeyboard/keyboard.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/Calibri/calibri-webfont.svg",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/modernizr.load.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/screenkeys/screenkeys-1.0.1.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/screenkeys/screenkeys.css",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/screenkeys/screenkeys-1.0.1.min.js",
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/screenkeys/locale/screenkeysloc_en_US.js",
+		"/C/Users/admin/Desktop/temp/Online Keyboard.html",
+		"/C/Users/admin/Desktop/temp/Online Keyboard_files/keyboard.js",
+		"/C/Users/admin/Desktop/screenkeys-master/screenkeys-master/lib/screenkeys-1.0.1.js",
+		"/C/Users/admin/Desktop/screenkeys-master/screenkeys-master/examples/fluidwidth.html",
+		"/C/Users/admin/Desktop/slider-captcha.1.3.3/slider-captcha/readme.txt",
+		"/C/Users/admin/Desktop/slider-captcha.1.3.3/slider-captcha/js/select2/select2.css",
+		"/C/Users/admin/Desktop/slider-captcha.1.3.3/slider-captcha/slider-captcha.php",
+		"/D/Proyectos/Alianza Fiduciaria/development/jade/sections/main/100.jade",
+		"/D/Proyectos/Alianza Fiduciaria/development/jade/template.jade",
+		"/D/Proyectos/Alianza Fiduciaria/development/jade/common/head.jade",
+		"/D/Proyectos/Alianza Fiduciaria/development/jade/sections/main/000.jade",
+		"/D/Proyectos/Alianza Fiduciaria/development/jade/index.jade",
+		"/D/Proyectos/Alianza Fiduciaria/development/less/custom.less",
+		"/D/Proyectos/Alianza Fiduciaria/development/jade/login.jade",
+		"/D/Proyectos/Alianza Fiduciaria/development/webapp/css/uno.css",
+		"/D/Proyectos/Alianza Fiduciaria/development/less/uno.less",
+		"/D/Proyectos/Alianza Fiduciaria/development/webapp/javascript/modernizr.load.js",
+		"/D/Proyectos/Alianza Fiduciaria/development/less/layout.less",
+		"/D/Proyectos/Alianza Fiduciaria/development/alianza.sublime-project",
+		"/D/Proyectos/Alianza Fiduciaria/development/less/anchor.less",
+		"/D/Proyectos/Alianza Fiduciaria/development/less/theme.less",
+		"/D/Proyectos/Alianza Fiduciaria/development/webapp/index.html",
+		"/D/Proyectos/template/development/webapp/index.html",
+		"/D/Proyectos/template/development/jade/index.jade",
+		"/D/Proyectos/template/development/jade/inicio.jade",
+		"/D/Proyectos/template/development/jade/common/head.jade",
+		"/D/Proyectos/template/development/jade/common/doctype.jade",
+		"/D/Proyectos/Certicamara/certiArchivo/development/jade/index.jade",
+		"/D/Proyectos/template/development/less/layout.less",
+		"/D/Proyectos/template/development/webapp/javascript/libs/jquery.js",
+		"/D/Proyectos/template/development/webapp/css/uno.css",
+		"/D/Proyectos/template/development/jade/sections/main/100.jade",
+		"/D/Proyectos/template/development/jade/sections/main/000.jade",
+		"/D/Proyectos/template/development/jade/sections/header.jade",
+		"/D/Proyectos/template/development/less/anchor.less",
+		"/D/Proyectos/template/development/jade/sections/nav.jade",
+		"/D/Proyectos/Certicamara/certiArchivo/development/jade/public/header.jade",
+		"/D/Proyectos/template/development/jade/sections/header/000.jade",
+		"/D/Proyectos/template/development/less/uno.less",
+		"/D/Proyectos/template/development/less/theme.less",
+		"/D/Proyectos/template/development/less/variables.less",
+		"/D/Proyectos/_Template/development/less/plugins.less",
+		"/D/Proyectos/_Template/development/less/base.less",
+		"/D/Proyectos/_Template/development/webapp/index.html",
+		"/D/Proyectos/_Template/development/jade/index.jade",
+		"/D/Proyectos/_Template/development/template.sublime-project",
+		"/D/Proyectos/_Template/development/settings.sublime-project",
+		"/D/Proyectos/_Template/settings.sublime-project",
+		"/D/Proyectos/_Template/settings.sublime-workspace",
+		"/D/Proyectos/_Template/uno.sublime-project",
+		"/D/Proyectos/Uno/development/less/base.less",
+		"/D/Proyectos/Uno/development/less/base/components/scrollable.less",
+		"/D/Proyectos/Uno/development/less/base/base.less",
+		"/D/Proyectos/Certicamara/certiArchivo/development/less/theme/styles.less",
+		"/D/Proyectos/Certicamara/certiArchivo/development/less/uno.less",
+		"/D/Proyectos/Certicamara/certiArchivo/development/webapp/javascript/scripts.js",
+		"/D/Proyectos/Certicamara/certiArchivo/development/jade/public/main200.jade",
+		"/D/Proyectos/Certicamara/certiArchivo/development/less/layout.less",
+		"/C/Users/admin/Downloads/attachment.txt",
+		"/D/Proyectos/Certicamara/certiArchivo/development/jade/public/main201.jade",
+		"/D/Proyectos/Seguros la Equidad/La Equidad Clientes/plantillas/less/estilos.less",
+		"/D/Proyectos/Certicamara/certiArchivo/development/less/anchor.less",
+		"/D/Proyectos/Seguros la Equidad/La Equidad Clientes/plantillas/js/scripts.js",
+		"/D/Proyectos/Seguros la Equidad/La Equidad Clientes/plantillas/less/main.less",
+		"/D/Proyectos/Seguros la Equidad/La Equidad Clientes/plantillas/html/clientes-chat-nuevo.html",
+		"/C/Users/admin/Desktop/chat-clientes/css/estilos.css",
+		"/D/Proyectos/Seguros la Equidad/La Equidad Clientes/plantillas/less/mixins.less",
+		"/D/Proyectos/Seguros la Equidad/La Equidad Clientes/plantillas/less/global.less"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".position",
+			"questionario",
+			".heading",
+			".fill",
+			".all",
+			"all",
+			".position",
+			".all",
+			"all",
+			".position",
+			".arrow",
+			" and (@query = 0)",
+			".position",
+			".all",
+			"fill",
+			".fill",
+			".position",
+			"key",
+			"offset",
+			"800px",
+			"message",
+			"has-",
+			"attr",
+			"18px",
+			".form",
+			"red",
+			"select",
+			"../",
+			".has-ale",
+			".has-aler",
+			"label label",
+			"error",
+			".desabled",
+			"80",
+			"p.",
+			"a(href=\"#\")",
+			".button",
+			"o-keyboard",
+			"slider",
+			"640px",
+			"14px",
+			"24",
+			"color",
+			"left",
+			".arrow",
+			"/*",
+			"sizing",
+			"alert",
+			"e.",
+			"contai",
+			"container",
+			"val",
+			"value",
+			"5",
+			"box-sh",
+			"(style='display: none;')",
+			"off",
+			"back",
+			"220",
+			"128",
+			"888",
+			"aaa",
+			"width",
+			".form",
+			"280px",
+			".hide",
+			".hide-",
+			"960px",
+			"-",
+			" 12.8",
+			"	",
+			"@select",
+			"user-",
+			"	",
+			"(style='display: none;')",
+			"focus",
+			"(style='display: inline;')",
+			"span",
+			"evt",
+			"calibri",
+			"body",
+			"inicio",
+			"../",
+			"ingreso",
+			"..",
+			"_Template",
+			"Uno",
+			"800px",
+			"640px",
+			"span-3",
+			".grid",
+			"breadcr",
+			"breadcc",
+			"m-",
+			".icon",
+			":before",
+			"36",
+			"side_tab",
+			"right",
+			"sideta",
+			"4px",
+			"5",
+			"#ddd .5",
+			"@spread @hsla",
+			"shadow",
+			"rounded",
+			".find('input')",
+			"checke",
+			"alternate_rows",
+			"layout",
+			"; ",
+			"B",
+			"XML",
+			"tables",
+			"has-align",
+			".text-",
+			"ext-",
+			"has-",
+			"trig",
+			"td",
+			", data-hint=\"\"",
+			"0",
+			".tooltip.up",
+			".button",
+			"//",
+			".inline-block; ",
+			"| ",
+			"small"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    ",
+			"@t",
+			"state.normal",
+			"@tt",
+			"    ",
+			"../images",
+			".uno-forms",
+			"",
+			"/images/",
+			"    ",
+			".grid-",
+			".item-first",
+			".group-",
+			"    ",
+			".col",
+			".item-first",
+			"    ",
+			"fiduciaria",
+			"",
+			".backpos",
+			"span",
+			"..",
+			" .size-align(",
+			" .backpos",
+			".backpos",
+			"../",
+			"5px",
+			"assets",
+			"../img/",
+			"@foreBase",
+			"@base",
+			"@foreBase",
+			"@fore"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "less/theme.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								149,
+								149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "less/anchor.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 38883,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1312,
+								1321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 49.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "alianza.sublime-project",
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"anchr",
+				"less\\anchor.less"
+			],
+			[
+				"the",
+				"less\\theme.less"
+			],
+			[
+				"00",
+				"jade\\sections\\main\\000.jade"
+			],
+			[
+				"theme",
+				"less\\theme.less"
+			],
+			[
+				"ing",
+				"jade\\ingreso.jade"
+			],
+			[
+				"ske",
+				"webapp\\javascript\\libs\\skeyboard\\skeyboard.js"
+			],
+			[
+				"lay",
+				"less\\layout.less"
+			],
+			[
+				"base",
+				"less\\base.less"
+			],
+			[
+				"anch",
+				"less\\anchor.less"
+			],
+			[
+				"an",
+				"less\\anchor.less"
+			],
+			[
+				"cus",
+				"webapp\\css\\uno.css"
+			],
+			[
+				"them",
+				"less\\theme.less"
+			],
+			[
+				"key",
+				"webapp\\javascript\\libs\\skeyboard\\skeyboard.css"
+			],
+			[
+				"reg",
+				"jade\\registro.jade"
+			],
+			[
+				"layo",
+				"less\\layout.less"
+			],
+			[
+				"head",
+				"jade\\common\\head.jade"
+			],
+			[
+				"inde",
+				"jade\\index.jade"
+			],
+			[
+				"ufo",
+				"webapp\\javascript\\libs\\uform\\uform.css"
+			],
+			[
+				"ufor",
+				"webapp\\javascript\\libs\\uform\\uform.js"
+			],
+			[
+				"000",
+				"jade\\sections\\main\\000.jade"
+			],
+			[
+				"ufro",
+				"webapp\\javascript\\libs\\uform\\uform.css"
+			],
+			[
+				"uform",
+				"webapp\\javascript\\libs\\uform\\uform.css"
+			],
+			[
+				"101",
+				"jade\\sections\\main\\101.jade"
+			],
+			[
+				"slider",
+				"jade\\sections\\libs\\slider.jade"
+			],
+			[
+				"skye",
+				"webapp\\javascript\\libs\\skeyboard\\skeyboard.js"
+			],
+			[
+				"ingr",
+				"jade\\ingreso.jade"
+			],
+			[
+				"100",
+				"jade\\sections\\main\\100.jade"
+			],
+			[
+				"nav",
+				"jade\\sections\\nav.jade"
+			],
+			[
+				"footer",
+				"jade\\sections\\footer.jade"
+			],
+			[
+				"header",
+				"jade\\sections\\header.jade"
+			],
+			[
+				"cust",
+				"less\\custom.less"
+			],
+			[
+				"vari",
+				"less\\variables.less"
+			],
+			[
+				"var",
+				"less\\variables.less"
+			],
+			[
+				"foot",
+				"jade\\sections\\footer.jade"
+			],
+			[
+				"script",
+				"webapp\\javascript\\scripts.js"
+			],
+			[
+				"bas",
+				"less\\base.less"
+			],
+			[
+				"10",
+				"jade\\sections\\main\\100.jade"
+			],
+			[
+				"slid",
+				"webapp\\javascript\\libs\\slider\\slider.css"
+			],
+			[
+				"slide",
+				"webapp\\javascript\\libs\\slider\\slider.js"
+			],
+			[
+				"o",
+				"webapp\\javascript\\libs\\o-keyboard\\o-keyboard.js"
+			],
+			[
+				"tes",
+				"jade\\test.jade"
+			],
+			[
+				"o-",
+				"webapp\\javascript\\libs\\o-keyboard\\o-keyboard.css"
+			],
+			[
+				"001",
+				"jade\\sections\\main\\001.jade"
+			],
+			[
+				"test",
+				"jade\\test.jade"
+			],
+			[
+				"anc",
+				"less\\anchor.less"
+			],
+			[
+				"in",
+				"jade\\ingreso.jade"
+			],
+			[
+				"va",
+				"less\\variables.less"
+			],
+			[
+				"cu",
+				"less\\custom.less"
+			],
+			[
+				"0",
+				"jade\\sections\\header\\100.jade"
+			],
+			[
+				"hea",
+				"jade\\sections\\header\\100.jade"
+			],
+			[
+				"ingre",
+				"jade\\ingreso.jade"
+			],
+			[
+				"oske",
+				"webapp\\javascript\\libs\\oskeyboard\\keyboard.js"
+			],
+			[
+				"screen",
+				"webapp\\javascript\\libs\\screenkeys\\screenkeys-1.0.1.js"
+			],
+			[
+				"styel",
+				"webapp\\javascript\\libs\\oskeyboard\\styles.css"
+			],
+			[
+				"uno.cs",
+				"webapp\\css\\uno.css"
+			],
+			[
+				"uno.less",
+				"less\\uno.less"
+			],
+			[
+				"log",
+				"jade\\login.jade"
+			],
+			[
+				"uno.c",
+				"webapp\\css\\uno.css"
+			],
+			[
+				"uno",
+				"less\\uno.less"
+			],
+			[
+				"dco",
+				"jade\\common\\doctype.jade"
+			],
+			[
+				"doc",
+				"jade\\common\\doctype.jade"
+			],
+			[
+				"anchor",
+				"less\\anchor.less"
+			],
+			[
+				"inici",
+				"jade\\inicio.jade"
+			],
+			[
+				"style",
+				"less\\theme\\styles.less"
+			],
+			[
+				"200",
+				"jade\\public\\main200.jade"
+			],
+			[
+				"201",
+				"jade\\public\\main201.jade"
+			],
+			[
+				"dire",
+				"jade\\directorio.jade"
+			],
+			[
+				"scri",
+				"webapp\\javascript\\scripts.js"
+			],
+			[
+				"ufrom",
+				"webapp\\javascript\\libs\\uform\\uform.js"
+			],
+			[
+				"scrip",
+				"webapp\\javascript\\scripts.js"
+			],
+			[
+				"glo",
+				"less\\theme\\global.less"
+			],
+			[
+				"adm",
+				"jade\\administracion.jade"
+			],
+			[
+				"glob",
+				"less\\theme\\global.less"
+			],
+			[
+				"sty",
+				"less\\theme\\styles.less"
+			],
+			[
+				"di",
+				"jade\\directorio.jade"
+			],
+			[
+				"301",
+				"jade\\public\\main301.jade"
+			],
+			[
+				"ad",
+				"jade\\administracion.jade"
+			],
+			[
+				"102",
+				"jade\\public\\main102.jade"
+			],
+			[
+				"admi",
+				"jade\\administracion.jade"
+			],
+			[
+				"certi",
+				"certiarchivo.sublime-project"
+			],
+			[
+				"gl",
+				"less\\theme\\global.less"
+			],
+			[
+				"reset",
+				"webapp\\html\\ingreso-contrasena.html"
+			],
+			[
+				"main",
+				"jade\\public\\main101.jade"
+			],
+			[
+				"mai",
+				"jade\\public\\main000.jade"
+			],
+			[
+				"ingres",
+				"jade\\ingreso.jade"
+			],
+			[
+				"30",
+				"jade\\public\\main301.jade"
+			],
+			[
+				"globa",
+				"less\\theme\\global.less"
+			],
+			[
+				"font",
+				"webapp\\fonts\\FontAwesome\\fonts\\font-awesome.min.css"
+			],
+			[
+				"cli",
+				"jade\\cliente.jade"
+			],
+			[
+				"custom",
+				"webapp\\javascript\\libs\\jquery-ui\\jquery-ui-1.10.4.custom.min.css"
+			],
+			[
+				"custo",
+				"less\\custom.less"
+			],
+			[
+				"mix",
+				"jade\\global\\mixins.jade"
+			],
+			[
+				"mixin",
+				"jade\\global\\mixins.jade"
+			],
+			[
+				"admin",
+				"jade\\administracion.jade"
+			],
+			[
+				"stye",
+				"less\\theme\\styles.less"
+			],
+			[
+				"moder",
+				"webapp\\javascript\\modernizr.load.js"
+			],
+			[
+				"he",
+				"jade\\public\\header.jade"
+			],
+			[
+				"scr",
+				"webapp\\javascript\\scripts.js"
+			],
+			[
+				"dir",
+				"jade\\directorio.jade"
+			],
+			[
+				"cond",
+				"jade\\global\\conditionals.jade"
+			],
+			[
+				"ba",
+				"less\\base.less"
+			],
+			[
+				"exp",
+				"jade\\explorer.jade"
+			],
+			[
+				"layou",
+				"less\\layout.less"
+			],
+			[
+				"expl",
+				"jade\\explorer.jade"
+			],
+			[
+				"condi",
+				"jade\\global\\conditionals.jade"
+			],
+			[
+				"11",
+				"jade\\public\\main101.jade"
+			],
+			[
+				"ind",
+				"jade\\index.jade"
+			],
+			[
+				"foo",
+				"jade\\public\\footer.jade"
+			],
+			[
+				"unole",
+				"less\\uno.less"
+			],
+			[
+				"styl",
+				"less\\theme\\styles.less"
+			],
+			[
+				"ijnd",
+				"jade\\index.jade"
+			],
+			[
+				"b",
+				"less\\base.less"
+			],
+			[
+				"less",
+				"less\\base.less"
+			],
+			[
+				"page",
+				"styles\\resources\\layout\\page.less"
+			],
+			[
+				"fon",
+				"styles\\plugins\\plugins\\fontawesome.less"
+			],
+			[
+				"helper",
+				"styles\\base\\presets\\helpers.less"
+			],
+			[
+				"plug",
+				"styles\\plugins\\plugins.less"
+			],
+			[
+				"reou",
+				"styles\\resources\\resources.less"
+			],
+			[
+				"blo",
+				"styles\\custom\\bem\\blocks.less"
+			],
+			[
+				"cuso",
+				"styles\\custom\\custom.less"
+			],
+			[
+				"bloc",
+				"styles\\custom\\bem\\blocks.less"
+			],
+			[
+				"pse",
+				"styles\\base\\components\\pseudo.less"
+			],
+			[
+				"sub",
+				"styles\\custom\\bem\\subblocks.less"
+			],
+			[
+				"ele",
+				"styles\\custom\\bem\\elements.less"
+			],
+			[
+				"plu",
+				"styles\\plugins\\plugins.less"
+			],
+			[
+				"c",
+				"styles\\custom\\custom.less"
+			],
+			[
+				"su",
+				"styles\\custom\\bem\\subblocks.less"
+			],
+			[
+				"sura",
+				"public\\css\\sura.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

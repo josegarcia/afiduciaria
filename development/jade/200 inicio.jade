@@ -3,12 +3,14 @@ include _includes/doctype
         include _includes/head
         include _includes/routines
         //- stylesheets
+        link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
         //- scripts
         script(src='../javascript/libs/jquery-1.11.1.min.js')
         script(src='../javascript/modernizr.js')
         script(src='../javascript/modernizr.load.js')
-    body.uno.l-public
-        include sections/header/100
-        include sections/main/103
+    body.uno.l-logged
+        include sections/header/200
+        include sections/nav
+        include sections/main/200
         include sections/footer
         script(src='../javascript/scripts.js')

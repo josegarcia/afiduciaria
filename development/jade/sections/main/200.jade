@@ -1,12 +1,33 @@
+mixin table-cell(length)
+    - for (var i = 0; i < length; ++i) {
+        tr
+            td.left 01/02/14
+            td 065419874
+            td Traslado
+            td.right 1'000.000.00
+        tr
+            td.left 01/02/14
+            td 1651000
+            td Deposito
+            td.right 1'100.000.00
+        tr
+            td.left 01/02/14
+            td 180576
+            td Transpaso
+            td.right 120.000.00
+    - }
 main
     section.text-frame
-        h1.heading.primary Bienvenido XXX
-        .grid.split-2
-            div
+        h1.heading.base Bienvenido(a)
+            span  Liliana Patricia Delgado García
+                a(href="#") Actualizar datos
+
+        .grid.split-5.separate
+            .column.span-3
                 .panel.recap
                     .top-bar
                         .subhead 
-                            i.fa.fa-book
+                            i.fa.fa-suitcase
                             |  Fondos
                         .balances
                             strong Saldo
@@ -14,24 +35,26 @@ main
                     ul.overview
                         li
                             .title
-                                strong Fondo abierto con pacto de permanencia CxC
+                                strong 
+                                    a(href="#") Fondo abierto con pacto de permanencia CxC
                                 div id 01234567890
                             .value
                                 strong $950.000.000.00
                                 div 
-                                    a(href="#") Detalle
+                                    a(href="#") Ver Detalle
                         li
                             .title
-                                strong Fondo abierto alianza
+                                strong 
+                                    a(href="#") Fondo abierto alianza
                                 div id 01234567890
                             .value
                                 strong $700.000.000.00
                                 div 
-                                    a(href="#") Detalle
+                                    a(href="#") Ver Detalle
                 .panel.recap
                     .top-bar
                         .subhead 
-                            i.fa.fa-book
+                            i.fa.fa-tasks
                             |  Fideicomisos
                         .balances
                             strong Saldo
@@ -39,44 +62,105 @@ main
                     ul.overview
                         li
                             .title
-                                strong Karivana Vista Golf
+                                strong 
+                                    a(href="#") Karivana Vista Golf
                                 div 
                                     | id 01234567890 /
                                     a(href="#") Personalizar
                             .value
                                 div
-                                    a(href="#") Detalle
+                                    a(href="#") Ver Detalle
                         li
                             .title
-                                strong Conjunto residencial San Mateo
+                                strong 
+                                    a(href="#") Conjunto residencial San Mateo
+                                div 
+                                    | id 01234567890 /
+                                    a(href="#") Personalizar
+                            .value
+                                div 
+                                    a(href="#") Ver Detalle
+                        li
+                            .title
+                                strong 
+                                    a(href="#") Urbanización quintas del paraiso
                                 div id 01234567890
                             .value
                                 div 
-                                    a(href="#") Detalle
-                        li
-                            .title
-                                strong Urbanización quintas del paraiso
-                                div id 01234567890
-                            .value
-                                div 
-                                    a(href="#") Detalle
+                                    a(href="#") Ver Detalle
                 .panel.recap
-                .top-bar
-                    .subhead 
-                        i.fa.fa-book
-                        |  Pensiones
-                    .balances
-                        strong Saldo
-                        div $$$
-                ul.overview
+                    .top-bar
+                        .subhead 
+                            i.fa.fa-book
+                            |  Pensiones
+                        .balances
+                            strong Saldo
+                            div $$$
+                    ul.overview
+                        li
+                            .title
+                                strong 
+                                    a(href="#") Pensiones
+                                div 
+                                    | id 01234567890 /
+                                    a(href="#") Personalizar
+                            .value
+                                strong Pensiones voluntarias
+                                div
+                                    a(href="#") Ver Detalle
+            .column.span-2 
+                canvas(id="myChart", width="320", height="320").canvas
+                ul.color-codes
                     li
-                        .title
-                            strong Pensiones
-                            div 
-                                | id 01234567890 /
-                                a(href="#") Personalizar
-                        .value
-                            strong Pensiones voluntarias
-                            div
-                                a(href="#") Detalle
-            div Charts.JS
+                        span.var1
+                        | Fondo abierto con pacto de permanencia CxC
+                    li
+                        span.var2
+                        | Fondo abierto alianza
+                    li
+                        span.var3
+                        | Fondo abierto
+
+        .panel.recap
+            .top-bar
+                .subhead 
+                    i.fa.fa-sort-amount-asc
+                    |  Últimos movimientos
+                .balances
+                    strong Saldo
+                    div $1'650.000.000.00
+            .scroller
+                table(id="dataTable").table.primary.striped
+                    thead
+                        tr
+                            th.left Fecha
+                            th Número encargo
+                            th Transacción
+                            th.right Monto
+                    tbody
+                        tr
+                            td.left 01/02/14
+                            td 468413
+                            td Traslado
+                            td.right 1'300.000.00
+                        tr
+                            td.left 01/02/14
+                            td 180576
+                            td Deposito
+                            td.right 1'200.000.00
+                        tr
+                            td.left 01/02/14
+                            td 980980
+                            td Traslado
+                            td.right 600.000.00
+                        tr
+                            td.left 01/02/14
+                            td 79809680
+                            td Devolución
+                            td.right 1'200.000.00
+                        tr
+                            td.left 01/02/14
+                            td 31321
+                            td Traslado
+                            td.right 1'450.000.00
+                        mixin table-cell(25)

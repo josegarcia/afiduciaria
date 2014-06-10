@@ -487,7 +487,7 @@
 
     .size (@width: auto, @height: auto, @query: 0) when (@query > 0) {
         @media all and (min-width: @query) {
-            .size (@width, @height, @display);
+            .size (@width, @height);
         }
     }
 

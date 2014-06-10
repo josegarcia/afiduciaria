@@ -10,18 +10,17 @@
 
     body                        { .font(1.4em @d 1.2, @font-base); .color(@text-base, @hexf); }
 
-    nav                         { .back.color(@hexe); }
-
+    nav                         {  background-color: @hexc;.gradient(@hexd, @hexc) }
     header                      {  background-color: @primary; max-height: 150px; }
-    header > section            { .padding(12px 2%, 800px); .color(@text-base); }
-    nav > section               { .padding(0 9%); }
-    main > section              { .padding(0 5%); .padding(0 2%, 1025px); }
+    header > section            { .padding(0, 800px); .color(@text-base); }
+    nav > section               { .padding(0); }
+    main > section              { .padding(0); .padding(0 0%, 1025px); }
     footer                      {  border-top: 1px solid @hexb; background-color: @hexf; }
     footer > section            { .padding(7px 2%); .color(@hex8); font-size: .9em; }
 
 
-    .l-layout                   { overflow: hidden; }
-    .l-layout main              { .back(@trans, '../images/back-breadcrumb.png', repeat-x, left top); }
+    .l-logged main,
+    .l-public main              { .back.color(@hexef); }
 
 //  Fonts
 
@@ -42,7 +41,7 @@
     a, 
     a:hover,
     em, 
-    .link                       {  color: @primary; text-decoration: none; }
+    .link                       {  color: @secondary; text-decoration: none; }
 
     .mark ()                    { .color(@hexf, @primary-lighter); text-shadow: none; }
     ::selection                 { .mark; }
@@ -62,6 +61,21 @@
 
     select option,
     select                      { padding: 5px; }
+
+
+    .inicio .inicio,
+
+// Page index
+
+    body.inicio nav .inicio,
+    body.inicio nav .inicio,
+    body.inicio nav .inicio,
+    body nav li a:hover  {
+         background-color: @hexef; color: @primary; text-decoration: none;
+         // border-bottom: 2px solid @primary; text-decoration: none;
+    }
+
+    // body.inicio nav .inicio:before {.arrow.top(6px, @primary); .position.left-bottom(absolute, 50%, 0); margin-left: -3px}
 
 //  Page Components
 
@@ -92,9 +106,14 @@
 
     .button.primary             { min-height: 42px; .font(bold 1em); .rounded(@base-radius); .color(@text-primary, @primary); .color.hover-focus(@text-primary, @primary-lighter); }
 
-    .heading.primary            { .font(2.2em @d 55px, @font-title); .color(@hex4); .border(0 0 1px 0, solid, @hexf); margin-bottom: 10px; .padding(0 2% 0 0); }
-    .heading.primary:before     { .pseudo('', 100%, 1px); .border(0 0 1px, solid, @hexc); .position.left-bottom(absolute, 0, 0); }
-    .heading.primary i          { margin-right: 10px; }
+
+    .heading.primary                    {
+        &                       { .font(2.2em @d 55px, @font-title); .color(@hex4); .border(0 0 1px 0, solid, @hexf); margin-bottom: 10px; .padding(0 2% 0 0); }
+        &:before                { .pseudo('', 100%, 1px); .border(0 0 1px, solid, @hexc); .position.left-bottom(absolute, 0, 0); }
+        & i                     { margin-right: 10px; }
+        & span                  { font-size: 0.76em; }
+    }
+
 
     .form.primary               { 
         & li strong             { .font(bold 1.2em); .block; padding: .2em 0; }
@@ -123,36 +142,21 @@
         }
     }
 
-    .navbar.primary               {
-        & h2                    { .font-size(1.6em); color: @primary; } 
+    .navbar.primary             {
         & li a                  { .font-size(1.6em); color: @hex4;  padding: 10px 0; }
         & li a:hover            {  color: @primary; } 
         & li ul li a            { .font-size(1em); } 
     }
 
     .pagination.primary         {
-        &                       { text-align: center; }
-        & .pages                {
-            &                   { .border(1px, solid, @hexb); .rounded(@base-radius); width: auto; .center-inline; }
-            & span,
-            & a                 {  color: @hex4; .border(0 0 0 1px, solid, @hexb); .size(auto, 28px); line-height:28px; min-width:28px; text-align: center; padding: 0 .6em; float: left; }
-            & a:first-child     { .border; }
-            & .current          { .color(@hexf, @primary); }
-            & a:hover           { .back.color(@hexd); }
-        }
-    }
-
-    .pagination.primary         {
-        &                       { text-align: center; }
-        & .dataTables_paginate  {
-            &                   { .border(1px, solid, @hexb); .rounded(@base-radius); width: auto; .center-inline; }
-            & span,
-            & a                 { .block; color: @hex4; .border(0 0 0 1px, solid, @hexb); .size(auto, 28px); line-height:28px; min-width:28px; text-align: center; padding: 0 .6em; float: left; }
-            & a:first-child     { .border; }
-            & .current          { .color(@hexf, @primary); }
-            & a:hover           { .back.color(@hexd); }
-            & a span            { display: none; }
-        }
+        &                       { text-align: center; margin-top: @base-margin; .border(1px, solid, @hexb); width: auto; .center-inline; }
+        & a,
+        & span span             { padding: 0 .6em; }
+        & span,
+        & a                     {  color: @hex4; .border(0 0 0 1px, solid, @hexb); .size(auto, 28px); line-height:28px; min-width:28px; text-align: center; float: left; }
+        & a:first-child         { .border; }
+        & .current              { .color(@hexf, @primary); }
+        & a:hover               { .back.color(@hexd); text-decoration: none; }
     }
 
     .panel.primary              { 
@@ -163,16 +167,9 @@
     }
 
     .table.primary              {
-        &                       { .table.padding(0.35em 1em); .font-size(1.2em, 800px); }
-        & tr th,
-        & tr td                 { text-align: center; }
-        & thead tr th a         { color: @primary; .color.hover(@secondary); }
+        &                       { .table.padding(0.35em 1em); .font-size(1.1em, 800px); }
         & tbody tr              { .color.hover(@text-base, @hexe); }
-        & tbody tr.selected     { .color(@hexf, @primary); }
-        & tbody tr.odd          { .back.color(@hexef); }
-        & .tcenter              { text-align: center; }
-        & .tleft                { text-align: left; }
-        & .tright               { text-align: right; }
+        & tbody tr.selected td  { .color(@hexf, @primary); }
     }
 
     .tabset.primary             {

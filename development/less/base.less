@@ -134,7 +134,8 @@
         &.indent.inherit li     {  padding-left: 10px; }
     }
 
-    table { 
+    .table,
+     table { 
         & {
             min-width: 100%; 
             table-layout: fixed; 
@@ -152,15 +153,19 @@
             text-align: left;  // ie8 text-align
             vertical-align: top; 
         }
+        & thead tr th,
+        & tbody tr td { 
+            .has-align;
+        }
         & thead tr th[colspan]  { 
             text-align: center; 
         }
         &.even {
-            .table.tbody-color(@hexe, even);
+            .table.tbody-color(inherit, @hexe, even);
         }
 
         &.striped {
-            .table.tbody-color(@hexe, odd);
+            .table.tbody-color(inherit, @hexe, odd);
         }
 
         &.horizontal {
@@ -283,12 +288,12 @@
 
     html .invisible         { visibility: hidden; }
 
-    html .left              { margin-left: 0; left: 0; float: left; }
+    html .to-left           { margin-left: 0; left: 0; float: left; }
 
     html .nowrap,
     html .nowrap a          { white-space: nowrap; }
 
-    html .right             { margin-left: 0; left: 0; float: right; }
+    html .to-right          { margin-left: 0; left: 0; float: right; }
 
     html .show              { display: block; }
     
@@ -306,11 +311,11 @@
 // Base Extends
 // ----------------------------------------------------------------------- //
 
-    .has-align ()               {
-        &.text-center           { text-align: center; }
-        &.text-left             { text-align: left; }
-        &.text-justify          { text-align: justify; }
-        &.text-right            { text-align: right; }
+    .has-align ()           {
+        &.center            { text-align: center; }
+        &.left              { text-align: left; }
+        &.justify           { text-align: justify; }
+        &.right             { text-align: right; }
     }
 
     .has-padding ()             {

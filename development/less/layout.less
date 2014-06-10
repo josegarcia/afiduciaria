@@ -1,8 +1,6 @@
 //
-// Layout 
-// ----------------------------------------------------------------------- //
-
-// --------------------------------------------------------------- Nav */
+//  Layout 
+//  ----------------------------------------------------------------------- */
 
     .offside () {
         .main (@distance: 100%, @query: 0) { 
@@ -16,15 +14,16 @@
             }
         }
         .side (@distance: 100%, @query: 0) {
-            &                           { .transition(all, 0.3s); .index(0); .translate(-@distance, 0); .index(2); }
-
+            &                           { .transition(all, 0.3s); .translate(-@distance, 0); .index(2); }
             .js-toggle &                { .translate; }
 
             @media screen and (min-width: @query) {
                &                        { .translate; }
             }
         } 
-    }// --------------------------------------------------------------- Sections */
+    }
+
+//  Sections 
 
     .layout {
         .padding-left (@padding: 0, @query: 0) {
@@ -53,19 +52,22 @@
                 & nav > section { width: @navwidth; margin: 0 0 0 50%; left: 0; float: right; }
             }
         }
-    }//
-// Layout Templates
-// ----------------------------------------------------------------------- //
+    }
 
-    .l-logged                   { 
-        // & header                {  position: fixed; top: 0; left: 0; z-index: 3; .shadow(0 1px 3px, #71061d, .3) }
-        // & main                  { .margin(0 0 0 -290px); .padding(0 0 0 290px, 1025px); .offside.main(290px, 1025px); }
-        // & footer                { .padding(0 0 0 290px, 1025px); }
-        // & nav                   { .offside.side(290px, 1025px); .size(290px, 100%); }
+//  Templates
+
+    .l-custom                   { 
+        & header                {  position: fixed; top: 0; left: 0; z-index: 3; .shadow(0 1px 3px, #71061d, .3) }
+        & main                  { .padding(0 0 0 290px, 1025px); .margin(0 0 0 -290px); .offside.main(290px, 1025px); }
+        & footer                { .padding(0 0 0 290px, 1025px); }
+        & nav                   { .offside.side(290px, 1025px); .size(290px, 100%); }
         // & main section:before   { content: ''; .position; .back.color(#000); .index(2); .opacity(0); .transition(all, 0.4s) }
         // .js-toggle & main section:before { .position.fill(absolute, 0, 0, 0, 0); .opacity(.5); }
     }
 
-    .l-public                   {
-        & .text-frame           { .center-block(1000px, 1000px); .width(1000px, 1000px); }
+    .l-logged                   {
+        & nav                   { .offside.side(290px, 1025px); .size(290px, 100%); .size(100%, 100%, 1025px); }
+        & main                  { .offside.main(290px, 1025px); .margin(0 0 0 -290px); .margin(0, 1025px); } //  .margin(0 0 0 -290px); .padding(0 0 0 290px, 1025px); 
     }
+
+    .text-frame                 { .center-block(1000px, 1000px); .width(1000px, 1000px); }

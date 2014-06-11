@@ -23,7 +23,7 @@ main
                 a(href="#") Actualizar datos
 
         .grid.split-5.separate
-            .column.span-3
+            .span-3
                 .panel.recap
                     .top-bar
                         .subhead 
@@ -108,19 +108,19 @@ main
                                 strong Pensiones voluntarias
                                 div
                                     a(href="#") Ver Detalle
-            .column.span-2 
-                canvas(id="myChart", width="320", height="320").canvas
-                ul.color-codes
-                    li
-                        span.var1
-                        | Fondo abierto con pacto de permanencia CxC
-                    li
-                        span.var2
-                        | Fondo abierto alianza
-                    li
-                        span.var3
-                        | Fondo abierto
-
+            .span-2
+                .m-general-pie
+                    canvas(id="myChart", width="320", height="320").canvas
+                    ul.color-codes
+                        li
+                            span.var1
+                            | Fondo abierto con pacto de permanencia CxC
+                        li
+                            span.var2
+                            | Fondo abierto alianza
+                        li
+                            span.var3
+                            | Fondo abierto
         .panel.recap
             .top-bar
                 .subhead 
@@ -129,7 +129,7 @@ main
                 .balances
                     strong Saldo
                     div $1'650.000.000.00
-            .scroller
+            .scrollable
                 table(id="dataTable").table.primary.striped
                     thead
                         tr

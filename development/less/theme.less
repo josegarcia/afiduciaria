@@ -12,15 +12,21 @@
 
     nav                         {  background-color: @hexc;.gradient(@hexd, @hexc) }
     header                      {  background-color: @primary; max-height: 150px; }
+    footer                      {  border-top: 1px solid @hexb; background-color: @hexf; }
+    
     header > section            { .padding(0, 800px); .color(@text-base); }
     nav > section               { .padding(0); }
-    main > section              { .padding(0); .padding(0 0%, 1025px); }
-    footer                      {  border-top: 1px solid @hexb; background-color: @hexf; }
+    main > section              { .padding(0 2%); .padding(0, 1025px); .back.color(@hexef); }
     footer > section            { .padding(7px 2%); .color(@hex8); font-size: .9em; }
 
 
     .l-logged main,
-    .l-public main              { .back.color(@hexef); }
+    .l-public main              { .back.color(@hexc); }
+
+    @media all and (min-width: 1025px) {
+        .l-logged main,
+        .l-public main          { .back.color(@hexef); }
+    }
 
 //  Fonts
 

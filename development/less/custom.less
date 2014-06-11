@@ -22,11 +22,17 @@
 //  ---------------------------------------
 
     .m-brand                    {
+        &                       { width: auto; }
         & .brand                { .size(200px, 120px); margin: 0; }
         & .brand a              { .display(block); .size(100%, 120px); padding: 20px 0 ; }
         & .brand  strong        { .display(none); }
-        & .fiduciaria           {  }
         & .valores              { .width; float: right; }
+    }
+
+    .m-sidemenu                 {
+        &                       { width: auto; .square(56px); line-height:56px; font-size: 1.8em; color: @hexf; text-align: center; margin-right: 10px; .display(none, 1025px); }
+        & a                     { color: inherit; display: block; }
+        & a:hover               { .color(@primary, @hexf); }
     }
 
     .m-user-options             {
@@ -64,16 +70,24 @@
 
     .m-mainnav {
         &                       { .font(bold 1.2em); text-align: right; }
-        & li:first-child        { float: left; }
-        & li                    { display: inline-block; float: none; border-right: 1px solid @hexb; margin-right: -4px; vertical-align: top; }
-        & li a                  { padding: 18px 20px 4px; display: inline-block; .color(@hex4); }
-        & li a:hover            { text-decoration: none; padding: 16px 20px 6px; }
-        & .subitems .title      { .font(.66em); text-align: center; padding: 0; text-transform: uppercase; color:@hex2; }
-        & .subitems li a        { padding: 3px 20px 4px; display: inline-block; }
-        & .subitems ul          { float:none; border-left: 1px solid @hexb; }
-        & .subitems             { padding-right: 3px; }
-    
+        & li:first-child        { .float(left, 1025px); }
+        & li                    { .display(block); .display(inline-block, 1025px); .margin(0 -4px 0 0, 1025px); vertical-align: top; text-align: left; }
+        & li a                  { .padding(7px 10px); .padding(18px 20px 4px, 1025px); .display(block); .display(inline-block, 1025px); .color(@hex4); }
+        & li a:hover            {  text-decoration: none; .padding(16px 20px 6px, 1025px); }
+        & li                    { .width(100%); .width(auto, 1025px); .border(1px 0, solid, @hexe @trans @hexa); }
+        & .subitems             {
+            &                   { .padding(0 3px 0 0, 1025px); }
+            & li                { .border; }
+            & li a              { .padding(3px 20px 4px, 1025px); }
+            & .title            { .font(.66em); text-align: left; text-transform: uppercase; color:@hex2; padding: 0 10px; }
+        }
+    }
 
+    @media all and (min-width: 1025px) {
+        .m-mainnav li           { .border(0 1px 0 0, solid, @hexb); .float(none); }
+        .m-mainnav .subitems ul { .border(0 0 0 1px, solid, @hexb); }
+        .m-mainnav .subitems .title { text-align: center; }
+        .m-mainnav .subitems ul { .float(none); }
     }
 
 //  Main
@@ -85,6 +99,10 @@
 
     .m-publicidad               {
         &                       { display: none; padding-top: 80px; .display(block, 640px) }
+    }
+
+    .m-general-pie              {
+        &                       { .center-block(350px, 1025px); overflow-x: hidden; }
     }
 
 //  Footer
@@ -185,8 +203,6 @@
         & .var2         { background-color: #008AC9; }
         & .var3         { background-color: #D8DFE3; }
     }
-
-   #myChart             { .center-block(100%); .center-block(350px, 800px); }
 
 
 //  dataTable

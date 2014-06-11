@@ -17,7 +17,8 @@ include _includes/doctype
         script(src='../javascript/libs/dataTables/jquery.dataTables.min.js')
         script(src='../javascript/scripts.js')
         script
-            var pieData = [
+            
+            var mydata = [
                 {
                     value: 30,
                     color : "#D8DFE3"
@@ -33,7 +34,32 @@ include _includes/doctype
             
             ];
 
-            var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(pieData);
+            //- var setupCanvas;
+
+            //- setupCanvas = function(canvas) {
+            //-     var ctx, newWidth;
+            //-     canvas = $(canvas);
+            //-     newWidth = canvas.parent().width();
+            //-     canvas.prop({
+            //-         width: newWidth,
+            //-         height: 320
+            //-     });
+            //-     ctx = canvas.get(0).getContext("2d");
+            //-     return new Chart(ctx).Pie(mydata);
+            //- };
+
+            //- (function(canvas) {
+            //-     setupCanvas(canvas);
+            //-     return $(window).resize(function() {
+            //-         return setupCanvas(canvas);
+            //-     });
+            //- })("#myChart");
+
+
+            $(document).ready(function() {
+                var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
+            });
+
 
         script
             $.fn.dataTableExt.oStdClasses.sPaging = "pagination primary ";

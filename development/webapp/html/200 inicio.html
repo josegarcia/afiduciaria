@@ -18,6 +18,7 @@
 <body class="uno l-logged inicio">
   <header>
     <section class="text-frame">
+      <div class="m-sidemenu"><a href="#" class="toggle js-navbar"><i class="fa fa-bars"></i></a></div>
       <div class="m-brand">
         <h1 class="brand fiduciaria"><a href="../index.html"><img src="../images/logo-fiduciaria.png"><strong> Alianza Fiduciaria</strong></a></h1>
       </div>
@@ -36,7 +37,7 @@
   <nav>
     <section class="text-frame">
       <div class="m-mainnav">
-        <ul class="horizontal">
+        <ul>
           <li><a href="#" class="inicio">Inicio</a></li>
           <li class="subitems"> 
             <div class="title">Inversiones</div>
@@ -56,7 +57,7 @@
     <section class="text-frame">
       <h1 class="heading base">Bienvenido(a)<span> Liliana Patricia Delgado García<a href="#">Actualizar datos</a></span></h1>
       <div class="grid split-5 separate">
-        <div class="column span-3">
+        <div class="span-3">
           <div class="panel recap">
             <div class="top-bar">
               <div class="subhead"> <i class="fa fa-suitcase"></i> Fondos</div>
@@ -145,13 +146,15 @@
             </ul>
           </div>
         </div>
-        <div class="column span-2"> 
-          <canvas id="myChart" width="320" height="320" class="canvas"></canvas>
-          <ul class="color-codes">
-            <li><span class="var1"></span>Fondo abierto con pacto de permanencia CxC</li>
-            <li><span class="var2"></span>Fondo abierto alianza</li>
-            <li><span class="var3"></span>Fondo abierto</li>
-          </ul>
+        <div class="span-2">
+          <div class="m-general-pie">
+            <canvas id="myChart" width="320" height="320" class="canvas"></canvas>
+            <ul class="color-codes">
+              <li><span class="var1"></span>Fondo abierto con pacto de permanencia CxC</li>
+              <li><span class="var2"></span>Fondo abierto alianza</li>
+              <li><span class="var3"></span>Fondo abierto</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="panel recap">
@@ -161,7 +164,7 @@
             <div>$1'650.000.000.00</div>
           </div>
         </div>
-        <div class="scroller">
+        <div class="scrollable">
           <table id="dataTable" class="table primary striped">
             <thead>
               <tr>
@@ -667,7 +670,7 @@
   <script src="../javascript/libs/dataTables/jquery.dataTables.min.js"></script>
   <script src="../javascript/scripts.js"></script>
   <script>
-    var pieData = [
+    var mydata = [
         {
             value: 30,
             color : "#D8DFE3"
@@ -683,7 +686,32 @@
         
     ];
     
-    var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(pieData);
+    //- var setupCanvas;
+    
+    //- setupCanvas = function(canvas) {
+    //-     var ctx, newWidth;
+    //-     canvas = $(canvas);
+    //-     newWidth = canvas.parent().width();
+    //-     canvas.prop({
+    //-         width: newWidth,
+    //-         height: 320
+    //-     });
+    //-     ctx = canvas.get(0).getContext("2d");
+    //-     return new Chart(ctx).Pie(mydata);
+    //- };
+    
+    //- (function(canvas) {
+    //-     setupCanvas(canvas);
+    //-     return $(window).resize(function() {
+    //-         return setupCanvas(canvas);
+    //-     });
+    //- })("#myChart");
+    
+    
+    $(document).ready(function() {
+        var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
+    });
+    
     
   </script>
   <script>

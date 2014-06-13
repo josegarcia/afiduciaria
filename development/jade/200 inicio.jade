@@ -17,23 +17,6 @@ include _includes/doctype
         script(src='../javascript/libs/dataTables/jquery.dataTables.min.js')
         script(src='../javascript/scripts.js')
         script
-            
-            var mydata = [
-                {
-                    value: 30,
-                    color : "#D8DFE3"
-                },
-                {
-                    value : 50,
-                    color: "#008AC9"
-                },
-                {
-                    value : 100,
-                    color : "#00275b"
-                }
-            
-            ];
-
             //- var setupCanvas;
 
             //- setupCanvas = function(canvas) {
@@ -54,6 +37,22 @@ include _includes/doctype
             //-         return setupCanvas(canvas);
             //-     });
             //- })("#myChart");
+            
+            var mydata = [
+                {
+                    value: 30,
+                    color : "#D8DFE3"
+                },
+                {
+                    value : 50,
+                    color: "#008AC9"
+                },
+                {
+                    value : 100,
+                    color : "#00275b"
+                }
+            
+            ];
 
 
             $(document).ready(function() {
@@ -65,10 +64,14 @@ include _includes/doctype
             $.fn.dataTableExt.oStdClasses.sPaging = "pagination primary ";
 
             $('#dataTable').dataTable( {
-                "filter"        : false,
-                "bLengthChange" : false,
-                "info"          : false,
-                "iDisplayLength" : 5
+                "filter"            : false,
+                "bLengthChange"     : false,
+                "info"              : false,
+                "iDisplayLength"    : 5,
+                "language"          : 
+                {
+                    "url" : "../javascript/libs/dataTables/spanish.json"
+                }
             });
         script
             $('#incFont').click(function(){   

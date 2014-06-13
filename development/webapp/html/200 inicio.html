@@ -126,7 +126,7 @@
           </div>
           <div class="panel recap">
             <div class="top-bar">
-              <div class="subhead"> <i class="fa fa-book"></i> Pensiones</div>
+              <div class="subhead"> <i class="fa fa-book"></i> Pensiones voluntarias</div>
               <div class="balances"><strong>Saldo</strong>
                 <div>$$$</div>
               </div>
@@ -150,9 +150,9 @@
           <div class="m-general-pie">
             <canvas id="myChart" width="320" height="320" class="canvas"></canvas>
             <ul class="color-codes">
-              <li><span class="var1"></span>Fondo abierto con pacto de permanencia CxC</li>
-              <li><span class="var2"></span>Fondo abierto alianza</li>
-              <li><span class="var3"></span>Fondo abierto</li>
+              <li><span class="var1"></span>Fondos</li>
+              <li><span class="var2"></span>Fideicomisos</li>
+              <li><span class="var3"></span>Pensiones voluntarias</li>
             </ul>
           </div>
         </div>
@@ -670,22 +670,6 @@
   <script src="../javascript/libs/dataTables/jquery.dataTables.min.js"></script>
   <script src="../javascript/scripts.js"></script>
   <script>
-    var mydata = [
-        {
-            value: 30,
-            color : "#D8DFE3"
-        },
-        {
-            value : 50,
-            color: "#008AC9"
-        },
-        {
-            value : 100,
-            color : "#00275b"
-        }
-        
-    ];
-    
     //- var setupCanvas;
     
     //- setupCanvas = function(canvas) {
@@ -707,6 +691,22 @@
     //-     });
     //- })("#myChart");
     
+    var mydata = [
+        {
+            value: 30,
+            color : "#D8DFE3"
+        },
+        {
+            value : 50,
+            color: "#008AC9"
+        },
+        {
+            value : 100,
+            color : "#00275b"
+        }
+        
+    ];
+    
     
     $(document).ready(function() {
         var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
@@ -718,10 +718,14 @@
     $.fn.dataTableExt.oStdClasses.sPaging = "pagination primary ";
     
     $('#dataTable').dataTable( {
-        "filter"        : false,
-        "bLengthChange" : false,
-        "info"          : false,
-        "iDisplayLength" : 5
+        "filter"            : false,
+        "bLengthChange"     : false,
+        "info"              : false,
+        "iDisplayLength"    : 5,
+        "language"          : 
+        {
+            "url" : "../javascript/libs/dataTables/spanish.json"
+        }
     });
   </script>
   <script>

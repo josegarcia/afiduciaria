@@ -2223,6 +2223,9 @@ ul.horizontal li {
   border-width: 0;
   border-style: none;
 }
+.m-mainnav .subitems li a {
+  padding: 7px 10px 7px 20px;
+}
 @media all and (min-width: 1025px) {
   .m-mainnav .subitems li a {
     padding: 3px 20px 4px;

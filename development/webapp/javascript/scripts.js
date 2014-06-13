@@ -1,6 +1,6 @@
 /*======================================================== scripts  */
 
-//  Table rows
+//  Table Rows
    
     function alternate_rows() {
         $('tr:nth-child(odd), option:nth-child(odd)').addClass('odd');
@@ -8,7 +8,7 @@
 
     alternate_rows();
 
-//  Show popup
+//  Show Popup
    
     $('.m-user-options .options').click(function(event){
         $(this).toggleClass('show');
@@ -20,24 +20,7 @@
         $('.m-user-options .options').removeClass('show');
     });
 
-// Tabset
-
-    $('.tabset .summary').click(function(event){
-        $('.tabset .summary').removeClass('active'); // all summaries
-        $('.tabset .summary').next('.details').removeClass('animate fadeIn'); // all summaries
-        // $(this).siblings('.details').hide();
-        $.when($(this).next('.details').fadeIn()).done(function() {
-             stickyFooter();
-        });
-        $(this).next('.details').addClass('animate fadeIn').fadeIn();
-        $(this).addClass('active');
-
-        // alert('sup');
-        
-        event.preventDefault();
-    });
-
-//  Toggle off-side canvas
+//  Offside Canvas
     
     $('.js-navbar').click(function(event) {
         $('html').toggleClass('js-toggle');
@@ -63,7 +46,8 @@
     add_close();
     close_button();
 
-    // Sticky footer
+//  Sticky Footer
+
     function stickyFooter() {
         var windHeight  = $(window).height();
         var mainHeight  = $('main').height();

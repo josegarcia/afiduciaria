@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* -----------------------------------------------------------------------
-iii. Assets
------------------------------------------------------------------------ */
 * {
   margin: 0;
   padding: 0;
@@ -1337,10 +1334,12 @@ html .uppercase {
 .l-custom main {
   overflow-x: hidden;
 }
+.l-custom main > .text-frame,
 .l-custom main > section {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.js-toggle .l-custom main > .text-frame,
 .js-toggle .l-custom main > section {
   -webkit-transform: translate(290px, 0);
   -moz-transform: translate(290px, 0);
@@ -1348,6 +1347,7 @@ html .uppercase {
   transform: translate(290px, 0);
 }
 @media screen and (min-width: 1025px) {
+  .js-toggle .l-custom main > .text-frame,
   .js-toggle .l-custom main > section {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -1426,10 +1426,12 @@ html .uppercase {
 .l-logged main {
   overflow-x: hidden;
 }
+.l-logged main > .text-frame,
 .l-logged main > section {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+.js-toggle .l-logged main > .text-frame,
 .js-toggle .l-logged main > section {
   -webkit-transform: translate(290px, 0);
   -moz-transform: translate(290px, 0);
@@ -1437,6 +1439,7 @@ html .uppercase {
   transform: translate(290px, 0);
 }
 @media screen and (min-width: 1025px) {
+  .js-toggle .l-logged main > .text-frame,
   .js-toggle .l-logged main > section {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
@@ -1618,14 +1621,32 @@ body nav li a:hover {
   color: #00275b;
   text-decoration: none;
 }
-body.fideicomisos .c-nav .resumen,
+body.fideicomisos.resumen .c-nav .resumen,
+body.fideicomisos.informes .c-nav .informes,
+body.fondos.resumen .c-nav .resumen,
+body.fondos.movimientos .c-nav .movimientos,
 body .c-nav li:hover {
-  background-color: #f6f6f7;
-  color: #444444;
-  text-decoration: none;
-  border-width: 0 1px 0 0;
+  border-width: 0 0 0 3px;
   border-style: solid;
-  border-color: #dddddd;
+  border-color: #00275b;
+}
+@media all and (min-width: 1025px) {
+  body.fideicomisos.resumen .c-nav .resumen,
+  body.fideicomisos.informes .c-nav .informes,
+  body.fondos.resumen .c-nav .resumen,
+  body.fondos.movimientos .c-nav .movimientos,
+  body .c-nav li:hover {
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-color: #00275b;
+  }
+}
+body.fideicomisos.resumen .c-nav .resumen a,
+body.fideicomisos.informes .c-nav .informes a,
+body.fondos.resumen .c-nav .resumen a,
+body.fondos.movimientos .c-nav .movimientos a,
+body .c-nav li:hover a {
+  color: #00275b;
 }
 .button-group,
 .m-options,
@@ -1846,33 +1867,20 @@ body .c-nav li:hover {
   text-decoration: none;
 }
 .panel.primary {
-  border-width: 0 1px 1px 0;
+  color: #444444;
+  background-color: #fff;
+  padding: 0.5em 14px;
+  -webkit-box-shadow: 0 1px 2px rgba(204, 204, 204, 0.6);
+  box-shadow: 0 1px 2px rgba(204, 204, 204, 0.6);
+  border-width: 1px;
   border-style: solid;
-  border-color: #cccccc;
+  border-color: #cccccc #bbbbbb #bbbbbb #cccccc;
+  margin: 14px 0;
 }
-.panel.primary .heading {
-  width: 100%;
-  height: 30px;
-  margin: 0;
-  padding: 0.4em 1em;
-  border-width: 1px 0 0 1px;
-  border-style: solid;
-  border-color: #cccccc;
-  font: bold 1em a;
-  font-family: inherit;
-  background-color: #eeeeee;
-}
-.panel.primary input[type="text"] {
-  font-size: 1.1em;
-  border-width: 0;
-  border-style: none;
-  -webkit-box-shadow: 0 0 rgba(128, 128, 128, 0.5);
-  box-shadow: 0 0 rgba(128, 128, 128, 0.5);
-}
-.panel.primary table {
-  border-width: 1px 0 0 1px;
-  border-style: solid;
-  border-color: #cccccc;
+@media all and (min-width: 1025px) {
+  .panel.primary.full {
+    margin: 64px 0 14px;
+  }
 }
 .table.primary tr th,
 .table.primary tr td {
@@ -2179,6 +2187,10 @@ label.auto {
   font-family: inherit;
   text-align: right;
 }
+.m-mainnav li:first-child {
+  border-width: 0;
+  border-style: none;
+}
 @media all and (min-width: 1025px) {
   .m-mainnav li:first-child {
     float: left;
@@ -2319,6 +2331,14 @@ label.auto {
 }
 .c-nav {
   background-color: #ffffff;
+  z-index: 2;
+  top: 0;
+  position: static;
+}
+@media all and (min-width: 1025px) {
+  .c-nav {
+    position: absolute;
+  }
 }
 .m-fideicomisos {
   margin-top: 14px;
@@ -2331,15 +2351,15 @@ label.auto {
   font: 1.2em a;
   font-family: inherit;
   text-align: right;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #dddddd;
 }
 .m-subnav li {
   display: block;
   vertical-align: top;
   text-align: left;
-  width: 100%;
-  border-width: 0 1px 0 0;
-  border-style: solid;
-  border-color: transparent;
+  width: auto;
 }
 @media all and (min-width: 1025px) {
   .m-subnav li {
@@ -2349,11 +2369,6 @@ label.auto {
 @media all and (min-width: 1025px) {
   .m-subnav li {
     margin: 0 0 0;
-  }
-}
-@media all and (min-width: 1025px) {
-  .m-subnav li {
-    width: auto;
   }
 }
 .m-subnav li a {
@@ -2756,6 +2771,33 @@ footer {
 .table.summary tr td {
   padding: 0.3em 0;
 }
+.table.single {
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #cccccc;
+}
+.table.single tr th,
+.table.single tr td {
+  padding: 0.35em 1em;
+}
+@media all and (min-width: 800px) {
+  .table.single {
+    font-size: 1.1em;
+  }
+}
+.table.single tbody tr:hover {
+  color: #444444;
+  background-color: #eeeeee;
+}
+.table.single tbody tr.selected td {
+  color: #ffffff;
+  background-color: #00275b;
+}
+.table.single thead tr th {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #cccccc;
+}
 .color-codes {
   margin: 15px 0 0;
 }
@@ -2782,4 +2824,7 @@ footer {
 }
 .dataTables_wrapper {
   text-align: center;
+}
+.fa {
+  margin-right: 10px;
 }

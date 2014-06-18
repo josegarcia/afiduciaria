@@ -74,7 +74,7 @@
 
     .m-mainnav {
         &                       { .font(bold 1.2em); text-align: right; }
-        & li:first-child        { .float(left, 1025px); }
+        & li:first-child        { .float(left, 1025px); .border; }
         & li                    { .display(block); .display(inline-block, 1025px); .margin(0 -4px 0 0, 1025px); vertical-align: top; text-align: left; }
         & li a                  { .padding(7px 10px); .padding(18px 20px 4px, 1025px); .display(block); .display(inline-block, 1025px); .color(@hex4); }
         & li a:hover            {  text-decoration: none; .padding(16px 20px 6px, 1025px); }
@@ -116,7 +116,7 @@
     }
 
     .c-nav                      {
-        &                       { background-color: @hexf; }
+        &                       { background-color: @hexf; z-index: 2; top: 0; .position; .position(absolute, 1025px); }
     }
 
     .m-fideicomisos             {
@@ -125,8 +125,8 @@
     }
 
     .m-subnav {
-        &                       { .font(1.2em); text-align: right; }
-        & li                    { .display(block); .display(inline-block, 1025px); .margin(0 0 0, 1025px); vertical-align: top; text-align: left; .width(100%); .width(auto, 1025px); .border(0 1px 0 0, solid, @trans); }
+        &                       { .font(1.2em); text-align: right; .border(0 0 1px 0, solid, @hexd); }
+        & li                    { .display(block); .display(inline-block, 1025px); .margin(0 0 0, 1025px); vertical-align: top; text-align: left; .width(auto); }
         & li a                  { .padding(7px 10px); .padding(18px 20px 4px, 1025px); .display(block); .display(inline-block, 1025px); .color(@hex4); }
         & li a:hover            {  text-decoration: none; .padding(16px 20px 6px, 1025px); }
     }
@@ -228,6 +228,13 @@
         &               { .table.cell-border(0 0 1px 0, solid, @hexc); .table.padding(.3em 0); }
     }
 
+    .table.single              {
+        &                       { .table.padding(0.35em 1em); .font-size(1.1em, 800px); .border(0 0 1px, solid, @hexc); }
+        & tbody tr              { .color.hover(@text-base, @hexe); }
+        & tbody tr.selected td  { .color(@hexf, @primary); }
+        & thead tr th           { .border(1px 0, solid, @hexc); }
+    }
+
 //  Custom
 //  ---------------------------------------
 
@@ -245,3 +252,4 @@
 //  ---------------------------------------
 
    .dataTables_wrapper  { text-align: center; }
+   .fa                  { margin-right: 10px; }

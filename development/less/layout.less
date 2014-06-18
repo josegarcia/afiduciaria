@@ -5,12 +5,15 @@
     .offside () {
         .main (@distance: 100%, @query: 0) { 
             &                           {  overflow-x: hidden; }
+            & > .text-frame,
             & > section                 { .transition(all, 0.3s); }
+            .js-toggle & > .text-frame,
             .js-toggle & > section      { .translate(@distance, 0); }
             // .js-toggle.touch body   { position: fixed; } // screw the animation
 
             @media screen and (min-width: @query) {
-               .js-toggle & > section   { .translate; }
+                .js-toggle & > .text-frame,
+                .js-toggle & > section   { .translate; }
             }
         }
         .side (@distance: 100%, @query: 0) {
@@ -18,7 +21,7 @@
             .js-toggle &                { .translate; }
 
             @media screen and (min-width: @query) {
-               &                        { .translate; }
+                &                       { .translate; }
             }
         } 
     }

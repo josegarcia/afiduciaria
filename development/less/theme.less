@@ -81,9 +81,14 @@
          // border-bottom: 2px solid @primary; text-decoration: none;
     }
 
-    body.fideicomisos .c-nav .resumen,
+    body.fideicomisos.resumen .c-nav .resumen,
+    body.fideicomisos.informes .c-nav .informes,
+    body.fondos.resumen .c-nav .resumen,
+    body.fondos.movimientos .c-nav .movimientos,
     body .c-nav li:hover  {
-         background-color: @hexef; color: @text-base; text-decoration: none; .border(0 1px 0 0, solid, @hexd);
+         // background-color: @hexef; color: @text-base; text-decoration: none; .border(0 1px 0 0, solid, @hexd);
+        &                   { .border(0 0 0 3px, solid, @primary); .border(0 0 3px 0, solid, @primary, 1025px); }
+        & a                 { color: @primary; }
     }
 
 //  Page Components
@@ -169,10 +174,8 @@
     }
 
     .panel.primary              { 
-        &                       { .border(0 1px 1px 0, solid, @hexc); }
-        & .heading              { .size(100%, 30px); .spacing(0, .4em 1em); .border(1px 0 0 1px, solid, @hexc); .font(bold 1em); .back.color(@hexe); }
-        & input[type="text"]    { .font-size(1.1em); .border; .shadow; }
-        & table                 { .border(1px 0 0 1px, solid, @hexc); }
+        &                       { color: @hex4; background-color: #fff; .padding(.5em @base-padding); .shadow(0 1px 2px, #ccc, .6); .border(1px, solid, @hexc @hexb @hexb @hexc); .margin(@base-margin 0); }
+        &.full                  { .margin(64px 0 @base-margin, 1025px); }
     }
 
     .table.primary              {

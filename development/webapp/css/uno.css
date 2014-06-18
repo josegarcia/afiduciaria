@@ -1156,7 +1156,7 @@ html .uppercase {
 }
 .scrollable {
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 .scrollable div {
@@ -1607,14 +1607,25 @@ select option,
 select {
   padding: 5px;
 }
-.inicio .inicio,
 body.inicio nav .inicio,
-body.inicio nav .inicio,
-body.inicio nav .inicio,
+body.fideicomisos nav .fideicomisos,
+body.pensiones nav .pensiones,
+body.fondos nav .fondos,
+body.certificados nav .certificados,
+body.transacciones nav .transacciones,
 body nav li a:hover {
-  background-color: #f6f6f7;
+  background-color: #ffffff;
   color: #00275b;
   text-decoration: none;
+}
+body.fideicomisos .c-nav .resumen,
+body .c-nav li:hover {
+  background-color: #f6f6f7;
+  color: #444444;
+  text-decoration: none;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #dddddd;
 }
 .button-group,
 .m-options,
@@ -1989,6 +2000,14 @@ li {
 ul.horizontal li {
   width: auto;
 }
+label.auto {
+  max-width: 100%;
+}
+.scrollable {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
 .m-brand {
   width: auto;
 }
@@ -2224,7 +2243,7 @@ ul.horizontal li {
   border-style: none;
 }
 .m-mainnav .subitems li a {
-  padding: 7px 10px 7px 20px;
+  padding: 7px 10px 7px 25px;
 }
 @media all and (min-width: 1025px) {
   .m-mainnav .subitems li a {
@@ -2279,6 +2298,87 @@ ul.horizontal li {
     margin-left: 50%;
   }
 }
+.m-resumen > ul {
+  border-top: 1px solid #cccccc;
+}
+.m-resumen > ul > li {
+  border-bottom: 1px solid #cccccc;
+  padding: 1em;
+  font-size: 1.2em;
+}
+.m-resumen > ul > li > strong {
+  width: 25%;
+}
+.m-resumen > ul > li > div {
+  width: 75%;
+}
+.m-resumen > ul > li > strong {
+  display: block;
+  position: relative;
+  float: left;
+}
+.c-nav {
+  background-color: #ffffff;
+}
+.m-fideicomisos {
+  margin-top: 14px;
+}
+.m-fideicomisos strong {
+  margin: .2em 0 .3em;
+  display: block;
+}
+.m-subnav {
+  font: 1.2em a;
+  font-family: inherit;
+  text-align: right;
+}
+.m-subnav li {
+  display: block;
+  vertical-align: top;
+  text-align: left;
+  width: 100%;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: transparent;
+}
+@media all and (min-width: 1025px) {
+  .m-subnav li {
+    display: inline-block;
+  }
+}
+@media all and (min-width: 1025px) {
+  .m-subnav li {
+    margin: 0 0 0;
+  }
+}
+@media all and (min-width: 1025px) {
+  .m-subnav li {
+    width: auto;
+  }
+}
+.m-subnav li a {
+  padding: 7px 10px;
+  display: block;
+  color: #444444;
+}
+@media all and (min-width: 1025px) {
+  .m-subnav li a {
+    padding: 18px 20px 4px;
+  }
+}
+@media all and (min-width: 1025px) {
+  .m-subnav li a {
+    display: inline-block;
+  }
+}
+.m-subnav li a:hover {
+  text-decoration: none;
+}
+@media all and (min-width: 1025px) {
+  .m-subnav li a:hover {
+    padding: 16px 20px 6px;
+  }
+}
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
@@ -2318,7 +2418,7 @@ footer {
 }
 .m-legal {
   text-align: center;
-  height: 65px;
+  min-height: 65px;
   line-height: 65px;
 }
 .m-legal .fiduciaria a,
@@ -2338,7 +2438,6 @@ footer {
   background: #ffffff url('../images/logo-fiduciaria-small.png') no-repeat left top;
   vertical-align: top;
   margin-top: 15px;
-  float: left;
 }
 .m-legal .seven4n {
   float: right;
@@ -2350,6 +2449,29 @@ footer {
 }
 .m-legal .seven4n:hover a {
   background-position: left bottom;
+}
+.m-legal .fiduciaria {
+  float: none;
+}
+@media all and (min-width: 960px) {
+  .m-legal .fiduciaria {
+    float: left;
+  }
+}
+.m-legal span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+@media all and (min-width: 960px) {
+  .m-legal span {
+    display: inline-block;
+  }
+}
+@media all and (min-width: 960px) {
+  .m-legal span {
+    width: auto;
+  }
 }
 #container .skeyboard {
   width: 364px;
@@ -2455,6 +2577,10 @@ footer {
 .form.login select:hover,
 .form.login textarea:hover {
   border-color: #4a5d68;
+}
+.heading a {
+  font-size: 0.6em;
+  padding: 0 0 0 0.3em;
 }
 .l-logged .heading.base {
   font: 2.2em / 55px Calibri, Helvetica, Arial, sans-serif;
@@ -2619,6 +2745,16 @@ footer {
   min-width: 180px;
   padding: 5px 10px 5px 0;
   text-align: right;
+}
+.table.summary tr th,
+.table.summary tr td {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #cccccc;
+}
+.table.summary tr th,
+.table.summary tr td {
+  padding: 0.3em 0;
 }
 .color-codes {
   margin: 15px 0 0;

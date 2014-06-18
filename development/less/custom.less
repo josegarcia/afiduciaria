@@ -3,7 +3,7 @@
     @import "variables";
 
 //
-//  Base Improvements 
+//  Base
 //  ----------------------------------------------------------------------- //
 
     .form label label.error + span    { display: none; }
@@ -17,6 +17,10 @@
     li                          { list-style: none outside none; }
 
     ul.horizontal li            { width: auto; }
+
+    label.auto                  { max-width: 100%; }
+
+    .scrollable                 { .overflow(auto, hidden); }
 
 //  Header
 //  ---------------------------------------
@@ -78,7 +82,7 @@
         & .subitems             {
             &                   { .padding(0 3px 0 0, 1025px); }
             & li                { .border; }
-            & li a              { .padding(7px 10px 7px 20px); .padding(3px 20px 4px, 1025px); }
+            & li a              { .padding(7px 10px 7px 25px); .padding(3px 20px 4px, 1025px); }
             & .title            { .font(.66em); text-align: left; text-transform: uppercase; color:@hex2; padding: 0 10px; }
         }
     }
@@ -105,6 +109,28 @@
         &                       { .center-block(350px, 1025px); overflow-x: hidden; }
     }
 
+    .m-resumen                  {
+        & > ul                  { border-top: 1px solid @hexc; }
+        & > ul > li             { border-bottom: 1px solid @hexc; padding: 1em; .strong-div-width(25%, 75%); font-size: 1.2em; }
+        & > ul > li> strong     { .block; }
+    }
+
+    .c-nav                      {
+        &                       { background-color: @hexf; }
+    }
+
+    .m-fideicomisos             {
+        &                       { margin-top: @base-margin; }
+        & strong                { margin: .2em 0 .3em; display: block; }
+    }
+
+    .m-subnav {
+        &                       { .font(1.2em); text-align: right; }
+        & li                    { .display(block); .display(inline-block, 1025px); .margin(0 0 0, 1025px); vertical-align: top; text-align: left; .width(100%); .width(auto, 1025px); .border(0 1px 0 0, solid, @trans); }
+        & li a                  { .padding(7px 10px); .padding(18px 20px 4px, 1025px); .display(block); .display(inline-block, 1025px); .color(@hex4); }
+        & li a:hover            {  text-decoration: none; .padding(16px 20px 6px, 1025px); }
+    }
+
 //  Footer
 //  ---------------------------------------
 
@@ -119,13 +145,15 @@
     }
 
     .m-legal                    {
-        &                       { text-align: center; height: 65px; line-height: 65px; }
+        &                       { text-align: center; min-height: 65px; line-height: 65px; }
         & .fiduciaria a,
         & .seven4n a            { .hide-text; .inline-block; .transition(all, 150ms); }
-        & .fiduciaria a         { .size(102px, 32px); .back(@hexf, '../images/logo-fiduciaria-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; float: left; }
+        & .fiduciaria a         { .size(102px, 32px); .back(@hexf, '../images/logo-fiduciaria-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; }
         & .seven4n              { float: right; }
         & .seven4n a            { .size(38px, 12px); .back(@hexf, '../images/logo-s4n-small.png', no-repeat, left top); }
         & .seven4n:hover a      { .back.position(left bottom); }
+        & .fiduciaria           { .float(none); .float(left, 960px); }
+        & span                  { .display(block); .display(inline-block, 960px); .width(100%); .width(auto, 960px); text-align: center; }
     }
 
 //  Styles
@@ -153,6 +181,10 @@
             &.hover,
             &:hover                 {  border-color: @secondary; }
         }
+    }
+
+    .heading            {
+        & a             { font-size: 0.6em; padding:0 0 0 0.3em }
     }
 
     .l-logged .heading.base     {
@@ -192,6 +224,10 @@
         }
     }
 
+    .table.summary      { 
+        &               { .table.cell-border(0 0 1px 0, solid, @hexc); .table.padding(.3em 0); }
+    }
+
 //  Custom
 //  ---------------------------------------
 
@@ -205,7 +241,7 @@
     }
 
 
-//  dataTable
+//  Plugins
 //  ---------------------------------------
 
    .dataTables_wrapper  { text-align: center; }

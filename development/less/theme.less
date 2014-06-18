@@ -68,20 +68,23 @@
     select option,
     select                      { padding: 5px; }
 
-
-    .inicio .inicio,
-
 // Page index
 
     body.inicio nav .inicio,
-    body.inicio nav .inicio,
-    body.inicio nav .inicio,
+    body.fideicomisos nav .fideicomisos,
+    body.pensiones nav .pensiones,
+    body.fondos nav .fondos,
+    body.certificados nav .certificados,
+    body.transacciones nav .transacciones,
     body nav li a:hover  {
-         background-color: @hexef; color: @primary; text-decoration: none;
+         background-color: @hexf; color: @primary; text-decoration: none;
          // border-bottom: 2px solid @primary; text-decoration: none;
     }
 
-    // body.inicio nav .inicio:before {.arrow.top(6px, @primary); .position.left-bottom(absolute, 50%, 0); margin-left: -3px}
+    body.fideicomisos .c-nav .resumen,
+    body .c-nav li:hover  {
+         background-color: @hexef; color: @text-base; text-decoration: none; .border(0 1px 0 0, solid, @hexd);
+    }
 
 //  Page Components
 

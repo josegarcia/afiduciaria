@@ -2803,6 +2803,8 @@ footer {
 }
 .color-codes li {
   margin: 3px 0;
+  padding-right: 10px;
+  width: auto;
 }
 .color-codes li span {
   width: 15px;
@@ -2817,10 +2819,61 @@ footer {
   background-color: #00275b;
 }
 .color-codes .var2 {
-  background-color: #008AC9;
+  background-color: #dedc1e;
 }
 .color-codes .var3 {
-  background-color: #D8DFE3;
+  background-color: #b3bec6;
+}
+.color-codes .var4 {
+  background-color: #00a49e;
+}
+.color-codes .var5 {
+  background-color: #eb6e08;
+}
+.color-codes .var6 {
+  background-color: #00a4da;
+}
+.color-codes .var7 {
+  background-color: #fff;
+}
+.color-codes .var8 {
+  background-color: #8b91b2;
+}
+.color-codes .var9 {
+  background-color: #f3f1b9;
+}
+.color-codes .var10 {
+  background-color: #6c7e89;
+}
+.color-codes .var11 {
+  background-color: #a3d2ce;
+}
+.color-codes .var12 {
+  background-color: #fac99e;
+}
+.color-codes .var13 {
+  background-color: #9ecfe9;
+}
+.color-codes .var14 {
+  background-color: #8f9ea8;
+}
+.color-codes .var15 {
+  background-color: #596490;
+}
+.color-codes .var16 {
+  background-color: #ecea8f;
+}
+.color-codes .var17 {
+  background-color: #4a5d68;
+}
+.color-codes .var18 {
+  background-color: #66bbb5;
+}
+.color-codes .var19 {
+  background-color: #f6ab6d;
+}
+.color-codes .var20 {
+  background-color: #5eb6de;
 }
 .dataTables_wrapper {
   text-align: center;

@@ -12,6 +12,8 @@
   <link href="../css/uno.css" rel="stylesheet">
   <link href="../fonts/FontAwesome/fonts/font-awesome.min.css" rel="stylesheet">
   <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
+  <link href="../javascript/libs/picker/default.css" rel="stylesheet">
+  <link href="../javascript/libs/picker/default.date.css" rel="stylesheet">
   <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
   <script src="../javascript/modernizr.js"></script>
   <script src="../javascript/modernizr.load.js"></script>
@@ -70,107 +72,89 @@
     </div>
     <section class="text-frame">
       <div class="panel primary full">
+        <h1 class="heading primary">Saldos históricos</h1>
         <form class="form filters">
-          <ul>
-            <li><strong>Seleccionar fondo:</strong>
+          <ul class="grid split-2 separate">
+            <li><strong>Seleccionar encargo:</strong>
               <div>
-                <label class="auto">
+                <label>
                   <select>
-                    <option>Todos</option>
-                    <option selected>Fondo abierto con pacto de permanencia CxC</option>
-                    <option>Fondo abierto Alianza</option>
+                    <option>Encargo 1 - Id. 8012345</option>
+                    <option selected>Universidad - Id. 85855</option>
+                    <option>Encargo 3 - Id. 8012345</option>
                   </select>
                 </label>
               </div>
             </li>
+            <li> <strong>Periodo:</strong>
+              <div class="grid split-2 separate">
+                <div>
+                  <input type="text" class="datepicker"><span>Desde</span>
+                </div>
+                <div>
+                  <input type="text" class="datepicker"><span>Hasta</span>
+                </div>
+              </div>
+            </li>
           </ul>
+          <div class="button-group">
+            <button type="button" class="button primary">Consultar</button>
+          </div>
         </form>
         <div class="m-results">
-          <h2> <i class="fa fa-suitcase"></i>Fondo abierto con pacto de permanencia CxC</h2>
+          <h2> <i class="fa fa-suitcase"></i>Universidad - Id. 85855</h2>
           <div class="scrollable">
             <table class="table single striped">
               <thead>
                 <tr>
-                  <th>Encargo</th>
-                  <th>Saldo disponible</th>
-                  <th>Saldo en canje</th>
+                  <th>Fecha</th>
+                  <th>Saldo inicio día</th>
+                  <th>Aportes del día</th>
+                  <th>Retiros del día</th>
                   <th>Saldo total</th>
-                  <th> </th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Encargo 1</td>
+                  <td>10/12/2014</td>
                   <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
                 <tr>
-                  <td>Encargo 1</td>
+                  <td>10/12/2014</td>
                   <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
                 <tr>
-                  <td>Encargo 1</td>
+                  <td>10/12/2014</td>
                   <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
                 <tr>
-                  <td>Encargo 1</td>
+                  <td>10/12/2014</td>
                   <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
                 <tr>
-                  <td>Encargo 1</td>
+                  <td>10/12/2014</td>
                   <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
-                </tr>
-                <tr>
-                  <td>Encargo 1</td>
-                  <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
-                </tr>
-                <tr>
-                  <td>Encargo 1</td>
-                  <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
-                </tr>
-                <tr>
-                  <td>Encargo 1</td>
-                  <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
-                </tr>
-                <tr>
-                  <td>Encargo 1</td>
-                  <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="#">Saldos históricos</a></td>
-                </tr>
-                <tr>
-                  <td>Encargo 1</td>
-                  <td>$5'000.000</td>
-                  <td>$5'000.000</td>
-                  <td>$16'000.000</td>
-                  <td><a href="402_fondos_resumen_detalle.html">Saldos históricos</a></td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="button-group">
+            <button type="button" class="button primary">Volver atrás</button>
           </div>
         </div>
       </div>
@@ -203,5 +187,25 @@
         }
     }); 
   </script>
+  <script src="../javascript/libs/picker/picker.js"></script>
+  <script src="../javascript/libs/picker/picker.date.js"></script>
   <script src="../javascript/libs/uform/uform.js"></script>
+  <script>
+    jQuery.extend(jQuery.fn.pickadate.defaults, {
+        monthsFull: [ 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre' ],
+        monthsShort: [ 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic' ],
+        weekdaysFull: [ 'domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado' ],
+        weekdaysShort: [ 'dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb' ],
+        today: 'hoy',
+        clear: 'borrar',
+        firstDay: 1,
+        format: 'dddd d !de mmmm !de yyyy',
+        formatSubmit: 'yyyy/mm/dd'
+    });
+    
+    $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: true
+    });
+  </script>
 </body>

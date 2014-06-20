@@ -20,10 +20,12 @@
     footer > section            { .padding(7px 2%); .color(@hex8); font-size: .9em; }
 
 
+    .l-admin main,
     .l-logged main,
     .l-public main              { .back.color(@hexc); }
 
     @media all and (min-width: 1025px) {
+        .l-admin main,
         .l-logged main,
         .l-public main          { .back.color(@hexef); }
     }
@@ -86,8 +88,7 @@
     body.fondos.resumen .c-nav .resumen,
     body.fondos.movimientos .c-nav .movimientos,
     body .c-nav li:hover  {
-         // background-color: @hexef; color: @text-base; text-decoration: none; .border(0 1px 0 0, solid, @hexd);
-        &                   { .border(0 0 0 3px, solid, @primary); .border(0 0 3px 0, solid, @primary, 1025px); }
+        &                   { .border(0 0 3px 0, solid, @primary); }
         & a                 { color: @primary; }
     }
 
@@ -127,7 +128,6 @@
         & i                     { margin-right: 10px; }
         & span                  { font-size: 0.76em; }
     }
-
 
     .form.primary               { 
         & li strong             { .font(bold 1.2em); .block; padding: .2em 0; }

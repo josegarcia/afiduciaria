@@ -659,6 +659,13 @@ table.rounded tr:last-child td:last-child {
     width: 44%;
   }
 }
+.form.auto li > strong {
+  margin-right: 1em;
+  float: right;
+}
+.form.auto li > div {
+  width: auto;
+}
 .message .button.close {
   width: 28px;
   height: 28px;
@@ -1508,11 +1515,13 @@ footer > section {
   color: #888888;
   font-size: .9em;
 }
+.l-admin main,
 .l-logged main,
 .l-public main {
   background-color: #cccccc;
 }
 @media all and (min-width: 1025px) {
+  .l-admin main,
   .l-logged main,
   .l-public main {
     background-color: #f6f6f7;
@@ -1626,20 +1635,9 @@ body.fideicomisos.informes .c-nav .informes,
 body.fondos.resumen .c-nav .resumen,
 body.fondos.movimientos .c-nav .movimientos,
 body .c-nav li:hover {
-  border-width: 0 0 0 3px;
+  border-width: 0 0 3px 0;
   border-style: solid;
   border-color: #00275b;
-}
-@media all and (min-width: 1025px) {
-  body.fideicomisos.resumen .c-nav .resumen,
-  body.fideicomisos.informes .c-nav .informes,
-  body.fondos.resumen .c-nav .resumen,
-  body.fondos.movimientos .c-nav .movimientos,
-  body .c-nav li:hover {
-    border-width: 0 0 3px 0;
-    border-style: solid;
-    border-color: #00275b;
-  }
 }
 body.fideicomisos.resumen .c-nav .resumen a,
 body.fideicomisos.informes .c-nav .informes a,
@@ -2016,6 +2014,24 @@ label.auto {
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
+.align {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.align.center {
+  text-align: center;
+}
+.align.left {
+  text-align: left;
+}
+.align.justify {
+  text-align: justify;
+}
+.align.right {
+  text-align: right;
+}
 .m-brand {
   width: auto;
 }
@@ -2102,6 +2118,9 @@ label.auto {
 }
 .m-user-options .options.show + .option-box {
   display: block;
+}
+.m-user-options .options .fa {
+  margin: 0;
 }
 .m-user-options .option-box {
   position: absolute;
@@ -2593,6 +2612,25 @@ footer {
 .form.login textarea:hover {
   border-color: #4a5d68;
 }
+.form.secondary li strong {
+  font: bold 1.2em a;
+  font-family: inherit;
+  display: block;
+  position: relative;
+  float: left;
+  padding: .2em 0;
+}
+.form.secondary li strong span {
+  font: 0.9em / 0.7 a;
+  font-family: inherit;
+}
+.form.secondary li {
+  padding-bottom: .5em;
+  border-bottom: 1px dotted #cccccc;
+}
+.form.secondary li div {
+  padding-top: 1em;
+}
 .heading a {
   font-size: 0.6em;
   padding: 0 0 0 0.3em;
@@ -2834,7 +2872,7 @@ footer {
   background-color: #00a4da;
 }
 .color-codes .var7 {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .color-codes .var8 {
   background-color: #8b91b2;
@@ -2875,9 +2913,82 @@ footer {
 .color-codes .var20 {
   background-color: #5eb6de;
 }
+.datepicker {
+  background: transparent url('../images/forms/date.png') no-repeat top right;
+  cursor: default;
+  padding-right: 36px;
+}
 .dataTables_wrapper {
   text-align: center;
 }
 .fa {
   margin-right: 10px;
+}
+.uno .picker__box {
+  padding: 0 1em .5em;
+}
+.uno .picker__nav--prev,
+.uno .picker__nav--next {
+  width: 56px;
+  height: 32px;
+  z-index: 2;
+}
+.uno .picker__month,
+.uno .picker__year {
+  width: auto;
+  display: inline-block;
+  float: none;
+}
+.uno .picker__table td,
+.uno .picker__table th,
+.uno .picker__table {
+  border: 0 none;
+  text-align: center;
+}
+.uno .picker__table {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+.uno .picker__day {
+  text-align: center;
+}
+.uno .picker__button--today,
+.uno .picker__button--clear {
+  padding: 0;
+  width: 46%;
+}
+.uno .picker__button--clear:before {
+  content: '';
+}
+.uno .picker__button--today:before {
+  border-width: 0;
+  border-style: none;
+}
+.uno .picker--opened .picker__holder {
+  overflow: hidden;
+}
+.uno .picker__day--highlighted:hover,
+.uno .picker--focused .picker__day--highlighted {
+  background-color: #00275b;
+}
+.uno .picker__day--selected,
+.picker__day--selected:hover {
+  border-color: #00275b;
+}
+.uno .picker__day--today {
+  color: #00275b;
+}
+.uno .picker__day--today:before {
+  border-top-color: #00275b;
+}
+.uno .picker__day--highlighted {
+  background-color: #c2c5d8;
+}
+.uno .picker__day--infocus:hover,
+.uno .picker__day--outfocus:hover {
+  background-color: #c2c5d8;
+}
+.uno .picker__button--today:hover,
+.uno .picker__button--clear:hover {
+  background-color: #c2c5d8;
 }

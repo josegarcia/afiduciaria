@@ -1,0 +1,67 @@
+main
+    section.text-frame
+        .m-parameters.panel.primary
+            h1.heading.primary Configuración de contraseña
+            .form.secondary.auto
+                ul
+                    li
+                        strong Aceptar o no la utilización de la(s) última(s) N contraseña(s) como nueva contraseña:
+                        .grid.split-2.separate
+                            label
+                                input(type="radio", name="group1")
+                                span Sí
+                            label
+                                input(type="radio", name="group1")
+                                span No
+                    li
+                        strong Número mínimo de caracteres:
+                        div
+                            label.shorter
+                                input(type="text")
+                    li
+                        strong 
+                            | Número mínimo de letras minúsculas:
+                            span (0 es no obligatorio)
+                        div
+                            label.shorter
+                                input(type="text", value="0")
+
+                    li
+                        strong
+                            | Número mínimo de letras mayúsculas:
+                            span (0 es no obligatorio)
+                        div
+                            label.shorter
+                                input(type="text", value="0")
+                    li
+                        strong
+                            | Número mínimo de caracteres numéricos:
+                            span (0 es no obligatorio)
+                        div
+                            label.shorter
+                                input(type="text", value="0")
+                    li
+                        strong 
+                            | Número de caracteres especiales:
+                            span (0 es no obligatorio)
+                        div
+                            label.shorter
+                                input(type="text", value="0")
+                    li
+                        strong Caracteres restringidos:
+                        div
+                            label.short
+                                input(type="text")
+                    li
+                        strong Periodo de cambio obligatorio:
+                        div
+                            label.shorter
+                                input(type="text")
+                                span.align.center Días
+                    li
+                        strong Número máximo de intentos de ingreso de contraseña:
+                        div
+                            label.shorter
+                                input(type="text")
+                .button-group
+                    button(type="button").button.primary Guardar cambios

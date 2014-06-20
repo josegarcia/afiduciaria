@@ -1,0 +1,39 @@
+include _includes/doctype
+    head
+        include _includes/head
+        include _includes/routines
+        //- stylesheets
+        link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
+        link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
+        link(href='../javascript/libs/picker/default.css', rel='stylesheet')
+        link(href='../javascript/libs/picker/default.date.css', rel='stylesheet')
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-logged.fondos.resumen
+        include sections/header/200
+        include sections/nav
+        include sections/main/402
+        include sections/footer
+        include sections/snippets/scripts
+        script(src='../javascript/libs/picker/picker.js')
+        script(src='../javascript/libs/picker/picker.date.js')
+        script(src='../javascript/libs/uform/uform.js')
+        script
+            jQuery.extend(jQuery.fn.pickadate.defaults, {
+                monthsFull: [ 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre' ],
+                monthsShort: [ 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic' ],
+                weekdaysFull: [ 'domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado' ],
+                weekdaysShort: [ 'dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb' ],
+                today: 'hoy',
+                clear: 'borrar',
+                firstDay: 1,
+                format: 'dddd d !de mmmm !de yyyy',
+                formatSubmit: 'yyyy/mm/dd'
+            });
+            
+            $('.datepicker').pickadate({
+                selectMonths: true,
+                selectYears: true
+            });

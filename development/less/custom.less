@@ -22,6 +22,10 @@
 
     .scrollable                 { .overflow(auto, hidden); }
 
+    .align                      { .block; .has-align; width: 100%; }
+
+    // .form.auto                  {} blah..
+
 //  Header
 //  ---------------------------------------
 
@@ -48,6 +52,7 @@
         & .options.show,
         & .options:hover        { background-color: white; color: @primary; }
         & .options.show + .option-box { .display(block); }
+        & .options .fa          { margin: 0; }
         & .option-box           {
             &                   { .position.right-top(absolute, 0, 56px); border: 1px solid #ddd; .back.color(white); .shadow(0 0 2px, #888, .4);
                                   .padding(10px 10px 0); width: 320px; }
@@ -183,6 +188,13 @@
         }
     }
 
+    .form.secondary             { 
+        & li strong             { .font(bold 1.2em); .block; padding: .2em 0; }
+        & li strong span        { .font(0.9em @d .7); }
+        & li                    {  padding-bottom: .5em; border-bottom: 1px dotted @hexc; }
+        & li div                {  padding-top: 1em; }
+    }
+
     .heading            {
         & a             { font-size: 0.6em; padding:0 0 0 0.3em }
     }
@@ -248,7 +260,7 @@
         & .var4         { background-color: #00a49e; }
         & .var5         { background-color: #eb6e08; }
         & .var6         { background-color: #00a4da; }
-        & .var7         { background-color: #fff; }
+        & .var7         { background-color: #ffffff; }
         & .var8         { background-color: #8b91b2; }
         & .var9         { background-color: #f3f1b9; }
         & .var10        { background-color: #6c7e89; }
@@ -264,9 +276,42 @@
         & .var20        { background-color: #5eb6de; }
     }
 
+    .datepicker         { .back(@trans, '../images/forms/date.png', no-repeat, top right); cursor: default; padding-right: 36px; }
+
 
 //  Plugins
 //  ---------------------------------------
 
    .dataTables_wrapper  { text-align: center; }
+   
    .fa                  { margin-right: 10px; }
+
+    // .uno.picker__active main    { z-index: 2; }
+    .uno .picker__box           { padding: 0 1em .5em; }
+    .uno .picker__nav--prev, 
+    .uno .picker__nav--next     { .size(56px, 32px); z-index: 2; }
+    .uno .picker__month,
+    .uno .picker__year          { width: auto; display: inline-block; float: none; }
+    .uno .picker__table td,
+    .uno .picker__table th,
+    .uno .picker__table         { border: 0 none; text-align: center; }
+    .uno .picker__table         { margin-top: .5em; margin-bottom: .5em; }
+    .uno .picker__day           { text-align: center; }
+    .uno .picker__button--today, 
+    .uno .picker__button--clear  { padding: 0; width: 46%; }
+    .uno .picker__button--clear:before { content: ''; }
+    .uno .picker__button--today:before { .border; }
+    .uno .picker--opened .picker__holder { overflow: hidden; }
+    // styled
+    // .uno .picker__button--today, 
+    // .uno .picker__button--clear  { .back(#1477B8); }
+    .uno .picker__day--highlighted:hover, 
+    .uno .picker--focused .picker__day--highlighted { .back.color(@primary); }
+    .uno .picker__day--selected, .picker__day--selected:hover { border-color: @primary; }
+    .uno .picker__day--today        { color: @primary; }
+    .uno .picker__day--today:before { border-top-color: @primary; }
+    .uno .picker__day--highlighted  { .back.color(@primary-lighter); }
+    .uno .picker__day--infocus:hover,
+    .uno .picker__day--outfocus:hover { .back.color(@primary-lighter); }
+    .uno .picker__button--today:hover,
+    .uno .picker__button--clear:hover  { .back.color(@primary-lighter); }

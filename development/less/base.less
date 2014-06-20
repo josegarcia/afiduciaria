@@ -240,6 +240,10 @@
             & .split-2 li       { .strong-div-width(36%, 64%, 640px); .strong-div-width(35.6%, 63.4%, 720px); }
             & .split-3 li       { .strong-div-width(36%, 64%, 640px); .strong-div-width(56%, 44%, 720px); }
         }
+        &.auto                  {
+            & li > strong       {  margin-right: 1em; float: right; }
+            & li > div          {  width: auto; }
+        }
     }
     
     .message                    {

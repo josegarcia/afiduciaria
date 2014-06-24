@@ -323,7 +323,7 @@
 			"file": "jade/701_parametros_contrasena.jade",
 			"settings":
 			{
-				"buffer_size": 724,
+				"buffer_size": 742,
 				"line_ending": "Unix"
 			}
 		},
@@ -339,8 +339,8 @@
 			"file": "less/custom.less",
 			"settings":
 			{
-				"buffer_size": 15864,
-				"line_ending": "Windows"
+				"buffer_size": 15885,
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -467,7 +467,9 @@
 	},
 	"file_history":
 	[
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
+		"/D/Proyectos/Seguros la Equidad/La Equidad ARL/maquetacion/less/queries.less",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/layout.less",
@@ -508,7 +510,6 @@
 		"/C/xampp/htdocs/xampp/index.php",
 		"/C/xampp/htdocs/any/index.html",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/dataTables/spanish.json",
-		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/103 cambiar_contrasena.jade",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/103 cambiar_contrasena.html",
 		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header.jade",
@@ -593,8 +594,7 @@
 		"/D/Proyectos/Alianza Fiduciaria/development/jade/common/head.jade",
 		"/D/Proyectos/Alianza Fiduciaria/development/jade/sections/main/000.jade",
 		"/D/Proyectos/Alianza Fiduciaria/development/jade/index.jade",
-		"/D/Proyectos/Alianza Fiduciaria/development/less/custom.less",
-		"/D/Proyectos/Alianza Fiduciaria/development/jade/login.jade"
+		"/D/Proyectos/Alianza Fiduciaria/development/less/custom.less"
 	],
 	"find":
 	{
@@ -792,7 +792,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -801,15 +801,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 724,
+						"buffer_size": 742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								527,
-								527
+								0,
+								0
 							]
 						],
 						"settings":
@@ -861,15 +861,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15864,
+						"buffer_size": 15885,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9678,
-								9678
+								0,
+								0
 							]
 						],
 						"settings":
@@ -939,10 +939,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -958,8 +958,8 @@
 						"selection":
 						[
 							[
-								1068,
-								1068
+								1340,
+								1340
 							]
 						],
 						"settings":
@@ -972,7 +972,7 @@
 						"translation.y": 360.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

@@ -20,6 +20,10 @@
     width: 110px;
 }
 
+.skeyboard .numbers.secure {
+    width: 110px;
+}
+
 .skeyboard ul li:hover {
     border: 1px solid #c8c8c8;
     top: 1px;
@@ -46,7 +50,7 @@
 }
 
 .skeyboard .delete {
-    width: 13%;
+    width: 48px;
 }
 
 .skeyboard .return {
@@ -65,34 +69,46 @@
     width: 180px;
 }
 
-.skeyboard .on {
+.skeyboard .symbol span {
     display: none;
+}
+
+.skeyboard .symbol .on {
+    display: block;
 }
 
 .skeyboard .first-row {
     clear: left;
 }
 
+.skeyboard .spacer0 {
+    width: 48px;
+}
+
 .skeyboard .spacer1 {
     display: none;
+    border: 1px solid transparent;
 }
 
 .skeyboard .spacer2 {
     width: 2%;
     border: none;
     background: none;
+    border: 1px solid transparent;
 }
 
 .skeyboard .spacer3 {
     width: 4%;
     border: none;
     background: none;
+    border: 1px solid transparent;
 }
 
 .skeyboard .spacer4 {
     width: 5%;
     border: none;
     background: none;
+    border: 1px solid transparent;
 }
 
 
@@ -100,9 +116,10 @@
     width: 37px;
     border: none;
     background: none;
+    border: 1px solid transparent;
 }
 
 
-.skeyboard .right-shift {
-    width: 13.5%;
+.skeyboard .shift {
+    width: 13.8%;
 }

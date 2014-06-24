@@ -1,7 +1,7 @@
-include _includes/doctype
+include sections/global/doctype
     head
-        include _includes/head
-        include _includes/routines
+        include sections/global/head
+        include sections/global/routines
         //- stylesheets
         link(href='../javascript/libs/skeyboard/skeyboard.css', rel='stylesheet')
         link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
@@ -12,7 +12,7 @@ include _includes/doctype
     body.uno.l-public
         include sections/snippets/skeyboard
         include sections/header/100
-        include sections/main/100
+        include sections/main/main_100
         include sections/footer
         script(src='../javascript/libs/uform/uform.js')
         script(src='../javascript/libs/skeyboard/skeyboard.js')

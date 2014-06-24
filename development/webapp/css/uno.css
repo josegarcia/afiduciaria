@@ -188,7 +188,6 @@ a,
   position: relative;
   display: inline-block;
   width: auto;
-  padding: 0 1.2em;
   border: 0;
   text-align: center;
   white-space: nowrap;
@@ -198,15 +197,13 @@ a,
   outline: 0;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
+  padding: 0 1.2em;
 }
 .button.looser {
   padding: 0 3.6em;
 }
 .button.loose {
   padding: 0 2.4em;
-}
-.button {
-  padding: 0 1.2em;
 }
 .button.tight {
   padding: 0 0.6em;
@@ -1332,14 +1329,12 @@ html .uppercase {
 }
 .l-custom main {
   margin: 0 0 0 -290px;
+  overflow-x: hidden;
 }
 @media all and (min-width: 1025px) {
   .l-custom main {
     padding: 0 0 0 290px;
   }
-}
-.l-custom main {
-  overflow-x: hidden;
 }
 .l-custom main > .text-frame,
 .l-custom main > section {
@@ -1368,10 +1363,6 @@ html .uppercase {
   }
 }
 .l-custom nav {
-  width: 290px;
-  height: 100%;
-}
-.l-custom nav {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   -webkit-transform: translate(-290px, 0);
@@ -1379,6 +1370,8 @@ html .uppercase {
   -ms-transform: translate(-290px, 0);
   transform: translate(-290px, 0);
   z-index: 2;
+  width: 290px;
+  height: 100%;
 }
 .js-toggle .l-custom nav {
   -webkit-transform: translate(0, 0);
@@ -1395,10 +1388,6 @@ html .uppercase {
   }
 }
 .l-logged nav {
-  width: 290px;
-  height: 100%;
-}
-.l-logged nav {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   -webkit-transform: translate(-290px, 0);
@@ -1406,6 +1395,8 @@ html .uppercase {
   -ms-transform: translate(-290px, 0);
   transform: translate(-290px, 0);
   z-index: 2;
+  width: 290px;
+  height: 100%;
 }
 .js-toggle .l-logged nav {
   -webkit-transform: translate(0, 0);
@@ -1428,10 +1419,8 @@ html .uppercase {
   }
 }
 .l-logged main {
-  margin: 0 0 0 -290px;
-}
-.l-logged main {
   overflow-x: hidden;
+  margin: 0 0 0 -290px;
 }
 .l-logged main > .text-frame,
 .l-logged main > section {
@@ -1906,6 +1895,9 @@ body .c-nav li:hover a {
   border-bottom: 1px solid #ddd;
   position: absolute;
 }
+.tabset.primary > .summary {
+  max-width: 32.5%;
+}
 .tabset.primary > .summary a {
   padding: 0 0.5em 0;
   font: 1.2em / 37px a;
@@ -1921,9 +1913,6 @@ body .c-nav li:hover a {
   .tabset.primary > .summary a {
     padding: 0 2em 0;
   }
-}
-.tabset.primary > .summary {
-  max-width: 32.5%;
 }
 .tabset.primary > .summary.active {
   max-width: 32.5%;
@@ -2553,6 +2542,7 @@ footer {
 }
 #container input.keyboard {
   background: #ffffff url('../images/forms/keyboard.png') no-repeat 100% 0;
+  padding-right: 45px;
 }
 #container .skeyboard {
   font-size: 1.2em;

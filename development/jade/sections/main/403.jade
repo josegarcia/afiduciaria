@@ -1,0 +1,122 @@
+main
+    .c-nav
+        .text-frame.form.selection
+            .m-subnav
+                ul
+                    li.resumen
+                        a(href="#") Resúmen
+                    li.movimientos
+                        a(href="#") Movimientos
+                    li.extractos
+                        a(href="#") Extractos
+                    li.certificados
+                        a(href="#") Certificados
+                    li.transacciones
+                        a(href="#") Transacciones
+    section.text-frame
+        .panel.primary.full
+            h1.heading.primary Movimientos
+            form.form.filters
+                ul.grid.split-2.separate
+                    li
+                        strong Fondos:
+                        div
+                            label
+                                select
+                                    option Fondo 1
+                                    option(selected) Fondo abierto alianza ssmp "alianza"
+                                    option Fondo 2
+                    li
+                        strong Encargos:
+                        div
+                            label
+                                select
+                                    option Encargo 1
+                                    option(selected) 60030016548 - Mifondo - Fondo abierto alianza ssmp "alianza"
+                                    option Encargo 2
+                ul.grid.split-2.separate
+                    li
+                        strong Periodo:
+                        .grid.split-2.separate
+                            div
+                                input(type="text").datepicker
+                                span Desde
+                            div
+                                input(type="text").datepicker
+                                span Hasta
+                    li
+                        strong Tipo de operación:
+                        div
+                            label
+                                select
+                                    option Algunos
+                                    option(selected) Todos
+                                    option Ninguno
+                ul.grid.split-2.separate
+                    li
+                        strong Identificación beneficiario:
+                        div
+                            label
+                                input(type="text")
+                    li
+                        strong Valor:
+                        div
+                            label
+                                input(type="text")
+                .button-group
+                    button(type="button").button.primary Consultar
+            .m-results
+                .scrollable
+                    table.table.single.striped
+                        thead
+                            tr
+                                th Fecha transacción
+                                th Tipo de operación
+                                th Concepto
+                                th Valor
+                                th GMF
+                                th Costo
+                                th Retención
+                                th Total
+                                th Nombre beneficiario
+                        tbody
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td Retiro inversionista fondos
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td Melisa Morales
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td Retención contingente
+                                td 500.000
+                                td 0
+                                td 500.000
+                                td 0
+                                td 500.000
+                                td Melisa Morales
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td Retiro inversionista fondos
+                                td 0
+                                td 0
+                                td 0
+                                td 1'200.000
+                                td 0
+                                td Melisa Morales
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td Recaudo aportes fondos
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td 0
+                                td Melisa Morales

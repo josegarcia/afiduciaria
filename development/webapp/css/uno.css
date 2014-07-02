@@ -1623,6 +1623,9 @@ body.fideicomisos.resumen .c-nav .resumen,
 body.fideicomisos.informes .c-nav .informes,
 body.fondos.resumen .c-nav .resumen,
 body.fondos.movimientos .c-nav .movimientos,
+body.fondos.extractos .c-nav .extractos,
+body.fondos.certificados .c-nav .certificados,
+body.fondos.transacciones .c-nav .transacciones,
 body .c-nav li:hover {
   border-width: 0 0 3px 0;
   border-style: solid;
@@ -1632,6 +1635,9 @@ body.fideicomisos.resumen .c-nav .resumen a,
 body.fideicomisos.informes .c-nav .informes a,
 body.fondos.resumen .c-nav .resumen a,
 body.fondos.movimientos .c-nav .movimientos a,
+body.fondos.extractos .c-nav .extractos a,
+body.fondos.certificados .c-nav .certificados a,
+body.fondos.transacciones .c-nav .transacciones a,
 body .c-nav li:hover a {
   color: #00275b;
 }
@@ -2021,6 +2027,9 @@ label.auto {
 .align.right {
   text-align: right;
 }
+table thead tr th {
+  line-height: 1;
+}
 .m-brand {
   width: auto;
 }
@@ -2033,7 +2042,7 @@ label.auto {
   display: block;
   width: 100%;
   height: 120px;
-  padding: 20px 0 ;
+  padding: 5px 0 ;
 }
 .m-brand .brand strong {
   display: none;
@@ -2789,6 +2798,15 @@ footer {
   padding: 5px 10px 5px 0;
   text-align: right;
 }
+.panel.recap .overview .messanges {
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+.panel.recap .overview .loader {
+  background: transparent url('../images/loader.gif') no-repeat center 1.5em;
+  padding-top: 3.5em;
+}
 .table.summary tr th,
 .table.summary tr td {
   border-width: 0 0 1px 0;
@@ -2904,12 +2922,21 @@ footer {
   background-color: #5eb6de;
 }
 .datepicker {
-  background: transparent url('../images/forms/date.png') no-repeat top right;
+  background: transparent url('../images/forms/date.jpg') no-repeat top right;
   cursor: default;
   padding-right: 36px;
 }
 .dataTables_wrapper {
   text-align: center;
+}
+.dataTables_wrapper .dataTable thead .sorting {
+  background: transparent url('../javascript/libs/dataTables/images/sort_both.png') no-repeat right center;
+}
+.dataTables_wrapper .dataTable thead .sorting_asc {
+  background: transparent url('../javascript/libs/dataTables/images/sort_asc.png') no-repeat right center;
+}
+.dataTables_wrapper .dataTable thead .sorting_desc {
+  background: transparent url('../javascript/libs/dataTables/images/sort_desc.png') no-repeat right center;
 }
 .fa {
   margin-right: 10px;

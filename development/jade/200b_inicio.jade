@@ -1,0 +1,95 @@
+include sections/global/doctype
+    head
+        include sections/global/head
+        include sections/global/routines
+        //- stylesheets
+        link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-logged.inicio
+        include sections/header/200
+        include sections/nav
+        include sections/main/200b
+        include sections/footer
+        script(src='../javascript/libs/chart.min.js')
+        //- script(src='../javascript/libs/dataTables/dataTables.jqueryui.css')
+        script(src='../javascript/libs/dataTables/jquery.dataTables.min.js')
+        script(src='../javascript/scripts.js')
+        script.
+            //- var setupCanvas;
+
+            //- setupCanvas = function(canvas) {
+            //-     var ctx, newWidth;
+            //-     canvas = $(canvas);
+            //-     newWidth = canvas.parent().width();
+            //-     canvas.prop({
+            //-         width: newWidth,
+            //-         height: 320
+            //-     });
+            //-     ctx = canvas.get(0).getContext("2d");
+            //-     return new Chart(ctx).Pie(mydata);
+            //- };
+
+            //- (function(canvas) {
+            //-     setupCanvas(canvas);
+            //-     return $(window).resize(function() {
+            //-         return setupCanvas(canvas);
+            //-     });
+            //- })("#myChart");
+            
+            var mydata = [
+                {
+                    value: 100,
+                    color : "#00275b"
+                },
+                {
+                    value : 20,
+                    color: "#dedc1e"
+                },
+                {
+                    value : 50,
+                    color : "#b3bec6"
+                }
+            ];
+
+            $(document).ready(function() {
+                var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
+            });
+
+
+        script.
+            $.fn.dataTableExt.oStdClasses.sPaging = "pagination primary ";
+
+            $('#dataTable').dataTable( {
+                "filter"            : false,
+                "bLengthChange"     : false,
+                "info"              : false,
+                "iDisplayLength"    : 5,
+                "language"          : 
+                {
+                    "url" : "../javascript/libs/dataTables/spanish.json"
+                }
+            });
+
+        script.
+            $('#incFont').click(function(){   
+                curSize= parseInt($('main').css('font-size')) + 2;
+                
+                if(curSize<=18){
+                    $('main').css('font-size', curSize);
+                }
+            }); 
+            
+            $('#resetFont').click(function(){   
+                    $('main').css('font-size', 14);
+            }); 
+            
+            $('#decFont').click(function(){   
+                curSize= parseInt($('main').css('font-size')) - 2;
+                
+                if(curSize>=12){
+                    $('main').css('font-size', curSize);
+                }
+            }); 

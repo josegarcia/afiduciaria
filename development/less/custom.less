@@ -26,13 +26,17 @@
 
     // .form.auto                  {} blah..
 
+    table thead tr th { 
+        line-height: 1; 
+    }
+
 //  Header
 //  ---------------------------------------
 
     .m-brand                    {
         &                       { width: auto; }
         & .brand                { .size(200px, 120px); margin: 0; }
-        & .brand a              { .display(block); .size(100%, 120px); padding: 20px 0 ; }
+        & .brand a              { .display(block); .size(100%, 120px); padding: 5px 0 ; }
         & .brand  strong        { .display(none); }
         & .valores              { .width; float: right; }
     }
@@ -232,7 +236,9 @@
             & li         { padding: 5px 0; .border(0 0 1px 0, dotted, #ccc); }
             & li:last-child { border:0; }
             & .title     { width:50%; min-width: 180px; padding: 5px 0 5px 10px; }
-            & .value     { width:50%; min-width: 180px; padding: 5px 10px 5px 0;  text-align: right;}
+            & .value     { width:50%; min-width: 180px; padding: 5px 10px 5px 0;  text-align: right; }
+            & .messanges { padding: 1em; text-align: center; font-weight: bold; }
+            & .loader    { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
         }
     }
 
@@ -276,13 +282,16 @@
         & .var20        { background-color: #5eb6de; }
     }
 
-    .datepicker         { .back(@trans, '../images/forms/date.png', no-repeat, top right); cursor: default; padding-right: 36px; }
+    .datepicker         { .back(@trans, '../images/forms/date.jpg', no-repeat, top right); cursor: default; padding-right: 36px; }
 
 
 //  Plugins
 //  ---------------------------------------
 
    .dataTables_wrapper  { text-align: center; }
+   .dataTables_wrapper .dataTable thead .sorting { .back(@trans, "../javascript/libs/dataTables/images/sort_both.png", no-repeat, right center); }
+   .dataTables_wrapper .dataTable thead .sorting_asc { .back(@trans, "../javascript/libs/dataTables/images/sort_asc.png", no-repeat, right center); }
+   .dataTables_wrapper .dataTable thead .sorting_desc { .back(@trans, "../javascript/libs/dataTables/images/sort_desc.png", no-repeat, right center); }
    
    .fa                  { margin-right: 10px; }
 

@@ -1,0 +1,150 @@
+<!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="es"> <![endif]-->
+<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<head>
+  <title>Alianza Fiduciaria</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Seven4n">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+  <link href="../css/uno.css" rel="stylesheet">
+  <link href="../fonts/FontAwesome/fonts/font-awesome.min.css" rel="stylesheet">
+  <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
+  <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
+  <script src="../javascript/modernizr.js"></script>
+  <script src="../javascript/modernizr.load.js"></script>
+</head>
+<body class="uno l-admin">
+  <header>
+    <section class="text-frame">
+      <div class="m-sidemenu"><a href="#" class="toggle js-navbar"><i class="fa fa-bars"></i></a></div>
+      <div class="m-brand">
+        <h1 class="brand fiduciaria"><a href="../index.html"><img src="../images/logo-fiduciaria.png"><strong> Alianza Fiduciaria</strong></a></h1>
+      </div>
+      <div class="m-user-options"><a href="#" class="options"><i class="fa fa-cog"></i></a>
+        <div class="option-box hide"><a href="#" class="to-left">Actualizar datos</a>
+          <div class="name">Liliana Patricia Delgado</div>
+          <div class="email">liliana.delgado@gmail.com</div>
+          <div class="button-group">
+            <button type="button" class="button primary loose"><i class="fa fa-signout"></i>Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+      <div class="m-font-size"><a href="#" id="decFont" class="fontsize">A-</a><a href="#" id="resetFont" class="fontsize">A</a><a href="#" id="incFont" class="fontsize">A+</a></div>
+    </section>
+  </header>
+  <main>
+    <section class="text-frame">
+      <div class="m-parameters panel primary">
+        <h1 class="heading primary">Configuración de contraseña</h1>
+        <div class="form secondary auto">
+          <ul>
+            <li><strong>Aceptar o no la utilización de la(s) última(s) N contraseña(s) como nueva contraseña:</strong>
+              <div class="grid split-2 separate">
+                <label>
+                  <input type="radio" name="group1"><span>Sí</span>
+                </label>
+                <label>
+                  <input type="radio" name="group1"><span>No</span>
+                </label>
+              </div>
+            </li>
+            <li><strong>Número mínimo de caracteres:</strong>
+              <div>
+                <label class="shorter">
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+            <li><strong>
+                 
+                Número mínimo de letras minúsculas:<span>(0 es no obligatorio)</span></strong>
+              <div>
+                <label class="shorter">
+                  <input type="text" value="0">
+                </label>
+              </div>
+            </li>
+            <li><strong>Número mínimo de letras mayúsculas:<span>(0 es no obligatorio)</span></strong>
+              <div>
+                <label class="shorter">
+                  <input type="text" value="0">
+                </label>
+              </div>
+            </li>
+            <li><strong>Número mínimo de caracteres numéricos:<span>(0 es no obligatorio)</span></strong>
+              <div>
+                <label class="shorter">
+                  <input type="text" value="0">
+                </label>
+              </div>
+            </li>
+            <li><strong>
+                 
+                Número de caracteres especiales:<span>(0 es no obligatorio)</span></strong>
+              <div>
+                <label class="shorter">
+                  <input type="text" value="0">
+                </label>
+              </div>
+            </li>
+            <li><strong>Caracteres restringidos:</strong>
+              <div>
+                <label class="short">
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+            <li><strong>Periodo de cambio obligatorio:</strong>
+              <div>
+                <label class="shorter">
+                  <input type="text"><span class="align center">Días</span>
+                </label>
+              </div>
+            </li>
+            <li><strong>Número máximo de intentos de ingreso de contraseña:</strong>
+              <div>
+                <label class="shorter">
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+          </ul>
+          <div class="button-group">
+            <button type="button" class="button primary">Guardar cambios</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="text-frame">
+      <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
+    </section>
+  </footer>
+  <script src="../javascript/scripts.js"></script>
+  <script>
+    $('#incFont').click(function(){   
+        curSize= parseInt($('main').css('font-size')) + 2;
+        
+        if(curSize<=18){
+            $('main').css('font-size', curSize);
+        }
+    }); 
+    
+    $('#resetFont').click(function(){   
+            $('main').css('font-size', 14);
+    }); 
+    
+    $('#decFont').click(function(){   
+        curSize= parseInt($('main').css('font-size')) - 2;
+        
+        if(curSize>=12){
+            $('main').css('font-size', curSize);
+        }
+    }); 
+  </script>
+  <script src="../javascript/libs/uform/uform.js"></script>
+</body>

@@ -1,0 +1,41 @@
+main
+    section.text-frame
+        .grid.split-2
+            .m-publicidad
+                img(src='../images/img-login.png')
+            .m-ingreso.panel.login
+                h2.subhead Ingreso usuarios
+                .message.primary.error.js-close
+                    p Nombre de usuario o contraseña no válidos, inténtelo nuevamente.
+                form.form.login
+                    ol
+                        li 
+                            strong Documento de identificación
+                            div.grid.split-5.separate
+                                label.span-2
+                                    select
+                                        option CC
+                                        option CE
+                                        option NIT
+                                    span Tipo
+                                label.span-3
+                                    input(type="text")
+                                    label.error Complete este campo
+                                    span Número
+                        li
+                            mixin skeyboard
+                    .button-group.full
+                        button(type="submit").button.primary Ingresar
+                    div
+                        a(href="#").right Registrese aquí
+        .m-recomendaciones
+            p 
+                strong RECOMENDACIONES
+                |  I. Ingrese únicamente al sitio web de Alianza digitando en la barra de direcciones: www.alianza.com.co. II. Alianza Fiduciaria nunca le solicitará sus datos de acceso, claves y datos personales por medio de correos electrónicos. La información suministrada por Usted es de absoluta reserva y confidencialidad. III. Mantenga actualizado su computador personal con programas de seguridad informática como: antivirus, antispyware y firewall personal, que le brinden protección contra el espionaje y robo de información. IV.Por su seguridad, le sugerimos registrar sus transacciones por Internet desde el computador personal en su casa u oficina. En algunos sitios públicos (café internet, bibliotecas, salas de cómputo en universidades, aeropuertos, etc.), pueden ser instalados programas espías para acceder a su información confidencial.
+        .m-certificados
+            span.amv Amv
+            span.verisign Verisign
+            span.super Superintendencia financiera de colombia
+
+
+

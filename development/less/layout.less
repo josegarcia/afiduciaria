@@ -1,0 +1,76 @@
+//
+//  Layout 
+//  ----------------------------------------------------------------------- */
+
+    .offside () {
+        .main (@distance: 100%, @query: 0) { 
+            &                           {  overflow-x: hidden; }
+            & > .text-frame,
+            & > section                 { .transition(all, 0.3s); }
+            .js-toggle & > .text-frame,
+            .js-toggle & > section      { .translate(@distance, 0); }
+            // .js-toggle.touch body   { position: fixed; } // screw the animation
+
+            @media screen and (min-width: @query) {
+                .js-toggle & > .text-frame,
+                .js-toggle & > section   { .translate; }
+            }
+        }
+        .side (@distance: 100%, @query: 0) {
+            &                           { .transition(all, 0.3s); .translate(-@distance, 0); .index(2); }
+            .js-toggle &                { .translate; }
+
+            @media screen and (min-width: @query) {
+                &                       { .translate; }
+            }
+        } 
+    }
+
+//  Sections 
+
+    .layout {
+        .padding-left (@padding: 0, @query: 0) {
+            @media screen and (min-width: @query) { 
+                &               { padding-left: @padding; }
+            }
+        }
+
+        .fix-nav-left (@width: 100%, @navwidth: 100%, @headwidth: 90px, @query: 0) {
+            @media screen and (min-width: @query) { 
+                & main, 
+                & footer        { padding-left: @navwidth; margin-left: -@navwidth; }
+                & nav           { width: @navwidth; z-index: 2; }
+                & footer        { float: right; }
+            }
+        }
+
+        .fixed-width-nav-left (@width: 100%, @navwidth: 100%, @navpadding: 2%, @query: 0) {
+            @contentwidth : @width - @navwidth;
+
+            @media screen and (min-width: @query) {
+                & main          { margin: 0 0 0 -50%; padding: 0; }
+                & nav           { width: 50%; position: relative; left: -(@navwidth - @navpadding); z-index: 2; }
+
+                & main > section{ .center(@contentwidth); padding-left: @navwidth; }
+                & nav > section { width: @navwidth; margin: 0 0 0 50%; left: 0; float: right; }
+            }
+        }
+    }
+
+//  Templates
+
+    .l-custom                   { 
+        & header                {  position: fixed; top: 0; left: 0; z-index: 3; .shadow(0 1px 3px, #71061d, .3) }
+        & main                  { .padding(0 0 0 290px, 1025px); .margin(0 0 0 -290px); .offside.main(290px, 1025px); }
+        & footer                { .padding(0 0 0 290px, 1025px); }
+        & nav                   { .offside.side(290px, 1025px); .size(290px, 100%); }
+        // & main section:before   { content: ''; .position; .back.color(#000); .index(2); .opacity(0); .transition(all, 0.4s) }
+        // .js-toggle & main section:before { .position.fill(absolute, 0, 0, 0, 0); .opacity(.5); }
+    }
+
+    .l-logged                   {
+        & nav                   { .offside.side(290px, 1025px); .size(290px, 100%); .size(100%, 100%, 1025px); }
+        & main                  { .offside.main(290px, 1025px); .margin(0 0 0 -290px); .margin(0, 1025px); } //  .margin(0 0 0 -290px); .padding(0 0 0 290px, 1025px); 
+    }
+
+    .text-frame                 { .center-block(1000px, 1000px); .width(1000px, 1000px); }

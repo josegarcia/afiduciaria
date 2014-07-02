@@ -1,0 +1,19 @@
+include sections/global/doctype
+    head
+        include sections/global/head
+        include sections/global/routines
+        //- stylesheets
+        link(href='../javascript/libs/skeyboard/skeyboard.css', rel='stylesheet')
+        link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-public
+        include sections/snippets/skeyboard
+        include sections/header/100
+        include sections/main/main_100
+        include sections/footer
+        script(src='../javascript/libs/uform/uform.js')
+        script(src='../javascript/libs/skeyboard/skeyboard.js')
+        script(src='../javascript/scripts.js')

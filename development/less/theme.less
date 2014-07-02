@@ -1,0 +1,211 @@
+//  Imports
+
+    @import "variables";
+
+//
+//  Global
+//  ----------------------------------------------------------------------- //
+
+//  Page Layout
+
+    body                        { .font(1.4em @d 1.2, @font-base); .color(@text-base, @hexf); }
+
+    nav                         {  background-color: @hexc;.gradient(@hexd, @hexc) }
+    header                      {  background-color: @primary; max-height: 150px; }
+    footer                      {  border-top: 1px solid @hexb; background-color: @hexf; }
+    
+    header > section            { .padding(0, 800px); .color(@text-base); }
+    nav > section               { .padding(0); }
+    main > section              { .padding(0 2%); .padding(0, 1025px); .back.color(@hexef); }
+    footer > section            { .padding(7px 2%); .color(@hex8); font-size: .9em; }
+
+
+    .l-admin main,
+    .l-logged main,
+    .l-public main              { .back.color(@hexc); }
+
+    @media all and (min-width: 1025px) {
+        .l-admin main,
+        .l-logged main,
+        .l-public main          { .back.color(@hexef); }
+    }
+
+//  Fonts
+
+    .font-face(Calibri, '../fonts/Calibri/calibri-webfont');
+
+    // @import url("http://fonts.googleapis.com/css?family=@{font-import-path}");
+    
+//  Page Elements
+
+    h1                          { font-size: 2.1em; margin-bottom: .3em; }
+    h2                          { font-size: 1.8em; margin-bottom: .3em; }
+    h3                          { font-size: 1.4em; margin-bottom: .3em; }
+    h4                          { font-size: 1.2em; margin-bottom: .3em; }
+    h5                          { font-size: 1  em; margin-bottom: .3em; }
+    h6                          { font-size:  .9em; margin-bottom: .3em; }
+    p                           { margin-bottom: .3em; }
+
+    a, 
+    a:hover,
+    em, 
+    .link                       {  color: @secondary; text-decoration: none; }
+
+    .mark ()                    { .color(@hexf, @primary-lighter); text-shadow: none; }
+    ::selection                 { .mark; }
+    ::-moz-selection            { .mark; }
+
+    .input, .select,
+    input, select,
+    textarea                    {
+        &                       { .rounded(@base-radius); height: 36px; .back.color(#fff); font-size: 1.2em; line-height: 34px; .shadow(skip, #bbb, .4); }
+        &.focus,
+        &:focus,
+        &.hover,
+        &:hover                 {  border-color: @secondary; }
+    }
+    a:focus,
+    a:hover                     { text-decoration: underline; }
+
+    select option,
+    select                      { padding: 5px; }
+
+// Page index
+
+    body.inicio nav .inicio,
+    body.fideicomisos nav .fideicomisos,
+    body.pensiones nav .pensiones,
+    body.fondos nav .fondos,
+    body.certificados nav .certificados,
+    body.transacciones nav .transacciones,
+    body nav li a:hover  {
+         background-color: @hexf; color: @primary; text-decoration: none;
+         // border-bottom: 2px solid @primary; text-decoration: none;
+    }
+
+    body.fideicomisos.resumen .c-nav .resumen,
+    body.fideicomisos.informes .c-nav .informes,
+    body.fondos.resumen .c-nav .resumen,
+    body.fondos.movimientos .c-nav .movimientos,
+    body.fondos.extractos .c-nav .extractos,
+    body.fondos.certificados .c-nav .certificados,
+    body.fondos.transacciones .c-nav .transacciones,
+    body .c-nav li:hover  {
+        &                   { .border(0 0 3px 0, solid, @primary); }
+        & a                 { color: @primary; }
+    }
+
+//  Page Components
+
+    .button-group,
+    .m-options,
+    .pagination,
+    .scrollable,
+    .panel                      {
+        &                       { margin-bottom: @base-margin; }
+    }
+
+    .button-group               {
+        &                       { margin: @base-margin 0; }
+    }
+
+//
+//  Styles
+//  ----------------------------------------------------------------------- //
+
+
+    .breadcrumb.primary         {
+        &                       { .back.color(@hexef); }
+        & li                    { height: 32px; padding:0 20px; margin-left: -20px; }
+        & li ~ li               { .back(#f5f5f5, '../images/back-crumb.png', no-repeat, left top); }
+        & li a                  { .block; .size(100%, 32px); padding: 0 20px 0 0; line-height: 34px; color: @hex4; .color.hover(@primary); text-align: right; }
+        & li .home              { font-size: 1.4em; }
+    }
+
+    .button.primary             { min-height: 42px; .font(bold 1em); .rounded(@base-radius); .color(@text-primary, @primary); .color.hover-focus(@text-primary, @primary-lighter); }
+
+
+    .heading.primary                    {
+        &                       { .font(2.2em @d 55px, @font-title); .color(@hex4); .border(0 0 1px 0, solid, @hexf); margin-bottom: 10px; .padding(0 2% 0 0); }
+        &:before                { .pseudo('', 100%, 1px); .border(0 0 1px, solid, @hexc); .position.left-bottom(absolute, 0, 0); }
+        & i                     { margin-right: 10px; }
+        & span                  { font-size: 0.76em; }
+    }
+
+    .form.primary               { 
+        & li strong             { .font(bold 1.2em); .block; padding: .2em 0; }
+        & li                    { padding-bottom: .5em; }
+    }
+    
+    .message.primary            {
+        &                       {  margin-bottom: @base-margin; padding: 1em 28px 1em 1em; .color(@hex2, @hexef); .border(1px, solid, @hexc); .font-size(1em); .rounded(3px); .shadow(0 1px 3px, @hex0, .1); }
+        & > .subhead            {  font-size: 1.4em; }
+        & > .subhead, strong, p, a { .text-shadow(0 1px 0, #fff, .5); }
+        &.error                 { 
+            &                   { .back.color(@error); border-color: @border-error; color: @text-error; .gradient(lighten(@error,  4%), @error); }
+            & > .subhead, strong, p, a { color: @text-error; }
+        }
+        &.warning               { 
+            &                   { .back.color(@warning); border-color: @border-warning; }
+            & > .subhead, strong, p, a { color: @text-warning; }
+        }
+        &.success               { 
+            &                   { .back.color(@success); border-color: @border-success; }
+            & > .subhead, strong, p, a { color: @text-success; }
+        }
+        &.info                  { 
+            &                   { .back.color(@info); border-color: @border-info; color: @text-info; .gradient(lighten(@info,  4%), @info); }
+            & > .subhead, strong, p, a { color: @text-info; }
+        }
+    }
+
+    .navbar.primary             {
+        & li a                  { .font-size(1.6em); color: @hex4;  padding: 10px 0; }
+        & li a:hover            {  color: @primary; } 
+        & li ul li a            { .font-size(1em); } 
+    }
+
+    .pagination.primary         {
+        &                       { text-align: center; margin-top: @base-margin; .border(1px, solid, @hexb); width: auto; .center-inline; }
+        & a,
+        & span span             { padding: 0 .6em; }
+        & span,
+        & a                     {  color: @hex4; .border(0 0 0 1px, solid, @hexb); .size(auto, 28px); line-height:28px; min-width:28px; text-align: center; float: left; }
+        & a:first-child         { .border; }
+        & .current              { .color(@hexf, @primary); }
+        & a:hover               { .back.color(@hexd); text-decoration: none; }
+    }
+
+    .panel.primary              { 
+        &                       { color: @hex4; background-color: #fff; .padding(.5em @base-padding); .shadow(0 1px 2px, #ccc, .6); .border(1px, solid, @hexc @hexb @hexb @hexc); .margin(@base-margin 0); }
+        &.full                  { .margin(64px 0 @base-margin, 1025px); }
+    }
+
+    .table.primary              {
+        &                       { .table.padding(0.35em 1em); .font-size(1.1em, 800px); }
+        & tbody tr              { .color.hover(@text-base, @hexe); }
+        & tbody tr.selected td  { .color(@hexf, @primary); }
+    }
+
+    .tabset.primary             {
+        &:before                { .pseudo('', 100%, 39px); border-bottom: 1px solid #ddd; position: absolute; }
+        & > .summary            {
+            & a                 { .padding(0 0.5em 0); .padding(0 1em 0, 640px); .padding(0 2em 0, 800px); .font(1.2em @d 37px); .color(@text-base); }
+            &                   { .max-width(32.5%, 0); }
+            &.active            { .max-width(32.5%, 0); }
+            &.active,
+            &:hover             {  border-bottom: 3px solid @primary; }
+            &.active a,
+            &:hover a           { .color(@primary); }
+        }
+        & > .details            { .padding(1.2em 0 0); }
+    }
+
+    .tooltip.primary            { 
+        &:after                 { .font(14px @d 1.2); .color(@hexf, #333); .padding(7px 14px); .rounded(@base-radius); }
+        &.up:before             { .arrow.bottom(4px, #333); }
+        &.down:before           { .arrow.top(4px, #333); }
+        &.right:before          { .arrow.left(4px, #333); }
+        &.left:before           { .arrow.right(4px, #333); }
+        &.wrap:after            {  min-width: 160px; }
+    }

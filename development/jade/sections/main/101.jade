@@ -1,0 +1,68 @@
+main
+    section.text-frame
+        h1.heading.primary Formulario de registro
+        .panel.padded
+            .message.primary.info.js-close.span-3
+                p Usted no aparece registrado como cliente de Alianza lo invitamos a que se comunique con nuestro call center 
+                    strong 6447700 
+                    |  Fiduciaria y 
+                    strong 6447730 
+                    |  Valores
+            .form.primary
+                    ul
+                        li
+                            strong Documento de identificación:
+                            .grid.split-3.separate
+                                label
+                                    select
+                                        option CC
+                                        option CE
+                                        option NIT
+                                    span Tipo de documento
+                                label.span-2
+                                    input(type="text")
+                                    span Número de identificación
+                        li
+                            strong Confirmar número de identificación:
+                            .grid.split-3.separate
+                                label
+                                label.span-2
+                                    input(type="text")
+                        li
+                            strong Correo electrónico:
+                            div
+                                label
+                                    input(type="text")
+                        li
+                            strong Confirmar correo electrónico:
+                            div
+                                label
+                                    input(type="text")
+                        li
+                            strong Deseo activar el control de acceso a direcciones IP
+                            .grid.split-4.separate
+                                label 
+                                    input(type="radio", name="ip_access")
+                                    span Sí
+                                label 
+                                    input(type="radio", name="ip_access")
+                                    span No
+                        li
+                            strong Ingrese el código que se muestra a continuación:
+                            div.style
+                                div
+                                    img(src="../images/captcha.jpg")
+                                label.medium
+                                    input(type="text")
+                    .button-group
+                        ul
+                            li
+                                label 
+                                    input(type="checkbox")
+                                    span Acepto que soy responsable o el responsable dentro de mi empresa de la administración del Portal Transaccional
+                            li
+                                label 
+                                    input(type="checkbox")
+                                    span He leido y acepto los
+                                        a(href="#")  Términos y condiciones
+                        button(type="submit", disabled="disabled").button Continuar

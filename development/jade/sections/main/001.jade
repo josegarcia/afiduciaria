@@ -1,0 +1,111 @@
+main
+    section
+        h1.heading.primary On-screen keyboard
+        #tryme
+            input(type="text").output
+            a(href="#").button click me
+        #container
+            textarea(id="write", cols="6") tryme
+            ul#keyboard
+                li.symbol
+            
+                    span.off `
+                    span.on ~
+                li.symbol
+                    span.off 1
+                    span.on !
+                li.symbol
+                    span.off 2
+                    span.on @
+                li.symbol
+                    span.off 3
+                    span.on #
+                li.symbol
+                    span.off 4
+                    span.on $
+                li.symbol
+                    span.off 5
+                    span.on %
+                li.symbol
+                    span.off 6
+                    span.on ^
+                li.symbol
+                    span.off 7
+                    span.on &
+                li.symbol
+                    span.off 8
+                    span.on *
+                li.symbol
+                    span.off 9
+                    span.on (
+                li.symbol
+                    span.off 0
+                    span.on )
+                li.symbol
+                    span.off -
+                    span.on _
+                li.symbol
+                    span.off =
+                    span.on +
+                li.delete.lastitem delete
+                li.tab tab
+                li.letter q
+                li.letter w
+                li.letter e
+                li.letter r
+                li.letter t
+                li.letter y
+                li.letter u
+                li.letter i
+                li.letter o
+                li.letter p
+                li.symbol
+                    span.off [
+                    span.on {
+                li.symbol
+                    span.off ]
+                    span.on }
+                li.symbol.lastitem
+                    span.off \
+                    span.on |
+                li.capslock caps lock
+                li.letter a
+                li.letter s
+                li.letter d
+                li.letter f
+                li.letter g
+                li.letter h
+                li.letter j
+                li.letter k
+                li.letter l
+                li.symbol
+                    span.off ;
+                    span.on :
+                li.symbol
+                    span.off '
+                    span.on "
+                li.return.lastitem return
+                li.left-shift shift
+                li.letter z
+                li.letter x
+                li.letter c
+                li.letter v
+                li.letter b
+                li.letter n
+                li.letter m
+                li.symbol
+                    span.off ,
+                    span.on <
+                li.symbol
+                    span.off .
+                    span.on >
+                li.symbol
+                    span.off /
+                    span.on ?
+                li.right-shift.lastitem shift
+                li.space.lastitem  
+script
+    $('a.button').click(function(){
+        $('.output').val('gotcha') ;
+    });
+

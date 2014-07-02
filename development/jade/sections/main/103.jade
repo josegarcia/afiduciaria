@@ -1,0 +1,26 @@
+main
+    section.text-frame
+        h1.heading.primary Cambio de contraseña
+        .panel.padded
+            .form.primary
+                ul
+                    li
+                        strong Contraseña actual:
+                        div
+                            label
+                                input(type="password")
+
+                    li
+                        strong Nueva contraseña:
+                        div
+                            label(data-hint="La contraseña debe tener al menos 8 caracteres y contener al menos dos de lo siguiente: mayúsculas, minúsculas, números y símbolos.").tooltip.primary.up.wrap
+                                input(type="password")
+                            span Mínimo 8 caracteres.
+
+                    li
+                        strong Repetir nueva contraseña:
+                        div
+                            label
+                                input(type="password")
+                .button-group
+                    button(type="submit").button.primary Confirmar

@@ -1,0 +1,260 @@
+<!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="es"> <![endif]-->
+<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<head>
+  <title>Alianza Fiduciaria</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Seven4n">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+  <link href="../css/uno.css" rel="stylesheet">
+  <link href="../fonts/FontAwesome/fonts/font-awesome.min.css" rel="stylesheet">
+  <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
+  <link href="../javascript/libs/picker/default.css" rel="stylesheet">
+  <link href="../javascript/libs/picker/default.date.css" rel="stylesheet">
+  <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
+  <script src="../javascript/modernizr.js"></script>
+  <script src="../javascript/modernizr.load.js"></script>
+</head>
+<body class="uno l-logged fondos movimientos">
+  <header>
+    <section class="text-frame">
+      <div class="m-sidemenu"><a href="#" class="toggle js-navbar"><i class="fa fa-bars"></i></a></div>
+      <div class="m-brand">
+        <h1 class="brand fiduciaria"><a href="../index.html"><img src="../images/logo-fiduciaria.png"><strong> Alianza Fiduciaria</strong></a></h1>
+      </div>
+      <div class="m-user-options"><a href="#" class="options"><i class="fa fa-cog"></i></a>
+        <div class="option-box hide"><a href="#" class="to-left">Actualizar datos</a>
+          <div class="name">Liliana Patricia Delgado</div>
+          <div class="email">liliana.delgado@gmail.com</div>
+          <div class="button-group">
+            <button type="button" class="button primary loose"><i class="fa fa-signout"></i>Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+      <div class="m-font-size"><a href="#" id="decFont" class="fontsize">A-</a><a href="#" id="resetFont" class="fontsize">A</a><a href="#" id="incFont" class="fontsize">A+</a></div>
+    </section>
+  </header>
+  <nav>
+    <section class="text-frame">
+      <div class="m-mainnav">
+        <ul>
+          <li><a href="#" class="inicio">Inicio</a></li>
+          <li class="subitems"> 
+            <div class="title">Inversiones</div>
+            <ul>
+              <li><a href="#" class="pensiones">Pensiones</a></li>
+              <li><a href="#" class="fondos">Fondos</a></li>
+            </ul>
+          </li>
+          <li><a href="#" class="fideicomisos">Fideicomisos</a></li>
+          <li><a href="#" class="certificados">Certificados</a></li>
+          <li><a href="#" class="transacciones">Transacciones</a></li>
+        </ul>
+      </div>
+    </section>
+  </nav>
+  <main>
+    <div class="c-nav">
+      <div class="text-frame form selection">
+        <div class="m-subnav">
+          <ul>
+            <li class="resumen"><a href="#">Resúmen</a></li>
+            <li class="movimientos"><a href="#">Movimientos</a></li>
+            <li class="extractos"><a href="#">Extractos</a></li>
+            <li class="certificados"><a href="#">Certificados</a></li>
+            <li class="transacciones"><a href="#">Transacciones</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section class="text-frame">
+      <div class="panel primary full">
+        <h1 class="heading primary">Movimientos</h1>
+        <form class="form filters">
+          <ul class="grid split-2 separate">
+            <li><strong>Fondos:</strong>
+              <div>
+                <label>
+                  <select>
+                    <option>Fondo 1</option>
+                    <option selected>Fondo abierto alianza ssmp "alianza"</option>
+                    <option>Fondo 2</option>
+                  </select>
+                </label>
+              </div>
+            </li>
+            <li><strong>Encargos:</strong>
+              <div>
+                <label>
+                  <select>
+                    <option>Encargo 1</option>
+                    <option selected>60030016548 - Mifondo - Fondo abierto alianza ssmp "alianza"</option>
+                    <option>Encargo 2</option>
+                  </select>
+                </label>
+              </div>
+            </li>
+          </ul>
+          <ul class="grid split-2 separate">
+            <li><strong>Periodo:</strong>
+              <div class="grid split-2 separate">
+                <div>
+                  <input type="text" class="datepicker"><span>Desde</span>
+                </div>
+                <div>
+                  <input type="text" class="datepicker"><span>Hasta</span>
+                </div>
+              </div>
+            </li>
+            <li><strong>Tipo de operación:</strong>
+              <div>
+                <label>
+                  <select>
+                    <option>Algunos</option>
+                    <option selected>Todos</option>
+                    <option>Ninguno</option>
+                  </select>
+                </label>
+              </div>
+            </li>
+          </ul>
+          <ul class="grid split-2 separate">
+            <li><strong>Identificación beneficiario:</strong>
+              <div>
+                <label>
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+            <li><strong>Valor:</strong>
+              <div>
+                <label>
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+          </ul>
+          <div class="button-group">
+            <button type="button" class="button primary">Consultar</button>
+          </div>
+        </form>
+        <div class="m-results">
+          <div class="scrollable">
+            <table class="table single striped">
+              <thead>
+                <tr>
+                  <th>Fecha transacción</th>
+                  <th>Tipo de operación</th>
+                  <th>Concepto</th>
+                  <th>Valor</th>
+                  <th>GMF</th>
+                  <th>Costo</th>
+                  <th>Retención</th>
+                  <th>Total</th>
+                  <th>Nombre beneficiario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10/12/2014</td>
+                  <td>Crédito</td>
+                  <td>Retiro inversionista fondos</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>Melisa Morales</td>
+                </tr>
+                <tr>
+                  <td>10/12/2014</td>
+                  <td>Crédito</td>
+                  <td>Retención contingente</td>
+                  <td>500.000</td>
+                  <td>0</td>
+                  <td>500.000</td>
+                  <td>0</td>
+                  <td>500.000</td>
+                  <td>Melisa Morales</td>
+                </tr>
+                <tr>
+                  <td>10/12/2014</td>
+                  <td>Crédito</td>
+                  <td>Retiro inversionista fondos</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>1'200.000</td>
+                  <td>0</td>
+                  <td>Melisa Morales</td>
+                </tr>
+                <tr>
+                  <td>10/12/2014</td>
+                  <td>Crédito</td>
+                  <td>Recaudo aportes fondos</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>Melisa Morales</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="text-frame">
+      <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
+    </section>
+  </footer>
+  <script src="../javascript/scripts.js"></script>
+  <script>
+    $('#incFont').click(function(){   
+        curSize= parseInt($('main').css('font-size')) + 2;
+        
+        if(curSize<=18){
+            $('main').css('font-size', curSize);
+        }
+    }); 
+    
+    $('#resetFont').click(function(){   
+            $('main').css('font-size', 14);
+    }); 
+    
+    $('#decFont').click(function(){   
+        curSize= parseInt($('main').css('font-size')) - 2;
+        
+        if(curSize>=12){
+            $('main').css('font-size', curSize);
+        }
+    }); 
+  </script>
+  <script src="../javascript/libs/picker/picker.js"></script>
+  <script src="../javascript/libs/picker/picker.date.js"></script>
+  <script src="../javascript/libs/uform/uform.js"></script>
+  <script>
+    jQuery.extend(jQuery.fn.pickadate.defaults, {
+        monthsFull: [ 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre' ],
+        monthsShort: [ 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic' ],
+        weekdaysFull: [ 'domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado' ],
+        weekdaysShort: [ 'dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb' ],
+        today: 'hoy',
+        clear: 'borrar',
+        firstDay: 1,
+        format: 'dddd d !de mmmm !de yyyy',
+        formatSubmit: 'yyyy/mm/dd'
+    });
+    
+    $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: true
+    });
+  </script>
+</body>

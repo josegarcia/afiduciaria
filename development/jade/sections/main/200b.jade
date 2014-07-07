@@ -33,7 +33,7 @@ main
                             strong Saldo
                             div $1'650.000.000.00
                     .overview
-                        p.messanges No se encontraron resultados
+                        p.messages No se encontraron resultados
                 .panel.recap
                     .top-bar
                         .subhead 
@@ -43,7 +43,7 @@ main
                             strong Saldo
                             div $$$
                     .overview
-                        p.messanges.loader Cargando..
+                        p.messages.loader Cargando..
                 .panel.recap
                     .top-bar
                         .subhead 
@@ -53,7 +53,7 @@ main
                             strong Saldo
                             div $$$
                     .overview
-                        p.messanges.loader Cargando..
+                        p.messages.loader Cargando..
             .span-2
                 .m-general-pie
                     canvas(id="myChart", width="320", height="320").canvas
@@ -76,37 +76,4 @@ main
                     strong Saldo
                     div $1'650.000.000.00
             .scrollable
-                table(id="dataTable").table.primary.striped
-                    thead
-                        tr
-                            th.left Fecha
-                            th Número encargo
-                            th Transacción
-                            th.right Monto
-                    tbody
-                        tr
-                            td.left 01/02/14
-                            td 468413
-                            td Traslado
-                            td.right 1'300.000.00
-                        tr
-                            td.left 01/02/14
-                            td 180576
-                            td Deposito
-                            td.right 1'200.000.00
-                        tr
-                            td.left 01/02/14
-                            td 980980
-                            td Traslado
-                            td.right 600.000.00
-                        tr
-                            td.left 01/02/14
-                            td 79809680
-                            td Devolución
-                            td.right 1'200.000.00
-                        tr
-                            td.left 01/02/14
-                            td 31321
-                            td Traslado
-                            td.right 1'450.000.00
-                        mixin table-cell(25)
+                p.messages.loader Cargando..

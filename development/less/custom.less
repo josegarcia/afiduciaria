@@ -237,7 +237,11 @@
             & li:last-child { border:0; }
             & .title     { width:50%; min-width: 180px; padding: 5px 0 5px 10px; }
             & .value     { width:50%; min-width: 180px; padding: 5px 10px 5px 0;  text-align: right; }
-            & .messanges { padding: 1em; text-align: center; font-weight: bold; }
+            & .messages  { padding: 1em; text-align: center; font-weight: bold; }
+            & .loader    { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
+        }
+        & .scrollable    {
+            & .messages  { padding: 1em; text-align: center; font-weight: bold; }
             & .loader    { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
         }
     }
@@ -252,6 +256,16 @@
         & tbody tr.selected td  { .color(@hexf, @primary); }
         & thead tr th           { .border(1px 0, solid, @hexc); }
     }
+
+//  Modals
+//  ---------------------------------------
+
+    .modals {
+        &                       { .index(3); }
+        & .loader .overlay      { .back(@trans, '../images/common/overlay.png'); .position.fill(fixed, 0, 0, 0, 0); .user-select; }
+        & .loader .contents     { .back(@black, '../images/common/loading_2x.gif', no-repeat, center); .rounded(10px); .square(80px); .position.fill(fixed, 380px, 0, 0, -40px); .margin(0 0 0 50%); .shadow(0 0 4px, @black, .8); }
+    }
+
 
 //  Custom
 //  ---------------------------------------
@@ -283,7 +297,6 @@
     }
 
     .datepicker         { .back(@trans, '../images/forms/date.jpg', no-repeat, top right); cursor: default; padding-right: 36px; }
-
 
 //  Plugins
 //  ---------------------------------------

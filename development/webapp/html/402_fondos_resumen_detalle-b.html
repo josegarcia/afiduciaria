@@ -18,7 +18,7 @@
   <script src="../javascript/modernizr.js"></script>
   <script src="../javascript/modernizr.load.js"></script>
 </head>
-<body class="uno l-logged fondos movimientos">
+<body class="uno l-logged fondos resumen">
   <header>
     <section class="text-frame">
       <div class="m-sidemenu"><a href="#" class="toggle js-navbar"><i class="fa fa-bars"></i></a></div>
@@ -72,40 +72,20 @@
     </div>
     <section class="text-frame">
       <div class="panel primary full">
-        <h1 class="heading primary">Movimientos</h1>
+        <h1 class="heading primary">Saldos históricos</h1>
         <form class="form filters">
           <ul class="grid split-2 separate">
-            <li><strong>Prueba:</strong>
-              <div>
-                <label>
-                  <input type="checkbox"><span>Holamundo</span>
-                </label>
-              </div>
-            </li>
-            <li><strong>Fondos:</strong>
+            <li><strong>Seleccionar encargo:</strong>
               <div>
                 <label>
                   <select>
-                    <option>Fondo 1</option>
-                    <option selected>Fondo abierto alianza ssmp "alianza"</option>
-                    <option>Fondo 2</option>
+                    <option>Encargo 1 - Id. 8012345</option>
+                    <option selected>Universidad - Id. 85855</option>
+                    <option>Encargo 3 - Id. 8012345</option>
                   </select>
                 </label>
               </div>
             </li>
-            <li><strong>Encargos:</strong>
-              <div>
-                <label>
-                  <select>
-                    <option>Encargo 1</option>
-                    <option selected>60030016548 - Mifondo - Fondo abierto alianza ssmp "alianza"</option>
-                    <option>Encargo 2</option>
-                  </select>
-                </label>
-              </div>
-            </li>
-          </ul>
-          <ul class="grid split-2 separate">
             <li><strong>Periodo:</strong>
               <div class="grid split-2 separate">
                 <div>
@@ -116,106 +96,76 @@
                 </div>
               </div>
             </li>
-            <li><strong>Tipo de operación:</strong>
-              <div>
-                <label>
-                  <select>
-                    <option>Algunos</option>
-                    <option selected>Todos</option>
-                    <option>Ninguno</option>
-                  </select>
-                </label>
-              </div>
-            </li>
-          </ul>
-          <ul class="grid split-2 separate">
-            <li><strong>Identificación beneficiario:</strong>
-              <div>
-                <label>
-                  <input type="text">
-                </label>
-              </div>
-            </li>
-            <li><strong>Valor:</strong>
-              <div>
-                <label>
-                  <input type="text">
-                </label>
-              </div>
-            </li>
           </ul>
           <div class="button-group">
-            <button type="button" class="button primary">Consultar</button>
+            <button type="button" id="consultar" class="button primary">Consultar</button>
           </div>
         </form>
         <div class="m-results">
+          <h2><i class="fa fa-suitcase"></i>Universidad - Id. 85855</h2>
           <div class="scrollable">
             <table class="table single striped">
               <thead>
                 <tr>
-                  <th>Fecha transacción</th>
-                  <th>Tipo de operación</th>
-                  <th>Concepto</th>
-                  <th>Valor</th>
-                  <th>GMF</th>
-                  <th>Costo</th>
-                  <th>Retención</th>
-                  <th>Total</th>
-                  <th>Nombre beneficiario</th>
+                  <th>Fecha</th>
+                  <th>Saldo inicio día</th>
+                  <th>Aportes del día</th>
+                  <th>Retiros del día</th>
+                  <th>Saldo total</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>10/12/2014</td>
-                  <td>Crédito</td>
-                  <td>Retiro inversionista fondos</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>Melisa Morales</td>
+                  <td>$5'000.000</td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
                 <tr>
                   <td>10/12/2014</td>
-                  <td>Crédito</td>
-                  <td>Retención contingente</td>
-                  <td>500.000</td>
-                  <td>0</td>
-                  <td>500.000</td>
-                  <td>0</td>
-                  <td>500.000</td>
-                  <td>Melisa Morales</td>
+                  <td>$5'000.000</td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
                 <tr>
                   <td>10/12/2014</td>
-                  <td>Crédito</td>
-                  <td>Retiro inversionista fondos</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>1'200.000</td>
-                  <td>0</td>
-                  <td>Melisa Morales</td>
+                  <td>$5'000.000</td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
                 <tr>
                   <td>10/12/2014</td>
-                  <td>Crédito</td>
-                  <td>Recaudo aportes fondos</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>Melisa Morales</td>
+                  <td>$5'000.000</td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
+                </tr>
+                <tr>
+                  <td>10/12/2014</td>
+                  <td>$5'000.000</td>
+                  <td>$1'000.000</td>
+                  <td>$0.000</td>
+                  <td>$5'900.000</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="button-group">
+            <button type="button" class="button primary">Volver atrás</button>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <div class="modals">
+    <div class="loader">
+      <div class="overlay"></div>
+      <div class="contents"></div>
+    </div>
+  </div>
   <footer>
     <section class="text-frame">
       <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
@@ -262,6 +212,15 @@
     $('.datepicker').pickadate({
         selectMonths: true,
         selectYears: true
+    });
+  </script>
+  <script>
+    $('.modals .loader').on('click', function(){
+        $(this).parent('.modals').fadeOut()
+    });
+    
+    $('#consultar').on('click', function(){
+        $('.modals').fadeIn()
     });
   </script>
 </body>

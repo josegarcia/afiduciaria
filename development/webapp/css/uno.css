@@ -1504,6 +1504,9 @@ footer > section {
   color: #888888;
   font-size: .9em;
 }
+em {
+  color: #009089;
+}
 .l-admin main,
 .l-logged main,
 .l-public main {
@@ -1550,7 +1553,6 @@ p {
 }
 a,
 a:hover,
-em,
 .link {
   color: #4a5d68;
   text-decoration: none;
@@ -2798,12 +2800,21 @@ footer {
   padding: 5px 10px 5px 0;
   text-align: right;
 }
-.panel.recap .overview .messanges {
+.panel.recap .overview .messages {
   padding: 1em;
   text-align: center;
   font-weight: bold;
 }
 .panel.recap .overview .loader {
+  background: transparent url('../images/loader.gif') no-repeat center 1.5em;
+  padding-top: 3.5em;
+}
+.panel.recap .scrollable .messages {
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
+}
+.panel.recap .scrollable .loader {
   background: transparent url('../images/loader.gif') no-repeat center 1.5em;
   padding-top: 3.5em;
 }
@@ -2843,6 +2854,36 @@ footer {
   border-width: 1px 0;
   border-style: solid;
   border-color: #cccccc;
+}
+.modals {
+  z-index: 3;
+}
+.modals .loader .overlay {
+  background: transparent url('../images/common/overlay.png') repeat 0 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.modals .loader .contents {
+  background: #000000 url('../images/common/loading_2x.gif') no-repeat center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 380px;
+  right: 0;
+  bottom: 0;
+  left: -40px;
+  margin: 0 0 0 50%;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
 }
 .color-codes {
   margin: 15px 0 0;

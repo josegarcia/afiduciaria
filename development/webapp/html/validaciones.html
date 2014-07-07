@@ -48,12 +48,12 @@
                 </label>
                 <label>
                   <input id="4710a492-b3d1-4666-8f17-e3b5cd0489bf" type="radio" name="ip_access" ng-model="autoregistro.activarIp" required="" value="false" aa-label-strategy="none" aa-label="Activar IP" class="ng-pristine ng-invalid ng-invalid-required"><span>No</span>
-                  <div aa-val-msg-for="signForm.ip_access" class="validation-errors ng-scope"></div>
                 </label>
-                <label ng-show="submitted" ng-repeat="msg in errorMessages" class="error ng-scope ng-binding">Activar IP es requerido.
+                <div aa-val-msg-for="signForm.ip_access" class="validation-errors ng-scope">
+                  <label ng-show="submitted" ng-repeat="msg in errorMessages" class="error ng-scope ng-binding">Activar IP es requerido.</label>
                   <div class="notch notch-border"></div>
                   <div class="notch"></div>
-                </label>
+                </div>
               </div>
             </li>
             <li>

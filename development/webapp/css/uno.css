@@ -547,6 +547,7 @@ table.rounded tr:last-child td:last-child {
 .form label.auto {
   width: auto;
 }
+.form .validation-errors .error,
 .form li label + label,
 .form li label label {
   display: block;
@@ -554,24 +555,28 @@ table.rounded tr:last-child td:last-child {
   padding: 2px .75em;
   font-size: .96em;
 }
+.form .validation-errors .error.error,
 .form li label + label.error,
 .form li label label.error {
   color: #d1302b;
   background-color: #FDF7F7;
   border: 1px solid #dd7f7f;
 }
+.form .validation-errors .error.warning,
 .form li label + label.warning,
 .form li label label.warning {
   color: #cd7901;
   background-color: #FCF8F2;
   border: 1px solid #e9a23c;
 }
+.form .validation-errors .error.success,
 .form li label + label.success,
 .form li label label.success {
   color: #1e9a20;
   background-color: #ecfae9;
   border: 1px solid #78c575;
 }
+.form .validation-errors .error.info,
 .form li label + label.info,
 .form li label label.info {
   color: #0990b7;
@@ -2037,6 +2042,10 @@ label.auto {
 .form li label.error {
   margin: 0;
   width: 100%;
+}
+.uno .validation-errors {
+  width: 100%;
+  margin: 0;
 }
 table thead tr th {
   line-height: 1;

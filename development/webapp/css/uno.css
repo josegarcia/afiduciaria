@@ -547,28 +547,33 @@ table.rounded tr:last-child td:last-child {
 .form label.auto {
   width: auto;
 }
-.form label label {
+.form li label + label,
+.form li label label {
   display: block;
   margin: 0 !important;
   padding: 2px .75em;
   font-size: .96em;
 }
-.form label label.error {
+.form li label + label.error,
+.form li label label.error {
   color: #d1302b;
   background-color: #FDF7F7;
   border: 1px solid #dd7f7f;
 }
-.form label label.warning {
+.form li label + label.warning,
+.form li label label.warning {
   color: #cd7901;
   background-color: #FCF8F2;
   border: 1px solid #e9a23c;
 }
-.form label label.success {
+.form li label + label.success,
+.form li label label.success {
   color: #1e9a20;
   background-color: #ecfae9;
   border: 1px solid #78c575;
 }
-.form label label.info {
+.form li label + label.info,
+.form li label label.info {
   color: #0990b7;
   background-color: #F4F8FA;
   border: 1px solid #11a0ca;
@@ -1981,7 +1986,7 @@ body .c-nav li:hover a {
 .tooltip.primary.wrap:after {
   min-width: 160px;
 }
-.form label label.error + span {
+.form label.error + span {
   display: none;
 }
 .button-group.full .button {
@@ -2028,6 +2033,10 @@ label.auto {
 }
 .align.right {
   text-align: right;
+}
+.form li label.error {
+  margin: 0;
+  width: 100%;
 }
 table thead tr th {
   line-height: 1;
@@ -2656,8 +2665,10 @@ footer {
   padding: 0 0 0 10px;
 }
 .option-description {
-  padding-left: 24px;
-  position: absolute;
+  padding: 0 0 0 24px;
+}
+span.option-description {
+  font-size: 1.1em !important;
 }
 .panel.login {
   padding: 30px 5% 20px;

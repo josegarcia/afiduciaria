@@ -6,7 +6,7 @@
 //  Base
 //  ----------------------------------------------------------------------- //
 
-    .form label label.error + span    { display: none; }
+    .form label.error + span    { display: none; }
 
     .button-group.full .button  { width: 100%; }
 
@@ -23,6 +23,8 @@
     .scrollable                 { .overflow(auto, hidden); }
 
     .align                      { .block; .has-align; width: 100%; }
+
+    .form li label.error        { margin: 0; width: 100%; }
 
     // .form.auto                  {} blah..
 
@@ -210,8 +212,9 @@
         & span a                { display: inline-block; font-size: 14px; line-height: 1; padding: 0 0 0 10px }
     }
 
-    .option-description     {
-        &                   { padding-left: 24px; position: absolute; }
+    .option-description {
+        &                   { padding: 0 0 0 24px; }
+        span&               { font-size: 1.1em !important; }
     }
 
     .panel.login        {

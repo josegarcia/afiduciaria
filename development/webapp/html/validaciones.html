@@ -41,23 +41,6 @@
         <h1 class="heading primary">Configuración de contraseña</h1>
         <div class="form primary">
           <ul>
-            <li><strong>Aceptar o no la utilización de la(s) última(s) N contraseña(s) como nueva contraseña:</strong>
-              <div class="grid split-2 separate">
-                <label>
-                  <input type="radio" name="group1"><span>Sí</span>
-                </label>
-                <label>
-                  <input type="radio" name="group1"><span>No</span>
-                </label>
-              </div>
-            </li>
-            <li><strong>Número mínimo de caracteres:</strong>
-              <div>
-                <label class="shorter">
-                  <input type="text">
-                </label>
-              </div>
-            </li>
             <li><strong class="ng-binding">Deseo activar el control de acceso a direcciones IP</strong>
               <div class="grid split-2 separate">
                 <label>
@@ -75,7 +58,7 @@
             </li>
             <li>
               <div>
-                <label><span ng-bind-html="'AUTOREGISTRO_LABEL_ACEPTA_TERMINOS' | translate" class="ng-binding">He leido y acepto los<a href="#"> Términos y condiciones</a></span>
+                <label><span ng-bind-html="'AUTOREGISTRO_LABEL_ACEPTA_TERMINOS' | translate" class="option-description ng-binding">He leido y acepto los<a href="#"> Términos y condiciones</a></span>
                   <input type="checkbox" id="aceptaTerminos">
                   <div aa-val-msg-for="signForm.aceptaTerminos" class="validation-errors ng-scope"></div>
                 </label>
@@ -83,14 +66,6 @@
                   <div class="notch notch-border"></div>
                   <div class="notch"></div>
                 </label>
-              </div>
-            </li>
-            <li><strong>Título</strong>
-              <div>
-                <label>
-                  <input type="checkbox">
-                </label>
-                <div class="option-description">He leido y acepto los<a href="#"> Términos y condiciones</a></div>
               </div>
             </li>
           </ul>

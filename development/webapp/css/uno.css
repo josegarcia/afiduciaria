@@ -2655,6 +2655,10 @@ footer {
   line-height: 1;
   padding: 0 0 0 10px;
 }
+.option-description {
+  padding-left: 24px;
+  position: absolute;
+}
 .panel.login {
   padding: 30px 5% 20px;
 }

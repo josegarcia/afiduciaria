@@ -1,0 +1,54 @@
+main
+    section.text-frame
+        .m-parameters.panel.primary
+            h1.heading.primary Configuración de contraseña
+            .form.primary
+                ul
+                    li
+                        strong Aceptar o no la utilización de la(s) última(s) N contraseña(s) como nueva contraseña:
+                        .grid.split-2.separate
+                            label
+                                input(type="radio", name="group1")
+                                span Sí
+                            label
+                                input(type="radio", name="group1")
+                                span No
+                    li
+                        strong Número mínimo de caracteres:
+                        div
+                            label.shorter
+                                input(type="text")
+                    li
+                        strong.ng-binding Deseo activar el control de acceso a direcciones IP
+                        .grid.split-2.separate
+                            label
+                              input#7c3bb1fa-6a6a-4435-90a3-ab523a7c1aa0.ng-pristine.ng-invalid.ng-invalid-required(type='radio', name='ip_access', ng-model='autoregistro.activarIp', value='true', aa-val-msg='', required='', aa-label-strategy='none', aa-label='Activar IP')
+                              span Sí
+                            label
+                              input#4710a492-b3d1-4666-8f17-e3b5cd0489bf.ng-pristine.ng-invalid.ng-invalid-required(type='radio', name='ip_access', ng-model='autoregistro.activarIp', required='', value='false', aa-label-strategy='none', aa-label='Activar IP')
+                              span No
+                              .validation-errors.ng-scope(aa-val-msg-for='signForm.ip_access')
+                            label.error.ng-scope.ng-binding(ng-show='submitted', ng-repeat='msg in errorMessages') Activar IP es requerido.
+                              .notch.notch-border
+                              .notch
+                    li
+                      div
+                        label
+                          span.ng-binding(ng-bind-html='\'AUTOREGISTRO_LABEL_ACEPTA_TERMINOS\' | translate')
+                            | He leido y acepto los
+                            a(href='#')  Términos y condiciones
+                          input(type='checkbox', id="aceptaTerminos")
+                          .validation-errors.ng-scope(aa-val-msg-for='signForm.aceptaTerminos')
+                        label.error.ng-scope.ng-binding(ng-show='submitted', ng-repeat='msg in errorMessages') Aceptar Términos y condiciones es requerido.
+                          .notch.notch-border
+                          .notch
+                    li 
+                        strong Título
+                        div
+                            label 
+                                input(type="checkbox")
+                            .option-description
+                                | He leido y acepto los
+                                a(href='#')  Términos y condiciones
+                .button-group
+                    button(type="button").button.primary Guardar cambios

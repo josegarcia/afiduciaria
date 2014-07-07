@@ -32,6 +32,18 @@ $(function(){
             return false;
         }
         
+        // Clean
+        if ($this.hasClass('clean')) {            
+            $write.val('');
+            return false;
+        }
+        
+        // Char
+        if ($this.hasClass('chars')) {            
+            $('.symbols').slideToggle();
+            return false;
+        }
+        
         // Special characters
         if ($this.hasClass('symbol')) character = $('span.on', $this).html();
         if ($this.hasClass('space')) character = ' ';

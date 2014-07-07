@@ -21,8 +21,8 @@ main
                       div
                         label
                           span.option-description.ng-binding(ng-bind-html='\'AUTOREGISTRO_LABEL_ACEPTA_TERMINOS\' | translate')
-                            | He leido y acepto los
-                            a(href='#')  Términos y condiciones
+                            | He leido y acepto los 
+                            a(href='#') Términos y condiciones
                           input(type='checkbox', id="aceptaTerminos")
                           .validation-errors.ng-scope(aa-val-msg-for='signForm.aceptaTerminos')
                         label.error.ng-scope.ng-binding(ng-show='submitted', ng-repeat='msg in errorMessages') Aceptar Términos y condiciones es requerido.

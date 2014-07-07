@@ -4,52 +4,33 @@ mixin skeyboard
         label
             input(id="write", type="text").keyboard
         .skeyboard.hide
-
-            ul.symbols.hide
-                li |
-                li ¬
-                li °
-                li !
-                li "
-                li #
-                li $
-                li %
-                li &
-                li /
-                li (
-                li )
-                li 
-                    | =
-                li ?
-                li ¡
-                li \
-                li ¸
-                li @
-                li ł
-                li €
-                li ¶
-                li ŧ
-                li ←
-                li ↓
-                li  →
-                li ø
-                li þ
-                li ~
-                li ł
-                li ĸ
-                li ŋ
-                li đ
-                li ðß
-                li æ
-                li |
-                li <
-                li «
-                li »
-                li ¢“
-                li µ
-                li ·̣̣
-
             ul.letters
+                li.spacer0.symbol
+                    span ~
+                    span.on .
+                li.symbol
+                    span <
+                    span.on !
+                li.symbol
+                    span >
+                    span.on @
+                li.symbol
+                    span -
+                    span.on #
+                li.symbol
+                    span *
+                    span.on $
+                li.symbol
+                    span (
+                    span.on %
+                li.symbol
+                    span )
+                    span.on ^
+                li.symbol
+                    span +
+                    span.on &
+                li.command.delete &larr;
+
                 li.letter.first-row q
                 li.letter w
                 li.letter e
@@ -80,13 +61,14 @@ mixin skeyboard
                 li.letter b
                 li.letter n
                 li.letter m
-                li.command.chars +=-
-
-                li.spacer4.first-row
-                li.command.delete Supr
-                li.letter.space
+                li.symbol
+                    span ?
+                    span.on /
                 li.command.shift Shift
-            
+
+                //- li.spacer4.first-row
+                //- li.command.delete Supr
+                //- li.letter.space
             ul.numbers
                 li.symbol.first-row
                     span *

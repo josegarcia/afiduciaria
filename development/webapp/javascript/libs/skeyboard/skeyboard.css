@@ -49,6 +49,10 @@
     background-image:         linear-gradient(180deg, #fff, #eee);
 }
 
+.skeyboard .clean {
+    width: 48px;
+}
+
 .skeyboard .delete {
     width: 48px;
 }
@@ -66,7 +70,7 @@
 }
 
 .skeyboard .space {
-    width: 180px;
+    width: 218px;
 }
 
 .skeyboard .symbol span {
@@ -120,6 +124,21 @@
 }
 
 
+.skeyboard .chars,
 .skeyboard .shift {
     width: 13.8%;
+}
+
+.skeyboard .symbols {
+    background: black;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.skeyboard .symbols li {
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
 }

@@ -29,7 +29,7 @@ include sections/global/doctype
                 today: 'hoy',
                 clear: 'borrar',
                 firstDay: 1,
-                format: 'dddd d !de mmmm !de yyyy',
+                format: 'd !de mmmm !de yyyy',
                 formatSubmit: 'yyyy/mm/dd'
             });
             
@@ -38,10 +38,28 @@ include sections/global/doctype
                 selectYears: true
             });
         script.
+            // Abrir modal
+            function open_modal(win) {
+                $('.modals').fadeIn();
+                $('.modals > div').removeClass('active');
+                $('.modals').find(win).addClass('active');
+            }
+
+            $('#cargando').on('click', function(){
+                open_modal('.loader');
+            });
+
+            $('#estado').on('click', function(){
+                open_modal('.status');
+            });
+            
+            // Cerrar modal
             $('.modals .loader').on('click', function(){
                 $(this).parent('.modals').fadeOut()
             });
 
-            $('#consultar').on('click', function(){
-                $('.modals').fadeIn()
+            $('.modals .btn-close').on('click', function(){
+                $(this).parents('.modals').fadeOut();
+                $('.modals > div').removeClass('active');
             });
+

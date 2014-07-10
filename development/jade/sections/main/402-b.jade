@@ -16,75 +16,26 @@ main
                         a(href="#") Transacciones
     section.text-frame
         .panel.primary.full
-            h1.heading.primary Saldos históricos
-            form.form.filters
-                ul.grid.split-2.separate
-                    li
-                        strong Seleccionar encargo:
-                        div
-                            label
-                                select
-                                    option Encargo 1 - Id. 8012345
-                                    option(selected) Universidad - Id. 85855
-                                    option Encargo 3 - Id. 8012345
-                    li 
-                        strong Periodo:
-                        .grid.split-2.separate
-                            div
-                                input(type="text").datepicker                               
-                                span Desde
-                            div
-                                input(type="text").datepicker
-                                span Hasta
-                .button-group
-                    button(type="button", id="consultar").button.primary Consultar
-            .m-results
-                h2 
-                    i.fa.fa-suitcase
-                    | Universidad - Id. 85855
-                .scrollable
-                    table.table.single.striped
-                        thead
-                            tr
-                                th Fecha
-                                th Saldo inicio día
-                                th Aportes del día
-                                th Retiros del día
-                                th Saldo total
-                        tbody
-                            tr
-                                td 10/12/2014
-                                td $5'000.000
-                                td $1'000.000
-                                td $0.000
-                                td $5'900.000
-                            tr
-                                td 10/12/2014
-                                td $5'000.000
-                                td $1'000.000
-                                td $0.000
-                                td $5'900.000
-                            tr
-                                td 10/12/2014
-                                td $5'000.000
-                                td $1'000.000
-                                td $0.000
-                                td $5'900.000
-                            tr
-                                td 10/12/2014
-                                td $5'000.000
-                                td $1'000.000
-                                td $0.000
-                                td $5'900.000
-                            tr
-                                td 10/12/2014
-                                td $5'000.000
-                                td $1'000.000
-                                td $0.000
-                                td $5'900.000
-                .button-group
-                    button(type="button").button.primary Volver atrás
+            h1.heading.primary Ventanas modales
+            .button-group.align.left
+                button(type="button", id="cargando").button.primary Cargando
+                button(type="button", id="estado").button.primary Estado
 .modals
-    .loader
+    .loader.hide
         .overlay
         .contents
+    .status.active
+        .overlay
+        .contents
+            .text-frame
+                h2 Ocurrio un error
+                p Ocurrio un error ejecutando su solicitud. Porfavor intentelo nuevamente.
+                p
+                    | En caso de persistir el error porfavor comuniquese con nuestro call center 
+                    strong 6447700
+                    |  Fiduciaria y 
+                    strong 6447730 
+                    | Valores indicando el código de error 5xx.x
+                p.small 10 de Julio de 2014, 2:35 PM
+                .button-group
+                    button(type="button").button.reverse.btn-close Continuar

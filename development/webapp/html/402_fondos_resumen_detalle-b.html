@@ -72,98 +72,32 @@
     </div>
     <section class="text-frame">
       <div class="panel primary full">
-        <h1 class="heading primary">Saldos históricos</h1>
-        <form class="form filters">
-          <ul class="grid split-2 separate">
-            <li><strong>Seleccionar encargo:</strong>
-              <div>
-                <label>
-                  <select>
-                    <option>Encargo 1 - Id. 8012345</option>
-                    <option selected>Universidad - Id. 85855</option>
-                    <option>Encargo 3 - Id. 8012345</option>
-                  </select>
-                </label>
-              </div>
-            </li>
-            <li><strong>Periodo:</strong>
-              <div class="grid split-2 separate">
-                <div>
-                  <input type="text" class="datepicker"><span>Desde</span>
-                </div>
-                <div>
-                  <input type="text" class="datepicker"><span>Hasta</span>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="button-group">
-            <button type="button" id="consultar" class="button primary">Consultar</button>
-          </div>
-        </form>
-        <div class="m-results">
-          <h2><i class="fa fa-suitcase"></i>Universidad - Id. 85855</h2>
-          <div class="scrollable">
-            <table class="table single striped">
-              <thead>
-                <tr>
-                  <th>Fecha</th>
-                  <th>Saldo inicio día</th>
-                  <th>Aportes del día</th>
-                  <th>Retiros del día</th>
-                  <th>Saldo total</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>10/12/2014</td>
-                  <td>$5'000.000</td>
-                  <td>$1'000.000</td>
-                  <td>$0.000</td>
-                  <td>$5'900.000</td>
-                </tr>
-                <tr>
-                  <td>10/12/2014</td>
-                  <td>$5'000.000</td>
-                  <td>$1'000.000</td>
-                  <td>$0.000</td>
-                  <td>$5'900.000</td>
-                </tr>
-                <tr>
-                  <td>10/12/2014</td>
-                  <td>$5'000.000</td>
-                  <td>$1'000.000</td>
-                  <td>$0.000</td>
-                  <td>$5'900.000</td>
-                </tr>
-                <tr>
-                  <td>10/12/2014</td>
-                  <td>$5'000.000</td>
-                  <td>$1'000.000</td>
-                  <td>$0.000</td>
-                  <td>$5'900.000</td>
-                </tr>
-                <tr>
-                  <td>10/12/2014</td>
-                  <td>$5'000.000</td>
-                  <td>$1'000.000</td>
-                  <td>$0.000</td>
-                  <td>$5'900.000</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="button-group">
-            <button type="button" class="button primary">Volver atrás</button>
-          </div>
+        <h1 class="heading primary">Ventanas modales</h1>
+        <div class="button-group align left">
+          <button type="button" id="cargando" class="button primary">Cargando</button>
+          <button type="button" id="estado" class="button primary">Estado</button>
         </div>
       </div>
     </section>
   </main>
   <div class="modals">
-    <div class="loader">
+    <div class="loader hide">
       <div class="overlay"></div>
       <div class="contents"></div>
+    </div>
+    <div class="status active">
+      <div class="overlay"></div>
+      <div class="contents">
+        <div class="text-frame">
+          <h2>Ocurrio un error</h2>
+          <p>Ocurrio un error ejecutando su solicitud. Porfavor intentelo nuevamente.</p>
+          <p>En caso de persistir el error porfavor comuniquese con nuestro call center <strong>6447700</strong> Fiduciaria y <strong>6447730 </strong>Valores indicando el código de error 5xx.x</p>
+          <p class="small">10 de Julio de 2014, 2:35 PM</p>
+          <div class="button-group">
+            <button type="button" class="button reverse btn-close">Continuar</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <footer>
@@ -205,7 +139,7 @@
         today: 'hoy',
         clear: 'borrar',
         firstDay: 1,
-        format: 'dddd d !de mmmm !de yyyy',
+        format: 'd !de mmmm !de yyyy',
         formatSubmit: 'yyyy/mm/dd'
     });
     
@@ -215,12 +149,30 @@
     });
   </script>
   <script>
+    // Abrir modal
+    function open_modal(win) {
+        $('.modals').fadeIn();
+        $('.modals > div').removeClass('active');
+        $('.modals').find(win).addClass('active');
+    }
+    
+    $('#cargando').on('click', function(){
+        open_modal('.loader');
+    });
+    
+    $('#estado').on('click', function(){
+        open_modal('.status');
+    });
+    
+    // Cerrar modal
     $('.modals .loader').on('click', function(){
         $(this).parent('.modals').fadeOut()
     });
     
-    $('#consultar').on('click', function(){
-        $('.modals').fadeIn()
+    $('.modals .btn-close').on('click', function(){
+        $(this).parents('.modals').fadeOut();
+        $('.modals > div').removeClass('active');
     });
+    
   </script>
 </body>

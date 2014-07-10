@@ -273,11 +273,6 @@ ul > li,
 ol > li {
   display: list-item;
 }
-.uno .list.bullet > li,
-ul.bullet > li,
-ol.bullet > li {
-  list-style: none inside url('../images/bullet.png');
-}
 .uno .list.square > li,
 ul.square > li,
 ol.square > li {
@@ -2047,6 +2042,11 @@ label.auto {
   width: 100%;
   margin: 0;
 }
+.uno .list.bullet > li,
+ul.bullet > li,
+ol.bullet > li {
+  list-style: none inside url('../images/common/bullet.png');
+}
 table thead tr th {
   line-height: 1;
 }
@@ -2225,12 +2225,24 @@ table thead tr th {
   text-align: right;
 }
 .m-mainnav li:first-child {
-  border-width: 0;
-  border-style: none;
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
 }
 @media all and (min-width: 1025px) {
   .m-mainnav li:first-child {
     float: left;
+  }
+}
+.m-mainnav li {
+  width: 100%;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #eeeeee transparent #aaaaaa;
+}
+@media all and (min-width: 1025px) {
+  .m-mainnav li {
+    width: auto;
   }
 }
 .m-mainnav li {
@@ -2271,17 +2283,6 @@ table thead tr th {
     padding: 16px 20px 6px;
   }
 }
-.m-mainnav li {
-  width: 100%;
-  border-width: 1px 0;
-  border-style: solid;
-  border-color: #eeeeee transparent #aaaaaa;
-}
-@media all and (min-width: 1025px) {
-  .m-mainnav li {
-    width: auto;
-  }
-}
 @media all and (min-width: 1025px) {
   .m-mainnav .subitems {
     padding: 0 3px 0 0;
@@ -2291,21 +2292,29 @@ table thead tr th {
   border-width: 0;
   border-style: none;
 }
+.m-mainnav .subitems li:first-child {
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #bbbbbb;
+}
 .m-mainnav .subitems li a {
   padding: 7px 10px 7px 25px;
 }
 @media all and (min-width: 1025px) {
   .m-mainnav .subitems li a {
-    padding: 3px 20px 4px;
+    padding: 2px 20px 2px;
   }
 }
 .m-mainnav .subitems .title {
-  font: 0.66em a;
+  font: bold 0.7em a;
   font-family: inherit;
   text-align: left;
   text-transform: uppercase;
   color: #222222;
   padding: 0 10px;
+  border-width: 0 0 0 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
 }
 @media all and (min-width: 1025px) {
   .m-mainnav li {
@@ -2314,13 +2323,24 @@ table thead tr th {
     border-color: #bbbbbb;
     float: none;
   }
+  .m-mainnav li:first-child {
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: #bbbbbb;
+  }
+  .m-mainnav .subitems {
+    text-align: center;
+    padding: 0;
+  }
   .m-mainnav .subitems ul {
     border-width: 0 0 0 1px;
     border-style: solid;
     border-color: #bbbbbb;
+    clear: both;
   }
   .m-mainnav .subitems .title {
     text-align: center;
+    display: inline-block;
   }
   .m-mainnav .subitems ul {
     float: none;
@@ -2346,6 +2366,9 @@ table thead tr th {
     left: -175px;
     margin-left: 50%;
   }
+}
+.m-general-pie > canvas {
+  max-width: 320px;
 }
 .m-resumen > ul {
   border-top: 1px solid #cccccc;
@@ -2589,6 +2612,13 @@ footer {
   color: #ffffff;
   background-color: #dddddd;
 }
+.button.reverse {
+  color: #ffffff;
+  background-color: #00275b;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+}
 .form.login strong {
   font-size: 1.3em;
   color: #00275b;
@@ -2827,7 +2857,8 @@ span.option-description {
 .panel.recap .overview .messages {
   padding: 1em;
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
+  color: #888888;
 }
 .panel.recap .overview .loader {
   background: transparent url('../images/loader.gif') no-repeat center 1.5em;
@@ -2836,11 +2867,25 @@ span.option-description {
 .panel.recap .scrollable .messages {
   padding: 1em;
   text-align: center;
-  font-weight: bold;
+  font-weight: normal;
+  color: #888888;
 }
 .panel.recap .scrollable .loader {
   background: transparent url('../images/loader.gif') no-repeat center 1.5em;
   padding-top: 3.5em;
+}
+.panel .loader {
+  background: transparent url('../images/loader.gif') no-repeat center 1.5em;
+  padding-top: 3.5em;
+}
+.panel .messages {
+  padding: 1em;
+  text-align: center;
+  font-weight: normal;
+  color: #888888;
+}
+.m-resumen .messages {
+  padding: 0 1em;
 }
 .table.summary tr th,
 .table.summary tr td {
@@ -2882,6 +2927,12 @@ span.option-description {
 .modals {
   z-index: 3;
 }
+.modals > div {
+  display: none;
+}
+.modals > .active {
+  display: block;
+}
 .modals .loader .overlay {
   background: transparent url('../images/common/overlay.png') repeat 0 0;
   position: fixed;
@@ -2894,7 +2945,7 @@ span.option-description {
   -ms-user-select: none;
 }
 .modals .loader .contents {
-  background: #000000 url('../images/common/loading_2x.gif') no-repeat center;
+  background: #000000 url('../images/common/loading2_2x.gif') no-repeat center;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -2908,6 +2959,38 @@ span.option-description {
   margin: 0 0 0 50%;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+}
+.modals .status .overlay {
+  background: transparent url('../images/common/overlay.png') repeat 0 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.modals .status .contents {
+  color: #ffffff;
+  background-color: #00275b;
+  min-height: 240px;
+  position: fixed;
+  left: 0;
+  top: 320px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.1em;
+}
+.modals .status .contents h2 {
+  font-weight: normal;
+}
+.modals .status .contents .small {
+  margin-top: 60px;
+}
+.modals .status .contents .button-group {
+  margin: 0;
+  padding: 0;
 }
 .color-codes {
   margin: 15px 0 0;
@@ -2995,13 +3078,13 @@ span.option-description {
   text-align: center;
 }
 .dataTables_wrapper .dataTable thead .sorting {
-  background: transparent url('../javascript/libs/dataTables/images/sort_both.png') no-repeat right center;
+  background: transparent url('../images/dataTables/sort_both.png') no-repeat right center;
 }
 .dataTables_wrapper .dataTable thead .sorting_asc {
-  background: transparent url('../javascript/libs/dataTables/images/sort_asc.png') no-repeat right center;
+  background: transparent url('../images/dataTables/sort_asc.png') no-repeat right center;
 }
 .dataTables_wrapper .dataTable thead .sorting_desc {
-  background: transparent url('../javascript/libs/dataTables/images/sort_desc.png') no-repeat right center;
+  background: transparent url('../images/dataTables/sort_desc.png') no-repeat right center;
 }
 .fa {
   margin-right: 10px;

@@ -2,18 +2,9 @@ $(function(){
     var $write = $('#write'),
         shift = false,
         capslock = false;
-    
 
-
-    $(document).on('click', '#help', function(){ // USE .ON INSTEAD OF .CLICK
-        var character = $(this).html(); 
-        $('#write').val($('#write').val() + character);
-    });
-
-    // IMPORTANT !!
-    // Use .on instead of .click for dinamically genarated content
-    $('.skeyboard li').on('click', function(){
-        var $this = $(this),
+function add_character(obj) {
+        var $this = $(obj),
             character = $this.html(); // If it's a lowercase letter, nothing happens to this variable
         
         // Shift keys
@@ -76,6 +67,11 @@ $(function(){
         if(character == '&gt;'){ character='>'; }
         $write.val($write.val() + character);
         $write.focus();
+
+}
+
+    $('.skeyboard li').click(function(){
+        add_character($(this));
     });
     
     $('#write').keypress(function(){
@@ -109,9 +105,21 @@ $(document).mouseup(function (event) {
     }
 });
 
+function aw() {
+    alert('aw');
+}
+
+function addElement() {
+  var ni = document.getElementById('myDiv');
+  var newdiv = document.createElement('li');
+
+  newdiv.setAttribute('id', 'blu');
+  newdiv.innerHTML = '&';
+  ni.appendChild(newdiv);
+  newdiv.addEventListener("click", aw, true); 
+}
+
 $( document ).ready(function() {
-    $('.skeyboard .symbols').append('<li id="help"></li>');
-    $('.skeyboard .symbols #help').html('8');
 
     var myArray = [1,2,3,4,5,6,7,8,9,0];
     Shuffle(myArray);
@@ -124,4 +132,6 @@ $( document ).ready(function() {
     for (var i=0;i<myArray.length;i++) {
         $(".skeyboard .numbers li span.on.n" + i).html(myArray[i]);
    }
+
+   addElement();
 });

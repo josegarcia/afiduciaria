@@ -258,18 +258,19 @@
             & li:last-child { border:0; }
             & .title     { width:50%; min-width: 180px; padding: 5px 0 5px 10px; }
             & .value     { width:50%; min-width: 180px; padding: 5px 10px 5px 0;  text-align: right; }
-            & .messages  { padding: 1em; text-align: center; font-weight: normal; color:@hex8; }
-            & .loader    { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
+            // & .messages  { padding: 1em; text-align: center; font-weight: normal; color:@hex8; }
+            // & .loader    { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
         }
-        & .scrollable    {
-            & .messages  { padding: 1em; text-align: center; font-weight: normal; color:@hex8; }
-            & .loader    { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
-        }
+        // & .scrollable    {
+        //     & .messages  { padding: 1em; text-align: center; font-weight: normal; color:@hex8; }
+        //     & .loader    { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
+        // }
     }
 
     .panel {
-        & .loader       { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding-top: 3.5em; }
         & .messages     { padding: 1em; text-align: center; font-weight: normal; color:@hex8; }
+        & .messages.loader       { .back(@trans, '../images/loader.gif', no-repeat, center 1.5em); padding: 3.5em 1em 1em; }
+        & .messages.error { color: red; }
     }
 
     .m-resumen {

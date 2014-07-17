@@ -70,21 +70,12 @@
     </div>
     <section class="text-frame">
       <div class="panel primary full">
-        <form class="form filters">
+        <div class="breadcrumb primary">
           <ul>
-            <li><strong>SubCuenta:</strong>
-              <div>
-                <label class="auto">
-                  <select>
-                    <option>Subcuenta 0001 - Mifondo</option>
-                    <option selected>Subcuenta 0002 - Mifondo</option>
-                    <option>Subcuenta 0003 - Mifondo</option>
-                  </select>
-                </label>
-              </div>
-            </li>
+            <li><a href="#">Resúmen</a></li>
+            <li><span>Detalles</span></li>
           </ul>
-        </form>
+        </div>
         <div class="m-results tabset accordion primary">
           <h2 class="summary">Cuenta 00001</h2>
           <div class="scrollable details">
@@ -315,7 +306,7 @@
   </script>
   <script src="../javascript/libs/uform/uform.js"></script>
   <script>
-    // Tabset
+    // Accordion tabset
     $('.tabset .summary').click(function(event){
         $('.tabset .summary.active').removeClass('active');
         $('.tabset .summary').next('.details').hide();

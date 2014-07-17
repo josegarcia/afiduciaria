@@ -16,16 +16,22 @@ main
                         a(href="#") Transacciones
     section.text-frame
         .panel.primary.full
-            form.form.filters
+            .breadcrumb.primary
                 ul
                     li
-                        strong SubCuenta:
-                        div
-                            label.auto
-                                select
-                                    option Subcuenta 0001 - Mifondo
-                                    option(selected) Subcuenta 0002 - Mifondo
-                                    option Subcuenta 0003 - Mifondo
+                        a(href="#") Resúmen
+                    li 
+                        span Detalles
+            //- form.form.filters
+            //-     ul
+            //-         li
+            //-             strong SubCuenta:
+            //-             div
+            //-                 label.auto
+            //-                     select
+            //-                         option Subcuenta 0001 - Mifondo
+            //-                         option(selected) Subcuenta 0002 - Mifondo
+            //-                         option Subcuenta 0003 - Mifondo
             .m-results.tabset.accordion.primary
                 h2.summary Cuenta 00001
                 .scrollable.details

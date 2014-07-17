@@ -1,0 +1,29 @@
+include sections/global/doctype
+    head
+        include sections/global/head
+        include sections/global/routines
+        //- stylesheets
+        link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
+        link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-logged.pensiones.resumen
+        include sections/header/200
+        include sections/nav
+        include sections/main/302
+        include sections/footer
+        include sections/snippets/scripts
+        script(src='../javascript/libs/uform/uform.js')
+        script.
+
+            // Tabset
+            $('.tabset .summary').click(function(event){
+                $('.tabset .summary.active').removeClass('active');
+                $('.tabset .summary').next('.details').hide();
+                $(this).addClass('active');
+                $(this).next('.details').fadeIn();
+
+                event.preventDefault();
+            });

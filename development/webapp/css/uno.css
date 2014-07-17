@@ -771,7 +771,7 @@ table.rounded tr:last-child td:last-child {
   overflow: visible;
 }
 .tabset.vertical {
-  padding-right: 73%;
+  padding-right: 0%;
 }
 .tabset.vertical > .summary {
   display: inline-block;
@@ -794,7 +794,7 @@ table.rounded tr:last-child td:last-child {
   right: 0;
   height: auto;
   overflow: visible;
-  width: 73%;
+  width: 0%;
 }
 .tabset.left {
   padding-left: 27%;
@@ -820,6 +820,26 @@ table.rounded tr:last-child td:last-child {
 }
 .tabset.left > .summary.active + .details {
   position: relative;
+  overflow: visible;
+}
+.tabset.accordion {
+  text-align: left;
+}
+.tabset.accordion > .summary a {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.tabset.accordion > .summary + .details {
+  position: absolute;
+  height: 1px;
+  overflow: hidden;
+  border-top: 1px solid transparent;
+}
+.tabset.accordion > .summary.active + .details {
+  position: relative;
+  height: auto;
   overflow: visible;
 }
 html .auto {
@@ -1633,6 +1653,7 @@ body.fondos.movimientos .c-nav .movimientos,
 body.fondos.extractos .c-nav .extractos,
 body.fondos.certificados .c-nav .certificados,
 body.fondos.transacciones .c-nav .transacciones,
+body.pensiones.resumen .c-nav .resumen,
 body .c-nav li:hover {
   border-width: 0 0 3px 0;
   border-style: solid;
@@ -1645,6 +1666,7 @@ body.fondos.movimientos .c-nav .movimientos a,
 body.fondos.extractos .c-nav .extractos a,
 body.fondos.certificados .c-nav .certificados a,
 body.fondos.transacciones .c-nav .transacciones a,
+body.pensiones.resumen .c-nav .resumen a,
 body .c-nav li:hover a {
   color: #00275b;
 }
@@ -1899,17 +1921,22 @@ body .c-nav li:hover a {
   color: #ffffff;
   background-color: #00275b;
 }
-.tabset.primary:before {
+.tabset.primary > .summary {
+  padding: 0.2em 0 0.2em 1.3em;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin: 0 0 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  background-color: #f6f6f7;
+}
+.tabset.primary > .summary:before {
   display: inline-block;
   content: '';
-  width: 100%;
-  height: 39px;
+  width: 1em;
+  height: 1em;
   vertical-align: middle;
-  border-bottom: 1px solid #ddd;
-  position: absolute;
-}
-.tabset.primary > .summary {
-  max-width: 32.5%;
 }
 .tabset.primary > .summary a {
   padding: 0 0.5em 0;
@@ -1927,19 +1954,31 @@ body .c-nav li:hover a {
     padding: 0 2em 0;
   }
 }
-.tabset.primary > .summary.active {
-  max-width: 32.5%;
-}
 .tabset.primary > .summary.active,
 .tabset.primary > .summary:hover {
-  border-bottom: 3px solid #00275b;
+  border-bottom: 2px solid transparent;
+  background-color: #dddddd;
 }
 .tabset.primary > .summary.active a,
 .tabset.primary > .summary:hover a {
   color: #00275b;
 }
-.tabset.primary > .details {
-  padding: 1.2em 0 0;
+.tabset.primary > .summary:before {
+  display: inline-block;
+  content: '\f067';
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  font: 0.86em / 36px 'FontAwesome';
+  position: absolute;
+  left: 7px;
+}
+.tabset.primary > .summary.active:before {
+  display: inline-block;
+  content: '\f068';
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
 }
 .tooltip.primary:after {
   font: 14px / 1.2 a;
@@ -2041,6 +2080,12 @@ label.auto {
 .uno .validation-errors {
   width: 100%;
   margin: 0;
+}
+.table tr.new td:first-child {
+  border-left: 3px solid #009089;
+}
+.table tr.new td {
+  background-color: #eeeeee;
 }
 .uno .list.bullet > li,
 ul.bullet > li,
@@ -2302,7 +2347,7 @@ table thead tr th {
 }
 @media all and (min-width: 1025px) {
   .m-mainnav .subitems li a {
-    padding: 2px 20px 2px;
+    padding: 2px 20px 3px;
   }
 }
 .m-mainnav .subitems .title {
@@ -2453,6 +2498,9 @@ table thead tr th {
   .m-subnav li a:hover {
     padding: 16px 20px 6px;
   }
+}
+.m-results .subhead {
+  font-size: 1.2em;
 }
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
@@ -2708,6 +2756,16 @@ footer {
 }
 span.option-description {
   font-size: 1.1em !important;
+}
+.panel.graphs {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #cccccc;
+  padding: 0.75em 1.5em;
+}
+.panel.graphs canvas {
+  left: -120px;
+  margin-left: 50%;
 }
 .panel.login {
   padding: 30px 5% 20px;
@@ -3056,6 +3114,60 @@ span.option-description {
   background: transparent url('../images/forms/date.jpg') no-repeat top right;
   cursor: default;
   padding-right: 36px;
+}
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+.animate.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
 }
 .dataTables_wrapper {
   text-align: center;

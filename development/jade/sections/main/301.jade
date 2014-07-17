@@ -1,0 +1,106 @@
+
+main
+    .c-nav
+        .text-frame.form.selection
+            .m-subnav
+                ul
+                    li.resumen
+                        a(href="#") Resúmen
+                    li.movimientos
+                        a(href="#") Movimientos
+                    li.extractos
+                        a(href="#") Extractos
+                    li.certificados
+                        a(href="#") Certificados
+                    li.transacciones
+                        a(href="#") Transacciones
+    section.text-frame
+        .panel.primary.full
+            form.form.filters
+                ul
+                    li
+                        strong Cuenta:
+                        div
+                            label.auto
+                                select
+                                    option Cuenta 00001
+                                    option(selected) Cuenta 00002
+                                    option Cuenta 00003
+            .m-results
+                h2 
+                    i.fa.fa-book
+                    | Cuenta 00002
+                .scrollable
+                    table.table.single.striped
+                        thead
+                            tr
+                                th Subcuenta
+                                th Saldo inicio día
+                                th Opción de inversión
+                                th Retención contingente
+                                th Retención sobre rendimientos
+                                th Rendimientos
+                                th Consolidado
+                                th 
+                        tbody
+                            tr
+                                td 
+                                    a(href="#") Personalizar
+                                td $11'000.000
+                                td 1
+                                td 500.000
+                                td 500.000
+                                td 500.000
+                                td 10%
+                                td
+                                    a(href="#") Detalle
+                            tr
+                                td 
+                                    a(href="#") Personalizar
+                                td $11'000.000
+                                td 2
+                                td 500.000
+                                td 500.000
+                                td 500.000
+                                td 10%
+                                td
+                                    a(href="#") Detalle
+                            tr
+                                td 
+                                    a(href="#") Personalizar
+                                td $11'000.000
+                                td 3
+                                td 500.000
+                                td 500.000
+                                td 500.000
+                                td 10%
+                                td
+                                    a(href="#") Detalle
+                            tr
+                                td 
+                                    a(href="#") Personalizar
+                                td $11'000.000
+                                td 4
+                                td 500.000
+                                td 500.000
+                                td 500.000
+                                td 10%
+                                td
+                                    a(href="#") Detalle
+                .grid.split-2.separate
+                    .panel.graphs
+                        h3 Composicion de cuenta por inversión
+                        canvas(id="myChart", width="240", height="240").canvas
+                        ul.color-codes
+                            li
+                                span.var1
+                                | Cuenta 0001
+                            li
+                                span.var2
+                                | Cuenta 0002
+                            li
+                                span.var3
+                                | Cuenta 0003
+                            li
+                                span.var3
+                                | Cuenta 0004

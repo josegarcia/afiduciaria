@@ -28,6 +28,9 @@
 
     .uno .validation-errors     { width: 100%; margin: 0; }
 
+    .table tr.new td:first-child { border-left: 3px solid @accent; }
+    .table tr.new td            {  background-color: @hexe; }
+
     // .form.auto                  {} blah..
 
     .uno .list,
@@ -38,6 +41,11 @@
     table thead tr th { 
         line-height: 1; 
     }
+
+    // .tabset
+    //     &.accordion {
+    //             .tabs.accordion;
+    //     }
 
 //  Header
 //  ---------------------------------------
@@ -101,7 +109,7 @@
             &                   { .padding(0 3px 0 0, 1025px); }
             & li                { .border; }
             & li:first-child    { .border(0 1px 0 0, solid, @hexb); }
-            & li a              { .padding(7px 10px 7px 25px); .padding(2px 20px 2px, 1025px); }
+            & li a              { .padding(7px 10px 7px 25px); .padding(2px 20px 3px, 1025px); }
             & .title            { .font(bold .7em); text-align: left; text-transform: uppercase; color:@hex2; padding: 0 10px; .border(0 0 0 1px, solid, @hexb); }
         }
     }
@@ -151,6 +159,11 @@
         & li                    { .display(block); .display(inline-block, 1025px); .margin(0 0 0, 1025px); vertical-align: top; text-align: left; .width(auto); }
         & li a                  { .padding(7px 10px); .padding(18px 20px 4px, 1025px); .display(block); .display(inline-block, 1025px); .color(@hex4); }
         & li a:hover            {  text-decoration: none; .padding(16px 20px 6px, 1025px); }
+    }
+
+    .m-results                  {
+        &                       {  }
+        & .subhead              { font-size: 1.2em; }
     }
 
 //  Footer
@@ -228,6 +241,11 @@
     .option-description {
         &                   { padding: 0 0 0 24px; }
         span&               { font-size: 1.1em !important; }
+    }
+
+    .panel.graphs       {
+        &               { .border(1px, solid, @border-base); .padding(.75em 1.5em); }
+        & canvas        { .center-block(240px); }
     }
 
     .panel.login        {
@@ -339,6 +357,55 @@
     }
 
     .datepicker         { .back(@trans, '../images/forms/date.jpg', no-repeat, top right); cursor: default; padding-right: 36px; }
+
+// Animate.CSS
+// ----------------------------------------
+
+.animate {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+}
+
+.animate.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
 
 //  Plugins
 //  ---------------------------------------

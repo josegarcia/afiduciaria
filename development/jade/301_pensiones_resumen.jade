@@ -1,0 +1,42 @@
+include sections/global/doctype
+    head
+        include sections/global/head
+        include sections/global/routines
+        //- stylesheets
+        link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
+        link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-logged.pensiones.resumen
+        include sections/header/200
+        include sections/nav
+        include sections/main/301
+        include sections/footer
+        include sections/snippets/scripts
+        script(src='../javascript/libs/chart.min.js')
+        script(src='../javascript/libs/uform/uform.js')
+        script.
+            var mydata = [
+                {
+                    value: 20,
+                    color : "#00275b"
+                },
+                {
+                    value : 77,
+                    color: "#dedc1e"
+                },
+                {
+                    value : 25,
+                    color : "#b3bec6"
+                },
+                {
+                    value: 44,
+                    color : "#00a49e"
+                }
+            ];
+
+            $(document).ready(function() {
+                var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
+            });

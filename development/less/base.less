@@ -264,10 +264,13 @@
                 .tabs.horizontal;
         }
         &.vertical   {
-                .tabs.vertical (27%);
+                .tabs.vertical (100%);
         }
         &.left      {
                 .tabs.left (27%);
+        }
+        &.accordion {
+                .tabs.accordion;
         }
     }//
 // Base Properties
@@ -591,6 +594,14 @@
 // ----------------------------------------------------------------------- //
 
     .tabs {
+        .accordion () {
+            &                       { text-align: left; }
+            & > .summary            {
+                & a                 { display: block; .ellipsis; }
+                & + .details        { position: absolute; height: 1px; overflow: hidden; border-top: 1px solid transparent; } //  visibility: hidden; display: none;
+                &.active + .details { position: relative; height: auto; overflow: visible; } //  visibility: visible; display: block;
+            }
+        }
         .horizontal (@summary: 27%) {
             &                       { text-align: left; }
             & > .summary            {

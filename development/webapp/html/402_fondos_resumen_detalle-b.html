@@ -12,8 +12,6 @@
   <link href="../css/uno.css" rel="stylesheet">
   <link href="../fonts/FontAwesome/fonts/font-awesome.min.css" rel="stylesheet">
   <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
-  <link href="../javascript/libs/picker/default.css" rel="stylesheet">
-  <link href="../javascript/libs/picker/default.date.css" rel="stylesheet">
   <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
   <script src="../javascript/modernizr.js"></script>
   <script src="../javascript/modernizr.load.js"></script>
@@ -85,7 +83,7 @@
       <div class="overlay"></div>
       <div class="contents"></div>
     </div>
-    <div class="status active">
+    <div class="status hide">
       <div class="overlay"></div>
       <div class="contents">
         <div class="text-frame">
@@ -127,27 +125,7 @@
         }
     }); 
   </script>
-  <script src="../javascript/libs/picker/picker.js"></script>
-  <script src="../javascript/libs/picker/picker.date.js"></script>
   <script src="../javascript/libs/uform/uform.js"></script>
-  <script>
-    jQuery.extend(jQuery.fn.pickadate.defaults, {
-        monthsFull: [ 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre' ],
-        monthsShort: [ 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic' ],
-        weekdaysFull: [ 'domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado' ],
-        weekdaysShort: [ 'dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb' ],
-        today: 'hoy',
-        clear: 'borrar',
-        firstDay: 1,
-        format: 'd !de mmmm !de yyyy',
-        formatSubmit: 'yyyy/mm/dd'
-    });
-    
-    $('.datepicker').pickadate({
-        selectMonths: true,
-        selectYears: true
-    });
-  </script>
   <script>
     // Abrir modal
     function open_modal(win) {
@@ -158,6 +136,10 @@
     
     $('#cargando').on('click', function(){
         open_modal('.loader');
+    });
+    
+    $('#detalles').on('click', function(){
+        open_modal('.details');
     });
     
     $('#estado').on('click', function(){

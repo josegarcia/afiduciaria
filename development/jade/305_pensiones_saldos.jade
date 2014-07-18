@@ -1,0 +1,53 @@
+include sections/global/doctype
+    head
+        include sections/global/head
+        include sections/global/routines
+        //- stylesheets
+        link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
+        link(href='../javascript/libs/picker/default.css', rel='stylesheet')
+        link(href='../javascript/libs/picker/default.date.css', rel='stylesheet')
+        link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-logged.pensiones.saldos
+        include sections/header/200
+        include sections/nav
+        include sections/main/305
+        include sections/footer
+        include sections/snippets/scripts
+        script(src='../javascript/libs/dataTables/jquery.dataTables.min.js')
+        script(src='../javascript/libs/picker/picker.js')
+        script(src='../javascript/libs/picker/picker.date.js')
+        script(src='../javascript/libs/uform/uform.js')
+        script.
+            jQuery.extend(jQuery.fn.pickadate.defaults, {
+                monthsFull: [ 'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre' ],
+                monthsShort: [ 'ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic' ],
+                weekdaysFull: [ 'domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado' ],
+                weekdaysShort: [ 'dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb' ],
+                today: 'hoy',
+                clear: 'borrar',
+                firstDay: 1,
+                format: 'd !de mmmm !de yyyy',
+                formatSubmit: 'yyyy/mm/dd'
+            });
+            
+            $('.datepicker').pickadate({
+                selectMonths: true,
+                selectYears: true
+            });
+        script.
+            $.fn.dataTableExt.oStdClasses.sPaging = "pagination primary ";
+
+            $('#dataTable').dataTable( {
+                "filter"            : false,
+                "bLengthChange"     : false,
+                "info"              : false,
+                "iDisplayLength"    : 15,
+                "language"          : 
+                {
+                    "url" : "../javascript/libs/dataTables/spanish.json"
+                }
+            });

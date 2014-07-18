@@ -1,0 +1,138 @@
+main
+    .c-nav
+        .text-frame.form.selection
+            .m-subnav
+                ul
+                    li.resumen
+                        a(href="#") Resúmen
+                    li.movimientos
+                        a(href="#") Movimientos
+                    li.extractos
+                        a(href="#") Extractos
+                    li.saldos
+                        a(href="#") Saldos históricos
+    section.text-frame
+        .panel.primary.full
+            h1.heading.primary Movimientos
+            form.form.filters
+                ul.grid.split-2.separate
+                    li
+                        strong Periodo:
+                        .grid.split-2.separate
+                            div
+                                input(type="text").datepicker
+                                span Desde
+                            div
+                                input(type="text").datepicker
+                                span Hasta
+                    li
+                        strong Tipo de operación:
+                        div
+                            label
+                                select
+                                    option Algunos
+                                    option(selected) Todos
+                                    option Ninguno
+                ul.grid.split-2.separate
+                    li
+                        strong Valor:
+                        div
+                            label
+                                input(type="text")
+                    li
+                        strong
+                            |  Cuenta
+                            em  (*)
+                            | :
+                        div
+                            label
+                                select
+                                    option Cuenta 0001
+                                    option(selected) Cuenta 0002
+                                    option Cuenta 0003
+                .button-group
+                    button(type="button").button.primary Consultar
+            .m-results
+                .scrollable
+                    table.table.single.striped
+                        thead
+                            tr
+                                th Fecha transacción
+                                th Tipo de operación
+                                th Subcuenta
+                                th Concepto
+                                th Valor en pesos
+                                th Nombre beneficiario
+                                th
+                        tbody
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td 1
+                                td Retiro inversionista fondos
+                                td 0
+                                td Melisa Morales
+                                td
+                                    a(href="#").link-popup Detalles
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td 1
+                                td Retención contingente
+                                td 500.000
+                                td Melisa Morales
+                                td
+                                    a(href="#").link-popup Detalles
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td 1
+                                td Retiro inversionista fondos
+                                td 0
+                                td Melisa Morales
+                                td
+                                    a(href="#").link-popup Detalles
+                            tr
+                                td 10/12/2014
+                                td Crédito
+                                td 1
+                                td Recaudo aportes fondos
+                                td 0
+                                td Melisa Morales
+                                td
+                                    a(href="#").link-popup Detalles
+                .grid.split-2
+                    .sidenote.text-left
+                        p (*) Indica campo obligatorio
+                    .fileformat.text-right
+                        | Guardar como: 
+                        a(href="#")  Excel
+                        |  | 
+                        a(href="#") PDF 
+    .modals.hide
+        .popup.active
+            .overlay
+            .contents
+                h2.heading.primary Detalle
+                .form.primary.scroll-y
+                    ul
+                        li
+                            strong Tipo de operación:
+                            div Retiro
+                        li
+                            strong Fecha:
+                            div 14/12/2014
+                        li
+                            strong Aporte:
+                            div 150.000.000
+                        li
+                            strong Valor:
+                            div 150.000.000
+                        li
+                            strong Retención de rendimientos:
+                            div 20.000.000
+                        li
+                            strong Retención de contingente:
+                            div 15.000.000
+                .button-group
+                    button(type="button").button.primary.btn-close Cerrar

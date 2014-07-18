@@ -16,7 +16,7 @@
   <script src="../javascript/modernizr.js"></script>
   <script src="../javascript/modernizr.load.js"></script>
 </head>
-<body class="uno l-logged pensiones resumen">
+<body class="uno l-logged pensiones extractos">
   <header>
     <section class="text-frame">
       <div class="m-sidemenu"><a href="#" class="toggle js-navbar"><i class="fa fa-bars"></i></a></div>
@@ -69,96 +69,71 @@
     </div>
     <section class="text-frame">
       <div class="panel primary full">
+        <h1 class="heading primary">Extractos</h1>
         <form class="form filters">
-          <ul>
-            <li><strong>Cuenta:</strong>
+          <ul class="grid split-2 separate">
+            <li><strong> Seleccionar cuenta:</strong>
               <div>
-                <label class="auto">
+                <label>
                   <select>
-                    <option>Cuenta 00001</option>
-                    <option selected>Cuenta 00002</option>
-                    <option>Cuenta 00003</option>
+                    <option>Cuenta 0001</option>
+                    <option selected>Cuenta 0002</option>
+                    <option>Cuenta 0003</option>
+                  </select>
+                </label>
+              </div>
+            </li>
+            <li><strong> Periodo:</strong>
+              <div>
+                <label>
+                  <select>
+                    <option>Enero de 2014</option>
+                    <option selected>Febrero de 2014</option>
+                    <option>Marzo de 2014</option>
                   </select>
                 </label>
               </div>
             </li>
           </ul>
-        </form>
-        <div class="m-results">
-          <h2><i class="fa fa-book"></i>Cuenta 00002</h2>
-          <div class="scrollable">
-            <table class="table single striped">
-              <thead>
-                <tr>
-                  <th>Subcuenta</th>
-                  <th>Saldo inicio día</th>
-                  <th>Opción de inversión</th>
-                  <th>Retención contingente</th>
-                  <th>Retención sobre rendimientos</th>
-                  <th>Rendimientos</th>
-                  <th>Consolidado</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="#">Personalizar</a></td>
-                  <td>$11'000.000</td>
-                  <td>1</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>10%</td>
-                  <td><a href="#">Detalle</a></td>
-                </tr>
-                <tr>
-                  <td><a href="#">Personalizar</a></td>
-                  <td>$11'000.000</td>
-                  <td>2</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>10%</td>
-                  <td><a href="#">Detalle</a></td>
-                </tr>
-                <tr>
-                  <td><a href="#">Personalizar</a></td>
-                  <td>$11'000.000</td>
-                  <td>3</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>10%</td>
-                  <td><a href="#">Detalle</a></td>
-                </tr>
-                <tr>
-                  <td><a href="#">Personalizar</a></td>
-                  <td>$11'000.000</td>
-                  <td>4</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>500.000</td>
-                  <td>10%</td>
-                  <td><a href="#">Detalle</a></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="button-group">
+            <button type="button" class="button primary">Consultar</button>
           </div>
-          <div class="grid split-2 separate">
-            <div class="panel graphs">
-              <h3>Composicion de cuenta por inversión</h3>
-              <canvas id="myChart" width="240" height="240" class="canvas"></canvas>
-              <ul class="color-codes">
-                <li><span class="var1"></span>Cuenta 0001</li>
-                <li><span class="var2"></span>Cuenta 0002</li>
-                <li><span class="var3"></span>Cuenta 0003</li>
-                <li><span class="var3"></span>Cuenta 0004</li>
-              </ul>
-            </div>
+        </form>
+      </div>
+    </section>
+    <div class="modals hide">
+      <div class="popup active">
+        <div class="overlay"></div>
+        <div class="contents">
+          <h2 class="heading primary">Detalle</h2>
+          <div class="form primary scroll-y">
+            <ul>
+              <li><strong>Tipo de operación:</strong>
+                <div>Retiro</div>
+              </li>
+              <li><strong>Fecha:</strong>
+                <div>14/12/2014</div>
+              </li>
+              <li><strong>Aporte:</strong>
+                <div>150.000.000</div>
+              </li>
+              <li><strong>Valor:</strong>
+                <div>150.000.000</div>
+              </li>
+              <li><strong>Retención de rendimientos:</strong>
+                <div>20.000.000</div>
+              </li>
+              <li><strong>Retención de contingente:</strong>
+                <div>15.000.000</div>
+              </li>
+            </ul>
+          </div>
+          <div class="button-group">
+            <button type="button" class="button primary btn-close">Cerrar</button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
   <footer>
     <section class="text-frame">
@@ -187,30 +162,5 @@
         }
     }); 
   </script>
-  <script src="../javascript/libs/chart.min.js"></script>
   <script src="../javascript/libs/uform/uform.js"></script>
-  <script>
-    var mydata = [
-        {
-            value: 20,
-            color : "#00275b"
-        },
-        {
-            value : 77,
-            color: "#dedc1e"
-        },
-        {
-            value : 25,
-            color : "#b3bec6"
-        },
-        {
-            value: 44,
-            color : "#00a49e"
-        }
-    ];
-    
-    $(document).ready(function() {
-        var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
-    });
-  </script>
 </body>

@@ -83,7 +83,6 @@ $(function(){
     });
 });
 
-
 $('#write').on('focus', function() {
     $('.skeyboard').fadeIn( function() {
         $(this).removeClass('hide');
@@ -101,7 +100,7 @@ $('.skeyboard .numbers').hover(
     }
 );
 
-$(document).mouseup(function (event) {
+$(document).mouseup(function(event) {
     var container = $("#container");
 
     if (!container.is(event.target)  && container.has(event.target).length === 0) {
@@ -124,4 +123,14 @@ $( document ).ready(function() {
     for (var i=0;i<myArray.length;i++) {
         $(".skeyboard .numbers li span.on.n" + i).html(myArray[i]);
    }
+
+    $('#write').bind('copy paste cut drag drop keyup', function (event) {  // NUEVO
+       event.preventDefault();
+    });
+
+    $('#write').on('keydown', function (event) {  // NUEVO
+        if (event.keyCode == 8 || event.keyCode == 46) {
+            return false;
+        }
+    });
 });

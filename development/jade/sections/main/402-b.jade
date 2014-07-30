@@ -20,11 +20,13 @@ main
             .button-group.align.left
                 button(type="button", id="cargando").button.primary Cargando
                 button(type="button", id="estado").button.primary Estado
+                button(type="button", id="exito").button.primary Éxito
+                button(type="button", id="popup").button.primary TyC
 .modals
     .loader.hide
         .overlay
         .contents
-    .status.active
+    .status.hide
         .overlay
         .contents
             .text-frame
@@ -39,3 +41,134 @@ main
                 p.small 10 de Julio de 2014, 2:35 PM
                 .button-group
                     button(type="button").button.reverse.btn-close Continuar
+    .success.hide
+        .overlay
+        .contents
+            .text-frame
+                h2 Registro Éxitoso
+                p El registro se ha realizado correctamente.
+                .button-group
+                    button(type="button").button.secondary.btn-close Continuar
+    .error.hide
+        .overlay
+        .contents
+            .text-frame
+                h2 Registro Éxitoso
+                p El registro se ha realizado correctamente.
+                .button-group
+                    button(type="button").button.secondary.btn-close Continuar
+    .popup-tyc.hide
+        .overlay
+        .contents
+                h2.heading.primary Términos y condiciones
+                div.form.primary.scroll-y
+                    p.
+                      Acuerdo para el acceso al sistema de Operaciones Electrónicas de ALIANZA FIDUCIARIA S. A., entre
+                      el cliente, partícipe, afiliado, o usuario, en adelante denominado EL CLIENTE que accede a este
+                      sistema y ALIANZA FIDUCIARIA S. A.
+                    p.
+                      El solo acceso a este sistema o la utilización de la clave autorizada, conllevan la aceptación del
+                      usuario a todas las estipulaciones de este acuerdo y las condiciones y reglamentos aplicables.
+                      Podrán utilizar el Servicio de portal de clientes de ALIANZA FIDUCIARIA S. A., los clientes que se
+                      encuentren vinculados a algún producto o servicio de ALIANZA FIDUCIARIA S. A. y a quienes se
+                      haya suministrado usuario y clave.
+                    p.
+                      El Servicio de portal de clientes permitirá a EL CLIENTE contar con una comunicación vía Internet
+                      con ALIANZA FIDUCIARIA S.A., con el fin de suministrarle o poner a disposición de EL CLIENTE
+                      información (Consultas) y/o permitirle la realización de las transacciones determinadas o
+                      habilitadas por ALIANZA FIDUCIARIA S. A. para cada producto en particular (Las Transacciones). Las
+                      Transacciones se regularán por los convenios particulares celebrados entre ALIANZA FIDUCIARIA S.A. y EL CLIENTE, por el reglamento de utilización del respectivo producto o servicio, o en su
+                      defecto, por las normas legales colombianas que les sean Aplicables.
+                    p.
+                      Las presentes cláusulas aplicarán igualmente a cualquier otro medio o canal electrónico o
+                      tecnológico dispuesto por ALIANZA FIDUCIARIA S.A. para el manejo de sus productos, tales como
+                      AUDIOSERVICIO, INTERNET, o cualquiera otro, en todo lo que resultara pertinente:
+                    h4.
+                      OBJETO
+                    p.
+                      El presente reglamento tiene por objeto establecer las bases que regularán el acceso y el manejo
+                      de los productos y servicios financieros del CLIENTE en ALIANZA FIDUCIARIA S. A., a través de la
+                      sección transaccional (parte privada) de la (s) página(s) publicada(s) por ALIANZA FIDUCIARIA S.A.
+                      para dichos efectos en el World Wide Web (www), en adelante EL SERVICIO DE INTERNET y demás
+                      canales electrónicos. Las disposiciones del presente reglamento se entienden plenamente
+                      aplicables y referidas a ALIANZA FIDUCIARIA S.A. con quien se encuentra vinculado
+                      contractualmente EL CLIENTE o se vincule en el futuro, razón por la cual en caso de vinculación con
+                      algún producto de ALIANZA FIDUCIARIA S.A. no será necesaria la aceptación de un nuevo
+                      reglamento. Con la aceptación del presente reglamento se inscribirán todos los productos del
+                      CLIENTE en ALIANZA FIDUCIARIA S.A.
+                    h4.
+                      OPERACIONES
+                    p.
+                      EL SERVICIO DE INTERNET y demás canales electrónicos le permitirá al CLIENTE, una comunicación
+                      a través de internet con ALIANZA FIDUCIARIA S.A., para que: 1) Obtenga información de los
+                      productos y servicios que tiene en ALIANZA FIDUCIARIA S.A. 2) Realice las transacciones
+                      financieras habilitadas o que se habiliten en el futuro. Para el caso de servicios diferentes a los de
+                      consulta, EL CLIENTE podrá en cualquier tiempo, solicitar su cancelación o suspensión, mediante
+                      comunicación escrita dirigida a LA ENTIDAD prestadora del servicio. ALIANZA FIDUCIARIA S. A. será libre de determinar que operaciones estarán habilitadas en la(s) página(s) en internet, así como el
+                      tipo de formato, los procedimientos, y las condiciones bajo los cuales operará la prestación de
+                      cada uno de los servicios, los cuales estarán previstos en la guía del servicio, en la parte privada del
+                      portal y en el link de seguridad de la parte pública. EL CLIENTE se compromete a dar cumplimiento
+                      a dichas condiciones, las cuales serán de necesaria lectura y entendimiento para hacer uso del
+                      SERVICIO DE INTERNET. En el evento en que ALIANZA FIDUCIARIA S.A. decida suspender de
+                      manera definitiva la prestación de alguno(s) de los servicios habilitados a través del SERVICIO DE
+                      INTERNET, dará noticia de éste hecho al CLIENTE en los términos previstos más adelante, sin que
+                      por ello haya lugar a sanción o responsabilidad alguna para LA ENTIDAD.
+                    h4.
+                      CLAVES
+                    p.
+                      Para el acceso al SERVICIO DE INTERNET, es necesario que EL CLIENTE obtenga las siguientes
+                      claves, las cuales serán el mecanismo acordado con EL CLIENTE para su autenticación ante los
+                      sistemas de ALIANZA FIDUCIARIA S. A. y tendrán el carácter de firma electrónica, por lo tanto, EL
+                      CLIENTE reconoce expresa e irrevocablemente que cualquier operación o consulta realizada bajo
+                      las claves secretas equivale a su firma manuscrita y que, ha consentido en las mismas:
+                    ul
+                      li.
+                        1. Clave para consultas de los productos y servicios financieros del CLIENTE y 
+                      li.
+                        2. Clave para la
+                        realización de transacciones monetarias o transacciones que impliquen la disposición de recursos.
+                    h4.
+                      MANEJO DE LAS CLAVES
+                    p.
+                      EL CLIENTE acepta que es la única persona que conoce y conocerá sus claves, que las mismas son
+                      personales e intransferibles, que no las divulgará, ni las dará a conocer a terceros y que bajo su
+                      exclusiva responsabilidad accederá a los productos ofrecidos por ALIANZA FIDUCIARIA S.A. a través
+                      del SERVICIO DE INTERNET. ALIANZA FIDUCIARIA S. A. y EL CLIENTE declaran y aceptan, que sin las
+                      claves no se podrá ingresar al sistema, ni ordenar cualquier tipo de operación, transacción,
+                      traslado, consulta, movimiento, pago, servicio o descuento por servicio. Por esta razón y con base
+                      en lo previsto en los artículos 16 y 17 de la Ley 527 de 1999, EL CLIENTE asume como suyas todas
+                      las operaciones, las transacciones, los traslados, las consultas, los movimientos, los pagos, los
+                      servicios o los descuentos por servicios que se hayan realizado utilizado las claves, conforme los
+                      procedimientos descritos en el presente reglamento, en la guía del usuario y en las condiciones del
+                      servicio publicadas o que se publiquen por ALIANZA FIDUCIARIA S.A. conjuntamente o por
+                      separado, por lo tanto, EL CLIENTE exonera de cualquier responsabilidad a ALIANZA FIDUCIARIA
+                      S.A., individual y conjuntamente consideradas por cualquier operación, transacción, traslado,
+                      consulta, movimiento, pago, servicio o descuento por servicio que se realice mediante el uso de la
+                      clave de acceso. De esta forma, EL CLIENTE exonera de toda responsabilidad a ALIANZA
+                      FIDUCIARIA S.A., así como a otra entidad que participe en los procesos de transferencias, pagos
+                      de bienes y/o servicios o pagos a terceros o cualquier otra actividad relacionada con los servicios
+                      objeto del presente reglamento, siempre que en la autorización de la transacción se hubiera
+                      suministrado la correspondiente clave de transacciones. Toda transacción de transferencia o pago
+                      a terceros así procesada, impedirá su reversión o reclamo a ALIANZA FIDUCIARIA S.A.,
+                      especialmente por circunstancias tales como la calidad, cantidad, cumplimiento de entrega o condiciones del bien y/o servicio objeto de adquisición, derecho de retractación, garantía de
+                      funcionamiento o cualquier incumplimiento a disposición contractual, legal o reglamentaria, las
+                      cuales competerán exclusivamente a la relación subyacente al pago procesado entre el CLIENTE
+                      con la Empresa, Comercio o Tercero receptor del pago.
+                    h4.
+                      CAMBIO DE CLAVES
+                    ul
+                        li.
+                          1. En caso que EL CLIENTE por cualquier circunstancia olvide alguna(s) clave(s) o sea
+                          eliminada o restringida por inactivación, falta de uso, uso indebido, condiciones de
+                          seguridad, borrado o cualquier otra circunstancia, deberá comunicarse con ALIANZA
+                          FIDUCIARIA S. A., si tiene vínculos con este, o con LA ENTIDAD ante la cual solicitó el
+                          SERVICIO DE INTERNET Y DEMAS CANALES ELECTRONICOS, para que le asigne la clave
+                          correspondiente, conforme el procedimiento establecido para el efecto. 
+                        li.
+                          2. En el evento en
+                          que por cualquier motivo EL CLIENTE sospeche que alguna de sus claves ha sido
+                          descubierta o accedida por terceros no autorizados y en general en caso que la seguridad
+                          de las claves se vea comprometida, EL CLIENTE deberá inmediatamente tomar todas las
+                          medidas necesarias para evitar usos no autorizados o fraudul…
+                .button-group
+                    button(type="button").button.primary.btn-close Cerrar

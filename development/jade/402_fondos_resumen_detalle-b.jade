@@ -35,6 +35,14 @@ include sections/global/doctype
             $('#estado').on('click', function(){
                 open_modal('.status');
             });
+
+            $('#exito').on('click', function(){
+                open_modal('.success');
+            });
+
+            $('#popup').on('click', function(){
+                open_modal('.popup-tyc');
+            });
             
             // Cerrar modal
             $('.modals .loader').on('click', function(){

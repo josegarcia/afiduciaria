@@ -46,6 +46,13 @@
         line-height: 1; 
     }
 
+    .form li input[type="checkbox"],
+    .form li input[type="radio"] {
+        &                       { .absolute.left-top(0, 0); }
+        & + span                { .padding(0 0 0 18px); }
+    }
+
+
     // .tabset
     //     &.accordion {
     //             .tabs.accordion;
@@ -200,9 +207,9 @@
 //  ---------------------------------------
 
     #container                  {
-        & .skeyboard            { .width(364px); .width(480px, 800px); .position.fill(absolute, 100%, 0, auto); .position.fill(absolute, -45px, 100%, auto, auto, 960px);}
-        & .skeyboard:before     { .arrow.right(12px, @hex8); .position.right-top(absolute, -24px, 62px) }
-        & .skeyboard:after      { .arrow.right(12px, @hexf); .position.right-top(absolute, -23px, 62px) }
+        & .skeyboard            { .width(364px); .width(480px, 800px); .absolute.align(100%, 0, auto); .absolute.align(-45px, 100%, auto, auto, 960px);}
+        & .skeyboard:before     { .arrow.top(12px, @hexa); .position.right-top(absolute, 23px, -25px) }
+        & .skeyboard:after      { .arrow.top(12px, @hexf); .position.right-top(absolute, 23px, -24px) }
         & input.keyboard        { .back(@hexf, '../images/forms/keyboard.png', no-repeat, 100% 0); padding-right: 45px; }
         & .skeyboard            { font-size: 1.2em; }
         & .skeyboard .numbers   { float:right; }
@@ -264,6 +271,7 @@
 
     .panel.padded       {
         &               { padding:@base-padding 0%; .padding(@base-padding 18%, 800px); }
+        & li a          { text-decoration: underline; }
     }
 
     .panel.recap        {
@@ -301,13 +309,13 @@
     }
 
     .table.summary      { 
-        &               { .table.cell-border(0 0 1px 0, solid, @hexc); .table.padding(.3em 0); }
+        &               { .table.border(0 0 1px 0, solid, @hexc); .table.padding(.3em 0); }
     }
 
     .table.single               {
         &                       { .table.padding(0.35em 1em); .font-size(1.1em, 800px); .border(0 0 1px, solid, @hexc); }
         &.smaller               { .font-size(.96em); }
-        & tbody tr              { .color.hover(@text-base, @hexe); }
+        & tbody tr              { .hover.color(@text-base, @hexe); }
         & tbody tr.selected td  { .color(@hexf, @primary); }
         & thead tr th           { .border(1px 0, solid, @hexc); }
     }
@@ -320,7 +328,7 @@
         & > div                 {
             &                   { display: none; }
             &.active            { display: block; }
-            & .overlay          { .back(@trans, '../images/common/overlay.png'); .position.fill(fixed, 0, 0, 0, 0); .user-select; }
+            & .overlay          { .back(@trans, '../images/common/overlay.png'); .fixed.align(0, 0, 0, 0); .user-select; }
         }
         & > .popup              {
             & .contents         { .color(@text-base, @base); .center-block(520px, 520px); .center-vertical(480px); .width(520px, 520px); .height(480px); position: fixed; .rounded(@base-radius); .padding(0 1em 36px); }
@@ -330,7 +338,7 @@
 
     .modals {
         & > .loader             {
-            & .contents         { .back(@black, '../images/common/loading2_2x.gif', no-repeat, center); .rounded(10px); .square(80px); .position.fill(fixed, 380px, 0, 0, -40px); .margin(0 0 0 50%); .shadow(0 0 4px, @black, .8); }
+            & .contents         { .back(@black, '../images/common/loading2_2x.gif', no-repeat, center); .rounded(10px); .square(80px); .fixed.align(380px, 0, 0, -40px); .margin(0 0 0 50%); .shadow(0 0 4px, @black, .8); }
         }
         & > .status             {
             & .contents         { 
@@ -342,14 +350,47 @@
         }
     }
 
+    .modals {
+        & > .success            {
+            & .text-frame       {
+                &               { .padding(30px 20px 60px 140px); .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); min-height: 240px; }
+                & .button-group { .spacing(0, 10px 20px); .absolute.left-bottom(0, 0); }
+            }
+            & .contents         { 
+                &               { .color(@text-base, @hexf); .position.left-top(fixed, 0, 320px); font-size: 1.1em; border-top: 15px solid #95c794; }
+                & h2            { font-weight: normal; }
+                & .small        { margin-top: 60px; }
+            }
+        }
+    }
+
+    .modals {
+        & > .error              {
+            & .contents         { 
+                &               { .color(@text-base, @hexf); min-height: 240px; .position.left-top(fixed, 0, 320px); font-size: 1.1em; .reset-block(); .center-block(640px, 640px); .padding(30px 20px 60px 140px); .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); border-top: 15px solid @error;
+                    border-image:url(../images/img-top-stripe.png) 15px 15px; webkit-border-image:url(../images/img-top-stripe.png) 15px 15px; }
+                & h2            { font-weight: normal; }
+                & .small        { margin-top: 60px; }
+                & .button-group { .spacing(0, 10px 20px); .absolute.left-bottom(0, 0); }
+            }
+        }
+    }
+
+    .modals {
+        & > .popup-tyc          {
+            & .contents         { .color(@text-base, @base); .center-block(640px, 640px); .center-vertical(480px); .width(640px, 640px); .height(480px); position: fixed; .rounded(@base-radius); .padding(0 1.6em 36px); }
+            & .contents .button-group { .position.right-bottom(absolute, 1em, 0); }
+        }
+    }
+
 
 //  Custom
 //  ---------------------------------------
 
     .color-codes {
         &               { margin: 15px 0 0; }
-        & li            { margin: 3px 0; padding-right: 10px; width: auto; }
-        & li span       { .square(15px); .block; margin-right: 5px; border: 1px solid #ccc; }
+        & li            { margin: 3px 0; padding:0 10px 0 18px; width: auto; }
+        & li span       { .square(15px); .block; margin-right: 5px; border: 1px solid #ccc; .absolute.left-top(0, 0) }
         & .var1         { background-color: #00275b; }
         & .var2         { background-color: #dedc1e; }
         & .var3         { background-color: #b3bec6; }
@@ -373,6 +414,11 @@
     }
 
     .datepicker         { .back(@trans, '../images/forms/date.jpg', no-repeat, top right); cursor: default; padding-right: 36px; }
+
+    #recaptcha_area     { 
+        & table         { width: auto; min-width: 0; .color(@text-base, @white); .border(1px, solid, @hexb); .shadow(0 1px 2px, @hexe, .6); }
+        & input[type="text"] { .padding(0 .6em); }
+    }
 
 // Animate.CSS
 // ----------------------------------------

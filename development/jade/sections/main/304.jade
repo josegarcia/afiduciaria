@@ -1,0 +1,65 @@
+main
+    .c-nav
+        .text-frame.form.selection
+            .m-subnav
+                ul
+                    li.resumen
+                        a(href="#") Resúmen
+                    li.movimientos
+                        a(href="#") Movimientos
+                    li.extractos
+                        a(href="#") Extractos
+                    li.saldos
+                        a(href="#") Saldos históricos
+    section.text-frame
+        .panel.primary.full
+            h1.heading.primary Extractos
+            form.form.filters
+                ul.grid.split-2.separate
+                    li
+                        strong
+                            |  Seleccionar cuenta:
+                        div
+                            label
+                                select
+                                    option Cuenta 0001
+                                    option(selected) Cuenta 0002
+                                    option Cuenta 0003
+                    li
+                        strong
+                            |  Periodo:
+                        div
+                            label
+                                select
+                                    option Enero de 2014
+                                    option(selected) Febrero de 2014
+                                    option Marzo de 2014
+                .button-group
+                    button(type="button").button.primary Consultar
+    .modals.hide
+        .popup.active
+            .overlay
+            .contents
+                h2.heading.primary Detalle
+                .form.primary.scroll-y
+                    ul
+                        li
+                            strong Tipo de operación:
+                            div Retiro
+                        li
+                            strong Fecha:
+                            div 14/12/2014
+                        li
+                            strong Aporte:
+                            div 150.000.000
+                        li
+                            strong Valor:
+                            div 150.000.000
+                        li
+                            strong Retención de rendimientos:
+                            div 20.000.000
+                        li
+                            strong Retención de contingente:
+                            div 15.000.000
+                .button-group
+                    button(type="button").button.primary.btn-close Cerrar

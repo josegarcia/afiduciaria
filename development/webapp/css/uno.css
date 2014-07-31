@@ -1521,6 +1521,13 @@ footer {
   border-top: 1px solid #bbbbbb;
   background-color: #ffffff;
 }
+.valores header {
+  color: #444444;
+  background-color: #ffffff;
+  border-bottom: 1px solid #bbbbbb;
+  -webkit-box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
+  box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
+}
 header > section {
   color: #444444;
 }
@@ -2165,6 +2172,9 @@ table thead tr th {
 .form li input[type="radio"] + span {
   padding: 0 0 0 18px;
 }
+input:required {
+  box-shadow: none;
+}
 .m-brand {
   width: auto;
 }
@@ -2620,6 +2630,7 @@ footer {
   min-height: 65px;
   line-height: 65px;
 }
+.m-legal .valores a,
 .m-legal .fiduciaria a,
 .m-legal .seven4n a {
   text-indent: -9999px;
@@ -2635,6 +2646,13 @@ footer {
   width: 102px;
   height: 32px;
   background: #ffffff url('../images/logo-fiduciaria-small.png') no-repeat left top;
+  vertical-align: top;
+  margin-top: 15px;
+}
+.m-legal .fiduciaria a {
+  width: 102px;
+  height: 32px;
+  background: #ffffff url('../images/logo-valores-small.png') no-repeat left top;
   vertical-align: top;
   margin-top: 15px;
 }
@@ -2922,7 +2940,7 @@ span.option-description {
 }
 .panel.success {
   padding-left: 120px;
-  padding-bottom: 30px;
+  padding-bottom: 0;
   border-top: 15px solid #95c794;
   background: #ffffff url('../images/icon-ok.png') no-repeat 40px 40px;
 }
@@ -3119,8 +3137,7 @@ span.option-description {
   position: fixed;
   left: 0;
   top: 320px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   font-size: 1.1em;
 }
 .modals > .status .contents h2 {

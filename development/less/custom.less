@@ -52,6 +52,9 @@
         & + span                { .padding(0 0 0 18px); }
     }
 
+    input:required {
+        box-shadow:none;
+    }
 
     // .tabset
     //     &.accordion {
@@ -67,6 +70,10 @@
         & .brand a              { .display(block); .size(100%, 120px); padding: 5px 0 ; }
         & .brand  strong        { .display(none); }
         & .valores              { .width; float: right; }
+    }
+
+    .valores .m-brand           {
+        &                       {  }
     }
 
     .m-sidemenu                 {
@@ -193,9 +200,11 @@
 
     .m-legal                    {
         &                       { text-align: center; min-height: 65px; line-height: 65px; }
+        & .valores a,
         & .fiduciaria a,
         & .seven4n a            { .hide-text; .inline-block; .transition(all, 150ms); }
         & .fiduciaria a         { .size(102px, 32px); .back(@hexf, '../images/logo-fiduciaria-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; }
+        & .fiduciaria a         { .size(102px, 32px); .back(@hexf, '../images/logo-valores-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; }
         & .seven4n              { float: right; }
         & .seven4n a            { .size(38px, 12px); .back(@hexf, '../images/logo-s4n-small.png', no-repeat, left top); }
         & .seven4n:hover a      { .back.position(left bottom); }
@@ -275,7 +284,7 @@
     }
 
     .panel.success      {
-        &               { padding-left: 120px; padding-bottom: 30px; border-top: 15px solid #95c794; .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); }
+        &               { padding-left: 120px; padding-bottom: 0; border-top: 15px solid #95c794; .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); }
     }
 
     .panel.recap        {
@@ -346,7 +355,7 @@
         }
         & > .status             {
             & .contents         { 
-                &               { .color(@hexf, @primary); min-height: 240px; .position.left-top(fixed, 0, 320px); padding-top: 20px; padding-bottom: 20px; font-size: 1.1em; }
+                &               { .color(@hexf, @primary); min-height: 240px; .position.left-top(fixed, 0, 320px); padding: 20px; font-size: 1.1em; }
                 & h2            { font-weight: normal; }
                 & .small        { margin-top: 60px; }
                 & .button-group { .spacing; }

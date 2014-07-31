@@ -82,8 +82,13 @@
         & a:hover               { .color(@primary, @hexf); }
     }
 
+    .m-login-data {
+        &                       { width: auto; font-size: .9em; margin: -15px 0 10px; color: @hex8; }
+        & p                     { text-align: left; }
+    }
+
     .m-user-options             {
-        &                       { .width; padding-right: 50px; .position.right-top(absolute, 0, 10px); .index(3); }
+        &                       { .width; padding-right: 50px; .position.right-top(absolute, 0, 10px); .index(3); .color(@text-base); }
         & .user                 { text-align: right; color: @hex8; }
         & .name                 { text-align: right; .font(bold 1.4em); }
         & .email                { text-align: right; margin-bottom: 10px; }

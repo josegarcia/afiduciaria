@@ -16,28 +16,7 @@ include sections/global/doctype
         script(src='../javascript/libs/chart.min.js')
         script(src='../javascript/libs/dataTables/jquery.dataTables.min.js')
         script(src='../javascript/scripts.js')
-        script
-            //- var setupCanvas;
-
-            //- setupCanvas = function(canvas) {
-            //-     var ctx, newWidth;
-            //-     canvas = $(canvas);
-            //-     newWidth = canvas.parent().width();
-            //-     canvas.prop({
-            //-         width: newWidth,
-            //-         height: 320
-            //-     });
-            //-     ctx = canvas.get(0).getContext("2d");
-            //-     return new Chart(ctx).Pie(mydata);
-            //- };
-
-            //- (function(canvas) {
-            //-     setupCanvas(canvas);
-            //-     return $(window).resize(function() {
-            //-         return setupCanvas(canvas);
-            //-     });
-            //- })("#myChart");
-            
+        script.
             var mydata = [
                 {
                     value: 101,
@@ -126,7 +105,7 @@ include sections/global/doctype
             });
 
 
-        script
+        script.
             $.fn.dataTableExt.oStdClasses.sPaging = "pagination primary ";
 
             $('#dataTable').dataTable( {
@@ -139,7 +118,8 @@ include sections/global/doctype
                     "url" : "../javascript/libs/dataTables/spanish.json"
                 }
             });
-        script
+            
+        script.
             $('#incFont').click(function(){   
                 curSize= parseInt($('main').css('font-size')) + 2;
                 

@@ -1,0 +1,121 @@
+<!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
+<!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]>  <html lang="es"> <![endif]-->
+<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<head>
+  <title>Alianza Fiduciaria</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Seven4n">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+  <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+  <link href="../css/uno.css" rel="stylesheet">
+  <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
+  <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
+  <script src="../javascript/modernizr.js"></script>
+  <script src="../javascript/modernizr.load.js"></script>
+</head>
+<body class="uno l-public">
+  <header>
+    <section class="text-frame">
+      <div class="m-brand">
+        <h1 class="brand fiduciaria"><a href="../index.html"><img src="../images/logo-fiduciaria.png"><strong> Alianza Fiduciaria</strong></a></h1>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="text-frame">
+      <h1 class="heading primary">Formulario de registro</h1>
+      <div class="panel padded">
+        <div class="message primary info js-close span-3">
+          <p>Usted no aparece registrado como cliente de Alianza lo invitamos a que se comunique con nuestro call center <strong>6447700 </strong> Fiduciaria y <strong>6447730 </strong> Valores</p>
+        </div>
+        <div class="form primary">
+          <ul>
+            <li><strong>Documento de identificación:</strong>
+              <div class="grid split-3 separate">
+                <label>
+                  <select>
+                    <option>CC</option>
+                    <option>CE</option>
+                    <option>NIT</option>
+                  </select><span>Tipo de documento</span>
+                </label>
+                <label class="span-2">
+                  <input type="text"><span>Número de identificación</span>
+                </label>
+              </div>
+            </li>
+            <li><strong>Confirmar número de identificación:</strong>
+              <div class="grid split-3 separate">
+                <label></label>
+                <label class="span-2">
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+            <li><strong>Correo electrónico:</strong>
+              <div>
+                <label>
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+            <li><strong>Confirmar correo electrónico:</strong>
+              <div>
+                <label>
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+            <li><strong>Deseo activar el control de acceso a direcciones IP</strong>
+              <div class="grid split-4 separate">
+                <label>
+                  <input type="radio" name="ip_access"><span>Sí</span>
+                </label>
+                <label>
+                  <input type="radio" name="ip_access"><span>No</span>
+                </label>
+              </div>
+            </li>
+            <li><strong>Ingrese el código que se muestra a continuación:</strong>
+              <div class="style">
+                <div><img src="../images/captcha.jpg"></div>
+                <label class="medium">
+                  <input type="text">
+                </label>
+              </div>
+            </li>
+          </ul>
+          <div class="button-group">
+            <ul>
+              <li>
+                <label>
+                  <input type="checkbox"><span>Acepto que soy responsable o el responsable dentro de mi empresa de la administración del Portal Transaccional</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox"><span>He leido y acepto los<a href="#"> Términos y condiciones</a></span>
+                </label>
+              </li>
+            </ul>
+            <button type="button" id="regresar" class="button secondary">Regresar</button>
+            <button type="submit" class="button primary">Continuar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section class="text-frame">
+      <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
+    </section>
+  </footer>
+  <script src="../javascript/scripts.js"></script>
+  <script>
+    $('#regresar').click(function(){
+        window.location='100ingreso.html';
+    });
+  </script>
+</body>

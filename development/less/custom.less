@@ -274,6 +274,10 @@
         & li a          { text-decoration: underline; }
     }
 
+    .panel.success      {
+        &               { padding-left: 120px; padding-bottom: 30px; border-top: 15px solid #95c794; .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); }
+    }
+
     .panel.recap        {
         &               { color: @hex4; background-color: #fff; .shadow(0 1px 2px, #ccc, .6); .border(1px, solid, @hexc @hexb @hexb @hexc); }
         & .top-bar      {
@@ -380,6 +384,11 @@
         & > .popup-tyc          {
             & .contents         { .color(@text-base, @base); .center-block(640px, 640px); .center-vertical(480px); .width(640px, 640px); .height(480px); position: fixed; .rounded(@base-radius); .padding(0 1.6em 36px); }
             & .contents .button-group { .position.right-bottom(absolute, 1em, 0); }
+            & .contents {
+                & .form.primary {
+                    &           { padding-left: .5em; }
+                }
+            }
         }
     }
 

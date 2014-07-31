@@ -2920,6 +2920,12 @@ span.option-description {
 .panel.padded li a {
   text-decoration: underline;
 }
+.panel.success {
+  padding-left: 120px;
+  padding-bottom: 30px;
+  border-top: 15px solid #95c794;
+  background: #ffffff url('../images/icon-ok.png') no-repeat 40px 40px;
+}
 .panel.recap {
   color: #444444;
   background-color: #fff;
@@ -3219,6 +3225,9 @@ span.option-description {
   position: absolute;
   right: 1em;
   bottom: 0;
+}
+.modals > .popup-tyc .contents .form.primary {
+  padding-left: .5em;
 }
 .color-codes {
   margin: 15px 0 0;

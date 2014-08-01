@@ -2856,9 +2856,14 @@ span.option-description {
   border-color: #cccccc;
   padding: 0.75em 1.5em;
 }
-.panel.graphs canvas {
+.panel.graphs #myChart {
   width: 240px;
   left: -120px;
+  margin-left: 50%;
+}
+.panel.graphs #barChart {
+  width: 360px;
+  left: -180px;
   margin-left: 50%;
 }
 .panel.login {

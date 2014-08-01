@@ -40,3 +40,20 @@ include sections/global/doctype
             $(document).ready(function() {
                 var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
             });
+        script.
+            var data = {
+                labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        fillColor: "#00275b",
+                        color: "rgba(0,0,0,0,1)",
+                        data: [90, 50, 15, -17, -16, 0, -4]
+                    }
+                ]
+            };
+
+            $(document).ready(function() {
+                var myBarChart = new Chart(document.getElementById("barChart").getContext("2d")).Bar(data);
+            });
+

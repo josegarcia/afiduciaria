@@ -52,8 +52,14 @@
         & + span                { .padding(0 0 0 18px); }
     }
 
+    textarea:required,
+    select:required,
     input:required {
-        box-shadow:none;
+        box-shadow: none;
+    }
+
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide {
+        display: none !important;
     }
 
     // .tabset
@@ -247,10 +253,10 @@
     }
 
     .form.secondary             { 
-        & li strong             { .font(bold 1.2em); .block; padding: .2em 0; }
-        & li strong span        { .font(0.9em @d .7); }
+        & li > strong           { .font(bold 1.2em); .block; padding: .2em 0; }
+        & li > strong span      { .font(0.9em @d .7); }
         & li                    {  padding-bottom: .5em; border-bottom: 1px dotted @hexc; }
-        & li div                {  padding-top: 1em; }
+        & li > div              {  padding-top: 1em; }
     }
 
     .heading            {

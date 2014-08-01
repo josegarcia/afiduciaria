@@ -1,111 +1,356 @@
 main
-    section
+    section.text-frame
         h1.heading.primary On-screen keyboard
-        #tryme
-            input(type="text").output
-            a(href="#").button click me
-        #container
-            textarea(id="write", cols="6") tryme
-            ul#keyboard
-                li.symbol
-            
-                    span.off `
-                    span.on ~
-                li.symbol
-                    span.off 1
-                    span.on !
-                li.symbol
-                    span.off 2
-                    span.on @
-                li.symbol
-                    span.off 3
-                    span.on #
-                li.symbol
-                    span.off 4
-                    span.on $
-                li.symbol
-                    span.off 5
-                    span.on %
-                li.symbol
-                    span.off 6
-                    span.on ^
-                li.symbol
-                    span.off 7
-                    span.on &
-                li.symbol
-                    span.off 8
-                    span.on *
-                li.symbol
-                    span.off 9
-                    span.on (
-                li.symbol
-                    span.off 0
-                    span.on )
-                li.symbol
-                    span.off -
-                    span.on _
-                li.symbol
-                    span.off =
-                    span.on +
-                li.delete.lastitem delete
-                li.tab tab
-                li.letter q
-                li.letter w
-                li.letter e
-                li.letter r
-                li.letter t
-                li.letter y
-                li.letter u
-                li.letter i
-                li.letter o
-                li.letter p
-                li.symbol
-                    span.off [
-                    span.on {
-                li.symbol
-                    span.off ]
-                    span.on }
-                li.symbol.lastitem
-                    span.off \
-                    span.on |
-                li.capslock caps lock
-                li.letter a
-                li.letter s
-                li.letter d
-                li.letter f
-                li.letter g
-                li.letter h
-                li.letter j
-                li.letter k
-                li.letter l
-                li.symbol
-                    span.off ;
-                    span.on :
-                li.symbol
-                    span.off '
-                    span.on "
-                li.return.lastitem return
-                li.left-shift shift
-                li.letter z
-                li.letter x
-                li.letter c
-                li.letter v
-                li.letter b
-                li.letter n
-                li.letter m
-                li.symbol
-                    span.off ,
-                    span.on <
-                li.symbol
-                    span.off .
-                    span.on >
-                li.symbol
-                    span.off /
-                    span.on ?
-                li.right-shift.lastitem shift
-                li.space.lastitem  
-script
-    $('a.button').click(function(){
-        $('.output').val('gotcha') ;
-    });
 
+        .panel.primary.full
+          h1.heading.primary Saldos históricos
+          form.form.filters.ng-invalid.ng-invalid-required.ng-dirty(role='form', name='formulario')
+            //- ngIf: (cargandoPensiones && cargandoCuentas) && ( !errorPensiones  && !errorCuentas )
+            //- ngIf: !cargandoPensiones && errorPensiones
+            //- ngIf: !cargandoCuentas && errorCuentas
+            //- ngIf: NoPensiones
+            ul.grid.split-2.separate(ng-show='(cargandoPensiones === false && cargandoCuentas === false) && ( !errorPensiones  && !errorCuentas )')
+              li
+                strong Cuenta:
+                div
+                  label
+                    select#4ebc5abe-e903-49d5-8f57-cd3e953b078d.ng-scope.ng-valid.ng-dirty.aa-had-focus(style='', aa-val-msg='', ng-model='id_cuenta_seleccionada', name='cuenta_seleccionada', aa-label-strategy='none', aa-label='Cuenta', ng-options='i.wpft_plan as i.wpft_plan for i in cuentas', ng-change='formSaldosActivate()')
+                      option(disabled='disabled', value='', selected='selected', ng-disabled='deshabilitar', ng-init='deshabilitar = true') Seleccionar
+                      option(value='0') 60031003030
+                    .validation-errors.ng-scope(aa-val-msg-for='formulario.cuenta_seleccionada')
+                      //- ngRepeat: msg in errorMessages
+                      .notch.notch-border
+                      .notch
+            div(ng-show='isFormSaldosActivate')
+              ul
+                li
+                  .grid.split-4.separate
+                    label
+                      input.ng-valid.ng-animate.ng-pristine-remove.ng-pristine-remove-active.ng-dirty(type='checkbox', style='', ng-model='checkSubCuenta', ng-change='cargarSelects("checkSubCuenta")')
+                      span Subcuenta
+                    label
+                      input.ng-valid.ng-animate.ng-pristine-remove.ng-pristine-remove-active.ng-dirty(type='checkbox', style='', ng-model='checkOpcionInversion', ng-change='cargarSelects("checkOpcionInversion")')
+                      span Opción de inversión
+              ul.grid.split-2.separate
+                p.messages.error.ng-hide(ng-show='cargando_subcuentas && errorSubcuentas') Hubo un error al obtener las subcuentas. Por favor reintentar
+                p.messages.loader.ng-hide(ng-show='cargando_subcuentas && !errorSubcuentas') Cargando subcuentas ...
+                li(ng-show='checkSubCuenta && cargando_subcuentas === false && !errorSubcuentas')
+                  strong Subcuenta:
+                  div
+                    label
+                      select.ng-pristine.ng-valid(style='', ng-model='id_subcuenta_seleccionada', ng-options='i.wsce_suct as i.wsce_suct_descri for i in subcuentas')
+                        option(disabled='disabled', value='', selected='selected', ng-disabled='deshabilitar', ng-init='deshabilitar = true') Seleccionar
+                        option(value='0') EXTRAORDINARIO
+                        option(value='1') FUNCIONARIO
+                p.messages.error.ng-hide(ng-show='cargando_opcioni && errorOpcionInversion') Hubo un error al obtener las opciones de inversion. Por favor reintentar
+                p.messages.loader.ng-hide(ng-show='cargando_opcioni && !errorOpcionInversion') Cargando opciones de inversion ...
+                li(ng-show='checkOpcionInversion && cargando_opcioni === false && !errorOpcionInversion')
+                  strong Opción de inversión:
+                  div
+                    label
+                      select.ng-pristine.ng-valid(style='', ng-model='id_opcioni_seleccionada', ng-options='i.wsco_opin as i.wsco_opin_descri for i in opcionInversion')
+                        option(disabled='disabled', value='', selected='selected', ng-disabled='deshabilitar', ng-init='deshabilitar = true') Seleccionar
+                        option(value='0') ACCIONES ECOPETROL
+                        option(value='1') CDT FINAMERICA
+                        option(value='2') CDT FINAMERICA 2
+                        option(value='3') CDT FINAMERICA 3
+                        option(value='4') CDTS GMAC
+                        option(value='5') OPCION CERRADA CDTS FINAMERICA
+                        option(value='6') PARTE  COMUN
+                        option(value='7') PENSIONALES 1 COLOMBIA
+                        option(value='8') PENSIONALES 2015 COLOMBIA
+                        option(value='9') PENSIONALES 2024 COLOMBIA
+                        option(value='10') PENSIONALES 4 COLOMBIA
+                        option(value='11') RENTA FIJA IBR 540
+                        option(value='12') RENTA FIJA INTERNACIONAL TD 1
+                li.ng-hide(ng-show='checkAporte')
+                  strong Aportes:
+                  div
+                    label
+                      select
+                        option(value='Algunos') Algunos
+                        option(value='Todos', selected='selected') Todos
+                        option(value='Ninguno') Ninguno
+              ul
+                li
+                  strong Periodo:
+                  .grid.split-2.separate
+                    div
+                      input#idFechaDesde.datepicker.ng-scope.ng-pristine.picker__input.ng-animate.ng-valid-remove.ng-invalid-add.ng-valid-remove-active.ng-invalid.ng-invalid-add-active.ng-invalid-required(type='text', aria-owns='idFechaDesde_root idFechaDesde_submit', aria-readonly='false', aria-expanded='false', aria-haspopup='true', readonly='', style='', aa-val-msg='', name='aaFechaDesde', ng-model='aaFechaDesde', aa-label-strategy='bottomSpan', aa-label='Desde', ng-change='modificarCalendarHasta()', calendar-alianza='alianzaSemestre', required='')
+                      span(for='idFechaDesde') Desde:
+                      .validation-errors.ng-scope(aa-val-msg-for='formulario.aaFechaDesde')
+                        //- ngRepeat: msg in errorMessages
+                        label.error.ng-binding.ng-scope.ng-hide(ng-show='submitted', ng-repeat='msg in errorMessages') El campo Desde es requerido.
+                        //- end ngRepeat: msg in errorMessages
+                        .notch.notch-border
+                        .notch
+                      #idFechaDesde_root.picker(aria-hidden='true')
+                        .picker__holder
+                          .picker__frame
+                            .picker__wrap
+                              .picker__box
+                                .picker__header
+                                  .picker__nav--prev(data-nav='-1')  
+                                  .picker__nav--next.picker__nav--disabled(data-nav='1')  
+                                  select.picker__select--month(disabled='')
+                                    option(value='0', disabled='') enero
+                                    option(value='1') febrero
+                                    option(value='2') marzo
+                                    option(value='3') abril
+                                    option(value='4') mayo
+                                    option(value='5') junio
+                                    option(value='6') julio
+                                    option(value='7', selected='') agosto
+                                    option(value='8', disabled='') septiembre
+                                    option(value='9', disabled='') octubre
+                                    option(value='10', disabled='') noviembre
+                                    option(value='11', disabled='') diciembre
+                                  select.picker__select--year(disabled='')
+                                    option(value='2014', selected='') 2014
+                                table.picker__table
+                                  thead
+                                    tr
+                                      th.picker__weekday lun
+                                      th.picker__weekday mar
+                                      th.picker__weekday mié
+                                      th.picker__weekday jue
+                                      th.picker__weekday vie
+                                      th.picker__weekday sáb
+                                      th.picker__weekday dom
+                                  tbody
+                                    tr
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406523600000', role='button', aria-controls='idFechaDesde') 28
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406610000000', role='button', aria-controls='idFechaDesde') 29
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406696400000', role='button', aria-controls='idFechaDesde') 30
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406782800000', role='button', aria-controls='idFechaDesde') 31
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--today.picker__day--highlighted(data-pick='1406869200000', role='button', aria-controls='idFechaDesde', aria-activedescendant='true') 1
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1406955600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 2
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407042000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 3
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407128400000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 4
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407214800000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 5
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407301200000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 6
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407387600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 7
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407474000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 8
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407560400000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 9
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407646800000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 10
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407733200000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 11
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407819600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 12
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407906000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 13
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407992400000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 14
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408078800000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 15
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408165200000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 16
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408251600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 17
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408338000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 18
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408424400000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 19
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408510800000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 20
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408597200000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 21
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408683600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 22
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408770000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 23
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408856400000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 24
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408942800000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 25
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409029200000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 26
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409115600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 27
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409202000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 28
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409288400000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 29
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409374800000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 30
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409461200000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 31
+                                    tr
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409547600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 1
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409634000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 2
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409720400000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 3
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409806800000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 4
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409893200000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 5
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409979600000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 6
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1410066000000', role='button', aria-controls='idFechaDesde', aria-disabled='true') 7
+                                .picker__footer
+                                  button.picker__button--today(type='button', data-pick='1406869200000', disabled='') hoy
+                                  button.picker__button--clear(type='button', data-clear='1', disabled='') borrar
+                      input#idFechaDesde_submit(type='hidden', name='aaFechaDesde_submit')
+                    div
+                      input#idFechaHasta.datepicker.picker__input.ng-scope.ng-pristine.ng-animate.ng-valid-remove.ng-invalid-add.ng-valid-remove-active.ng-invalid.ng-invalid-add-active.ng-invalid-required(type='text', style='', aria-owns='idFechaHasta_root idFechaHasta_submit', aria-readonly='false', aria-expanded='false', aria-haspopup='true', readonly='', aa-val-msg='', name='aaFechaHasta', ng-model='aaFechaHasta', aa-label-strategy='bottomSpan', aa-label='Hasta', ng-change='modificarCalendarDesde()', calendar-alianza='alianzaSemestre', required='')
+                      span(for='idFechaHasta') Hasta:
+                      .validation-errors.ng-scope(aa-val-msg-for='formulario.aaFechaHasta')
+                        //- ngRepeat: msg in errorMessages
+                        label.error.ng-binding.ng-scope.ng-hide(ng-show='submitted', ng-repeat='msg in errorMessages') El campo Hasta es requerido.
+                        //- end ngRepeat: msg in errorMessages
+                        .notch.notch-border
+                        .notch
+                      #idFechaHasta_root.picker(aria-hidden='true')
+                        .picker__holder
+                          .picker__frame
+                            .picker__wrap
+                              .picker__box
+                                .picker__header
+                                  .picker__nav--prev(data-nav='-1')  
+                                  .picker__nav--next.picker__nav--disabled(data-nav='1')  
+                                  select.picker__select--month(disabled='')
+                                    option(value='0', disabled='') enero
+                                    option(value='1') febrero
+                                    option(value='2') marzo
+                                    option(value='3') abril
+                                    option(value='4') mayo
+                                    option(value='5') junio
+                                    option(value='6') julio
+                                    option(value='7', selected='') agosto
+                                    option(value='8', disabled='') septiembre
+                                    option(value='9', disabled='') octubre
+                                    option(value='10', disabled='') noviembre
+                                    option(value='11', disabled='') diciembre
+                                  select.picker__select--year(disabled='')
+                                    option(value='2014', selected='') 2014
+                                table.picker__table
+                                  thead
+                                    tr
+                                      th.picker__weekday lun
+                                      th.picker__weekday mar
+                                      th.picker__weekday mié
+                                      th.picker__weekday jue
+                                      th.picker__weekday vie
+                                      th.picker__weekday sáb
+                                      th.picker__weekday dom
+                                  tbody
+                                    tr
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406523600000', role='button', aria-controls='idFechaHasta') 28
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406610000000', role='button', aria-controls='idFechaHasta') 29
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406696400000', role='button', aria-controls='idFechaHasta') 30
+                                      td
+                                        .picker__day.picker__day--outfocus(data-pick='1406782800000', role='button', aria-controls='idFechaHasta') 31
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--today.picker__day--highlighted(data-pick='1406869200000', role='button', aria-controls='idFechaHasta', aria-activedescendant='true') 1
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1406955600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 2
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407042000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 3
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407128400000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 4
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407214800000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 5
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407301200000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 6
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407387600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 7
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407474000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 8
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407560400000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 9
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407646800000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 10
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407733200000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 11
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407819600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 12
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407906000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 13
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1407992400000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 14
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408078800000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 15
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408165200000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 16
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408251600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 17
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408338000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 18
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408424400000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 19
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408510800000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 20
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408597200000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 21
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408683600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 22
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408770000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 23
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408856400000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 24
+                                    tr
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1408942800000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 25
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409029200000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 26
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409115600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 27
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409202000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 28
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409288400000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 29
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409374800000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 30
+                                      td
+                                        .picker__day.picker__day--infocus.picker__day--disabled(data-pick='1409461200000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 31
+                                    tr
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409547600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 1
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409634000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 2
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409720400000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 3
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409806800000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 4
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409893200000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 5
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1409979600000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 6
+                                      td
+                                        .picker__day.picker__day--outfocus.picker__day--disabled(data-pick='1410066000000', role='button', aria-controls='idFechaHasta', aria-disabled='true') 7
+                                .picker__footer
+                                  button.picker__button--today(type='button', data-pick='1406869200000', disabled='') hoy
+                                  button.picker__button--clear(type='button', data-clear='1', disabled='') borrar
+                      input#idFechaHasta_submit(type='hidden', name='aaFechaHasta_submit')
+              .button-group
+                button.button.primary(type='button', ng-click='consultarSaldosHistoricos()') Consultar
+          p.messages.error.ng-hide(ng-show='cargando_saldoshistoricos && errorSaldosHistoricos') Hubo un error al obtener los saldos historicos. Por favor reintentar
+          p.messages.loader.ng-hide(ng-show='cargando_saldoshistoricos && !errorSaldosHistoricos') Cargando saldos historicos...
+          //- ngIf: cargando_saldoshistoricos === false && !errorSaldosHistoricos

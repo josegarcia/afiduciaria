@@ -2170,8 +2170,19 @@ table thead tr th {
 .form li input[type="radio"] + span {
   padding: 0 0 0 18px;
 }
+textarea:required,
+select:required,
 input:required {
   box-shadow: none;
+}
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide {
+  display: none !important;
 }
 .m-brand {
   width: auto;
@@ -2802,7 +2813,7 @@ footer {
 .form.login textarea:hover {
   border-color: #4a5d68;
 }
-.form.secondary li strong {
+.form.secondary li > strong {
   font: bold 1.2em a;
   font-family: inherit;
   display: block;
@@ -2810,7 +2821,7 @@ footer {
   float: left;
   padding: .2em 0;
 }
-.form.secondary li strong span {
+.form.secondary li > strong span {
   font: 0.9em / 0.7 a;
   font-family: inherit;
 }
@@ -2818,7 +2829,7 @@ footer {
   padding-bottom: .5em;
   border-bottom: 1px dotted #cccccc;
 }
-.form.secondary li div {
+.form.secondary li > div {
   padding-top: 1em;
 }
 .heading a {

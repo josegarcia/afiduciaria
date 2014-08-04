@@ -291,6 +291,15 @@
 // Queries
 // ----------------------------------------------------------------------- //
 
+    .absolute {
+        .align (@top: auto, @right: auto, @bottom: auto, @left: auto, @query: 0) when (@query > 0) {
+            @media all and (min-width: @query) {
+                .absolute.align (@top, @right, @bottom, @left);
+                color: #b4d455;
+            }
+        }
+    }
+
     .align (@top: auto, @right: auto, @bottom: auto, @left: auto, @query: 0) when (@query > 0) {
         @media all and (min-width: @query) {
             .align (@top, @right, @bottom, @left);

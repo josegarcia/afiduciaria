@@ -2136,6 +2136,8 @@ label.auto {
 .uno .validation-errors {
   width: 100%;
   margin: 0;
+  float: right;
+  min-width: 320px;
 }
 .table tr.prev td:first-child {
   border-left: 3px solid #cccccc;
@@ -2175,14 +2177,9 @@ select:required,
 input:required {
   box-shadow: none;
 }
-[ng\:cloak],
-[ng-cloak],
-[data-ng-cloak],
-[x-ng-cloak],
-.ng-cloak,
-.x-ng-cloak,
-.ng-hide {
-  display: none !important;
+input[type="radio"],
+input[type="checkbox"] {
+  padding: 0;
 }
 .m-brand {
   width: auto;
@@ -2536,6 +2533,10 @@ input:required {
   position: relative;
   float: left;
 }
+.m-resumen table.summary tr th,
+.m-resumen table.summary tr td {
+  padding: .3em .5em;
+}
 .c-nav {
   background-color: #ffffff;
   z-index: 2;
@@ -2719,10 +2720,21 @@ footer {
   right: 0;
   bottom: auto;
   left: auto;
+  font-size: 1.2em;
 }
 @media all and (min-width: 800px) {
   #container .skeyboard {
     width: 480px;
+  }
+}
+@media all and (min-width: 960px) {
+  #container .skeyboard {
+    position: absolute;
+    top: -45px;
+    right: 100%;
+    bottom: auto;
+    left: auto;
+    color: #b4d455;
   }
 }
 #container .skeyboard:before {
@@ -2731,10 +2743,10 @@ footer {
   width: 0;
   height: 0;
   border: 12px solid transparent;
-  border-bottom-color: #aaaaaa;
+  border-left-color: #aaaaaa;
   position: absolute;
-  right: 23px;
-  top: -25px;
+  right: -24px;
+  top: 56px;
 }
 #container .skeyboard:after {
   display: block;
@@ -2742,17 +2754,14 @@ footer {
   width: 0;
   height: 0;
   border: 12px solid transparent;
-  border-bottom-color: #ffffff;
+  border-left-color: #ffffff;
   position: absolute;
-  right: 23px;
-  top: -24px;
+  right: -23px;
+  top: 56px;
 }
 #container input.keyboard {
   background: #ffffff url('../images/forms/keyboard.png') no-repeat 100% 0;
   padding-right: 45px;
-}
-#container .skeyboard {
-  font-size: 1.2em;
 }
 #container .skeyboard .numbers {
   float: right;

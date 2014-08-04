@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Index of</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <link href="../css/uno.css" rel="stylesheet">
+    <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
+    <link href="../javascript/libs/o-keyboard/o-keyboard.css" rel="stylesheet">
+    <script src="../javascript/libs/o-keyboard/o-keyboard.js"></script>
+  </head>
+  <body class="uno l-public">
+    <main>
+      <section class="text-frame">
+        <h1 class="heading primary">On-screen keyboard</h1>
+        <div class="panel primary full">
+          <h1 class="heading primary">Saldos históricos</h1>
+          <form role="form" name="formulario" class="form filters ng-invalid ng-invalid-required ng-dirty">
+            <ul ng-show="(cargandoPensiones === false &amp;&amp; cargandoCuentas === false) &amp;&amp; ( !errorPensiones  &amp;&amp; !errorCuentas )" class="grid split-2 separate">
+              <li><strong>Cuenta:</strong>
+                <div>
+                  <label>
+                    <select id="4ebc5abe-e903-49d5-8f57-cd3e953b078d" style="" aa-val-msg="" ng-model="id_cuenta_seleccionada" name="cuenta_seleccionada" aa-label-strategy="none" aa-label="Cuenta" ng-options="i.wpft_plan as i.wpft_plan for i in cuentas" ng-change="formSaldosActivate()" class="ng-scope ng-valid ng-dirty aa-had-focus">
+                      <option disabled="disabled" value="" selected="selected" ng-disabled="deshabilitar" ng-init="deshabilitar = true">Seleccionar</option>
+                      <option value="0">60031003030</option>
+                    </select>
+                    <div aa-val-msg-for="formulario.cuenta_seleccionada" class="validation-errors ng-scope">
+                      <div class="notch notch-border"></div>
+                      <div class="notch"></div>
+                    </div>
+                  </label>
+                </div>
+              </li>
+            </ul>
+            <div ng-show="isFormSaldosActivate">
+              <ul>
+                <li>
+                  <div class="grid split-4 separate">
+                    <label>
+                      <input type="checkbox" style="" ng-model="checkSubCuenta" ng-change="cargarSelects(&quot;checkSubCuenta&quot;)" class="ng-valid ng-animate ng-pristine-remove ng-pristine-remove-active ng-dirty"><span>Subcuenta</span>
+                    </label>
+                    <label>
+                      <input type="checkbox" style="" ng-model="checkOpcionInversion" ng-change="cargarSelects(&quot;checkOpcionInversion&quot;)" class="ng-valid ng-animate ng-pristine-remove ng-pristine-remove-active ng-dirty"><span>Opción de inversión</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <ul class="grid split-2 separate">
+                <p ng-show="cargando_subcuentas &amp;&amp; errorSubcuentas" class="messages error ng-hide">Hubo un error al obtener las subcuentas. Por favor reintentar</p>
+                <p ng-show="cargando_subcuentas &amp;&amp; !errorSubcuentas" class="messages loader ng-hide">Cargando subcuentas ...</p>
+                <li ng-show="checkSubCuenta &amp;&amp; cargando_subcuentas === false &amp;&amp; !errorSubcuentas"><strong>Subcuenta:</strong>
+                  <div>
+                    <label>
+                      <select style="" ng-model="id_subcuenta_seleccionada" ng-options="i.wsce_suct as i.wsce_suct_descri for i in subcuentas" class="ng-pristine ng-valid">
+                        <option disabled="disabled" value="" selected="selected" ng-disabled="deshabilitar" ng-init="deshabilitar = true">Seleccionar</option>
+                        <option value="0">EXTRAORDINARIO</option>
+                        <option value="1">FUNCIONARIO</option>
+                      </select>
+                    </label>
+                  </div>
+                </li>
+                <p ng-show="cargando_opcioni &amp;&amp; errorOpcionInversion" class="messages error ng-hide">Hubo un error al obtener las opciones de inversion. Por favor reintentar</p>
+                <p ng-show="cargando_opcioni &amp;&amp; !errorOpcionInversion" class="messages loader ng-hide">Cargando opciones de inversion ...</p>
+                <li ng-show="checkOpcionInversion &amp;&amp; cargando_opcioni === false &amp;&amp; !errorOpcionInversion"><strong>Opción de inversión:</strong>
+                  <div>
+                    <label>
+                      <select style="" ng-model="id_opcioni_seleccionada" ng-options="i.wsco_opin as i.wsco_opin_descri for i in opcionInversion" class="ng-pristine ng-valid">
+                        <option disabled="disabled" value="" selected="selected" ng-disabled="deshabilitar" ng-init="deshabilitar = true">Seleccionar</option>
+                        <option value="0">ACCIONES ECOPETROL</option>
+                        <option value="1">CDT FINAMERICA</option>
+                        <option value="2">CDT FINAMERICA 2</option>
+                        <option value="3">CDT FINAMERICA 3</option>
+                        <option value="4">CDTS GMAC</option>
+                        <option value="5">OPCION CERRADA CDTS FINAMERICA</option>
+                        <option value="6">PARTE  COMUN</option>
+                        <option value="7">PENSIONALES 1 COLOMBIA</option>
+                        <option value="8">PENSIONALES 2015 COLOMBIA</option>
+                        <option value="9">PENSIONALES 2024 COLOMBIA</option>
+                        <option value="10">PENSIONALES 4 COLOMBIA</option>
+                        <option value="11">RENTA FIJA IBR 540</option>
+                        <option value="12">RENTA FIJA INTERNACIONAL TD 1</option>
+                      </select>
+                    </label>
+                  </div>
+                </li>
+                <li ng-show="checkAporte" class="ng-hide"><strong>Aportes:</strong>
+                  <div>
+                    <label>
+                      <select>
+                        <option value="Algunos">Algunos</option>
+                        <option value="Todos" selected="selected">Todos</option>
+                        <option value="Ninguno">Ninguno</option>
+                      </select>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+              <ul>
+                <li><strong>Periodo:</strong>
+                  <div class="grid split-2 separate">
+                    <div>
+                      <input id="idFechaDesde" type="text" aria-owns="idFechaDesde_root idFechaDesde_submit" aria-readonly="false" aria-expanded="false" aria-haspopup="true" readonly="" style="" aa-val-msg="" name="aaFechaDesde" ng-model="aaFechaDesde" aa-label-strategy="bottomSpan" aa-label="Desde" ng-change="modificarCalendarHasta()" calendar-alianza="alianzaSemestre" required="" class="datepicker ng-scope ng-pristine picker__input ng-animate ng-valid-remove ng-invalid-add ng-valid-remove-active ng-invalid ng-invalid-add-active ng-invalid-required"><span for="idFechaDesde">Desde:</span>
+                      <div aa-val-msg-for="formulario.aaFechaDesde" class="validation-errors ng-scope">
+                        <label ng-show="submitted" ng-repeat="msg in errorMessages" class="error ng-binding ng-scope ng-hide">El campo Desde es requerido.</label>
+                        <div class="notch notch-border"></div>
+                        <div class="notch"></div>
+                      </div>
+                      <div id="idFechaDesde_root" aria-hidden="true" class="picker">
+                        <div class="picker__holder">
+                          <div class="picker__frame">
+                            <div class="picker__wrap">
+                              <div class="picker__box">
+                                <div class="picker__header">
+                                  <div data-nav="-1" class="picker__nav--prev"> </div>
+                                  <div data-nav="1" class="picker__nav--next picker__nav--disabled"> </div>
+                                  <select disabled="" class="picker__select--month">
+                                    <option value="0" disabled="">enero</option>
+                                    <option value="1">febrero</option>
+                                    <option value="2">marzo</option>
+                                    <option value="3">abril</option>
+                                    <option value="4">mayo</option>
+                                    <option value="5">junio</option>
+                                    <option value="6">julio</option>
+                                    <option value="7" selected="">agosto</option>
+                                    <option value="8" disabled="">septiembre</option>
+                                    <option value="9" disabled="">octubre</option>
+                                    <option value="10" disabled="">noviembre</option>
+                                    <option value="11" disabled="">diciembre</option>
+                                  </select>
+                                  <select disabled="" class="picker__select--year">
+                                    <option value="2014" selected="">2014</option>
+                                  </select>
+                                </div>
+                                <table class="picker__table">
+                                  <thead>
+                                    <tr>
+                                      <th class="picker__weekday">lun</th>
+                                      <th class="picker__weekday">mar</th>
+                                      <th class="picker__weekday">mié</th>
+                                      <th class="picker__weekday">jue</th>
+                                      <th class="picker__weekday">vie</th>
+                                      <th class="picker__weekday">sáb</th>
+                                      <th class="picker__weekday">dom</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1406523600000" role="button" aria-controls="idFechaDesde" class="picker__day picker__day--outfocus">28</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406610000000" role="button" aria-controls="idFechaDesde" class="picker__day picker__day--outfocus">29</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406696400000" role="button" aria-controls="idFechaDesde" class="picker__day picker__day--outfocus">30</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406782800000" role="button" aria-controls="idFechaDesde" class="picker__day picker__day--outfocus">31</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406869200000" role="button" aria-controls="idFechaDesde" aria-activedescendant="true" class="picker__day picker__day--infocus picker__day--today picker__day--highlighted">1</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406955600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">2</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407042000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">3</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1407128400000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">4</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407214800000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">5</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407301200000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">6</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407387600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">7</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407474000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">8</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407560400000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">9</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407646800000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">10</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1407733200000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">11</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407819600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">12</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407906000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">13</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407992400000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">14</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408078800000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">15</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408165200000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">16</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408251600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">17</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1408338000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">18</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408424400000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">19</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408510800000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">20</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408597200000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">21</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408683600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">22</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408770000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">23</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408856400000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">24</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1408942800000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">25</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409029200000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">26</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409115600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">27</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409202000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">28</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409288400000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">29</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409374800000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">30</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409461200000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">31</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1409547600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">1</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409634000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">2</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409720400000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">3</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409806800000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">4</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409893200000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">5</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409979600000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">6</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1410066000000" role="button" aria-controls="idFechaDesde" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">7</div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="picker__footer">
+                                  <button type="button" data-pick="1406869200000" disabled="" class="picker__button--today">hoy</button>
+                                  <button type="button" data-clear="1" disabled="" class="picker__button--clear">borrar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <input id="idFechaDesde_submit" type="hidden" name="aaFechaDesde_submit">
+                    </div>
+                    <div>
+                      <input id="idFechaHasta" type="text" style="" aria-owns="idFechaHasta_root idFechaHasta_submit" aria-readonly="false" aria-expanded="false" aria-haspopup="true" readonly="" aa-val-msg="" name="aaFechaHasta" ng-model="aaFechaHasta" aa-label-strategy="bottomSpan" aa-label="Hasta" ng-change="modificarCalendarDesde()" calendar-alianza="alianzaSemestre" required="" class="datepicker picker__input ng-scope ng-pristine ng-animate ng-valid-remove ng-invalid-add ng-valid-remove-active ng-invalid ng-invalid-add-active ng-invalid-required"><span for="idFechaHasta">Hasta:</span>
+                      <div aa-val-msg-for="formulario.aaFechaHasta" class="validation-errors ng-scope">
+                        <label ng-show="submitted" ng-repeat="msg in errorMessages" class="error ng-binding ng-scope ng-hide">El campo Hasta es requerido.</label>
+                        <div class="notch notch-border"></div>
+                        <div class="notch"></div>
+                      </div>
+                      <div id="idFechaHasta_root" aria-hidden="true" class="picker">
+                        <div class="picker__holder">
+                          <div class="picker__frame">
+                            <div class="picker__wrap">
+                              <div class="picker__box">
+                                <div class="picker__header">
+                                  <div data-nav="-1" class="picker__nav--prev"> </div>
+                                  <div data-nav="1" class="picker__nav--next picker__nav--disabled"> </div>
+                                  <select disabled="" class="picker__select--month">
+                                    <option value="0" disabled="">enero</option>
+                                    <option value="1">febrero</option>
+                                    <option value="2">marzo</option>
+                                    <option value="3">abril</option>
+                                    <option value="4">mayo</option>
+                                    <option value="5">junio</option>
+                                    <option value="6">julio</option>
+                                    <option value="7" selected="">agosto</option>
+                                    <option value="8" disabled="">septiembre</option>
+                                    <option value="9" disabled="">octubre</option>
+                                    <option value="10" disabled="">noviembre</option>
+                                    <option value="11" disabled="">diciembre</option>
+                                  </select>
+                                  <select disabled="" class="picker__select--year">
+                                    <option value="2014" selected="">2014</option>
+                                  </select>
+                                </div>
+                                <table class="picker__table">
+                                  <thead>
+                                    <tr>
+                                      <th class="picker__weekday">lun</th>
+                                      <th class="picker__weekday">mar</th>
+                                      <th class="picker__weekday">mié</th>
+                                      <th class="picker__weekday">jue</th>
+                                      <th class="picker__weekday">vie</th>
+                                      <th class="picker__weekday">sáb</th>
+                                      <th class="picker__weekday">dom</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1406523600000" role="button" aria-controls="idFechaHasta" class="picker__day picker__day--outfocus">28</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406610000000" role="button" aria-controls="idFechaHasta" class="picker__day picker__day--outfocus">29</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406696400000" role="button" aria-controls="idFechaHasta" class="picker__day picker__day--outfocus">30</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406782800000" role="button" aria-controls="idFechaHasta" class="picker__day picker__day--outfocus">31</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406869200000" role="button" aria-controls="idFechaHasta" aria-activedescendant="true" class="picker__day picker__day--infocus picker__day--today picker__day--highlighted">1</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1406955600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">2</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407042000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">3</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1407128400000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">4</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407214800000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">5</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407301200000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">6</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407387600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">7</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407474000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">8</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407560400000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">9</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407646800000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">10</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1407733200000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">11</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407819600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">12</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407906000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">13</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1407992400000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">14</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408078800000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">15</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408165200000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">16</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408251600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">17</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1408338000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">18</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408424400000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">19</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408510800000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">20</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408597200000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">21</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408683600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">22</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408770000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">23</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1408856400000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">24</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1408942800000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">25</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409029200000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">26</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409115600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">27</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409202000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">28</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409288400000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">29</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409374800000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">30</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409461200000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--infocus picker__day--disabled">31</div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div data-pick="1409547600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">1</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409634000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">2</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409720400000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">3</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409806800000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">4</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409893200000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">5</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1409979600000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">6</div>
+                                      </td>
+                                      <td>
+                                        <div data-pick="1410066000000" role="button" aria-controls="idFechaHasta" aria-disabled="true" class="picker__day picker__day--outfocus picker__day--disabled">7</div>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="picker__footer">
+                                  <button type="button" data-pick="1406869200000" disabled="" class="picker__button--today">hoy</button>
+                                  <button type="button" data-clear="1" disabled="" class="picker__button--clear">borrar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <input id="idFechaHasta_submit" type="hidden" name="aaFechaHasta_submit">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="button-group">
+                <button type="button" ng-click="consultarSaldosHistoricos()" class="button primary">Consultar</button>
+              </div>
+            </div>
+          </form>
+          <p ng-show="cargando_saldoshistoricos &amp;&amp; errorSaldosHistoricos" class="messages error ng-hide">Hubo un error al obtener los saldos historicos. Por favor reintentar</p>
+          <p ng-show="cargando_saldoshistoricos &amp;&amp; !errorSaldosHistoricos" class="messages loader ng-hide">Cargando saldos historicos...</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -3012,7 +3012,7 @@ span.option-description {
   font: 1.6em / 1 a;
   font-family: inherit;
 }
-.panel.recap .overview li {
+.panel.recap .overview > li {
   padding: 5px 0;
   border-width: 0 0 1px 0;
   border-style: dotted;
@@ -3022,15 +3022,56 @@ span.option-description {
   border: 0;
 }
 .panel.recap .overview .title {
-  width: 50%;
-  min-width: 180px;
   padding: 5px 0 5px 10px;
 }
+@media all and (min-width: 640px) {
+  .panel.recap .overview .title {
+    width: 50%;
+  }
+}
 .panel.recap .overview .value {
-  width: 50%;
-  min-width: 180px;
   padding: 5px 10px 5px 0;
   text-align: right;
+}
+@media all and (min-width: 640px) {
+  .panel.recap .overview .value {
+    width: 50%;
+  }
+}
+.panel.recap .overview .subitems li {
+  padding: 2px 10px 2px 20px;
+  text-align: right;
+  border-width: 1px 0 0;
+  border-style: dotted;
+  border-color: #cccccc;
+}
+.panel.recap .overview .subitems li > strong {
+  display: block;
+  width: 100%;
+  float: left;
+}
+.panel.recap .overview .subitems li > div {
+  width: 100%;
+}
+@media print, screen and (min-width: 640px) {
+  .panel.recap .overview .subitems li > strong {
+    display: block;
+    width: 50%;
+    float: left;
+  }
+  .panel.recap .overview .subitems li > div {
+    width: 50%;
+  }
+}
+.panel.recap .overview .subitems li > strong {
+  text-align: left;
+  font-weight: normal;
+}
+.panel.recap .overview .subitems li .val {
+  font-weight: bold;
+}
+.panel.recap .overview .subitems li:hover {
+  background-color: #f6f6f7;
 }
 .panel .messages {
   padding: 1em;

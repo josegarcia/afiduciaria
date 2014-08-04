@@ -205,14 +205,14 @@
 
     .tabset.primary             {
         & > .summary            {
-            &                   { .padding(.2em 0 .2em 1.3em); cursor: pointer; border-bottom: 2px solid @trans; margin: 0 0 2px; .user-select; .back.color(@hexef); }
+            &                   { .padding(.2em 0 .2em 1.4em); cursor: pointer; border-bottom: 2px solid @trans; margin: 0 0 2px; .user-select; .back.color(@hexef); }
             &:before            { .pseudo('', 1em, 1em); }
             & a                 { .padding(0 0.5em 0); .padding(0 1em 0, 640px); .padding(0 2em 0, 800px); .font(1.2em @d 37px); .color(@text-base); }
             &.active,
             &:hover             {  border-bottom: 2px solid @trans; .back.color(@hexd); }
             &.active a,
             &:hover a           { .color(@primary); }
-            &:before            { .pseudo('\f067', 1em, 1em); .font(.86em @d 36px, 'FontAwesome'); position: absolute; left: 7px; }
+            &:before            { .pseudo('\f067', 1em, 1em); .font(.86em @d 30px, 'FontAwesome'); position: absolute; left: 7px; }
             &.active:before     { .pseudo('\f068', 1em, 1em); }
         }
     }

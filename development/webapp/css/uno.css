@@ -1978,7 +1978,7 @@ body .c-nav li:hover a {
   background-color: #00275b;
 }
 .tabset.primary > .summary {
-  padding: 0.2em 0 0.2em 1.3em;
+  padding: 0.2em 0 0.2em 1.4em;
   cursor: pointer;
   border-bottom: 2px solid transparent;
   margin: 0 0 2px;
@@ -2025,7 +2025,7 @@ body .c-nav li:hover a {
   width: 1em;
   height: 1em;
   vertical-align: middle;
-  font: 0.86em / 36px 'FontAwesome';
+  font: 0.86em / 30px 'FontAwesome';
   position: absolute;
   left: 7px;
 }
@@ -2607,6 +2607,9 @@ input:required {
 .m-results.accordion .table th {
   border-top: 0 none;
 }
+.m-results .summary {
+  font-size: 1.4em;
+}
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
@@ -3028,6 +3031,17 @@ span.option-description {
   .panel.recap .overview .title {
     width: 50%;
   }
+}
+.panel.recap .overview .title strong {
+  font-size: 1.2em;
+  color: #4a5d68;
+}
+.panel.recap .overview .title strong span {
+  font-size: .86em;
+  line-height: 1;
+  font-weight: normal;
+  color: #888;
+  display: block;
 }
 .panel.recap .overview .value {
   padding: 5px 10px 5px 0;

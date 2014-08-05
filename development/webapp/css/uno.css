@@ -2615,7 +2615,7 @@ input[type="checkbox"] {
   width: 50%;
   left: -25%;
   margin-left: 50%;
-  color: #b4d455;
+  margin-left: 50% !important;
 }
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);

@@ -193,7 +193,7 @@
               </tbody>
             </table>
           </div>
-          <h2 class="summary">Cuenta 00003</h2>
+          <h2 class="summary c3">Cuenta 00003</h2>
           <div class="scrollable details">
             <table class="table single striped">
               <thead>
@@ -292,6 +292,7 @@
             </table>
           </div>
         </div>
+        <div class="button-group"><a href="#" id="abrirCuenta" class="cuenta2">Abrir Cuenta!!</a></div>
       </div>
     </section>
   </main>
@@ -326,12 +327,19 @@
   <script>
     // Accordion tabset
     $('.tabset .summary').click(function(event){
-        $('.tabset .summary.active').removeClass('active');
-        $('.tabset .summary').next('.details').hide();
-        $(this).addClass('active');
-        $(this).next('.details').fadeIn();
-        
-        event.preventDefault();
+        abrirCuenta('.m-results', $(this));
     });
+    
+    $('#abrirCuenta').click(function(event){
+        abrirCuenta('.m-results', '.m-results .c3');
+    });
+    
+    
+    function abrirCuenta(parent, obj) {
+        $(parent + '.tabset .summary.active').removeClass('active');
+        $(parent + '.tabset .summary').next('.details').hide();
+        $(obj).addClass('active');
+        $(obj).next('.details').fadeIn();
+    }
   </script>
 </body>

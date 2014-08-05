@@ -20,10 +20,17 @@ include sections/global/doctype
 
             // Accordion tabset
             $('.tabset .summary').click(function(event){
-                $('.tabset .summary.active').removeClass('active');
-                $('.tabset .summary').next('.details').hide();
-                $(this).addClass('active');
-                $(this).next('.details').fadeIn();
-
-                event.preventDefault();
+                abrirCuenta('.m-results', $(this));
             });
+
+            $('#abrirCuenta').click(function(event){
+                abrirCuenta('.m-results', '.m-results .c3');
+            });
+
+
+            function abrirCuenta(parent, obj) {
+                $(parent + '.tabset .summary.active').removeClass('active');
+                $(parent + '.tabset .summary').next('.details').hide();
+                $(obj).addClass('active');
+                $(obj).next('.details').fadeIn();
+            }

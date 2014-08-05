@@ -1662,6 +1662,7 @@ body.fideicomisos nav .fideicomisos,
 body.pensiones nav .pensiones,
 body.fondos nav .fondos,
 body.certificados nav .certificados,
+body.extractos nav .extractos,
 body.certi nav .certi,
 body.transacciones nav .transacciones,
 body nav li a:hover {
@@ -1680,7 +1681,7 @@ body.fondos.transacciones .c-nav .transacciones,
 body.pensiones.resumen .c-nav .resumen,
 body.pensiones.movimientos .c-nav .movimientos,
 body.pensiones.extractos .c-nav .extractos,
-body.pensiones.extractos .c-nav .extractos,
+body.pensiones.certificados .c-nav .certificados,
 body.pensiones.saldos .c-nav .saldos,
 body .c-nav li:hover {
   border-width: 0 0 3px 0;
@@ -1698,7 +1699,7 @@ body.fondos.transacciones .c-nav .transacciones a,
 body.pensiones.resumen .c-nav .resumen a,
 body.pensiones.movimientos .c-nav .movimientos a,
 body.pensiones.extractos .c-nav .extractos a,
-body.pensiones.extractos .c-nav .extractos a,
+body.pensiones.certificados .c-nav .certificados a,
 body.pensiones.saldos .c-nav .saldos a,
 body .c-nav li:hover a {
   color: #00275b;
@@ -2492,7 +2493,7 @@ input[type="checkbox"] {
 }
 .m-publicidad {
   display: none;
-  padding-top: 80px;
+  padding-top: 50px;
 }
 @media all and (min-width: 640px) {
   .m-publicidad {
@@ -2974,6 +2975,17 @@ span.option-description {
 .panel.padded li a {
   text-decoration: underline;
 }
+.panel.padded-medium {
+  padding: 14px 0%;
+}
+@media all and (min-width: 800px) {
+  .panel.padded-medium {
+    padding: 14px 18%;
+  }
+}
+.panel.padded-medium li a {
+  text-decoration: underline;
+}
 .panel.success {
   padding-left: 120px;
   padding-bottom: 0;
@@ -3121,6 +3133,13 @@ span.option-description {
 .table.summary tr th,
 .table.summary tr td {
   padding: 0.3em 0;
+}
+.table.summary .options {
+  text-align: right;
+}
+.table.summary.wide tr th,
+.table.summary.wide tr td {
+  padding: 0.5em 0.2em;
 }
 .table.single {
   border-width: 0 0 1px;

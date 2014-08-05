@@ -163,7 +163,7 @@
     }
 
     .m-publicidad               {
-        &                       { display: none; padding-top: 80px; .display(block, 640px) }
+        &                       { display: none; padding-top: 50px; .display(block, 640px) }
     }
 
     .m-general-pie              {
@@ -300,6 +300,11 @@
         & li a          { text-decoration: underline; }
     }
 
+    .panel.padded-medium {
+        &               { padding:@base-padding 0%; .padding(@base-padding 18%, 800px); }
+        & li a          { text-decoration: underline; }
+    }
+
     .panel.success      {
         &               { padding-left: 120px; padding-bottom: 0; border-top: 15px solid #95c794; .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); }
     }
@@ -349,6 +354,8 @@
 
     .table.summary      { 
         &               { .table.border(0 0 1px 0, solid, @hexc); .table.padding(.3em 0); }
+        & .options      { text-align: right; }
+        &.wide          { .table.padding(.5em .2em); }
     }
 
     .table.single               {

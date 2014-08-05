@@ -1506,17 +1506,18 @@ body {
   color: #444444;
   background-color: #ffffff;
 }
+header {
+  color: #00275b;
+  background-color: #ffffff;
+  max-height: 150px;
+  border-bottom: 2px solid #bbbbbb;
+}
 nav {
   background-color: #cccccc;
-  background: #dddddd none repeat-x center;
-  background-image: -webkit-linear-gradient(180deg, #dddddd, #cccccc);
-  background-image: -moz-linear-gradient(180deg, #dddddd, #cccccc);
-  background-image: linear-gradient(180deg, #dddddd, #cccccc);
-}
-header {
-  color: #ffffff;
-  background-color: #00275b;
-  max-height: 150px;
+  background: #f6f6f7 none repeat-x center;
+  background-image: -webkit-linear-gradient(180deg, #f6f6f7, #dddddd);
+  background-image: -moz-linear-gradient(180deg, #f6f6f7, #dddddd);
+  background-image: linear-gradient(180deg, #f6f6f7, #dddddd);
 }
 footer {
   border-top: 1px solid #bbbbbb;
@@ -1525,13 +1526,13 @@ footer {
 .valores header {
   color: #444444;
   background-color: #ffffff;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 2px solid #bbbbbb;
   -webkit-box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
 }
 @media all and (min-width: 800px) {
   header > section {
-    padding: 0 0 20px;
+    padding: 0;
   }
 }
 nav > section {
@@ -2186,7 +2187,7 @@ input[type="checkbox"] {
   width: auto;
 }
 .m-brand .brand {
-  width: 200px;
+  width: 230px;
   height: 120px;
   margin: 0;
 }
@@ -2194,7 +2195,6 @@ input[type="checkbox"] {
   display: block;
   width: 100%;
   height: 120px;
-  padding: 5px 0 ;
 }
 .m-brand .brand strong {
   display: none;
@@ -2262,7 +2262,6 @@ input[type="checkbox"] {
   right: 10px;
   top: 10px;
   font-size: 1.6em;
-  color: #ffffff;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -2273,8 +2272,8 @@ input[type="checkbox"] {
 }
 .m-user-options .options.show,
 .m-user-options .options:hover {
-  background-color: white;
-  color: #00275b;
+  color: #ffffff;
+  background-color: #00275b;
 }
 .m-user-options .options.show + .option-box {
   display: block;
@@ -2334,7 +2333,7 @@ input[type="checkbox"] {
   bottom: 0;
 }
 .m-font-size .fontsize {
-  color: white;
+  color: #00275b;
   display: block;
   width: 30px;
   height: 32px;
@@ -2343,8 +2342,8 @@ input[type="checkbox"] {
 }
 .m-font-size .fontsize:focus,
 .m-font-size .fontsize:hover {
-  color: #00275b;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #00275b;
   text-decoration: none;
 }
 .m-font-size #incFont {
@@ -2611,6 +2610,12 @@ input[type="checkbox"] {
 }
 .m-results .summary {
   font-size: 1.4em;
+}
+.center-50 {
+  width: 50%;
+  left: -25%;
+  margin-left: 50%;
+  color: #b4d455;
 }
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);

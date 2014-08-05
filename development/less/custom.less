@@ -75,8 +75,8 @@
 
     .m-brand                    {
         &                       { width: auto; }
-        & .brand                { .size(200px, 120px); margin: 0; }
-        & .brand a              { .display(block); .size(100%, 120px); padding: 5px 0 ; }
+        & .brand                { .size(230px, 120px); margin: 0; }
+        & .brand a              { .display(block); .size(100%, 120px); }
         & .brand  strong        { .display(none); }
         & .valores              { .width; float: right; }
     }
@@ -101,9 +101,9 @@
         & .user                 { text-align: right; color: @hex8; }
         & .name                 { text-align: right; .font(bold 1.4em); }
         & .email                { text-align: right; margin-bottom: 10px; }
-        & .options              { .position.right-top(absolute, 10px, 10px); font-size: 1.6em; .color(white); .rounded(50%); .square(32px); text-align: center; line-height:30px; }
+        & .options              { .position.right-top(absolute, 10px, 10px); font-size: 1.6em; .rounded(50%); .square(32px); text-align: center; line-height:30px; }
         & .options.show,
-        & .options:hover        { background-color: white; color: @primary; }
+        & .options:hover        { .color(@white, @primary); }
         & .options.show + .option-box { .display(block); }
         & .options .fa          { margin: 0; }
         & .option-box           {
@@ -119,9 +119,9 @@
 
     .m-font-size                {
         &                       { width: auto; .position.right-bottom(absolute, 10px, 0); }
-        & .fontsize             { color:white; display: block; width: 30px; height: 32px; float: left; text-align:center; }
+        & .fontsize             { color:@primary; display: block; width: 30px; height: 32px; float: left; text-align:center; }
         & .fontsize:focus,
-        & .fontsize:hover       { .color(@primary, @hexf); text-decoration: none; }
+        & .fontsize:hover       { .color(@text-primary, @primary); text-decoration: none; }
         & #incFont              { font-size: 1.3em; line-height: 32px; }
         & #resetFont            { font-size: 1.1em; line-height: 34px; text-align: left; padding-left: 8px; }
         & #decFont              { font-size: .7em; line-height: 38px; }
@@ -200,6 +200,10 @@
         & .subhead              { font-size: 1.2em; }
         &.accordion .table th   { border-top: 0 none; }
         & .summary              { font-size: 1.4em; }
+    }
+
+    .center-50 {
+        &                       { .center-block(50%); color:#b4d455 }
     }
 
 //  Footer

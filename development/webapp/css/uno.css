@@ -2623,12 +2623,12 @@ input[type="checkbox"] {
   margin-right: .2em;
 }
 .m-results table .fa {
-  font-size: .6em;
+  font-size: 1em;
 }
-.m-results .fa-plus {
+.m-results .fa-sort-up {
   color: green;
 }
-.m-results .fa-minus {
+.m-results .fa-sort-down {
   color: red;
 }
 .convenciones {

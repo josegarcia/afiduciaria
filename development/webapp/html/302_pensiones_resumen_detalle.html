@@ -95,7 +95,9 @@
           </div>
         </div>
         <div class="m-results tabset accordion primary">
-          <h2 class="summary">Cuenta 00001</h2>
+          <h2 class="summary">Cuenta 00001
+            <div class="disponible"><span>Disponible</span><strong>$66.000.000</strong></div>
+          </h2>
           <div class="scrollable details">
             <table class="table single striped">
               <thead>
@@ -106,6 +108,7 @@
                   <th>Rendimientos</th>
                   <th>Retención contingente</th>
                   <th>Saldo</th>
+                  <th>Ganancia</th>
                 </tr>
               </thead>
               <tbody>
@@ -116,6 +119,7 @@
                   <td>500.000</td>
                   <td>500.000</td>
                   <td>$150.000</td>
+                  <td><i class="fa fa-minus"></i>15%</td>
                 </tr>
                 <tr>
                   <td>13/06/14</td>
@@ -124,6 +128,7 @@
                   <td>500.000</td>
                   <td>500.000</td>
                   <td>$150.000</td>
+                  <td><i class="fa fa-plus"></i>15%</td>
                 </tr>
                 <tr>
                   <td>13/06/14</td>
@@ -132,6 +137,7 @@
                   <td>500.000</td>
                   <td>500.000</td>
                   <td>$150.000</td>
+                  <td><i class="fa fa-plus"></i>15%</td>
                 </tr>
                 <tr>
                   <td>13/06/14</td>
@@ -139,7 +145,8 @@
                   <td>11.000.000</td>
                   <td>500.000</td>
                   <td>500.000</td>
-                  <td>$150.000</td>
+                  <td>$151</td>
+                  <td><i class="fa fa-minus"></i>15%</td>
                 </tr>
               </tbody>
             </table>
@@ -155,6 +162,7 @@
                   <th>Rendimientos</th>
                   <th>Retención contingente</th>
                   <th>Saldo</th>
+                  <th>Ganancia</th>
                 </tr>
               </thead>
               <tbody>
@@ -165,6 +173,7 @@
                   <td>500.000</td>
                   <td>500.000</td>
                   <td>$150.000</td>
+                  <td><i class="fa fa-minus"></i>14%</td>
                 </tr>
                 <tr>
                   <td>13/06/14</td>
@@ -173,6 +182,7 @@
                   <td>500.000</td>
                   <td>500.000</td>
                   <td>$150.000</td>
+                  <td><i class="fa fa-minus"></i>14%</td>
                 </tr>
                 <tr>
                   <td>13/06/14</td>
@@ -181,6 +191,7 @@
                   <td>500.000</td>
                   <td>500.000</td>
                   <td>$150.000</td>
+                  <td><i class="fa fa-minus"></i>14%</td>
                 </tr>
                 <tr>
                   <td>13/06/14</td>
@@ -189,6 +200,7 @@
                   <td>500.000</td>
                   <td>500.000</td>
                   <td>$150.000</td>
+                  <td><i class="fa fa-minus"></i>14%</td>
                 </tr>
               </tbody>
             </table>
@@ -328,16 +340,17 @@
     // Accordion tabset
     $('.tabset .summary').click(function(event){
         abrirCuenta('.m-results', $(this));
+        event.preventDefault();
     });
     
     $('#abrirCuenta').click(function(event){
         abrirCuenta('.m-results', '.m-results .c3');
+        event.preventDefault();
     });
     
-    
     function abrirCuenta(parent, obj) {
-        $(parent + '.tabset .summary.active').removeClass('active');
-        $(parent + '.tabset .summary').next('.details').hide();
+        $(parent + '.tabset > .summary.active').removeClass('active');
+        $(parent + '.tabset > .summary').next('.details').hide();
         $(obj).addClass('active');
         $(obj).next('.details').fadeIn();
     }

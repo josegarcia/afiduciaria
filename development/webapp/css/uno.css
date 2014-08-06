@@ -2611,6 +2611,20 @@ input[type="checkbox"] {
 .m-results .summary {
   font-size: 1.4em;
 }
+.m-results .disponible {
+  float: right;
+  width: auto;
+  font-size: .9em;
+  padding: 0 .6em;
+}
+.m-results .disponible span {
+  font-weight: normal;
+  font-size: .86em;
+  margin-right: .2em;
+}
+.m-results .fa {
+  font-size: .6em;
+}
 .center-50 {
   width: 50%;
   left: -25%;

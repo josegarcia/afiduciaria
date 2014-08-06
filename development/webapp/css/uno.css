@@ -2622,8 +2622,23 @@ input[type="checkbox"] {
   font-size: .86em;
   margin-right: .2em;
 }
-.m-results .fa {
+.m-results table .fa {
   font-size: .6em;
+}
+.m-results .fa-plus {
+  color: green;
+}
+.m-results .fa-minus {
+  color: red;
+}
+.convenciones {
+  border: 1px solid #dddddd;
+  width: auto;
+  margin-bottom: 1em;
+}
+.convenciones div {
+  width: auto;
+  padding: .2em .5em;
 }
 .center-50 {
   width: 50%;

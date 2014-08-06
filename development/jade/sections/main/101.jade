@@ -19,6 +19,8 @@ main
                                         option CE
                                         option NIT
                                     span Tipo de documento
+                                    .validation-errors 
+                                        label.error El campo tipo de documento es requerido
                                 label.span-2
                                     input(type="text", required)
                                     span Número de identificación
@@ -63,6 +65,8 @@ main
                             li
                                 label 
                                     input(type="checkbox")
+                                    .validation-errors 
+                                        label.error El campo tipo de documento es requerido
                                     span He leido y acepto los
                                         a(href="#")  Términos y condiciones
                         button(type="button", id='regresar').button.secondary Regresar

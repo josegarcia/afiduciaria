@@ -2141,6 +2141,9 @@ label.auto {
   float: right;
   min-width: 320px;
 }
+.uno .split-3 .validation-errors {
+  min-width: 0;
+}
 .table tr.prev td:first-child {
   border-left: 3px solid #cccccc;
 }
@@ -2155,6 +2158,14 @@ label.auto {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   height: 350px;
+}
+.uno .form li input[type="checkbox"] {
+  position: relative;
+}
+.uno .form li input[type="checkbox"] + span,
+.uno .form li input[type="checkbox"] + div + span {
+  position: absolute;
+  top: 0;
 }
 .uno .list.bullet > li,
 ul.bullet > li,

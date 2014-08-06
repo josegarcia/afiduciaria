@@ -27,6 +27,8 @@
     .form li label.error        { margin: 0; width: 100%; }
 
     .uno .validation-errors     { width: 100%; margin: 0; float: right; min-width: 320px; }
+    
+    .uno .split-3 .validation-errors     { min-width: 0; }
 
     .table tr.prev td:first-child { border-left: 3px solid @hexc; }
 
@@ -36,6 +38,13 @@
     .scroll-y                   { .overflow(hidden, auto); height: 350px }
 
     // .form.auto                  {} blah..
+
+    .uno .form li input[type="checkbox"] { position: relative; }
+
+    .uno .form li input[type="checkbox"] + span,
+    .uno .form li input[type="checkbox"] + div + span { position: absolute; top: 0; }
+
+
 
     .uno .list,
     ul, ol                      { 

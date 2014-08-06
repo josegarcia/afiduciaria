@@ -40,9 +40,12 @@
                     <option>CE</option>
                     <option>NIT</option>
                   </select><span>Tipo de documento</span>
+                  <div class="validation-errors">
+                    <label class="error">El campo tipo de documento es requerido</label>
+                  </div>
                 </label>
                 <label class="span-2">
-                  <input type="text"><span>Número de identificación</span>
+                  <input type="text" required><span>Número de identificación</span>
                 </label>
               </div>
             </li>
@@ -96,11 +99,14 @@
               </li>
               <li>
                 <label>
-                  <input type="checkbox"><span>He leido y acepto los<a href="#"> Términos y condiciones</a></span>
+                  <input type="checkbox">
+                  <div class="validation-errors">
+                    <label class="error">El campo tipo de documento es requerido</label>
+                  </div><span>He leido y acepto los<a href="#"> Términos y condiciones</a></span>
                 </label>
               </li>
             </ul>
-            <button type="button" class="button secondary">Regresar</button>
+            <button type="button" id="regresar" class="button secondary">Regresar</button>
             <button type="submit" class="button primary">Continuar</button>
           </div>
         </div>
@@ -113,4 +119,9 @@
     </section>
   </footer>
   <script src="../javascript/scripts.js"></script>
+  <script>
+    $('#regresar').click(function(){
+        window.location='100ingreso.html';
+    });
+  </script>
 </body>

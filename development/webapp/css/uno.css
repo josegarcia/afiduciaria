@@ -858,6 +858,9 @@ table.rounded tr:last-child td:last-child {
   height: auto;
   overflow: visible;
 }
+.tabset.accordion > .summary.active + .details.scrollable {
+  overflow: auto;
+}
 html .auto {
   width: auto;
 }
@@ -1176,12 +1179,6 @@ html .uppercase {
     page-break-inside: auto;
     page-break-after: avoid;
   }
-  .scrollable,
-  .scrollable div {
-    overflow-x: visible;
-    overflow-y: visible;
-    -webkit-overflow-scrolling: touch;
-  }
   .print-only {
     display: block;
   }
@@ -1203,7 +1200,7 @@ html .uppercase {
 }
 .scrollable div {
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
 }
 .scrollable div > table {

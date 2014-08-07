@@ -528,9 +528,6 @@
 
     div                     { page-break-inside: auto; page-break-after: avoid; }
 
-    .scrollable,
-    .scrollable div         { .overflow(visible); }
-
     .print-only             { display: block; }
 
 
@@ -554,7 +551,7 @@
             .overflow(auto, hidden);
         }
         & div { 
-            .overflow(auto);
+            .overflow(auto, hidden);
         }
         & div > table {
         	margin:0;
@@ -600,6 +597,7 @@
                 & a                 { display: block; .ellipsis; }
                 & + .details        { position: absolute; height: 1px; overflow: hidden; border-top: 1px solid transparent; } //  visibility: hidden; display: none;
                 &.active + .details { position: relative; height: auto; overflow: visible; } //  visibility: visible; display: block;
+                &.active + .details.scrollable {overflow:auto; } 
             }
         }
         .horizontal (@summary: 27%) {

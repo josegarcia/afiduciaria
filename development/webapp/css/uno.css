@@ -1670,6 +1670,7 @@ body nav li a:hover {
 }
 body.fideicomisos.resumen .c-nav .resumen,
 body.fideicomisos.informes .c-nav .informes,
+body.fideicomisos.certificados .c-nav .certificados,
 body.fondos.resumen .c-nav .resumen,
 body.fondos.movimientos .c-nav .movimientos,
 body.fondos.extractos .c-nav .extractos,
@@ -1688,6 +1689,7 @@ body .c-nav li:hover {
 }
 body.fideicomisos.resumen .c-nav .resumen a,
 body.fideicomisos.informes .c-nav .informes a,
+body.fideicomisos.certificados .c-nav .certificados a,
 body.fondos.resumen .c-nav .resumen a,
 body.fondos.movimientos .c-nav .movimientos a,
 body.fondos.extractos .c-nav .extractos a,
@@ -2852,7 +2854,7 @@ footer {
   border-radius: 3px;
   height: 52px;
   background-color: #ffffff;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 50px;
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);

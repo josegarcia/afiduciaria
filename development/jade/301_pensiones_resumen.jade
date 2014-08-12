@@ -15,31 +15,37 @@ include sections/global/doctype
         include sections/main/301
         include sections/footer
         include sections/snippets/scripts
-        script(src='../javascript/libs/chart.min.js')
+        script(src='../javascript/libs/chart.js')
         script(src='../javascript/libs/uform/uform.js')
         script.
             var mydata = [
                 {
                     value: 20,
-                    color : "#00275b"
+                    color : "#00275b",
+                    label: "Hola"
                 },
                 {
                     value : 77,
-                    color: "#dedc1e"
+                    color: "#dedc1e",
+                    label: "mundo"
                 },
                 {
                     value : 25,
-                    color : "#b3bec6"
+                    color : "#b3bec6",
+                    label: "ejemplo"
                 },
                 {
                     value: 44,
-                    color : "#00a49e"
+                    color : "#00a49e",
+                    label: "labels!!"
                 }
             ];
 
             $(document).ready(function() {
                 var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
             });
+
+
         script.
             var data = {
                 labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul"],
@@ -48,7 +54,7 @@ include sections/global/doctype
                         label: "My First dataset",
                         fillColor: "#00275b",
                         color: "rgba(0,0,0,0,1)",
-                        data: [90, 50, 15, -17, -16, 0, -4]
+                        data: [90, 50, 15, -17, -96, 0, -4]
                     }
                 ]
             };

@@ -12,6 +12,7 @@
   <link href="../css/uno.css" rel="stylesheet">
   <link href="../fonts/FontAwesome/fonts/font-awesome.min.css" rel="stylesheet">
   <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
+  <link href="../javascript/libs/morris/morris.css" rel="stylesheet">
   <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
   <script src="../javascript/modernizr.js"></script>
   <script src="../javascript/modernizr.load.js"></script>
@@ -157,7 +158,7 @@
             </div>
             <div class="panel graphs">
               <h3>Rentabilidad mensual</h3>
-              <canvas id="barChart" width="360" height="240" class="canvas"></canvas>
+              <div id="test" style="height: 240px; width: 360"></div>
               <ul class="color-codes">
                 <li><span class="var1"></span>Rendimientos</li>
               </ul>
@@ -195,13 +196,15 @@
     }); 
   </script>
   <script src="../javascript/libs/chart.js"></script>
+  <script src="../javascript/libs/morris/morris.js"></script>
+  <script src="../javascript/libs/morris/raphael.js"></script>
   <script src="../javascript/libs/uform/uform.js"></script>
   <script>
     var mydata = [
         {
             value: 20,
             color : "#00275b",
-            label: "Hola"
+            label: "Hola",
         },
         {
             value : 77,
@@ -227,21 +230,21 @@
     
   </script>
   <script>
-    var data = {
-        labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul"],
-        datasets: [
-            {
-                label: "My First dataset",
-                fillColor: "#00275b",
-                color: "rgba(0,0,0,0,1)",
-                data: [90, 50, 15, -17, -96, 0, -4]
-            }
-        ]
-    };
-    
-    $(document).ready(function() {
-        var myBarChart = new Chart(document.getElementById("barChart").getContext("2d")).Bar(data);
+    new Morris.Bar({
+            element: 'test',
+            data: [
+                { label: 'Ene', a: 100 },
+                { label: 'Feb', a: 70 },
+                { label: 'Mar', a: 55 },
+                { label: 'Abr', a: -45 },
+                { label: 'May', a: -20},
+                { label: 'Jun', a: 10},
+            ],
+            xkey: 'label',
+            ykeys: ['a'],
+            labels: ['Valor'],
+            barColors: [ '#00275b'],
+            hideHover: true
     });
-    
   </script>
 </body>

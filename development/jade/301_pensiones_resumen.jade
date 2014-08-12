@@ -5,6 +5,7 @@ include sections/global/doctype
         //- stylesheets
         link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
         link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
+        link(href='../javascript/libs/morris/morris.css', rel='stylesheet')
         //- scripts
         script(src='../javascript/libs/jquery-1.11.1.min.js')
         script(src='../javascript/modernizr.js')
@@ -16,13 +17,15 @@ include sections/global/doctype
         include sections/footer
         include sections/snippets/scripts
         script(src='../javascript/libs/chart.js')
+        script(src='../javascript/libs/morris/morris.js')
+        script(src='../javascript/libs/morris/raphael.js')
         script(src='../javascript/libs/uform/uform.js')
         script.
             var mydata = [
                 {
                     value: 20,
                     color : "#00275b",
-                    label: "Hola"
+                    label: "Hola",
                 },
                 {
                     value : 77,
@@ -46,20 +49,44 @@ include sections/global/doctype
             });
 
 
+        //- script.
+        //-     var options = {
+        //-         scaleShowGridLines : true,
+        //-         scaleBeginAtZero : false
+        //-     };
+
+
+        //-     var data = {
+        //-         labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul"],
+        //-         datasets: [
+        //-             {
+        //-                 label: "My First dataset",
+        //-                 fillColor: "#00275b",
+        //-                 color: "rgba(0,0,0,0,1)",
+        //-                 data: [90, 90, 15, -17, -96, 0, -4]
+        //-             }
+        //-         ]
+        //-     };
+
+        //-     $(document).ready(function() {
+        //-         var myBarChart = new Chart(document.getElementById("barChart").getContext("2d")).Bar(data, options);
+        //-     });
+
         script.
-            var data = {
-                labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul"],
-                datasets: [
-                    {
-                        label: "My First dataset",
-                        fillColor: "#00275b",
-                        color: "rgba(0,0,0,0,1)",
-                        data: [90, 50, 15, -17, -96, 0, -4]
-                    }
-                ]
-            };
-
-            $(document).ready(function() {
-                var myBarChart = new Chart(document.getElementById("barChart").getContext("2d")).Bar(data);
-            });
-
+ 
+            new Morris.Bar({
+                    element: 'test',
+                    data: [
+                        { label: 'Ene', a: 100 },
+                        { label: 'Feb', a: 70 },
+                        { label: 'Mar', a: 55 },
+                        { label: 'Abr', a: -45 },
+                        { label: 'May', a: -20},
+                        { label: 'Jun', a: 10},
+                    ],
+                    xkey: 'label',
+                    ykeys: ['a'],
+                    labels: ['Valor'],
+                    barColors: [ '#00275b'],
+                    hideHover: true
+                });

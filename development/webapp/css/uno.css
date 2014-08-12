@@ -3626,3 +3626,13 @@ span.option-description {
 .uno .picker__button--clear:hover {
   background-color: #c2c5d8;
 }
+.morris-hover {
+  width: auto;
+}
+.morris-hover-point {
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff !important;
+}

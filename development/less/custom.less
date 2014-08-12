@@ -26,7 +26,10 @@
 
     .form li label.error        { margin: 0; width: 100%; }
 
-    .uno .validation-errors     { width: 100%; margin: 0; float: right; min-width: 320px; }
+    .uno .validation-errors     { width: 100%; margin: 0; float: right; }
+
+    .uno .short .validation-errors,
+    .uno .shorter .validation-errors { min-width: 320px; }
     
     .uno .split-3 .validation-errors     { min-width: 0; }
 
@@ -35,7 +38,7 @@
     .table tr.new td:first-child { border-left: 3px solid @accent; }
     .table tr.new td            {  background-color: @hexe; }
 
-    .scroll-y                   { .overflow(hidden, auto); height: 382px }
+    .scroll-y                   { .overflow(hidden, auto); height: 388px }
 
     // .form.auto                  {} blah..
 
@@ -457,8 +460,9 @@
             & .contents         { .color(@text-base, @base); .center-block(720px, 720px); .center-vertical(480px); .width(720px, 720px); .height(520px); position: fixed; .rounded(@base-radius); .padding(0 1.6em 36px); .font-size(1.1em) }
             & .contents .button-group { .position.right-bottom(absolute, 1em, 0); }
             & .contents {
+                & h4            { margin-top: .4em; }
                 & .form.primary {
-                    &           { padding-left: .5em; }
+                    &           { padding-right: .5em; }
                 }
             }
         }

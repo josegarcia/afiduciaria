@@ -2136,6 +2136,9 @@ label.auto {
   width: 100%;
   margin: 0;
   float: right;
+}
+.uno .short .validation-errors,
+.uno .shorter .validation-errors {
   min-width: 320px;
 }
 .uno .split-3 .validation-errors {
@@ -2154,7 +2157,7 @@ label.auto {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: 382px;
+  height: 388px;
 }
 table tfoot td {
   font-weight: bold;
@@ -3405,9 +3408,13 @@ span.option-description {
   right: 1em;
   bottom: 0;
 }
+.modals > .popup-tyc .contents h4,
+.modals > .popup2-tyc .contents h4 {
+  margin-top: .4em;
+}
 .modals > .popup-tyc .contents .form.primary,
 .modals > .popup2-tyc .contents .form.primary {
-  padding-left: .5em;
+  padding-right: .5em;
 }
 .color-codes {
   margin: 15px 0 0;

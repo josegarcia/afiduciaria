@@ -35,7 +35,7 @@
     .table tr.new td:first-child { border-left: 3px solid @accent; }
     .table tr.new td            {  background-color: @hexe; }
 
-    .scroll-y                   { .overflow(hidden, auto); height: 350px }
+    .scroll-y                   { .overflow(hidden, auto); height: 382px }
 
     // .form.auto                  {} blah..
 
@@ -452,8 +452,9 @@
     }
 
     .modals {
-        & > .popup-tyc          {
-            & .contents         { .color(@text-base, @base); .center-block(640px, 640px); .center-vertical(480px); .width(640px, 640px); .height(480px); position: fixed; .rounded(@base-radius); .padding(0 1.6em 36px); }
+        & > .popup-tyc,
+        & > .popup2-tyc         {
+            & .contents         { .color(@text-base, @base); .center-block(720px, 720px); .center-vertical(480px); .width(720px, 720px); .height(520px); position: fixed; .rounded(@base-radius); .padding(0 1.6em 36px); .font-size(1.1em) }
             & .contents .button-group { .position.right-bottom(absolute, 1em, 0); }
             & .contents {
                 & .form.primary {

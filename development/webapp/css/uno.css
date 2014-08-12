@@ -2154,7 +2154,7 @@ label.auto {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: 350px;
+  height: 382px;
 }
 table tfoot td {
   font-weight: bold;
@@ -3370,37 +3370,43 @@ span.option-description {
   left: 0;
   bottom: 0;
 }
-.modals > .popup-tyc .contents {
+.modals > .popup-tyc .contents,
+.modals > .popup2-tyc .contents {
   color: #444444;
   background-color: #ffffff;
   margin-top: -240px;
   position: absolute;
   top: 50%;
-  height: 480px;
+  height: 520px;
   position: fixed;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   padding: 0 1.6em 36px;
+  font-size: 1.1em;
 }
-@media all and (min-width: 640px) {
-  .modals > .popup-tyc .contents {
-    width: 640px;
-    left: -320px;
+@media all and (min-width: 720px) {
+  .modals > .popup-tyc .contents,
+  .modals > .popup2-tyc .contents {
+    width: 720px;
+    left: -360px;
     margin-left: 50%;
   }
 }
-@media all and (min-width: 640px) {
-  .modals > .popup-tyc .contents {
-    width: 640px;
+@media all and (min-width: 720px) {
+  .modals > .popup-tyc .contents,
+  .modals > .popup2-tyc .contents {
+    width: 720px;
   }
 }
-.modals > .popup-tyc .contents .button-group {
+.modals > .popup-tyc .contents .button-group,
+.modals > .popup2-tyc .contents .button-group {
   position: absolute;
   right: 1em;
   bottom: 0;
 }
-.modals > .popup-tyc .contents .form.primary {
+.modals > .popup-tyc .contents .form.primary,
+.modals > .popup2-tyc .contents .form.primary {
   padding-left: .5em;
 }
 .color-codes {

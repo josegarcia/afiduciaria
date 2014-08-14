@@ -2177,6 +2177,15 @@ table tfoot td {
   position: absolute;
   top: 0;
 }
+td.long-cell {
+  width: 9em;
+}
+td.medium-cell {
+  width: 7em;
+}
+td.short-cell {
+  width: 5em;
+}
 .uno .list.bullet > li,
 ul.bullet > li,
 ol.bullet > li {

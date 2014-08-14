@@ -89,14 +89,13 @@ $('#write').on('focus', function() {
     });
 });
 
-$('.skeyboard .numbers').hover(
-
-    // Show Numbers
+$('.skeyboard .numbers, .skeyboard .letters').on('hover'
+    // Hide Numbers
     function () {
-        $(this).find('span').toggle();
+        $('.skeyboard .numbers').find('span').toggle();
     }, 
     function () {
-        $(this).find('span').toggle();
+        $('.skeyboard .numbers').find('span').toggle();
     }
 );
 

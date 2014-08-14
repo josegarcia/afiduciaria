@@ -2161,6 +2161,13 @@ label.auto {
   -webkit-overflow-scrolling: touch;
   height: 388px;
 }
+.form.halves li > strong {
+  width: 50%;
+  text-align: right;
+}
+.form.halves li > div {
+  width: 50%;
+}
 table tfoot td {
   font-weight: bold;
   border-top: 1px solid #ccc;

@@ -19,15 +19,17 @@ mixin table-cell(length)
 main
     section.text-frame
         .m-current-date.panel.primary
-            .grid.separate.split-2
-                div
-                    p 
-                        | Fecha actual:
-                        span 12/02/2014
-                div.text-right
-                    a(href="#") 
-                        i.fa.fa-edit
-                        | Editar fecha actual
+            .form.halves.horizontal
+                ol.grid.split-2
+                    li
+                        strong  Fecha actual:
+                        div
+                            label
+                                input(type="text", value="12/02/2014")
+                    li.text-right
+                        a(href="#") 
+                            i.fa.fa-edit
+                            | Editar fecha actual
         h1.heading.base Bienvenido(a)
             span  Liliana Patricia Delgado García
                 a(href="#") Actualizar datos

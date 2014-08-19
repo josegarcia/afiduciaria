@@ -2161,6 +2161,13 @@ label.auto {
   -webkit-overflow-scrolling: touch;
   height: 388px;
 }
+.error .highlight {
+  background-color: #eabebe;
+  list-style: disc inside;
+}
+.error ul li {
+  padding: 2px 5px;
+}
 .form.halves li > strong {
   width: 50%;
   text-align: right;

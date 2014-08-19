@@ -435,6 +435,13 @@
 	},
 	"file_history":
 	[
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200 inicio.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/200.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/custom.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/200.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200b_inicio.jade",
 		"/D/Projects/Certicamara/certiArchivo/development/webapp/css/uno.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/301.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/301_pensiones_resumen.jade",
@@ -445,12 +452,10 @@
 		"/C/Users/admin/Desktop/uniandinos/qa/main.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/100 ingreso.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/custom.less",
 		"/C/Users/admin/Desktop/uniandinos/qa/inicio_ok_files/foundation.js",
 		"/C/Users/admin/Desktop/uniandinos/qa/inicio_ok_files/additional-methods.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.css",
 		"/C/Users/admin/Desktop/uniandinos/qa/busqueda.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
 		"/C/Users/admin/Desktop/uniandinos/qa/noticias_files/main.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
 		"/C/Users/admin/Desktop/uniandinos/qa/inicio_ok_files/main.css",
@@ -481,9 +486,7 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/110_valores.html",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100_header_valores.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/800_admin.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/800_admin.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/200.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/css/uno.css",
 		"/C/Users/admin/alianza-transaccional/fiduciaria/frontend/app/styles/alianza.css",
@@ -494,9 +497,6 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/101.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/001.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/test.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/200.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200b_inicio.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200 inicio.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/Calibri/calibri-webfont.svg",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/nav.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/304_pensiones_extractos.jade",
@@ -580,6 +580,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"m-directory",
+			".has-padd",
+			".button",
+			"//",
 			"input[type",
 			":\\",
 			", ",
@@ -703,10 +707,6 @@
 			".overv",
 			".overfwi",
 			"0",
-			".auto",
-			"short",
-			".horizontal",
-			"short",
 			".auto"
 		],
 		"highlight": true,
@@ -812,6 +812,22 @@
 		"selected_items":
 		[
 			[
+				"anch",
+				"less\\anchor.less"
+			],
+			[
+				"cus",
+				"less\\custom.less"
+			],
+			[
+				"base",
+				"less\\base.less"
+			],
+			[
+				"200",
+				"jade\\sections\\main\\200.jade"
+			],
+			[
 				"301",
 				"jade\\301_pensiones_resumen.jade"
 			],
@@ -828,15 +844,7 @@
 				"jade\\100 ingreso.jade"
 			],
 			[
-				"cus",
-				"less\\custom.less"
-			],
-			[
 				"anc",
-				"less\\anchor.less"
-			],
-			[
-				"anch",
 				"less\\anchor.less"
 			],
 			[
@@ -876,10 +884,6 @@
 				"jade\\sections\\main\\800_main.jade"
 			],
 			[
-				"base",
-				"less\\base.less"
-			],
-			[
 				"uno.less",
 				"less\\uno.less"
 			],
@@ -894,10 +898,6 @@
 			[
 				"an",
 				"less\\anchor.less"
-			],
-			[
-				"200",
-				"jade\\sections\\main\\200.jade"
 			],
 			[
 				"001",

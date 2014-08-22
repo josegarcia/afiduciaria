@@ -100,6 +100,9 @@
     //             .tabs.accordion;
     //     }
 
+    .fa.fa-file-pdf-o,
+    .fa.fa-file-excel-o { margin-right: 5px; }
+
 //  Header
 //  ---------------------------------------
 
@@ -116,9 +119,9 @@
     }
 
     .m-sidemenu                 {
-        &                       { width: auto; .square(56px); line-height:56px; font-size: 1.8em; color: @hexf; text-align: center; margin-right: 10px; .display(none, 1025px); }
+        &                       { width: auto; .square(56px); line-height:56px; font-size: 1.8em; color: @primary; text-align: center; margin-right: 10px; .display(none, 1025px); }
         & a                     { color: inherit; display: block; }
-        & a:hover               { .color(@primary, @hexf); }
+        & a:hover               { .color(@text-primary, @primary); }
     }
 
     .m-login-data {
@@ -169,7 +172,7 @@
         & li a:hover            {  text-decoration: none; .padding(16px 20px 6px, 1025px); }
         & .subitems             {
             &                   { .padding(0 3px 0 0, 1025px); }
-            & li                { .border; }
+            & li                { .border; margin: 0; }
             & li:first-child    { .border(0 1px 0 0, solid, @hexb); }
             & li a              { .padding(7px 10px 7px 25px); .padding(2px 20px 3px, 1025px); }
             & .title            { .font(bold .7em); text-align: left; text-transform: uppercase; color:@hex2; padding: 0 10px; .border(0 0 0 1px, solid, @hexb); }

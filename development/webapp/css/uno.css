@@ -1967,7 +1967,7 @@ body .c-nav li:hover a {
 }
 @media all and (min-width: 800px) {
   .table.primary {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 .table.primary tbody tr:hover {
@@ -2227,6 +2227,10 @@ input[type="radio"],
 input[type="checkbox"] {
   padding: 0;
 }
+.fa.fa-file-pdf-o,
+.fa.fa-file-excel-o {
+  margin-right: 5px;
+}
 .m-brand {
   width: auto;
 }
@@ -2253,7 +2257,7 @@ input[type="checkbox"] {
   height: 56px;
   line-height: 56px;
   font-size: 1.8em;
-  color: #ffffff;
+  color: #00275b;
   text-align: center;
   margin-right: 10px;
 }
@@ -2267,8 +2271,8 @@ input[type="checkbox"] {
   display: block;
 }
 .m-sidemenu a:hover {
-  color: #00275b;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #00275b;
 }
 .m-login-data {
   width: auto;
@@ -2476,6 +2480,7 @@ input[type="checkbox"] {
 .m-mainnav .subitems li {
   border-width: 0;
   border-style: none;
+  margin: 0;
 }
 .m-mainnav .subitems li:first-child {
   border-width: 0 1px 0 0;

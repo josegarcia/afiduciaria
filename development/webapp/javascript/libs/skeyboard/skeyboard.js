@@ -89,15 +89,26 @@ $('#write').on('focus', function() {
     });
 });
 
-$('.skeyboard .numbers, .skeyboard .letters').on('hover'
-    // Hide Numbers
+// Nuevo
+
+function toggleNumbers () {
+    $('.skeyboard .numbers').find('span').toggle();
+}
+
+$('.skeyboard .numbers, .skeyboard .letters').hover( 
     function () {
-        $('.skeyboard .numbers').find('span').toggle();
-    }, 
+        toggleNumbers();
+    },
     function () {
-        $('.skeyboard .numbers').find('span').toggle();
+        toggleNumbers();
     }
 );
+
+$('.button').click(function(event) {
+    toggleNumbers();
+});
+
+// Fin Nuevo
 
 $(document).mouseup(function(event) {
     var container = $("#container");

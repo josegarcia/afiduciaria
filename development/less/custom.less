@@ -460,6 +460,17 @@
                 & .small        { margin-top: 60px; }
             }
         }
+        & > .warning            {
+            & .text-frame       {
+                &               { .padding(30px 20px 60px 140px); .back(@hexf, '../images/icon-warning.png', no-repeat, 40px 35px); min-height: 240px; }
+                & .button-group { .spacing(0, 10px 20px); .absolute.left-bottom(0, 0); }
+            }
+            & .contents         { 
+                &               { .color(@text-base, @hexf); .position.left-top(fixed, 0, 320px); font-size: 1.1em; border-top: 15px solid #e8b051; }
+                & h2            { font-weight: normal; }
+                & .small        { margin-top: 60px; }
+            }
+        }
     }
 
     .modals {

@@ -21,8 +21,9 @@ main
                 button(type="button", id="cargando").button.primary Cargando
                 button(type="button", id="estado").button.primary Estado
                 button(type="button", id="exito").button.primary Éxito
-                button(type="button", id="popup").button.primary TyC
+                button(type="button", id="warning").button.primary Warning
             .button-group.align.left
+                button(type="button", id="popup").button.primary TyC
                 button(type="button", id="popup2").button.primary TyC Valores
 .modals
     .loader.hide
@@ -51,6 +52,15 @@ main
                 p El registro se ha realizado correctamente.
                 .button-group
                     button(type="button").button.secondary.btn-close Continuar
+    .warning.hide
+        .overlay
+        .contents
+            .text-frame
+                h2 Eliminar IP
+                p ¿Está seguro que desea eliminar esta dirección IP?
+                .button-group
+                    button(type="button").button.secondary.btn-close Cancelar
+                    button(type="button").button.primary.btn-close Aceptar
     .error.hide
         .overlay
         .contents

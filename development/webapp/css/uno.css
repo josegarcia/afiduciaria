@@ -3371,6 +3371,33 @@ span.option-description {
 .modals > .success .contents .small {
   margin-top: 60px;
 }
+.modals > .warning .text-frame {
+  padding: 30px 20px 60px 140px;
+  background: #ffffff url('../images/icon-warning.png') no-repeat 40px 35px;
+  min-height: 240px;
+}
+.modals > .warning .text-frame .button-group {
+  margin: 0;
+  padding: 10px 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.modals > .warning .contents {
+  color: #444444;
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  top: 320px;
+  font-size: 1.1em;
+  border-top: 15px solid #e8b051;
+}
+.modals > .warning .contents h2 {
+  font-weight: normal;
+}
+.modals > .warning .contents .small {
+  margin-top: 60px;
+}
 .modals > .error .contents {
   color: #444444;
   background-color: #ffffff;

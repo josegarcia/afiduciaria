@@ -75,9 +75,10 @@
           <button type="button" id="cargando" class="button primary">Cargando</button>
           <button type="button" id="estado" class="button primary">Estado</button>
           <button type="button" id="exito" class="button primary">Éxito</button>
-          <button type="button" id="popup" class="button primary">TyC</button>
+          <button type="button" id="warning" class="button primary">Warning</button>
         </div>
         <div class="button-group align left">
+          <button type="button" id="popup" class="button primary">TyC</button>
           <button type="button" id="popup2" class="button primary">TyC Valores</button>
         </div>
       </div>
@@ -110,6 +111,19 @@
           <p>El registro se ha realizado correctamente.</p>
           <div class="button-group">
             <button type="button" class="button secondary btn-close">Continuar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="warning hide">
+      <div class="overlay"></div>
+      <div class="contents">
+        <div class="text-frame">
+          <h2>Eliminar IP</h2>
+          <p>¿Está seguro que desea eliminar esta dirección IP?</p>
+          <div class="button-group">
+            <button type="button" class="button secondary btn-close">Cancelar</button>
+            <button type="button" class="button primary btn-close">Aceptar</button>
           </div>
         </div>
       </div>
@@ -380,6 +394,10 @@
     
     $('#exito').on('click', function(){
         open_modal('.success');
+    });
+    
+    $('#warning').on('click', function(){
+        open_modal('.warning');
     });
     
     $('#popup').on('click', function(){

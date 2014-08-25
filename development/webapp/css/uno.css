@@ -1527,6 +1527,17 @@ footer {
   -webkit-box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
 }
+main section:before {
+  background: transparent url('../images/img-superintendencia.png') no-repeat center;
+  position: absolute;
+  left: -40px;
+  bottom: 20px;
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 166px;
+  vertical-align: middle;
+}
 @media all and (min-width: 800px) {
   header > section {
     padding: 0;

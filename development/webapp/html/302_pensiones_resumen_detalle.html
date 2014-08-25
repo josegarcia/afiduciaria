@@ -353,10 +353,15 @@
     });
     
     function abrirCuenta(parent, obj) {
-        $(parent + '.tabset > .summary.active').removeClass('active');
-        $(parent + '.tabset > .summary').next('.details').hide();
-        $(obj).addClass('active');
-        $(obj).next('.details').fadeIn();
+        if($(obj).hasClass("active")){
+            $(obj).removeClass('active');
+            $(obj).next('.details').fadeOut('slow');
+        } else {
+            $(parent + '.tabset > .summary.active').removeClass('active');
+            $(parent + '.tabset > .summary').next('.details').hide();
+            $(obj).addClass('active');
+            $(obj).next('.details').fadeIn();
+        }
     }
   </script>
 </body>

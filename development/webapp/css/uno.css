@@ -3253,7 +3253,7 @@ span.option-description {
 }
 @media all and (min-width: 800px) {
   .table.single {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 }
 .table.single.smaller {

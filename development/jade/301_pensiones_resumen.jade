@@ -25,7 +25,7 @@ include sections/global/doctype
                 {
                     value: 20,
                     color : "#00275b",
-                    label: "Hola",
+                    label: "Hola mundo como estas???",
                 },
                 {
                     value : 77,
@@ -44,8 +44,14 @@ include sections/global/doctype
                 }
             ];
 
+            var options = [
+                {
+                    tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>"
+                }
+            ]
+
             $(document).ready(function() {
-                var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
+                var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata, options);
             });
 
 

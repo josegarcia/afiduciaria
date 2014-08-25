@@ -2792,6 +2792,14 @@ footer {
 .m-legal .seven4n:hover a {
   background-position: left bottom;
 }
+.m-legal .valores {
+  float: none;
+}
+@media all and (min-width: 960px) {
+  .m-legal .valores {
+    float: left;
+  }
+}
 .m-legal .fiduciaria {
   float: none;
 }

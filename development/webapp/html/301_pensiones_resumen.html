@@ -170,7 +170,7 @@
   </main>
   <footer>
     <section class="text-frame">
-      <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
+      <div class="m-legal copy"><span class="valores"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
     </section>
   </footer>
   <script src="../javascript/scripts.js"></script>
@@ -204,7 +204,7 @@
         {
             value: 20,
             color : "#00275b",
-            label: "Hola",
+            label: "Hola mundo como estas???",
         },
         {
             value : 77,
@@ -223,8 +223,14 @@
         }
     ];
     
+    var options = [
+        {
+            tooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>"
+        }
+    ]
+    
     $(document).ready(function() {
-        var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata);
+        var myPie = new Chart(document.getElementById("myChart").getContext("2d")).Pie(mydata, options);
     });
     
     

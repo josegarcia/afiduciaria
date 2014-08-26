@@ -2848,7 +2848,7 @@ footer {
     width: 480px;
   }
 }
-@media all and (min-width: 960px) {
+@media all and (min-width: 840px) {
   #container .skeyboard {
     position: absolute;
     top: -45px;

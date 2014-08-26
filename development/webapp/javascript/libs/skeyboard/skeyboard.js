@@ -91,21 +91,20 @@ $('#write').on('focus', function() {
 
 // Nuevo
 
-function toggleNumbers () {
-    $('.skeyboard .numbers').find('span').toggle();
-}
-
 $('.skeyboard .numbers, .skeyboard .letters, .skeyboard .symbols').hover( 
     function () {
-        toggleNumbers();
+        $('.skeyboard .numbers').find('span').show();
+        $('.skeyboard .numbers').find('.on').hide();
     },
     function () {
-        toggleNumbers();
+        $('.skeyboard .numbers').find('span').hide();
+        $('.skeyboard .numbers').find('.on').show();
     }
 );
 
 $('.button').click(function(event) {
-    toggleNumbers();
+    $('.skeyboard .numbers').find('span').show();
+    $('.skeyboard .numbers').find('.on').hide();
 });
 
 // Fin Nuevo
@@ -134,11 +133,11 @@ $( document ).ready(function() {
         $(".skeyboard .numbers li span.on.n" + i).html(myArray[i]);
    }
 
-    $('#write').bind('copy paste cut drag drop keyup', function (event) {  // NUEVO
+    $('#write').bind('copy paste cut drag drop keyup', function (event) {
        event.preventDefault();
     });
 
-    $('#write').on('keydown', function (event) {  // NUEVO
+    $('#write').on('keydown', function (event) {
         if (event.keyCode == 8 || event.keyCode == 46) {
             return false;
         }

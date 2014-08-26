@@ -95,7 +95,7 @@ function toggleNumbers () {
     $('.skeyboard .numbers').find('span').toggle();
 }
 
-$('.skeyboard .numbers, .skeyboard .letters').hover( 
+$('.skeyboard .numbers, .skeyboard .letters, .skeyboard .symbols').hover( 
     function () {
         toggleNumbers();
     },

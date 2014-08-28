@@ -2251,6 +2251,7 @@ input:required {
 input[type="radio"],
 input[type="checkbox"] {
   padding: 0;
+  border: 0 none;
 }
 .fa.fa-file-pdf-o,
 .fa.fa-file-excel-o {
@@ -3516,7 +3517,7 @@ span.option-description {
 .color-codes li {
   margin: 3px 0;
   padding: 0 10px 0 18px;
-  width: auto;
+  width: 100%;
 }
 .color-codes li span {
   width: 15px;

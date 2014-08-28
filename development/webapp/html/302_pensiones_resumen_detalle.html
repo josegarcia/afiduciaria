@@ -342,15 +342,24 @@
   <script src="../javascript/libs/uform/uform.js"></script>
   <script>
     // Accordion tabset
-    $('.tabset .summary').click(function(event){
-        abrirCuenta('.m-results', $(this));
-        event.preventDefault();
-    });
+    //- $('.tabset .summary').click(function(event){
+    //-     abrirCuenta('.m-results', $(this));
+    //-     event.preventDefault();
+    //- });
     
     $('#abrirCuenta').click(function(event){
         abrirCuenta('.m-results', '.m-results .c3');
         event.preventDefault();
     });
+    
+    function tabClick(parent) {
+        $(parent + '.tabset .summary').click(function(event){
+            abrirCuenta(parent, $(this));
+            event.preventDefault();
+        });
+    }
+    
+    tabClick('.m-results');
     
     function abrirCuenta(parent, obj) {
         if($(obj).hasClass("active")){

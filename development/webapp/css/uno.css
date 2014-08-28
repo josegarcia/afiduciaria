@@ -1674,6 +1674,7 @@ body.certificados nav .certificados,
 body.inversiones nav .inversiones,
 body.carteras nav .carteras,
 body.extractos nav .extractos,
+body.extr nav .extr,
 body.certi nav .certi,
 body.transacciones nav .transacciones,
 body nav li a:hover {
@@ -2599,8 +2600,10 @@ html .table {
   max-width: 320px;
 }
 .m-resumen > ul {
-  border-top: 1px solid #cccccc;
   font-size: .9em;
+}
+.m-resumen > ul {
+  border-top: 1px solid #cccccc;
 }
 .m-resumen > ul > li {
   border-bottom: 1px solid #cccccc;

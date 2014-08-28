@@ -1988,7 +1988,7 @@ body .c-nav li:hover a {
 }
 .table.primary tr th,
 .table.primary tr td {
-  padding: 0.35em 1em;
+  padding: 0.35em 0.75em;
 }
 @media all and (min-width: 800px) {
   .table.primary {
@@ -2259,7 +2259,14 @@ input[type="checkbox"] {
 }
 td.fecha,
 th.fecha {
-  width: 160px;
+  width: 150px;
+}
+html .table thead tr th[colspan] {
+  text-align: center;
+}
+html table,
+html .table {
+  text-align: left;
 }
 .m-brand {
   width: auto;
@@ -2593,6 +2600,7 @@ th.fecha {
 }
 .m-resumen > ul {
   border-top: 1px solid #cccccc;
+  font-size: .9em;
 }
 .m-resumen > ul > li {
   border-bottom: 1px solid #cccccc;
@@ -3110,7 +3118,7 @@ span.option-description {
 .panel.success {
   padding-left: 120px;
   padding-bottom: 0;
-  border-top: 15px solid #95c794;
+  border-top: 15px solid #00a49e;
   background: #ffffff url('../images/icon-ok.png') no-repeat 40px 40px;
 }
 .panel.recap {
@@ -3269,7 +3277,7 @@ span.option-description {
 }
 .table.single tr th,
 .table.single tr td {
-  padding: 0.35em 1em;
+  padding: 0.35em 0.75em;
 }
 @media all and (min-width: 800px) {
   .table.single {

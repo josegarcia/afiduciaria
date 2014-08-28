@@ -104,7 +104,11 @@
     .fa.fa-file-excel-o { margin-right: 5px; }
 
     td.fecha,
-    th.fecha { .width(160px); }
+    th.fecha { .width(150px); }
+
+    html .table thead tr th[colspan]  { text-align: center; }
+    html table,
+    html .table { text-align: left; }
 
 //  Header
 //  ---------------------------------------
@@ -212,7 +216,7 @@
     }
 
     .m-resumen                  {
-        & > ul                  { border-top: 1px solid @hexc; }
+        & > ul                  { border-top: 1px solid @hexc; font-size: .9em; }
         & > ul > li             { border-bottom: 1px solid @hexc; padding: 1em; .strong-div-width(25%, 75%); font-size: 1.2em; }
         & > ul > li> strong     { .block; }
         & table.summary tr th,
@@ -359,7 +363,7 @@
     }
 
     .panel.success      {
-        &               { padding-left: 120px; padding-bottom: 0; border-top: 15px solid #95c794; .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); }
+        &               { padding-left: 120px; padding-bottom: 0; border-top: 15px solid #00a49e; .back(@hexf, '../images/icon-ok.png', no-repeat, 40px 40px); }
     }
 
     .panel.recap        {
@@ -412,7 +416,7 @@
     }
 
     .table.single               {
-        &                       { .table.padding(0.35em 1em); .font-size(1.0em, 800px); .border(0 0 1px, solid, @hexc); }
+        &                       { .table.padding(0.35em .75em); .font-size(1.0em, 800px); .border(0 0 1px, solid, @hexc); }
         &.smaller               { .font-size(.96em); }
         & tbody tr              { .hover.color(@text-base, @hexe); }
         & tbody tr.selected td  { .color(@hexf, @primary); }

@@ -110,8 +110,10 @@
     th.fecha:before {  .pseudo('', 150px, 1px); }
 
     html .table thead tr th[colspan]  { text-align: center; }
-    html table,
-    html .table { text-align: left; } // fixed width to add custom cell width
+    html table td,
+    html .table td,
+    html table th,
+    html .table th { text-align: left; } // fixed width to add custom cell width
 
     .table thead tr th.text-right,
     .table thead tr td.text-right       { text-align: right; }
@@ -269,8 +271,10 @@
     .convenciones               { border: 1px solid @hexd; width: auto; margin-bottom: 1em; }
     .convenciones div           { width: auto; padding: .2em .5em; }
 
+    .uno .grid.separate > .center-50,
+    .uno .grid > .center-50,
     .center-50 {
-        &                       { .center-block(50%); margin-left:  50% !important; }
+        &                       { .center-block(50%, 640px); } // margin-left:  50% !important;
     }
 
 //  Footer

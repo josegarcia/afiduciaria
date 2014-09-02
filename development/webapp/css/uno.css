@@ -1527,17 +1527,6 @@ footer {
   -webkit-box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 -4px rgba(186, 186, 186, 0.4);
 }
-main section:before {
-  background: transparent url('../images/img-superintendencia.png') no-repeat center;
-  position: absolute;
-  left: -40px;
-  bottom: 20px;
-  display: inline-block;
-  content: '';
-  width: 20px;
-  height: 166px;
-  vertical-align: middle;
-}
 @media all and (min-width: 800px) {
   header > section {
     padding: 0;
@@ -1547,18 +1536,29 @@ nav > section {
   padding: 0;
 }
 main > section {
-  padding: 0 2%;
+  padding: 0 2% 0 40px;
   background-color: #f6f6f7;
 }
 @media all and (min-width: 1025px) {
   main > section {
-    padding: 0;
+    padding: 0 2% 0 3%;
   }
 }
 footer > section {
   padding: 7px 2%;
   color: #888888;
   font-size: .9em;
+}
+main section:before {
+  background: transparent url('../images/img-superintendencia.png') no-repeat center;
+  position: absolute;
+  left: 5px;
+  bottom: 20px;
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 166px;
+  vertical-align: middle;
 }
 em {
   color: #009089;
@@ -2284,8 +2284,10 @@ th.fecha:before {
 html .table thead tr th[colspan] {
   text-align: center;
 }
-html table,
-html .table {
+html table td,
+html .table td,
+html table th,
+html .table th {
   text-align: left;
 }
 .table thead tr th.text-right,
@@ -2768,11 +2770,14 @@ html .table {
   width: auto;
   padding: .2em .5em;
 }
-.center-50 {
-  width: 50%;
-  left: -25%;
-  margin-left: 50%;
-  margin-left: 50% !important;
+@media all and (min-width: 640px) {
+  .uno .grid.separate > .center-50,
+  .uno .grid > .center-50,
+  .center-50 {
+    width: 50%;
+    left: -25%;
+    margin-left: 50%;
+  }
 }
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);

@@ -19,14 +19,13 @@
         & header                { .color(@text-base, @base); border-bottom: 2px solid @hexb; .shadow(0 0 -4px, #bbb, .4); }
     }
 
-
-    main section:before         { .back(@trans, "../images/img-superintendencia.png", no-repeat, center); .absolute.left-bottom(-40px, 20px); .pseudo('', 20px, 166px);}
-    
     header > section            { .padding(0, 800px); }
     nav > section               { .padding(0); }
-    main > section              { .padding(0 2%); .padding(0, 1025px); .back.color(@hexef); }
+    main > section              { .padding(0 2% 0 40px); .padding(0 2% 0 3%, 1025px); .back.color(@hexef); }
     footer > section            { .padding(7px 2%); .color(@hex8); font-size: .9em; }
 
+    main section:before         { .back(@trans, "../images/img-superintendencia.png", no-repeat, center); .absolute.left-bottom(5px, 20px); .pseudo('', 20px, 166px);}
+    
     em                          { color: @tertiary; }
 
     .l-admin main,

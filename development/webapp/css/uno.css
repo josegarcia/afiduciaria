@@ -1666,6 +1666,9 @@ select option,
 select {
   padding: 5px;
 }
+body.clientes nav .clientes,
+body.reglas nav .reglas,
+body.permisosfide nav .permisosfide,
 body.inicio nav .inicio,
 body.fideicomisos nav .fideicomisos,
 body.pensiones nav .pensiones,
@@ -1682,6 +1685,10 @@ body nav li a:hover {
   color: #00275b;
   text-decoration: none;
 }
+body.permisosfide.consultar .c-nav .consultar,
+body.permisosfide.crear .c-nav .crear,
+body.clientes.consultar .c-nav .consultar,
+body.clientes.crear .c-nav .crear,
 body.fideicomisos.resumen .c-nav .resumen,
 body.fideicomisos.informes .c-nav .informes,
 body.fideicomisos.certificados .c-nav .certificados,
@@ -1707,6 +1714,10 @@ body .c-nav li:hover {
   border-style: solid;
   border-color: #00275b;
 }
+body.permisosfide.consultar .c-nav .consultar a,
+body.permisosfide.crear .c-nav .crear a,
+body.clientes.consultar .c-nav .consultar a,
+body.clientes.crear .c-nav .crear a,
 body.fideicomisos.resumen .c-nav .resumen a,
 body.fideicomisos.informes .c-nav .informes a,
 body.fideicomisos.certificados .c-nav .certificados a,

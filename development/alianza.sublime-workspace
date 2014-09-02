@@ -359,7 +359,7 @@
 			"file": "less/custom.less",
 			"settings":
 			{
-				"buffer_size": 28851,
+				"buffer_size": 28973,
 				"line_ending": "Unix"
 			}
 		},
@@ -375,7 +375,7 @@
 			"file": "less/theme.less",
 			"settings":
 			{
-				"buffer_size": 10695,
+				"buffer_size": 10707,
 				"line_ending": "Unix"
 			}
 		}
@@ -479,6 +479,9 @@
 	},
 	"file_history":
 	[
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/angular.min.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/morris/morris.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/100 ingreso.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200 inicio.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200b_inicio.jade",
@@ -488,7 +491,6 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/doctype.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/301.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/200.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/angular.min.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/css/uno.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/uno.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.css",
@@ -502,11 +504,9 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/302.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/scripts.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/slider-captcha.min.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/402-b.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/morris/morris.js",
 		"/D/Projects/CO/CO Visualization/webapp/templates/index.jade",
 		"/D/Projects/CO/CO Visualization/webapp/public/css/uno.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/variables.less",
@@ -624,6 +624,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"[]",
+			"center-block",
+			"center-50",
+			"white-space",
 			".login",
 			"scope",
 			"                $",
@@ -747,11 +751,7 @@
 			"preven",
 			"prevent",
 			"         {",
-			", disabled=\"disabled\"",
-			".color.h",
-			"-color",
-			"@back",
-			"mixins"
+			", disabled=\"disabled\""
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -804,7 +804,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -834,7 +834,7 @@
 						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -864,7 +864,7 @@
 						"translation.y": 405.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -873,15 +873,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 28851,
+						"buffer_size": 28973,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15916,
-								15916
+								10730,
+								10730
 							]
 						],
 						"settings":
@@ -891,10 +891,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5262.0,
+						"translation.y": 3837.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -924,7 +924,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -933,15 +933,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10695,
+						"buffer_size": 10707,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1173,
-								1173
+								1907,
+								1907
 							]
 						],
 						"settings":
@@ -951,10 +951,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1007,6 +1007,14 @@
 		"selected_items":
 		[
 			[
+				"them",
+				"less\\theme.less"
+			],
+			[
+				"anc",
+				"less\\anchor.less"
+			],
+			[
 				"110",
 				"jade\\sections\\main\\110_main.jade"
 			],
@@ -1037,10 +1045,6 @@
 			[
 				"anch",
 				"less\\anchor.less"
-			],
-			[
-				"them",
-				"less\\theme.less"
 			],
 			[
 				"base",
@@ -1133,10 +1137,6 @@
 			[
 				"morris",
 				"webapp\\javascript\\libs\\morris\\morris.js"
-			],
-			[
-				"anc",
-				"less\\anchor.less"
 			],
 			[
 				"var",

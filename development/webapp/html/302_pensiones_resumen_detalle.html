@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
 <!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]>  <html lang="es"> <![endif]-->
-<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<!--[if !IE]><!--> <html ng-app lang="es"> <!--<![endif]-->
 <head>
   <title>Alianza Fiduciaria</title>
   <meta charset="utf-8">
@@ -12,6 +12,7 @@
   <link href="../css/uno.css" rel="stylesheet">
   <link href="../fonts/FontAwesome/fonts/font-awesome.min.css" rel="stylesheet">
   <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
+  <script src="../javascript/libs/angular.min.js"></script>
   <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
   <script src="../javascript/modernizr.js"></script>
   <script src="../javascript/modernizr.load.js"></script>
@@ -95,7 +96,7 @@
           </div>
         </div>
         <div class="m-results tabset accordion primary">
-          <h2 class="summary">Cuenta 00001
+          <h2 ng-controller="FunWithClassesCtrl" ng-click="abrirPestana('c1')" ng-class="{'active': dato.seleccionada === true}" ng-model="c1" class="summary">Cuenta 00001
             <div class="disponible"><span>Disponible</span><strong>$66.000.000</strong></div>
           </h2>
           <div class="scrollable details">
@@ -151,7 +152,7 @@
               </tbody>
             </table>
           </div>
-          <h2 class="summary active">Cuenta 00002</h2>
+          <h2 ng-controller="FunWithClassesCtrl" ng-click="toggleActive()" ng-class="{true:'summary active', false:'summary'}[isActive]" ng-model="c2">Cuenta 00002</h2>
           <div class="scrollable details">
             <table class="table single striped">
               <thead>
@@ -209,7 +210,7 @@
             <div class="plus"><i class="fa fa-sort-up"></i>Utilidades</div>
             <div class="minus"><i class="fa fa-sort-down"></i>Perdidas</div>
           </div>
-          <h2 class="summary c3">Cuenta 00003</h2>
+          <h2 ng-controller="FunWithClassesCtrl" ng-click="toggleActive()" ng-class="{true:'summary active', false:'summary'}[isActive]" ng-model="c3">Cuenta 00003</h2>
           <div class="scrollable details">
             <table class="table single striped">
               <thead>
@@ -258,7 +259,7 @@
               </tbody>
             </table>
           </div>
-          <h2 class="summary">Cuenta 00004</h2>
+          <h2 ng-controller="FunWithClassesCtrl" ng-click="toggleActive()" ng-class="{true:'summary active', false:'summary'}[isActive]" ng-model="c4">Cuenta 00004</h2>
           <div class="scrollable details">
             <table class="table single striped">
               <thead>
@@ -347,10 +348,10 @@
     //-     event.preventDefault();
     //- });
     
-    $('#abrirCuenta').click(function(event){
-        abrirCuenta('.m-results', '.m-results .c3');
-        event.preventDefault();
-    });
+    //- $('#abrirCuenta').click(function(event){
+    //-     abrirCuenta('.m-results', '.m-results .c3');
+    //-     event.preventDefault();
+    //- });
     
     function tabClick(parent) {
         $(parent + '.tabset .summary').click(function(event){
@@ -359,7 +360,7 @@
         });
     }
     
-    tabClick('.m-results');
+    //- tabClick('.m-results');
     
     function abrirCuenta(parent, obj) {
         if($(obj).hasClass("active")){
@@ -372,5 +373,36 @@
             $(obj).next('.details').fadeIn();
         }
     }
+    
+    //- function checkClass () {
+    //-     //- alert('hello world');
+    //-     $scope.isActive = !$scope.isActive;
+    //- }
+    
+    function FunWithClassesCtrl($scope) {
+    
+        $scope.seleccionada = 1;
+        $scope.datos = [
+            {'nombre': 'Abel', 'id': 1},
+            {'nombre': 'Rodrigo', 'id': 2}
+        ];
+        
+        $scope.datos.forEach(function(dato){
+            if($scope.seleccionada === dato.id) dato.seleccionada = true;
+        });
+        
+    $scope.abrirPestana = function (cuenta) {
+            switch(cuenta) {
+                case 'c1':
+                    $scope.ac1 = !$scope.ac1;
+                    break;
+                    case 'c2':
+                        $scope.ac1 = !$scope.ac1;
+                    break;
+            }
+    }
+    }
+    
+    
   </script>
 </body>

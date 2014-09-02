@@ -44,8 +44,8 @@ main
                                         option 00001
                                         option 00002
                                         option 00003
-            .m-results.tabset.accordion.primary
-                h2.summary 
+            .m-results.tabset.accordion.primary()
+                h2.summary(ng-controller="FunWithClassesCtrl", ng-click="abrirPestana('c1')", ng-class="{'active': dato.seleccionada === true}", ng-model="c1")
                     | Cuenta 00001
                     div.disponible
                         span Disponible
@@ -102,7 +102,7 @@ main
                                 td 
                                     i.fa.fa-sort-down
                                     | 15%
-                h2.summary.active Cuenta 00002
+                h2(ng-controller="FunWithClassesCtrl", ng-click="toggleActive()", ng-class="{true:'summary active', false:'summary'}[isActive]", ng-model="c2") Cuenta 00002
                 .scrollable.details
                     table.table.single.striped
                         thead
@@ -162,7 +162,7 @@ main
                     .minus
                         i.fa.fa-sort-down 
                         | Perdidas
-                h2.summary.c3 Cuenta 00003
+                h2(ng-controller="FunWithClassesCtrl", ng-click="toggleActive()", ng-class="{true:'summary active', false:'summary'}[isActive]", ng-model="c3") Cuenta 00003
                 .scrollable.details
                     table.table.single.striped
                         thead
@@ -202,7 +202,7 @@ main
                                 td 500.000
                                 td 500.000
                                 td $150.000
-                h2.summary Cuenta 00004
+                h2(ng-controller="FunWithClassesCtrl", ng-click="toggleActive()", ng-class="{true:'summary active', false:'summary'}[isActive]", ng-model="c4") Cuenta 00004
                 .scrollable.details
                     table.table.single.striped
                         thead

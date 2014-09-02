@@ -63,9 +63,12 @@
     .uno .form li input[type="checkbox"] + span,
     .uno .form li input[type="checkbox"] + div + span { position: absolute; top: 0; }
 
-    td.long-cell    { width: 9em; }
-    td.medium-cell  { width: 7em; }
-    td.short-cell   { width: 5em; }
+    th.cell-short:before,
+    td.cell-short:before    { .pseudo('', 120px, 1px); }
+    th.cell-medium:before,
+    td.cell-medium:before   { .pseudo('', 240px, 1px); }
+    th.cell-large:before,
+    td.cell-large:before    { .pseudo('', 380px, 1px); }
 
     .uno .list,
     ul, ol                      { 
@@ -103,12 +106,23 @@
     .fa.fa-file-pdf-o,
     .fa.fa-file-excel-o { margin-right: 5px; }
 
-    td.fecha,
-    th.fecha { .width(150px); }
+    td.fecha:before,
+    th.fecha:before {  .pseudo('', 150px, 1px); }
 
     html .table thead tr th[colspan]  { text-align: center; }
     html table,
-    html .table { text-align: left; }
+    html .table { text-align: left; } // fixed width to add custom cell width
+
+    .table thead tr th.text-right,
+    .table thead tr td.text-right       { text-align: right; }
+    .table thead tr th.text-left,
+    .table thead tr td.text-left        { text-align: left; }
+    .table thead tr th.text-center,
+    .table thead tr td.text-center      { text-align: center; }
+    .table thead tr th.text-justify,
+    .table thead tr td.text-justify     { text-align: justify; }
+
+    .table tr th.nowrap                    { white-space: normal; }
 
 //  Header
 //  ---------------------------------------
@@ -345,8 +359,8 @@
     }
 
     .panel.login        {
-        &               { .padding(30px 5% 20px); .padding(50px 9% 20px, 640px); } // border: 1px solid #ccc;
-        & > .subhead    { width: 100%; height: 30px; line-height: 28px; font-size: 1.4em; .offset(6%); .offset(24%, 640px); .box-sizing; background-color: @primary; color: @text-primary; text-align: center; text-transform: uppercase; margin-bottom: @base-padding; }
+        &               { .padding(30px 5% 20px); .padding(50px 7% 20px, 640px); } // border: 1px solid #ccc;
+        & > .subhead    { width: 100%; min-height: 36px; line-height: 34px; font-size: 1.4em; .offset(6%); .offset(24%, 640px); .box-sizing; background-color: @primary; color: @text-primary; text-align: center; text-transform: uppercase; margin-bottom: @base-padding; }
         & > .subhead:before { .arrow.right-top(10px, @primary-darker); .position.left-bottom(absolute, 0, -10px); }
         & > .subhead:after { .arrow.left-top(10px, @primary-darker); .position.right-bottom(absolute, 0, -10px); }
         & .message      { .center-block(156%, 640px); .width(156%, 640px); }

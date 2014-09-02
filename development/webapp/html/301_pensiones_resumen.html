@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
 <!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]>  <html lang="es"> <![endif]-->
-<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<!--[if !IE]><!--> <html ng-app lang="es"> <!--<![endif]-->
 <head>
   <title>Alianza Fiduciaria</title>
   <meta charset="utf-8">
@@ -87,6 +87,101 @@
         </form>
         <div class="m-results">
           <h2><i class="fa fa-book"></i>Cuenta 00002</h2>
+          <div class="scrollable">
+            <table class="table single striped">
+              <thead>
+                <tr>
+                  <th class="fecha">Tipo Titulo</th>
+                  <th>Fecha Emisión</th>
+                  <th class="cell-large">Fecha de vencimiento</th>
+                  <th>Modalidad de pago</th>
+                  <th>Nominal</th>
+                  <th>Valor de compra</th>
+                  <th>Valor de mercado</th>
+                  <th>TIR Compra</th>
+                  <th>TIR Valoración</th>
+                  <th>NULL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- ngRepeat: rentaFija in detalleRentaFija-->
+                <tr class="ng-scope">
+                  <td class="ng-binding">BANCOLOMBIA</td>
+                  <td class="ng-binding">Certificados de Depósito a Término</td>
+                  <td class="ng-binding">13 octubre 2011</td>
+                  <td class="ng-binding">13 octubre 2018</td>
+                  <td class="ng-binding">TRIMESTRE VENCIDO</td>
+                  <td class="ng-binding">$500,000,000.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">0.00%</td>
+                  <td class="ng-binding">0.00%</td>
+                </tr>
+                <!-- end ngRepeat: rentaFija in detalleRentaFija-->
+                <tr ng-repeat="rentaFija in detalleRentaFija" class="ng-scope">
+                  <td class="ng-binding">BCO. CORPBANCA</td>
+                  <td class="ng-binding">Certificados de Depósito a Término</td>
+                  <td class="ng-binding">4 diciembre 2007</td>
+                  <td class="ng-binding">4 diciembre 2014</td>
+                  <td class="ng-binding">TRIMESTRE VENCIDO</td>
+                  <td class="ng-binding">$500,000,000.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">0.00%</td>
+                  <td class="ng-binding">0.00%</td>
+                </tr>
+                <!-- end ngRepeat: rentaFija in detalleRentaFija-->
+                <tr ng-repeat="rentaFija in detalleRentaFija" class="ng-scope">
+                  <td class="ng-binding">BCO. DE OCCIDENTE</td>
+                  <td class="ng-binding">Bonos emitidos por entidades vigiladas por la Superintendencia Financiera</td>
+                  <td class="ng-binding">21 noviembre 2013</td>
+                  <td class="ng-binding">21 noviembre 2015</td>
+                  <td class="ng-binding">MES VENCIDO</td>
+                  <td class="ng-binding">$500,000,000.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">0.00%</td>
+                  <td class="ng-binding">0.00%</td>
+                </tr>
+                <!-- end ngRepeat: rentaFija in detalleRentaFija-->
+                <tr ng-repeat="rentaFija in detalleRentaFija" class="ng-scope">
+                  <td class="ng-binding">BCO. POPULAR</td>
+                  <td class="ng-binding">Bonos emitidos por entidades vigiladas por la Superintendencia Financiera</td>
+                  <td class="ng-binding">24 julio 2008</td>
+                  <td class="ng-binding">24 julio 2015</td>
+                  <td class="ng-binding">TRIMESTRE VENCIDO</td>
+                  <td class="ng-binding">$500,000,000.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">0.00%</td>
+                  <td class="ng-binding">0.00%</td>
+                </tr>
+                <!-- end ngRepeat: rentaFija in detalleRentaFija-->
+                <tr ng-repeat="rentaFija in detalleRentaFija" class="ng-scope">
+                  <td class="ng-binding">FINDETER</td>
+                  <td class="ng-binding">Certificados de Depósito a Término</td>
+                  <td class="ng-binding">17 julio 2012</td>
+                  <td class="ng-binding">17 julio 2015</td>
+                  <td class="ng-binding">TRIMESTRE VENCIDO</td>
+                  <td class="ng-binding">$500,000,000.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">0.00%</td>
+                  <td class="ng-binding">0.00%</td>
+                </tr>
+                <!-- end ngRepeat: rentaFija in detalleRentaFija-->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="5">Total</td>
+                  <td class="ng-binding">$2,500,000,000.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td class="ng-binding">$0.00</td>
+                  <td colspan="2"></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
           <div class="scrollable">
             <table class="table single striped">
               <thead>

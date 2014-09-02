@@ -6,6 +6,7 @@ include sections/global/doctype
         link(href='../fonts/FontAwesome/fonts/font-awesome.min.css', rel='stylesheet')
         link(href='../javascript/libs/uform/uform.css', rel='stylesheet')
         //- scripts
+        script(src='../javascript/libs/angular.min.js')
         script(src='../javascript/libs/jquery-1.11.1.min.js')
         script(src='../javascript/modernizr.js')
         script(src='../javascript/modernizr.load.js')
@@ -24,10 +25,10 @@ include sections/global/doctype
             //-     event.preventDefault();
             //- });
 
-            $('#abrirCuenta').click(function(event){
-                abrirCuenta('.m-results', '.m-results .c3');
-                event.preventDefault();
-            });
+            //- $('#abrirCuenta').click(function(event){
+            //-     abrirCuenta('.m-results', '.m-results .c3');
+            //-     event.preventDefault();
+            //- });
 
             function tabClick(parent) {
                 $(parent + '.tabset .summary').click(function(event){
@@ -36,7 +37,7 @@ include sections/global/doctype
                 });
             }
 
-            tabClick('.m-results');
+            //- tabClick('.m-results');
 
             function abrirCuenta(parent, obj) {
                 if($(obj).hasClass("active")){
@@ -49,3 +50,34 @@ include sections/global/doctype
                     $(obj).next('.details').fadeIn();
                 }
             }
+
+            //- function checkClass () {
+            //-     //- alert('hello world');
+            //-     $scope.isActive = !$scope.isActive;
+            //- }
+
+            function FunWithClassesCtrl($scope) {
+
+                $scope.seleccionada = 1;
+                $scope.datos = [
+                    {'nombre': 'Abel', 'id': 1},
+                    {'nombre': 'Rodrigo', 'id': 2}
+                ];
+
+                $scope.datos.forEach(function(dato){
+                    if($scope.seleccionada === dato.id) dato.seleccionada = true;
+                });
+
+               $scope.abrirPestana = function (cuenta) {
+                    switch(cuenta) {
+                        case 'c1':
+                            $scope.ac1 = !$scope.ac1;
+                            break;
+                            case 'c2':
+                                $scope.ac1 = !$scope.ac1;
+                            break;
+                    }
+                }
+            }
+
+            

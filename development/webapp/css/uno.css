@@ -1541,7 +1541,7 @@ main > section {
 }
 @media all and (min-width: 1025px) {
   main > section {
-    padding: 0 2% 0 3%;
+    padding: 0 0 0 3%;
   }
 }
 footer > section {
@@ -2288,34 +2288,42 @@ td.fecha:before,
 th.fecha:before {
   display: inline-block;
   content: '';
-  width: 150px;
+  width: 135px;
   height: 1px;
   vertical-align: middle;
 }
+html body table tbody tr td,
+html .table tbody tr td,
+html table thead tr th,
+html .table thead tr th,
+html table thead tr th[colspan],
 html .table thead tr th[colspan] {
-  text-align: center;
-}
-html table td,
-html .table td,
-html table th,
-html .table th {
   text-align: left;
 }
 .table thead tr th.text-right,
-.table thead tr td.text-right {
+.table tbody tr td.text-right a,
+.table tbody tr td.text-right {
   text-align: right;
 }
+.table thead tr th.fecha,
 .table thead tr th.text-left,
-.table thead tr td.text-left {
+.table tbody tr td.text-left a,
+.table tbody tr td.text-left {
   text-align: left;
 }
 .table thead tr th.text-center,
-.table thead tr td.text-center {
+.table tbody tr td.text-center a,
+.table tbody tr td.text-center {
   text-align: center;
 }
 .table thead tr th.text-justify,
-.table thead tr td.text-justify {
+.table tbody tr td.text-justify a,
+.table tbody tr td.text-justify {
   text-align: justify;
+}
+.table thead tr th a,
+.table tbody tr td a {
+  text-decoration: underline;
 }
 .table tr th.nowrap {
   white-space: normal;
@@ -2661,18 +2669,21 @@ html .table th {
   padding: 1em;
   font-size: 1.2em;
 }
-.m-resumen > ul > li > strong {
-  display: block;
-  width: 25%;
-  float: left;
-}
-.m-resumen > ul > li > div {
-  width: 75%;
+@media print, screen and (min-width: 960px) {
+  .m-resumen > ul > li > strong {
+    display: block;
+    width: 25%;
+    float: left;
+  }
+  .m-resumen > ul > li > div {
+    width: 75%;
+  }
 }
 .m-resumen > ul > li > strong {
   display: block;
   position: relative;
   float: left;
+  font-size: 1.1em;
 }
 .m-resumen table.summary tr th,
 .m-resumen table.summary tr td {
@@ -2900,6 +2911,11 @@ footer {
     width: auto;
   }
 }
+header .subhead {
+  text-align: right;
+  margin-top: -80px;
+  padding-left: 270px;
+}
 #container .skeyboard {
   width: 364px;
   position: absolute;
@@ -2921,7 +2937,6 @@ footer {
     right: 100%;
     bottom: auto;
     left: auto;
-    color: #b4d455;
   }
 }
 #container .skeyboard:before {
@@ -3079,11 +3094,6 @@ span.option-description {
 .panel.login {
   padding: 30px 5% 20px;
 }
-@media all and (min-width: 640px) {
-  .panel.login {
-    padding: 50px 7% 20px;
-  }
-}
 .panel.login > .subhead {
   width: 100%;
   min-height: 36px;
@@ -3155,7 +3165,7 @@ span.option-description {
 }
 @media all and (min-width: 800px) {
   .panel.padded {
-    padding: 14px 18%;
+    padding: 14px 16%;
   }
 }
 .panel.padded li a {
@@ -3166,7 +3176,7 @@ span.option-description {
 }
 @media all and (min-width: 800px) {
   .panel.padded-medium {
-    padding: 14px 18%;
+    padding: 14px 16%;
   }
 }
 .panel.padded-medium li a {

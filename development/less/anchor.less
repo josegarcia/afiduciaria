@@ -295,7 +295,6 @@
         .align (@top: auto, @right: auto, @bottom: auto, @left: auto, @query: 0) when (@query > 0) {
             @media all and (min-width: @query) {
                 .absolute.align (@top, @right, @bottom, @left);
-                color: #b4d455;
             }
         }
     }
@@ -383,6 +382,14 @@
         @media all and (min-width: @query) {
             .display (@display);
         } 
+    }
+
+    .fixed {
+        .align (@top: auto, @right: auto, @bottom: auto, @left: auto, @query: 0) when (@query > 0) {
+            @media all and (min-width: @query) {
+                .fixed.align (@top, @right, @bottom, @left);
+            }
+        }
     }
 
     .float (@float: none, @query: 0) when (@query > 0) {

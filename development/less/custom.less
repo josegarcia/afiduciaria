@@ -107,24 +107,34 @@
     .fa.fa-file-excel-o { margin-right: 5px; }
 
     td.fecha:before,
-    th.fecha:before {  .pseudo('', 150px, 1px); }
+    th.fecha:before {  .pseudo('', 135px, 1px); }
 
-    html .table thead tr th[colspan]  { text-align: center; }
-    html table td,
-    html .table td,
-    html table th,
-    html .table th { text-align: left; } // fixed width to add custom cell width
+    // html .table thead tr th[colspan]  { text-align: center; }
+    html body table tbody tr td,
+    html .table tbody tr td,
+    html table thead tr th,
+    html .table thead tr th,
+    html table thead tr th[colspan],
+    html .table thead tr th[colspan] { text-align: left; } // fixed width to add custom cell width
 
     .table thead tr th.text-right,
-    .table thead tr td.text-right       { text-align: right; }
+    .table tbody tr td.text-right a,
+    .table tbody tr td.text-right       { text-align: right; }
+    .table thead tr th.fecha,
     .table thead tr th.text-left,
-    .table thead tr td.text-left        { text-align: left; }
+    .table tbody tr td.text-left a,
+    .table tbody tr td.text-left        { text-align: left; }
     .table thead tr th.text-center,
-    .table thead tr td.text-center      { text-align: center; }
+    .table tbody tr td.text-center a,
+    .table tbody tr td.text-center      { text-align: center; }
     .table thead tr th.text-justify,
-    .table thead tr td.text-justify     { text-align: justify; }
+    .table tbody tr td.text-justify a,
+    .table tbody tr td.text-justify     { text-align: justify; }
 
-    .table tr th.nowrap                    { white-space: normal; }
+    .table thead tr th a,
+    .table tbody tr td a                { text-decoration: underline; }
+
+    .table tr th.nowrap                 { white-space: normal; }
 
 //  Header
 //  ---------------------------------------
@@ -234,8 +244,8 @@
     .m-resumen                  {
         & > ul                  { font-size: .9em; }
         & > ul                  { border-top: 1px solid @hexc; }
-        & > ul > li             { border-bottom: 1px solid @hexc; padding: 1em; .strong-div-width(25%, 75%); font-size: 1.2em; }
-        & > ul > li> strong     { .block; }
+        & > ul > li             { border-bottom: 1px solid @hexc; padding: 1em; .strong-div-width(25%, 75%, 960px); font-size: 1.2em; }
+        & > ul > li> strong     { .block; font-size: 1.1em; }
         & table.summary tr th,
         & table.summary tr td   { padding: .3em .5em; }
     }
@@ -308,6 +318,8 @@
 //  Styles
 //  ---------------------------------------
 
+    header .subhead             { text-align: right; margin-top: -80px; padding-left: 270px; }
+
     #container                  {
         & .skeyboard            { .width(364px); .width(480px, 800px); .absolute.align(100%, 0, auto); .absolute.align(-45px, 100%, auto, auto, 840px); font-size: 1.2em; }
         & .skeyboard:before     { .arrow.right(12px, @hexa); .position.right-top(absolute, -24px, 56px) }
@@ -363,7 +375,7 @@
     }
 
     .panel.login        {
-        &               { .padding(30px 5% 20px); .padding(50px 7% 20px, 640px); } // border: 1px solid #ccc;
+        &               { .padding(30px 5% 20px); } // border: 1px solid #ccc;
         & > .subhead    { width: 100%; min-height: 36px; line-height: 34px; font-size: 1.4em; .offset(6%); .offset(24%, 640px); .box-sizing; background-color: @primary; color: @text-primary; text-align: center; text-transform: uppercase; margin-bottom: @base-padding; }
         & > .subhead:before { .arrow.right-top(10px, @primary-darker); .position.left-bottom(absolute, 0, -10px); }
         & > .subhead:after { .arrow.left-top(10px, @primary-darker); .position.right-bottom(absolute, 0, -10px); }
@@ -372,12 +384,12 @@
     }
 
     .panel.padded       {
-        &               { padding:@base-padding 0%; .padding(@base-padding 18%, 800px); }
+        &               { padding:@base-padding 0%; .padding(@base-padding 16%, 800px); }
         & li a          { text-decoration: underline; }
     }
 
     .panel.padded-medium {
-        &               { padding:@base-padding 0%; .padding(@base-padding 18%, 800px); }
+        &               { padding:@base-padding 0%; .padding(@base-padding 16%, 800px); }
         & li a          { text-decoration: underline; }
     }
 

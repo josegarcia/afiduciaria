@@ -3716,12 +3716,15 @@ span.option-description {
 }
 .dataTables_wrapper .dataTable thead .sorting {
   background: transparent url('../images/dataTables/sort_both.png') no-repeat right center;
+  text-align: left;
 }
 .dataTables_wrapper .dataTable thead .sorting_asc {
   background: transparent url('../images/dataTables/sort_asc.png') no-repeat right center;
+  text-align: left;
 }
 .dataTables_wrapper .dataTable thead .sorting_desc {
   background: transparent url('../images/dataTables/sort_desc.png') no-repeat right center;
+  text-align: left;
 }
 .fa {
   margin-right: 10px;

@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
 <!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]>  <html lang="es"> <![endif]-->
-<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<!--[if !IE]><!--> <html ng-app lang="es"> <!--<![endif]-->
 <head>
   <title>Alianza Fiduciaria</title>
   <meta charset="utf-8">
@@ -21,9 +21,34 @@
     <section class="text-frame">
       <div class="m-brand">
         <h1 class="brand fiduciaria"><a href="../index.html"><img src="../images/logo-fiduciaria.png"><strong> Alianza Fiduciaria</strong></a></h1>
+        <h2 class="subhead ng-binding">Administración Portal Fiduciaria</h2>
       </div>
     </section>
   </header>
+  <noscript>   
+    <aside id="oldbrowser" class="hide">
+      <section class="text-frame">
+        <div class="panel primary success">
+          <h1 class="heading primary">Registro exitoso</h1>
+          <p>El registro se ha realizado correctamente.</p>
+          <div class="button-group">
+            <button type="button" class="button primary">Atrás</button>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </noscript>
+  <aside id="oldbrowser" class="hide">
+    <section class="text-frame">
+      <div class="panel primary success">
+        <h1 class="heading primary">Registro exitoso</h1>
+        <p>El registro se ha realizado correctamente.</p>
+        <div class="button-group">
+          <button type="button" class="button primary">Atrás</button>
+        </div>
+      </div>
+    </section>
+  </aside>
   <main>
     <section class="text-frame">
       <div class="grid split-2">
@@ -53,7 +78,7 @@
               <li><strong>Contraseñas:</strong>
                   <div id="container">
                     <label>
-                      <input id="write" type="text" class="keyboard">
+                      <input id="write" type="text" class="keyboard disabled">
                     </label>
                     <div class="skeyboard hide">
                       <ul id="myDiv" class="symbols hide">
@@ -167,7 +192,7 @@
   </main>
   <footer>
     <section class="text-frame">
-      <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
+      <div class="m-legal copy"><span class="valores"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
     </section>
   </footer>
   <script src="../javascript/libs/uform/uform.js"></script>
@@ -177,5 +202,24 @@
     $('#prueba').click(function(){
         window.location='101registro.html';
     });
+  </script>
+  <script>
+    (function ($) {
+        "use strict";
+        
+        // Detecting IE
+        var oldIE;
+        if ($('html').is('.ie6, .ie7, .ie8')) {
+            oldIE = true;
+        }
+        
+        if (oldIE) {
+            $('main').addClass('hide');
+            $('#oldbrowser').removeClass('hide');
+        } else {
+            // ..And here's the full-fat code for everyone else
+        }
+        
+    }(jQuery));
   </script>
 </body>

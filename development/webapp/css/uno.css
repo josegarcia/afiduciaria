@@ -3188,6 +3188,13 @@ span.option-description {
   border-top: 15px solid #00a49e;
   background: #ffffff url('../images/icon-ok.png') no-repeat 40px 40px;
 }
+.panel.warning {
+  padding-left: 120px;
+  padding-bottom: 0;
+  border-top: 15px solid #dedc1e;
+  background: #ffffff url('../images/icon-warning2.png') no-repeat 40px 40px;
+  min-height: 200px;
+}
 .panel.recap {
   color: #444444;
   background-color: #fff;
@@ -3472,7 +3479,7 @@ span.option-description {
   left: 0;
   top: 320px;
   font-size: 1.1em;
-  border-top: 15px solid #95c794;
+  border-top: 15px solid #00a49e;
 }
 .modals > .success .contents h2 {
   font-weight: normal;

@@ -25,12 +25,23 @@
       </div>
     </section>
   </header>
+  <aside id="oldbrowser">
+    <section class="text-frame">
+      <div class="panel primary success">
+        <h1 class="heading primary">Registro exitoso</h1>
+        <p>El registro se ha realizado correctamente.</p>
+        <div class="button-group">
+          <button type="button" class="button primary">Atrás</button>
+        </div>
+      </div>
+    </section>
+  </aside>
   <main>
     <section class="text-frame">
       <div class="grid split-2">
         <div class="m-publicidad"><img src="../images/img-login.png"></div>
         <div class="m-ingreso panel login">
-          <h2 class="subhead">Ingreso usuarios</h2>
+          <h2 class="subhead">Ingreso usuariossdfsfsdfsd</h2>
           <div class="message primary error js-close">
             <p>Nombre de usuario o contraseña no válidos, inténtelo nuevamente.</p>
           </div>
@@ -178,5 +189,24 @@
     $('#prueba').click(function(){
         window.location='101registro.html';
     });
+  </script>
+  <script>
+    (function ($) {
+        "use strict";
+        
+        // Detecting IE
+        var oldIE;
+        if ($('html').is('.ie6, .ie7, .ie8')) {
+            oldIE = true;
+        }
+        
+        if (oldIE) {
+            $('main').addClass('hide');
+            $('#oldbrowser').removeClass('hide');
+        } else {
+            // ..And here's the full-fat code for everyone else
+        }
+        
+    }(jQuery));
   </script>
 </body>

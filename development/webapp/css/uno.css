@@ -2920,7 +2920,7 @@ header .subhead {
   width: 364px;
   position: absolute;
   top: 100%;
-  right: 0;
+  right: -20px;
   bottom: auto;
   left: auto;
   font-size: 1.2em;
@@ -2967,6 +2967,20 @@ header .subhead {
 }
 #container .skeyboard .numbers {
   float: right;
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: -32%;
+}
+@media all and (min-width: 840px) {
+  #container .skeyboard .numbers {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
 }
 .button {
   min-height: 42px;

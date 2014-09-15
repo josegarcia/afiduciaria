@@ -34,7 +34,7 @@
 .skeyboard .symbol,
 .skeyboard .letter {
     border: 1px solid #d8d8d8;
-    margin: 0 5px 5px 0;
+    margin: 0 4px 5px 0;
     font-weight: bold;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
     color:#222;

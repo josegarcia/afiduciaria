@@ -2,7 +2,9 @@ mixin skeyboard
     strong Contraseñas:
     #container
         label
-            input(id="write", type="text").keyboard
+            //- input(id="write", type="text").keyboard
+            input(id="write", type="text", readonly="readonly").keyboard
+            //- div(id="write").keyboard.input
         .skeyboard.hide
 
             ul.symbols.hide#myDiv

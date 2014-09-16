@@ -4,8 +4,12 @@
 		"selected_items":
 		[
 			[
+				"min",
+				"min-height"
+			],
+			[
 				"text",
-				"text-decoration"
+				"text-frame"
 			],
 			[
 				"pad",
@@ -66,10 +70,6 @@
 			[
 				"border",
 				"border-top"
-			],
-			[
-				"min",
-				"min-width"
 			],
 			[
 				"key",
@@ -340,34 +340,42 @@
 	"buffers":
 	[
 		{
-			"file": "jade/302_pensiones_resumen_detalle.jade",
+			"file": "jade/100 ingreso.jade",
 			"settings":
 			{
-				"buffer_size": 3011,
+				"buffer_size": 1395,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "jade/sections/main/302.jade",
+			"file": "jade/sections/main/105_main.jade",
 			"settings":
 			{
-				"buffer_size": 10560,
+				"buffer_size": 222,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "jade/800_admin.jade",
+			"file": "jade/sections/global/doctype.jade",
 			"settings":
 			{
-				"buffer_size": 634,
+				"buffer_size": 249,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "jade/sections/header/100.jade",
+			"file": "jade/sections/main/main_100.jade",
 			"settings":
 			{
-				"buffer_size": 294,
+				"buffer_size": 2926,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "jade/sections/snippets/skeyboard.jade",
+			"settings":
+			{
+				"buffer_size": 3213,
 				"line_ending": "Unix"
 			}
 		},
@@ -375,15 +383,31 @@
 			"file": "less/custom.less",
 			"settings":
 			{
-				"buffer_size": 29458,
+				"buffer_size": 29824,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "jade/sections/main/110_main.jade",
+			"file": "less/anchor.less",
 			"settings":
 			{
-				"buffer_size": 2150,
+				"buffer_size": 55059,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "webapp/javascript/libs/skeyboard/skeyboard.css",
+			"settings":
+			{
+				"buffer_size": 2376,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "webapp/javascript/libs/skeyboard/skeyboard.js",
+			"settings":
+			{
+				"buffer_size": 4170,
 				"line_ending": "Unix"
 			}
 		}
@@ -487,18 +511,40 @@
 	},
 	"file_history":
 	[
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard-bak.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.css",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/snippets/skeyboard.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/jquery-1.11.1.min.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/scripts.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/slider-captcha.min.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100_header_valores.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/100 ingreso.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/100ingreso.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/100 ingreso.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/110_main.jade",
+		"/C/Users/admin/Desktop/delme.css",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/css/uno.css",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/main_100.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/000.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/302_pensiones_resumen_detalle.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/302.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/800_admin.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/custom.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/105_oldbrowser.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/105_main.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/104.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/104 exito.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/105_oldbrowser.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/doctype.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/morris/morris.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/index.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.css",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/uno.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/angular.min.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/css/uno.css",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/uno.less",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.css",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/100 ingreso.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100_header_valores.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/main_100.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/100 ingreso.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/800_main.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/800_admin.html",
 		"/C/Windows/System32/drivers/etc/hosts",
@@ -507,19 +553,13 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200b_inicio.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/200.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/301_pensiones_resumen.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/doctype.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/301.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/200.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/FontAwesome/fonts/font-awesome.min.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/103 cambiar_contrasena.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/302_pensiones_resumen_detalle.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/302.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/scripts.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/slider-captcha.min.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/402-b.jade",
 		"/D/Projects/CO/CO Visualization/webapp/templates/index.jade",
@@ -528,13 +568,11 @@
 		"/D/Projects/Alianza Fiduciaria/Portal Alianza/development/less/anchor.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/footer.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/303.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/custom.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/snippets/scripts.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/402_fondos_resumen_detalle-b.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/402_fondos_resumen_detalle.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/403.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/402.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/100ingreso.html",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/305.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/305_pensiones_saldos.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/103.jade",
@@ -552,7 +590,6 @@
 		"/C/Users/admin/Desktop/uniandinos/qa/main.css",
 		"/C/Users/admin/Desktop/uniandinos/qa/inicio_ok_files/foundation.js",
 		"/C/Users/admin/Desktop/uniandinos/qa/inicio_ok_files/additional-methods.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.css",
 		"/C/Users/admin/Desktop/uniandinos/qa/busqueda.html",
 		"/C/Users/admin/Desktop/uniandinos/qa/noticias_files/main.css",
 		"/C/Users/admin/Desktop/uniandinos/qa/inicio_ok_files/main.css",
@@ -568,20 +605,15 @@
 		"/D/Projects/CO/CO IMC/development/webapp/js/scripts/reports.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/chart.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/301_pensiones_resumen.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/000.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/402_fondos_resumen_detalle.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/110_main.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/110_valores.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/110_valores.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/800_admin.jade",
 		"/C/Users/admin/alianza-transaccional/fiduciaria/frontend/app/styles/alianza.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/101.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/001.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/test.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/Calibri/calibri-webfont.svg",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/nav.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/104.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/104 exito.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/100 ingreso.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/header/100.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/footer.jade",
@@ -596,29 +628,21 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/layout.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/101 registro.html",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/routines.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/snippets/skeyboard.jade",
 		"/C/Users/admin/Desktop/ejemplo.html",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/201.jade",
 		"/C/Users/admin/Downloads/alianza.css",
 		"/C/Users/admin/Desktop/base_ok.less",
 		"/C/Users/admin/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard-bak.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/validaciones.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/snippets/_skeyboard-v1.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/validaciones.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/701_parametros_contrasena.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/701.jade",
-		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project",
-		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
-		"/D/Proyectos/Seguros la Equidad/La Equidad ARL/maquetacion/less/queries.less",
-		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
-		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
-		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/less/layout.less",
-		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/000.jade"
+		"/D/Proyectos/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -632,6 +656,20 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fixed",
+			"skeyboard",
+			"disabled",
+			"write",
+			".panel",
+			"super",
+			".success",
+			"header .subhead",
+			".panel.login",
+			"-31.",
+			".subhead",
+			"header .subhead",
+			".panel.success",
+			"colspan",
 			".fixed",
 			".relative",
 			".fixed",
@@ -745,21 +783,7 @@
 			".absolute",
 			"queries",
 			"1px solid red",
-			"skeyboard",
-			"m-results",
-			"#4a5d68",
-			"overview",
-			"horizontal",
-			"720px",
-			"80",
-			" min-width: 180px;",
-			"overv",
-			"\n                                    a(href=\"#\") \n                                        i.fa.fa-search",
-			"valores",
-			"// ",
-			"attrs",
-			"left",
-			".secondary"
+			"skeyboard"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -812,84 +836,24 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "jade/302_pensiones_resumen_detalle.jade",
+					"file": "jade/100 ingreso.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3011,
+						"buffer_size": 1395,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2571,
-								2571
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "jade/sections/main/302.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 10560,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								797,
-								797
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 285.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "jade/800_admin.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 634,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								1371,
+								1371
 							]
 						],
 						"settings":
@@ -902,24 +866,52 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "jade/sections/header/100.jade",
+					"buffer": 1,
+					"file": "jade/sections/main/105_main.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 294,
+						"buffer_size": 222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								294,
-								294
+								222,
+								28
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "jade/sections/global/doctype.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								13
 							]
 						],
 						"settings":
@@ -934,50 +926,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "less/custom.less",
+					"buffer": 3,
+					"file": "jade/sections/main/main_100.jade",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29458,
+						"buffer_size": 2926,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1238,
-								1238
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 565.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "jade/sections/main/110_main.jade",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2150,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								689,
-								689
+								90,
+								90
 							]
 						],
 						"settings":
@@ -991,6 +953,160 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "jade/sections/snippets/skeyboard.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3213,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								244,
+								244
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "less/custom.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14660,
+								14660
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4467.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "less/anchor.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 55059,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16348,
+								16348
+							],
+							[
+								16526,
+								16526
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6747.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "webapp/javascript/libs/skeyboard/skeyboard.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2376,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								684,
+								684
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "webapp/javascript/libs/skeyboard/skeyboard.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2790,
+								2790
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -1043,6 +1159,54 @@
 		"selected_items":
 		[
 			[
+				"105",
+				"jade\\sections\\main\\105_main.jade"
+			],
+			[
+				"doc",
+				"jade\\sections\\global\\doctype.jade"
+			],
+			[
+				"anch",
+				"less\\anchor.less"
+			],
+			[
+				"skey",
+				"webapp\\javascript\\libs\\skeyboard\\skeyboard.css"
+			],
+			[
+				"custom",
+				"less\\custom.less"
+			],
+			[
+				"",
+				"jade\\100 ingreso.jade"
+			],
+			[
+				"100",
+				"jade\\sections\\main\\main_100.jade"
+			],
+			[
+				"104",
+				"jade\\sections\\main\\104.jade"
+			],
+			[
+				"00",
+				"jade\\sections\\main\\000.jade"
+			],
+			[
+				"main",
+				"jade\\sections\\main\\main_100.jade"
+			],
+			[
+				"ingre",
+				"jade\\100 ingreso.jade"
+			],
+			[
+				"uno",
+				"webapp\\css\\uno.css"
+			],
+			[
 				"anchor",
 				"less\\anchor.less"
 			],
@@ -1063,16 +1227,8 @@
 				"webapp\\css\\uno.css"
 			],
 			[
-				"100",
-				"jade\\sections\\header\\100.jade"
-			],
-			[
 				"800",
 				"jade\\sections\\main\\800_main.jade"
-			],
-			[
-				"anch",
-				"less\\anchor.less"
 			],
 			[
 				"anc",
@@ -1091,10 +1247,6 @@
 				"jade\\302_pensiones_resumen_detalle.jade"
 			],
 			[
-				"doc",
-				"jade\\sections\\global\\doctype.jade"
-			],
-			[
 				"uno.c",
 				"webapp\\css\\uno.css"
 			],
@@ -1111,16 +1263,8 @@
 				"less\\base.less"
 			],
 			[
-				"custom",
-				"less\\custom.less"
-			],
-			[
 				"ufor",
 				"webapp\\javascript\\libs\\uform\\uform.js"
-			],
-			[
-				"uno",
-				"less\\uno.less"
 			],
 			[
 				"vari",
@@ -1129,10 +1273,6 @@
 			[
 				"head",
 				"jade\\sections\\header.jade"
-			],
-			[
-				"skey",
-				"webapp\\javascript\\libs\\skeyboard\\skeyboard.js"
 			],
 			[
 				"foot",
@@ -1215,10 +1355,6 @@
 				"jade\\301_pensiones_resumen.jade"
 			],
 			[
-				"104",
-				"jade\\sections\\main\\104.jade"
-			],
-			[
 				"101",
 				"jade\\sections\\main\\101.jade"
 			],
@@ -1289,10 +1425,6 @@
 			[
 				"lay",
 				"less\\layout.less"
-			],
-			[
-				"00",
-				"jade\\sections\\main\\000.jade"
 			],
 			[
 				"701",
@@ -1447,10 +1579,6 @@
 				"jade\\sections\\header\\100.jade"
 			],
 			[
-				"ingre",
-				"jade\\ingreso.jade"
-			],
-			[
 				"oske",
 				"webapp\\javascript\\libs\\oskeyboard\\keyboard.js"
 			],
@@ -1531,10 +1659,6 @@
 				"webapp\\html\\ingreso-contrasena.html"
 			],
 			[
-				"main",
-				"jade\\public\\main101.jade"
-			],
-			[
 				"mai",
 				"jade\\public\\main000.jade"
 			],
@@ -1545,14 +1669,6 @@
 			[
 				"globa",
 				"less\\theme\\global.less"
-			],
-			[
-				"font",
-				"webapp\\fonts\\FontAwesome\\fonts\\font-awesome.min.css"
-			],
-			[
-				"cli",
-				"jade\\cliente.jade"
 			]
 		],
 		"width": 0.0

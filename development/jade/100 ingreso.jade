@@ -21,3 +21,19 @@ include sections/global/doctype
             $('#prueba').click(function(){
                 window.location='101registro.html';
             });
+        script.
+            (function ($) {
+                "use strict";
+
+                // Detecting IE
+                var oldIE;
+                if ($('html').is('.ie6, .ie7, .ie8')) {
+                    oldIE = true;
+                }
+
+                if (oldIE) {
+                    $('main').addClass('hide');
+                    $('#oldbrowser').removeClass('hide');
+                } else {
+                }
+            }(jQuery));

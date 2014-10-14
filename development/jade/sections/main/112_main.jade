@@ -1,0 +1,43 @@
+
+main
+    .c-nav
+        .text-frame.form.selection
+            .m-subnav
+                ul
+                    li.resumen
+                        a(href="#") Resúmen
+                    li.movimientos
+                        a(href="#") Movimientos
+                    li.extractos
+                        a(href="#") Extractos
+                    li.saldos
+                        a(href="#") Saldos históricos
+    section.text-frame
+        .panel.primary.full
+            .m-results
+                h2.heading.primary
+                    | Cargar Datos de Carteras
+                .message.primary.success.js-close
+                    p 
+                        | Lorem Ipsum Dolor
+                        strong  Nombre del archivo
+                        |  Set Amet
+                div.form
+                    ul.grid.primary
+                        li
+                            strong 1. Seleccione un archivo .csv , para proceder a la carga de informacion de cartera internacional.
+                            div
+                                label.medium
+                                    input(type="file")
+                        li
+                            strong 2. Haga click en "Cargar Archivo" (Archivos pesados pueden tardar algunos minutos en subir)
+                            div.options.button-group.text-left
+                                button.button(type="button").primary
+                                    i.fa.fa-times-circle-o
+                                    | Cerrar Página
+                                button.button(type="button").primary
+                                    i.fa.fa-upload
+                                    | Cargar Archivo
+                                button.button(type="button").primary
+                                    i.fa.fa-trash-o
+                                    | Borrar Archivo

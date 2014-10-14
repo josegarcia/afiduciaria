@@ -1,0 +1,15 @@
+include sections/global/doctype
+    head
+        include sections/global/head
+        include sections/global/routines
+        //- stylesheets
+        link(href='../javascript/libs/skeyboard/skeyboard.css', rel='stylesheet')
+        //- scripts
+        script(src='../javascript/libs/jquery-1.11.1.min.js')
+        script(src='../javascript/modernizr.js')
+        script(src='../javascript/modernizr.load.js')
+    body.uno.l-public
+        include sections/header/header-portal
+        include sections/main/99_main
+        include sections/99_footer
+        script(src='../javascript/scripts.js')

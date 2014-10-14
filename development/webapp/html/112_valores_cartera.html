@@ -11,6 +11,7 @@
   <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon">
   <link href="../css/uno.css" rel="stylesheet">
   <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/FontAwesome/fonts/font-awesome.min.css">
   <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
   <script src="../javascript/modernizr.js"></script>
   <script src="../javascript/modernizr.load.js"></script>
@@ -26,55 +27,43 @@
     </section>
   </header>
   <main>
-    <section class="text-frame">
-      <h1 class="heading primary">Registro de direcciones IP</h1>
-      <div class="panel padded-medium">
-        <form class="form filters horizontal">
+    <div class="c-nav">
+      <div class="text-frame form selection">
+        <div class="m-subnav">
           <ul>
-            <li><strong>Nueva dirección IP</strong>
-              <div>
-                <label>
-                  <input type="text">
-                </label>
-              </div>
-            </li>
+            <li class="resumen"><a href="#">Resúmen</a></li>
+            <li class="movimientos"><a href="#">Movimientos</a></li>
+            <li class="extractos"><a href="#">Extractos</a></li>
+            <li class="saldos"><a href="#">Saldos históricos</a></li>
           </ul>
-        </form>
-        <div class="button-group">
-          <button type="submit" class="button primary">Agregar dirección</button>
         </div>
-        <h2>Listado IP's</h2>
-        <div class="scrollable">
-          <table class="table summary wide">
-            <thead>
-              <tr>
-                <th>Direción IP</th>
-                <th class="options text-right">Opciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr> 
-                <td>127.0.0.1</td>
-                <td class="text-right"><a href="#"><i class="fa fa-delete"></i>Eliminar</a></td>
-              </tr>
-              <tr> 
-                <td>127.0.0.1</td>
-                <td class="text-right"><a href="#"><i class="fa fa-delete"></i>Eliminar</a></td>
-              </tr>
-              <tr> 
-                <td>127.0.0.1</td>
-                <td class="text-right"><a href="#"><i class="fa fa-delete"></i>Eliminar</a></td>
-              </tr>
-              <tr> 
-                <td>127.0.0.1</td>
-                <td class="text-right"><a href="#"><i class="fa fa-delete"></i>Eliminar</a></td>
-              </tr>
-              <tr> 
-                <td>127.0.0.1</td>
-                <td class="text-right"><a href="#"><i class="fa fa-delete"></i>Eliminar</a></td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+    </div>
+    <section class="text-frame">
+      <div class="panel primary full">
+        <div class="m-results">
+          <h2 class="heading primary">Cargar Datos de Carteras</h2>
+          <div class="message primary success js-close">
+            <p>Lorem Ipsum Dolor<strong> Nombre del archivo</strong> Set Amet</p>
+          </div>
+          <div class="form">
+            <ul class="grid primary">
+              <li><strong>1. Seleccione un archivo .csv , para proceder a la carga de informacion de cartera internacional.</strong>
+                <div>
+                  <label class="medium">
+                    <input type="file">
+                  </label>
+                </div>
+              </li>
+              <li><strong>2. Haga click en "Cargar Archivo" (Archivos pesados pueden tardar algunos minutos en subir)</strong>
+                <div class="options button-group text-left">
+                  <button type="button" class="button primary"><i class="fa fa-times-circle-o"></i>Cerrar Página</button>
+                  <button type="button" class="button primary"><i class="fa fa-upload"></i>Cargar Archivo</button>
+                  <button type="button" class="button primary"><i class="fa fa-trash-o"></i>Borrar Archivo</button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

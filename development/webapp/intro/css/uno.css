@@ -2222,6 +2222,7 @@ label.auto {
 .error ul li {
   padding: 2px 5px;
 }
+div.button.primary,
 a.button.primary {
   line-height: 42px;
 }
@@ -2820,6 +2821,9 @@ html .table thead tr th[colspan] {
     left: -25%;
     margin-left: 50%;
   }
+}
+.m-ingreso a.right {
+  float: right;
 }
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
@@ -3745,11 +3749,16 @@ span.option-description {
   height: 152px;
 }
 .intro-quote h2 {
-  background: transparent url('../images/back-intro.jpg') repeat-x center;
+  background: transparent url('../images/back-intro-mobile.jpg') no-repeat center;
   height: 152px;
   text-indent: -9999px;
   text-align: left;
   overflow: hidden;
+}
+@media all and (min-width: 1200px) {
+  .intro-quote h2 {
+    background-image: url('../images/back-intro.jpg');
+  }
 }
 .animate {
   -webkit-animation-duration: .8s;

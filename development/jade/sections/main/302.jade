@@ -32,9 +32,8 @@ main
             //-                         option Subcuenta 0001 - Mifondo
             //-                         option(selected) Subcuenta 0002 - Mifondo
             //-                         option Subcuenta 0003 - Mifondo
-            div.grid.split-2
-                h2 Hola mundo
-                div.form.primary.horizontal
+            div.grid.split-2.separate
+                div.form.primary.horizontal.separate
                     ul  
                         li
                             strong Cuenta:
@@ -44,6 +43,7 @@ main
                                         option 00001
                                         option 00002
                                         option 00003
+                h2 Total: $5'000.000
             .m-results.tabset.accordion.primary()
                 h2.summary(ng-controller="FunWithClassesCtrl", ng-click="abrirPestana('c1')", ng-class="{'active': dato.seleccionada === true}", ng-model="c1")
                     | Cuenta 00001

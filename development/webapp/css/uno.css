@@ -1560,8 +1560,25 @@ main section:before {
   height: 166px;
   vertical-align: middle;
 }
+main > section.portal {
+  padding: 0;
+}
+main > section.portal:before {
+  background: transparent none repeat 0 0;
+}
 em {
   color: #009089;
+}
+.addsuper:before {
+  background: transparent url('../images/img-superintendencia.png') no-repeat center;
+  position: absolute;
+  left: 5px;
+  bottom: 20px;
+  display: inline-block;
+  content: '';
+  width: 20px;
+  height: 166px;
+  vertical-align: middle;
 }
 .l-admin main,
 .l-logged main,
@@ -2205,6 +2222,10 @@ label.auto {
 .error ul li {
   padding: 2px 5px;
 }
+div.button.primary,
+a.button.primary {
+  line-height: 42px;
+}
 .form.halves li > strong {
   width: 50%;
   text-align: right;
@@ -2801,6 +2822,9 @@ html .table thead tr th[colspan] {
     margin-left: 50%;
   }
 }
+.m-ingreso a.right {
+  float: right;
+}
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
@@ -2843,6 +2867,7 @@ footer {
   min-height: 65px;
   line-height: 65px;
 }
+.m-legal .enlinea a,
 .m-legal .valores a,
 .m-legal .fiduciaria a,
 .m-legal .seven4n a {
@@ -2854,6 +2879,13 @@ footer {
   float: none;
   -webkit-transition: all 150ms ease 0s;
   transition: all 150ms ease 0s;
+}
+.m-legal .enlinea a {
+  width: 102px;
+  height: 32px;
+  background: #ffffff url('../images/logo-enlinea-small.png') no-repeat left top;
+  vertical-align: top;
+  margin-top: 15px;
 }
 .m-legal .fiduciaria a {
   width: 102px;
@@ -2880,18 +2912,14 @@ footer {
 .m-legal .seven4n:hover a {
   background-position: left bottom;
 }
-.m-legal .valores {
-  float: none;
-}
-@media all and (min-width: 960px) {
-  .m-legal .valores {
-    float: left;
-  }
-}
+.m-legal .enlinea,
+.m-legal .valores,
 .m-legal .fiduciaria {
   float: none;
 }
 @media all and (min-width: 960px) {
+  .m-legal .enlinea,
+  .m-legal .valores,
   .m-legal .fiduciaria {
     float: left;
   }
@@ -3705,6 +3733,32 @@ span.option-description {
 }
 #recaptcha_area input[type="text"] {
   padding: 0 0.6em;
+}
+.intro-portal {
+  padding: 50px 50px;
+}
+.intro-portal img {
+  padding: 0 0 20px;
+}
+.m-intro-fiduciaria {
+  border-right: 1px dotted #ddd;
+}
+.intro-quote {
+  background: transparent url('../images/back-intro-gradient.jpg') repeat-x center;
+  margin-bottom: 50px;
+  height: 152px;
+}
+.intro-quote h2 {
+  background: transparent url('../images/back-intro-mobile.jpg') no-repeat center;
+  height: 152px;
+  text-indent: -9999px;
+  text-align: left;
+  overflow: hidden;
+}
+@media all and (min-width: 1200px) {
+  .intro-quote h2 {
+    background-image: url('../images/back-intro.jpg');
+  }
 }
 .animate {
   -webkit-animation-duration: .8s;

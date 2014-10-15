@@ -1715,6 +1715,7 @@ body.fondos.extractos .c-nav .extractos,
 body.carteras.extractos .c-nav .extractos,
 body.carteras.resumen .c-nav .resumen,
 body.carteras.movimientos .c-nav .movimientos,
+body.carteras.cartera-internacional .c-nav .cartera-internacional,
 body.inversiones.extractos .c-nav .extractos,
 body.inversiones.resumen .c-nav .resumen,
 body.inversiones.movimientos .c-nav .movimientos,
@@ -1744,6 +1745,7 @@ body.fondos.extractos .c-nav .extractos a,
 body.carteras.extractos .c-nav .extractos a,
 body.carteras.resumen .c-nav .resumen a,
 body.carteras.movimientos .c-nav .movimientos a,
+body.carteras.cartera-internacional .c-nav .cartera-internacional a,
 body.inversiones.extractos .c-nav .extractos a,
 body.inversiones.resumen .c-nav .resumen a,
 body.inversiones.movimientos .c-nav .movimientos a,
@@ -2213,7 +2215,7 @@ label.auto {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: 388px;
+  height: 410px;
 }
 .error .highlight {
   background-color: #eabebe;
@@ -3439,10 +3441,10 @@ span.option-description {
 .modals > .popup .contents {
   color: #444444;
   background-color: #ffffff;
-  margin-top: -240px;
+  margin-top: -265px;
   position: absolute;
   top: 50%;
-  height: 480px;
+  height: 530px;
   position: fixed;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;

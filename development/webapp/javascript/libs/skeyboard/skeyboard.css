@@ -1,9 +1,18 @@
+.skeyboard .cerrar {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    min-width: 0;
+    text-align: right;
+    font-size: .9em;
+}
+
 
 .skeyboard {
     border:1px solid #ddd;
     background-color: white;
-    padding: 7px 0 2px 5px;
-    min-width: 364px;
+    padding: 30px 0 2px 6px;
+    min-width: 365px;
     z-index: 2;
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .2);
             box-shadow: 0 0 3px rgba(0, 0, 0, .2);
@@ -141,4 +150,8 @@
     width: 32px;
     height: 32px;
     line-height: 32px;
+}
+
+.skeyboard .last {
+    margin-left: 34px;
 }

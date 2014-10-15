@@ -1715,7 +1715,6 @@ body.fondos.extractos .c-nav .extractos,
 body.carteras.extractos .c-nav .extractos,
 body.carteras.resumen .c-nav .resumen,
 body.carteras.movimientos .c-nav .movimientos,
-body.carteras.cartera-internacional .c-nav .cartera-internacional,
 body.inversiones.extractos .c-nav .extractos,
 body.inversiones.resumen .c-nav .resumen,
 body.inversiones.movimientos .c-nav .movimientos,
@@ -1745,7 +1744,6 @@ body.fondos.extractos .c-nav .extractos a,
 body.carteras.extractos .c-nav .extractos a,
 body.carteras.resumen .c-nav .resumen a,
 body.carteras.movimientos .c-nav .movimientos a,
-body.carteras.cartera-internacional .c-nav .cartera-internacional a,
 body.inversiones.extractos .c-nav .extractos a,
 body.inversiones.resumen .c-nav .resumen a,
 body.inversiones.movimientos .c-nav .movimientos a,
@@ -2215,7 +2213,7 @@ label.auto {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: 410px;
+  height: 388px;
 }
 .error .highlight {
   background-color: #eabebe;
@@ -2224,7 +2222,6 @@ label.auto {
 .error ul li {
   padding: 2px 5px;
 }
-div.button.primary,
 a.button.primary {
   line-height: 42px;
 }
@@ -2824,9 +2821,6 @@ html .table thead tr th[colspan] {
     margin-left: 50%;
   }
 }
-.m-ingreso a.right {
-  float: right;
-}
 footer {
   -webkit-box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
   box-shadow: 0 0 4px rgba(186, 186, 186, 0.4);
@@ -2882,7 +2876,7 @@ footer {
   -webkit-transition: all 150ms ease 0s;
   transition: all 150ms ease 0s;
 }
-.m-legal .enlinea {
+.m-legal .enlinea a {
   width: 102px;
   height: 32px;
   background: #ffffff url('../images/logo-enlinea-small.png') no-repeat left top;
@@ -2940,11 +2934,6 @@ footer {
   .m-legal span {
     width: auto;
   }
-}
-.m-legal .enlinea {
-  text-indent: -9999px;
-  text-align: left;
-  overflow: hidden;
 }
 header .subhead {
   text-align: right;
@@ -3446,10 +3435,10 @@ span.option-description {
 .modals > .popup .contents {
   color: #444444;
   background-color: #ffffff;
-  margin-top: -265px;
+  margin-top: -240px;
   position: absolute;
   top: 50%;
-  height: 530px;
+  height: 480px;
   position: fixed;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -3756,16 +3745,11 @@ span.option-description {
   height: 152px;
 }
 .intro-quote h2 {
-  background: transparent url('../images/back-intro-mobile.jpg') no-repeat center;
+  background: transparent url('../images/back-intro.jpg') repeat-x center;
   height: 152px;
   text-indent: -9999px;
   text-align: left;
   overflow: hidden;
-}
-@media all and (min-width: 1200px) {
-  .intro-quote h2 {
-    background-image: url('../images/back-intro.jpg');
-  }
 }
 .animate {
   -webkit-animation-duration: .8s;

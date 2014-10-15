@@ -2882,7 +2882,7 @@ footer {
   -webkit-transition: all 150ms ease 0s;
   transition: all 150ms ease 0s;
 }
-.m-legal .enlinea a {
+.m-legal .enlinea {
   width: 102px;
   height: 32px;
   background: #ffffff url('../images/logo-enlinea-small.png') no-repeat left top;
@@ -2940,6 +2940,11 @@ footer {
   .m-legal span {
     width: auto;
   }
+}
+.m-legal .enlinea {
+  text-indent: -9999px;
+  text-align: left;
+  overflow: hidden;
 }
 header .subhead {
   text-align: right;

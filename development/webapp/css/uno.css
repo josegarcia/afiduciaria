@@ -2957,71 +2957,13 @@ header .subhead {
   margin-top: -80px;
   padding-left: 270px;
 }
-#container .skeyboard {
-  width: 364px;
-  position: absolute;
-  top: 100%;
-  right: -20px;
-  bottom: auto;
-  left: auto;
-  font-size: 1.2em;
-}
-@media all and (min-width: 800px) {
-  #container .skeyboard {
-    width: 480px;
-  }
-}
-@media all and (min-width: 840px) {
-  #container .skeyboard {
-    position: absolute;
-    top: -45px;
-    right: 100%;
-    bottom: auto;
-    left: auto;
-  }
-}
-#container .skeyboard:before {
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  border: 12px solid transparent;
-  border-left-color: #aaaaaa;
-  position: absolute;
-  right: -24px;
-  top: 56px;
-}
-#container .skeyboard:after {
-  display: block;
-  content: '';
-  width: 0;
-  height: 0;
-  border: 12px solid transparent;
-  border-left-color: #ffffff;
-  position: absolute;
-  right: -23px;
-  top: 56px;
-}
 #container input.keyboard {
-  background: #ffffff url('../images/forms/keyboard.png') no-repeat 100% 0;
+  background: #ffffff url('../images/forms/keyboard-small.png') no-repeat 100% 0;
   padding-right: 45px;
 }
-#container .skeyboard .numbers {
-  float: right;
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: -32%;
-}
-@media all and (min-width: 840px) {
-  #container .skeyboard .numbers {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-  }
+.m-ingreso #container input.keyboard {
+  background: #ffffff url('../images/forms/keyboard.png') no-repeat 100% 0;
+  padding-right: 45px;
 }
 .button {
   min-height: 42px;

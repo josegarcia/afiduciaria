@@ -333,11 +333,11 @@
     header .subhead             { text-align: right; margin-top: -80px; padding-left: 270px; }
 
     #container                  {
-        & .skeyboard            { .width(364px); .width(480px, 800px); .absolute.align(100%, -20px, auto); .absolute.align(-45px, 100%, auto, auto, 840px); font-size: 1.2em; }
-        & .skeyboard:before     { .arrow.right(12px, @hexa); .position.right-top(absolute, -24px, 56px) }
-        & .skeyboard:after      { .arrow.right(12px, @hexf); .position.right-top(absolute, -23px, 56px) }
+        & input.keyboard        { .back(@hexf, '../images/forms/keyboard-small.png', no-repeat, 100% 0); padding-right: 45px; }
+    }
+
+    .m-ingreso #container                  {
         & input.keyboard        { .back(@hexf, '../images/forms/keyboard.png', no-repeat, 100% 0); padding-right: 45px; }
-        & .skeyboard .numbers   { float:right; .relative.align(auto, auto, auto, -32%); .relative.align(auto, auto, auto, auto, 840px); }
     }
 
     .button             { min-height: 42px; .font(bold 1em); .rounded(@base-radius); .color(@hexf, @hexd); }

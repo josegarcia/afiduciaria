@@ -33,6 +33,21 @@
     width: 110px;
 }
 
+.skeyboard .numbers   { 
+    float:right;
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: -32%;
+}
+
+@media all and (min-width: 800px) {
+    .skeyboard .numbers   { 
+        left: auto;
+    }
+}
+
 .skeyboard ul li:hover {
     border: 1px solid #c8c8c8;
     top: 1px;
@@ -154,4 +169,85 @@
 
 .skeyboard .last {
     margin-left: 34px;
+}
+
+/*top*/
+
+.skeyboard.left {
+    width:364px;
+    position: absolute;
+    top:-10px;
+    right:-10px;
+    bottom: auto;
+    font-size: 1.2em;
+}
+
+@media all and (min-width: 800px) {
+    .skeyboard.left {
+        width:480px;
+        position: absolute;
+        top:-45px;
+        right:100%;
+        bottom: auto;
+        left: auto;
+    }
+}
+
+.skeyboard.left:before {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right:-24px;
+    top:56px;
+    border: 12px solid transparent;
+    border-left-color: #aaa;
+}
+
+.skeyboard.left:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right:-23px;
+    top:56px;
+    border: 12px solid transparent;
+    border-left-color: #fff;
+}
+
+/*bottom*/
+
+.skeyboard.bottom {
+    width:100%;
+    position: absolute;
+    top:100%;
+    right:0px;
+    bottom: auto;
+    font-size: 1.2em;
+}
+
+.skeyboard.bottom:before {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right:50%;
+    top:-25px;
+    border: 12px solid transparent;
+    border-bottom-color: #aaa;
+}
+
+.skeyboard.bottom:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right:50%;
+    top:-24px;
+    border: 12px solid transparent;
+    border-bottom-color: #fff;
 }

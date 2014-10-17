@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
   <link href="../images/favicon.ico" type="image/x-icon" rel="shortcut icon">
   <link href="../css/uno.css" rel="stylesheet">
+  <link href="../javascript/libs/skeyboard/skeyboard.css" rel="stylesheet">
   <link href="../javascript/libs/uform/uform.css" rel="stylesheet">
   <script src="../javascript/libs/jquery-1.11.1.min.js"></script>
   <script src="../javascript/modernizr.js"></script>
@@ -73,6 +74,106 @@
                 </label>
               </div>
             </li>
+            <li><strong>Contraseñas:</strong>
+                <div id="container">
+                  <label>
+                    <input id="write" type="text" readonly="readonly" class="keyboard">
+                  </label>
+                  <div class="skeyboard bottom hide"><a href="#" class="cerrar">[Cerrar]</a>
+                    <ul id="myDiv" class="symbols hide">
+                      <li>|</li>
+                      <li>¬</li>
+                      <li>°</li>
+                      <li>!</li>
+                      <li>"</li>
+                      <li>#</li>
+                      <li>$</li>
+                      <li>%</li>
+                      <li>&</li>
+                      <li>/</li>
+                      <li>(</li>
+                      <li>)</li>
+                      <li>=</li>
+                      <li>?</li>
+                      <li>¡</li>
+                      <li>\</li>
+                      <li>¸</li>
+                      <li>@</li>
+                      <li>ł</li>
+                      <li>€</li>
+                      <li>¶</li>
+                      <li id="theValue">123</li>
+                      <li>ŧ</li>
+                      <li>←</li>
+                      <li>↓</li>
+                      <li> →</li>
+                      <li>ø</li>
+                      <li>þ</li>
+                      <li>~</li>
+                      <li>ł</li>
+                      <li>ĸ</li>
+                      <li>ŋ</li>
+                      <li>đ</li>
+                      <li>ðß</li>
+                      <li>æ</li>
+                      <li>|</li>
+                      <li><</li>
+                      <li>«</li>
+                      <li>»</li>
+                      <li>¢“</li>
+                      <li>µ</li>
+                      <li>·̣̣</li>
+                    </ul>
+                    <ul class="letters">
+                      <li class="letter first-row">q</li>
+                      <li class="letter">w</li>
+                      <li class="letter">e</li>
+                      <li class="letter">r</li>
+                      <li class="letter">t</li>
+                      <li class="letter">y</li>
+                      <li class="letter">u</li>
+                      <li class="letter">i</li>
+                      <li class="letter">o</li>
+                      <li class="letter">p</li>
+                      <li class="spacer2 first-row"></li>
+                      <li class="letter">a</li>
+                      <li class="letter">s</li>
+                      <li class="letter">d</li>
+                      <li class="letter">f</li>
+                      <li class="letter">g</li>
+                      <li class="letter">h</li>
+                      <li class="letter">j</li>
+                      <li class="letter">k</li>
+                      <li class="letter">l</li>
+                      <li class="spacer3 first-row"></li>
+                      <li class="letter">z</li>
+                      <li class="letter">x</li>
+                      <li class="letter">c</li>
+                      <li class="letter">v</li>
+                      <li class="letter">b</li>
+                      <li class="letter">n</li>
+                      <li class="letter">m</li>
+                      <li class="command chars">+=-</li>
+                      <li class="spacer4 first-row"></li>
+                      <li class="command delete">Supr</li>
+                      <li class="letter space"></li>
+                      <li class="command shift">Shift</li>
+                    </ul>
+                    <ul class="numbers">
+                      <li class="symbol first-row"><span>*</span><span class="on n1">1</span></li>
+                      <li class="symbol"><span>*</span><span class="on n2">2</span></li>
+                      <li class="symbol"><span>*</span><span class="on n3">3</span></li>
+                      <li class="symbol first-row"><span>*</span><span class="on n4">4</span></li>
+                      <li class="symbol"><span>*</span><span class="on n5">5</span></li>
+                      <li class="symbol"><span>*</span><span class="on n6">6</span></li>
+                      <li class="symbol first-row"><span>*</span><span class="on n7">7</span></li>
+                      <li class="symbol"><span>*</span><span class="on n8">8</span></li>
+                      <li class="symbol"><span>*</span><span class="on n9">9</span></li>
+                      <li class="symbol last"><span>*</span><span class="on n0">0</span></li>
+                    </ul>
+                  </div>
+                </div>
+            </li>
             <li><strong>Deseo activar el control de acceso a direcciones IP</strong>
               <div class="grid split-4 separate">
                 <label>
@@ -121,6 +222,7 @@
     </section>
   </footer>
   <script src="../javascript/scripts.js"></script>
+  <script src="../javascript/libs/skeyboard/skeyboard.js"></script>
   <script>
     $('#regresar').click(function(){
         window.location='100ingreso.html';

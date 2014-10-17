@@ -8,9 +8,12 @@ header
                 a(href='../index.html')
                     img(src="../images/logo-fiduciaria.png")
                     strong  Alianza Fiduciaria
-        .m-user-options
-            a(href="#").options
-                i.fa.fa-cog
+        .m-user-group
+            .options
+                a(href="#", data-hint="Actualizar Datos").tooltip.left.primary
+                    i.fa.fa-user
+                a(href="#", data-hint="Cerrar Sesión").tooltip.left.primary
+                    i.fa.fa-sign-out
             .option-box.hide
                 a(href="#").to-left Actualizar datos
                 .name Liliana Patricia Delgado

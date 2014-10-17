@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background"
+			],
+			[
+				"margi",
+				"margin-left"
+			],
+			[
 				"min",
-				"min-height"
+				"min-width"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"bord",
+				"border"
 			],
 			[
 				"text",
@@ -36,10 +52,6 @@
 				"list-style-position"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"max",
 				"max-height"
 			],
@@ -54,10 +66,6 @@
 			[
 				"butt",
 				"button-group"
-			],
-			[
-				"margin",
-				"margin-left"
 			],
 			[
 				"span",
@@ -102,10 +110,6 @@
 			[
 				"pdd",
 				"padding-right"
-			],
-			[
-				"bord",
-				"border-bottom"
 			],
 			[
 				"bor",
@@ -182,10 +186,6 @@
 			[
 				"font-",
 				"font-size"
-			],
-			[
-				"margi",
-				"margin-top"
 			],
 			[
 				"TE",
@@ -439,44 +439,70 @@
 	},
 	"file_history":
 	[
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.css",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/100 ingreso.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/105_main.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/doctype.jade",
+		"/C/Users/admin/Desktop/temp/calendar/afidu.html",
+		"/C/Users/admin/Desktop/temp/calendar/afidu_files/customMe.css",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/header-portal.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/99_footer.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/99_portal.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/custom.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/main_100.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/snippets/skeyboard.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/custom.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.css",
+		"/C/Users/admin/alianza-portales/alianza-portales/themes/alianza-theme/docroot/css/custom.css",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100_header_valores.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/100 ingreso.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/100 ingreso.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/99_portal.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/99_main.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header_portal.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/head.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/test.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/000.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/112_main.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/112_valores_cartera.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.js",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.css",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/101.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/Calibri/calibri-webfont.svg",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/301.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/301_pensiones_resumen.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/anchor.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/uno.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/layout.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/303_pensiones_movimientos_persona.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/template.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/test.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/304_pensiones_extractos.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/header/100.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/index.html",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/index.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/105_main.jade",
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/doctype.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/302.jade",
 		"/D/Projects/Uno/development/less/anchor.less",
 		"/D/Projects/Seguros la Equidad/La Equidad ARL/maquetacion/css/estilos.css",
 		"/C/Users/admin/alianza-portales/alianza-portales/themes/alianza-theme/docroot/_diffs/css/custom.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/302_pensiones_resumen_detalle.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/301_pensiones_resumen.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/skeyboard/skeyboard-bak.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/jquery-1.11.1.min.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/scripts.js",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/slider-captcha.min.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100_header_valores.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/100 ingreso.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/100.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/100ingreso.html",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/110_main.jade",
 		"/C/Users/admin/Desktop/delme.css",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/css/uno.css",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/000.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/800_admin.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/105_oldbrowser.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/104.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/104 exito.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/105_oldbrowser.html",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/morris/morris.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/index.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.css",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/uno.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/angular.min.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/theme.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/800_main.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/800_admin.html",
 		"/C/Windows/System32/drivers/etc/hosts",
@@ -484,13 +510,9 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200 inicio.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/200b_inicio.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header/200.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/301.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/200.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/FontAwesome/fonts/font-awesome.min.css",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/base.less",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/103 cambiar_contrasena.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/javascript/libs/uform/uform.js",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/header.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/alianza.sublime-project",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/402-b.jade",
 		"/D/Projects/CO/CO Visualization/webapp/templates/index.jade",
@@ -540,33 +562,11 @@
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/110_valores.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/110_valores.html",
 		"/C/Users/admin/alianza-transaccional/fiduciaria/frontend/app/styles/alianza.css",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/101.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/001.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/test.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/fonts/Calibri/calibri-webfont.svg",
 		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/nav.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/100 ingreso.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/header/100.jade",
 		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/footer.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/200 inicio.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/200b.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/main/main_100.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/snippets/scripts.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/snippets/slider.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Valores/development/jade/sections/main/validaciones.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/101 registro.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/101registro.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/less/layout.less",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/101 registro.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/global/routines.jade",
-		"/C/Users/admin/Desktop/ejemplo.html",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/201.jade",
-		"/C/Users/admin/Downloads/alianza.css",
-		"/C/Users/admin/Desktop/base_ok.less",
-		"/C/Users/admin/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/main/validaciones.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/sections/snippets/_skeyboard-v1.jade",
-		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/jade/validaciones.jade"
+		"/D/Projects/Alianza Fiduciaria/Alianza Fiduciaria/development/webapp/html/200 inicio.html"
 	],
 	"find":
 	{
@@ -584,6 +584,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"BUSCAR",
+			"0 ",
+			".css",
+			"ng-app",
+			"none",
+			".modals",
+			".modals > .popup .contents",
+			" ",
+			"ingreso",
+			"publicidad",
+			"m-ingreso",
+			"section",
+			".valores",
 			".icon",
 			"icon",
 			"fixed",
@@ -698,20 +711,7 @@
 			"min-width: 320px",
 			"min-width:320px",
 			"320px",
-			"popup",
-			"64",
-			"popup",
-			"104 exito",
-			"user-options",
-			"certificados",
-			".table",
-			".table thead tr th",
-			".table",
-			"701_parametros_contrasena",
-			"m-resumen",
-			"input",
-			".absolute",
-			"queries"
+			"popup"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -816,6 +816,90 @@
 		"selected_items":
 		[
 			[
+				"ske",
+				"webapp\\javascript\\libs\\skeyboard\\skeyboard.css"
+			],
+			[
+				"skey",
+				"jade\\sections\\snippets\\skeyboard.jade"
+			],
+			[
+				"100",
+				"jade\\sections\\main\\main_100.jade"
+			],
+			[
+				"99",
+				"jade\\sections\\99_footer.jade"
+			],
+			[
+				"head",
+				"jade\\sections\\header\\header-portal.jade"
+			],
+			[
+				"the",
+				"less\\theme.less"
+			],
+			[
+				"cus",
+				"less\\custom.less"
+			],
+			[
+				"ufor",
+				"webapp\\javascript\\libs\\uform\\uform.js"
+			],
+			[
+				"000",
+				"jade\\sections\\main\\000.jade"
+			],
+			[
+				"carte",
+				"jade\\112_valores_cartera.jade"
+			],
+			[
+				"301",
+				"jade\\sections\\main\\301.jade"
+			],
+			[
+				"main_",
+				"jade\\sections\\main\\main_100.jade"
+			],
+			[
+				"anc",
+				"less\\anchor.less"
+			],
+			[
+				"anch",
+				"less\\anchor.less"
+			],
+			[
+				"thme",
+				"less\\theme.less"
+			],
+			[
+				"layo",
+				"less\\layout.less"
+			],
+			[
+				".less",
+				"less\\uno.less"
+			],
+			[
+				"foot",
+				"jade\\sections\\footer.jade"
+			],
+			[
+				"hea",
+				"jade\\sections\\header\\header-portal.jade"
+			],
+			[
+				"header",
+				"jade\\sections\\header_portal.jade"
+			],
+			[
+				"inde",
+				"webapp\\index.html"
+			],
+			[
 				"302",
 				"jade\\sections\\main\\302.jade"
 			],
@@ -828,24 +912,12 @@
 				"jade\\sections\\global\\doctype.jade"
 			],
 			[
-				"anch",
-				"less\\anchor.less"
-			],
-			[
-				"skey",
-				"webapp\\javascript\\libs\\skeyboard\\skeyboard.css"
-			],
-			[
 				"custom",
 				"less\\custom.less"
 			],
 			[
 				"",
 				"jade\\100 ingreso.jade"
-			],
-			[
-				"100",
-				"jade\\sections\\main\\main_100.jade"
 			],
 			[
 				"104",
@@ -892,10 +964,6 @@
 				"jade\\sections\\main\\800_main.jade"
 			],
 			[
-				"anc",
-				"less\\anchor.less"
-			],
-			[
 				"110",
 				"jade\\sections\\main\\110_main.jade"
 			],
@@ -908,10 +976,6 @@
 				"webapp\\css\\uno.css"
 			],
 			[
-				"301",
-				"jade\\sections\\main\\301.jade"
-			],
-			[
 				"sci",
 				"webapp\\javascript\\scripts.js"
 			],
@@ -920,20 +984,8 @@
 				"less\\base.less"
 			],
 			[
-				"ufor",
-				"webapp\\javascript\\libs\\uform\\uform.js"
-			],
-			[
 				"vari",
 				"less\\variables.less"
-			],
-			[
-				"head",
-				"jade\\sections\\header.jade"
-			],
-			[
-				"foot",
-				"jade\\sections\\footer.jade"
 			],
 			[
 				"cust",
@@ -969,10 +1021,6 @@
 			],
 			[
 				"c",
-				"less\\custom.less"
-			],
-			[
-				"cus",
 				"less\\custom.less"
 			],
 			[
@@ -1016,16 +1064,8 @@
 				"jade\\sections\\main\\101.jade"
 			],
 			[
-				"000",
-				"jade\\sections\\main\\000.jade"
-			],
-			[
 				"bsa",
 				"less\\base.less"
-			],
-			[
-				"layo",
-				"less\\layout.less"
 			],
 			[
 				"custo",
@@ -1034,10 +1074,6 @@
 			[
 				"reg",
 				"jade\\101 registro.jade"
-			],
-			[
-				"ske",
-				"webapp\\javascript\\libs\\skeyboard\\skeyboard.js"
 			],
 			[
 				"200b",
@@ -1128,20 +1164,12 @@
 				"less\\anchor.less"
 			],
 			[
-				"header",
-				"jade\\sections\\header.jade"
-			],
-			[
 				"s",
 				"webapp\\javascript\\libs\\skeyboard\\skeyboard.js"
 			],
 			[
 				"rou",
 				"jade\\_includes\\routines.jade"
-			],
-			[
-				"the",
-				"less\\theme.less"
 			],
 			[
 				"scripts",
@@ -1178,10 +1206,6 @@
 			[
 				"key",
 				"webapp\\javascript\\libs\\skeyboard\\skeyboard.css"
-			],
-			[
-				"inde",
-				"jade\\index.jade"
 			],
 			[
 				"ufo",
@@ -1229,10 +1253,6 @@
 			],
 			[
 				"0",
-				"jade\\sections\\header\\100.jade"
-			],
-			[
-				"hea",
 				"jade\\sections\\header\\100.jade"
 			],
 			[
@@ -1306,26 +1326,6 @@
 			[
 				"certi",
 				"certiarchivo.sublime-project"
-			],
-			[
-				"gl",
-				"less\\theme\\global.less"
-			],
-			[
-				"reset",
-				"webapp\\html\\ingreso-contrasena.html"
-			],
-			[
-				"mai",
-				"jade\\public\\main000.jade"
-			],
-			[
-				"ingres",
-				"jade\\ingreso.jade"
-			],
-			[
-				"globa",
-				"less\\theme\\global.less"
 			]
 		],
 		"width": 0.0

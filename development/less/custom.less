@@ -38,7 +38,7 @@
     .table tr.new td:first-child { border-left: 3px solid @accent; }
     .table tr.new td            {  background-color: @hexe; }
 
-    .scroll-y                   { .overflow(hidden, auto); height: 388px }
+    .scroll-y                   { .overflow(hidden, auto); height: 410px }
 
     .error .highlight           { background-color: #eabebe; list-style: disc inside; }
     .error ul li                { padding: 2px 5px; }
@@ -165,14 +165,15 @@
         & p                     { text-align: left; }
     }
 
-    .m-user-options             {
+    .m-user-group             {
         &                       { .width; padding-right: 50px; .position.right-top(absolute, 0, 10px); .index(3); .color(@text-base); }
         & .user                 { text-align: right; color: @hex8; }
         & .name                 { text-align: right; .font(bold 1.4em); }
         & .email                { text-align: right; margin-bottom: 10px; }
-        & .options              { .position.right-top(absolute, 10px, 10px); font-size: 1.6em; .rounded(50%); .square(32px); text-align: center; line-height:30px; }
+        & .options              { .position.right-top(absolute, 10px, 10px); width: 76px; }
+        & .options a            { display: inline-block; font-size: 1.6em; .rounded(50%); .square(32px); text-align: center; line-height:30px; float: left; margin-left:5px; }
         & .options.show,
-        & .options:hover        { .color(@white, @primary); }
+        & .options a:hover      { .color(@white, @primary); }
         & .options.show + .option-box { .display(block); }
         & .options .fa          { margin: 0; }
         & .option-box           {
@@ -313,7 +314,7 @@
         & .valores a,
         & .fiduciaria a,
         & .seven4n a            { .hide-text; .inline-block; .transition(all, 150ms); }
-        & .enlinea a            { .size(102px, 32px); .back(@hexf, '../images/logo-enlinea-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; }
+        & .enlinea              { .size(102px, 32px); .back(@hexf, '../images/logo-enlinea-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; }
         & .fiduciaria a         { .size(102px, 32px); .back(@hexf, '../images/logo-fiduciaria-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; }
         & .valores a            { .size(102px, 32px); .back(@hexf, '../images/logo-valores-small.png', no-repeat, left top); vertical-align: top; margin-top: 15px; }
         & .seven4n              { float: right; }
@@ -323,6 +324,7 @@
         & .valores,
         & .fiduciaria           { .float(none); .float(left, 960px); }
         & span                  { .display(block); .display(inline-block, 960px); .width(100%); .width(auto, 960px); text-align: center; }
+        & .enlinea              { .hide-text; }
     }
 
 //  Styles
@@ -479,7 +481,7 @@
             & .overlay          { .back(@trans, '../images/common/overlay.png'); .fixed.align(0, 0, 0, 0); .user-select; }
         }
         & > .popup              {
-            & .contents         { .color(@text-base, @base); .center-block(520px, 520px); .center-vertical(480px); .width(520px, 520px); .height(480px); position: fixed; .rounded(@base-radius); .padding(0 1em 36px); }
+            & .contents         { .color(@text-base, @base); .center-block(520px, 520px); .center-vertical(530px); .width(520px, 520px); .height(530px); position: fixed; .rounded(@base-radius); .padding(0 1em 36px); }
             & .contents .button-group { .position.right-bottom(absolute, 1em, 0); }
         }
     }

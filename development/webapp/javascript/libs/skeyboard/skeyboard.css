@@ -225,6 +225,12 @@
 
 /*bottom*/
 
+.skeyboard.push {
+    width:100%;
+    bottom: auto;
+    font-size: 1.2em;
+}
+
 .skeyboard.bottom {
     width:100%;
     position: absolute;
@@ -234,6 +240,7 @@
     font-size: 1.2em;
 }
 
+.skeyboard.push:before,
 .skeyboard.bottom:before {
     display: block;
     content: '';
@@ -246,6 +253,7 @@
     border-bottom-color: #aaa;
 }
 
+.skeyboard.push:after,
 .skeyboard.bottom:after {
     display: block;
     content: '';

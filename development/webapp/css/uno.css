@@ -2403,6 +2403,97 @@ html .table thead tr th[colspan] {
 .m-login-data p {
   text-align: left;
 }
+.m-user-options {
+  width: auto;
+  padding-right: 50px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  z-index: 3;
+  color: #444444;
+}
+.m-user-options .user {
+  text-align: right;
+  color: #888888;
+}
+.m-user-options .name {
+  text-align: right;
+  font: bold 1.4em a;
+  font-family: inherit;
+}
+.m-user-options .email {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.m-user-options .options {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.6em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 30px;
+}
+.m-user-options .options.show,
+.m-user-options .options:hover {
+  color: #ffffff;
+  background-color: #00275b;
+}
+.m-user-options .options.show + .option-box {
+  display: block;
+}
+.m-user-options .options .fa {
+  margin: 0;
+}
+.m-user-options .option-box {
+  position: absolute;
+  right: 0;
+  top: 56px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 2px rgba(135, 135, 135, 0.4);
+  box-shadow: 0 0 2px rgba(135, 135, 135, 0.4);
+  padding: 10px 10px 0;
+  width: 320px;
+}
+.m-user-options .option-box:before {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 15px;
+  top: -22px;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #dddddd;
+}
+.m-user-options .option-box:after {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 15px;
+  top: -20px;
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #ffffff;
+}
+.m-user-options .option-box .button-group {
+  border-top: 1px solid #cccccc;
+  padding: 10px;
+  margin: 0 0 0 -10px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
 .m-user-group {
   width: auto;
   padding-right: 50px;

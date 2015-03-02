@@ -3,20 +3,6 @@
 //- --------------------------------------------------------- */
 
 //- Tables
-
-
-//-  mixin tbody(2, ['one', 'two', 'three'])
-
-    //- <tr>
-    //-     <td>one</td>
-    //-     <td>two</td>
-    //-     <td>three</td>
-    //- </tr>
-    //- <tr>
-    //-     <td>one</td>
-    //-     <td>two</td>
-    //-     <td>three</td>
-    //- </tr>
 mixin tbody(length, items)
     - for (var i = 0; i < length; ++i) {
         tr

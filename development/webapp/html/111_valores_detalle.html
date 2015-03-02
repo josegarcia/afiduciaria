@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
 <!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]>  <html lang="es"> <![endif]-->
-<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<!--[if !IE]><!--> <html ng-app lang="es"> <!--<![endif]-->
 <head>
   <title>Alianza Fiduciaria</title>
   <meta charset="utf-8">
@@ -22,7 +22,8 @@
       <div class="m-brand">
         <h1 class="brand fiduciaria"><a href="../index.html"><img src="../images/logo-fiduciaria.png"><strong> Alianza Fiduciaria</strong></a></h1>
       </div>
-      <div class="m-user-options"><a href="#" class="options"><i class="fa fa-cog"></i></a>
+      <div class="m-user-group">
+        <div class="options"><a href="#" data-hint="Actualizar IPs válidas" class="tooltip left primary"><i class="fa fa-filter"></i></a><a href="#" data-hint="Cambiar Contraseña" class="tooltip left primary"><i class="fa fa-lock"></i></a><a href="#" data-hint="Cerrar Sesión" class="tooltip left primary"><i class="fa fa-sign-out"></i></a></div>
         <div class="option-box hide"><a href="#" class="to-left">Actualizar datos</a>
           <div class="name">Liliana Patricia Delgado</div>
           <div class="email">liliana.delgado@gmail.com</div>
@@ -36,17 +37,27 @@
   </header>
   <nav>
     <section class="text-frame">
-      <div class="m-mainnav">
+      <div class="m-mainnav navbar primary dropdown">
         <ul>
           <li><a href="#" class="inicio">Inicio</a></li>
           <li class="subitems"> 
             <div class="title">Inversiones</div>
             <ul>
-              <li><a href="#" class="pensiones">Pensiones</a></li>
-              <li><a href="#" class="fondos">Fondos</a></li>
+              <li> <a href="#" class="pensiones">Pensiones</a></li>
+              <li> <a href="#" class="fondos">Fondos</a></li>
             </ul>
           </li>
-          <li><a href="#" class="fideicomisos">Fideicomisos</a></li>
+          <li><a href="#" class="fideicomisos">Fideicomisos</a>
+            <ul class="subnav">
+              <li><a href="#">Inscripciones</a></li>
+              <li><a href="#">Transferencias</a></li>
+              <li><a href="#">Retiros</a></li>
+              <li class="separator"><a href="#">Programación de pagos</a></li>
+              <li><a href="#">Pagos masivos</a></li>
+              <li class="separator"><a href="#">Alianza express</a></li>
+              <li><a href="#">Consulta de estados</a></li>
+            </ul>
+          </li>
           <li><a href="#" class="certificados">Certificados</a></li>
           <li><a href="#" class="transacciones">Transacciones</a></li>
         </ul>
@@ -58,7 +69,7 @@
       <div class="text-frame form selection">
         <div class="m-subnav">
           <ul>
-            <li class="resumen"><a href="#">Resúmen</a></li>
+            <li class="resumen active"><a href="#">Resúmen</a></li>
             <li class="movimientos"><a href="#">Movimientos</a></li>
             <li class="extractos"><a href="#">Extractos</a></li>
             <li class="saldos"><a href="#">Saldos históricos</a></li>
@@ -72,7 +83,7 @@
           <ul>
             <li><a href="#">Pensiones</a></li>
             <li><a href="#">Resúmen</a></li>
-            <li><span>Detalles</span></li>
+            <li> <span>Detalles</span></li>
           </ul>
         </div>
         <div class="m-results tabset accordion primary">
@@ -202,7 +213,7 @@
   </main>
   <footer>
     <section class="text-frame">
-      <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
+      <div class="m-legal copy"><span class="valores"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
     </section>
   </footer>
   <script src="../javascript/scripts.js"></script>

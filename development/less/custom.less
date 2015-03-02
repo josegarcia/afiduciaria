@@ -1,5 +1,7 @@
 //  Imports
 
+    @import "anchor";
+    @import "base";
     @import "variables";
 
 //
@@ -8,7 +10,7 @@
 
     .form label.error + span    { display: none; }
 
-    .button-group.full .button  { width: 100%; }
+    .button-group.full .button  { width: 100%; } // (y)
 
     .l-public                   { .user-select; }
 
@@ -20,9 +22,9 @@
 
     label.auto                  { max-width: 100%; }
 
-    .scrollable                 { .overflow(auto, hidden); }
+    .scrollable                 { .overflow(auto, hidden); } // (y)
 
-    .align                      { .block; .has-align; width: 100%; }
+    .align                      { .block; .has-align; width: 100%; } // (~)
 
     .form li label.error        { margin: 0; width: 100%; }
 
@@ -165,6 +167,27 @@
         & p                     { text-align: left; }
     }
 
+    .m-user-options {
+        & { .width; padding-right: 50px; .position.right-top(absolute, 0, 10px); .index(3); .color(@text-base); }
+        & .user { text-align: right; color: @hex8; }
+        & .name { text-align: right; .font(bold 1.4em); }
+        & .email { text-align: right; margin-bottom: 10px; }
+        & .options { .position.right-top(absolute, 10px, 10px); font-size: 1.6em; .rounded(50%); .square(32px); text-align: center; line-height:30px; }
+        & .options.show,
+        & .options:hover { .color(@white, @primary); }
+        & .options.show + .option-box { .display(block); }
+        & .options .fa { margin: 0; }
+        & .option-box {
+        & { .position.right-top(absolute, 0, 56px); border: 1px solid #ddd; .back.color(white); .shadow(0 0 2px, #888, .4);
+        .padding(10px 10px 0); width: 320px; }
+        &:before { .pseudo('', 0, 0); .position.right-top(absolute, 15px, -22px); .arrow.top(10px, @hexd); }
+        &:after { .pseudo('', 0, 0); .position.right-top(absolute, 15px, -20px); .arrow.top(10px, @hexf); }
+        & .button-group {
+        border-top: 1px solid @hexc; padding: 10px; margin: 0 0 0 -10px; .box-sizing;
+        }
+        }
+    }
+
     .m-user-group             {
         &                       { .width; padding-right: 50px; .position.right-top(absolute, 0, 10px); .index(3); .color(@text-base); }
         & .user                 { text-align: right; color: @hex8; }
@@ -219,6 +242,8 @@
     @media all and (min-width: 1025px) {
         .m-mainnav li           { .border(0 1px 0 0, solid, @hexb); .float(none); }
         .m-mainnav li:first-child { .border(0 1px 0 0, solid, @hexb); }
+        .m-mainnav > ul > li { display: inline-block; } // !! part of navbar primary
+        // .m-mainnav .subitems    { display: inline-block !important }
         .m-mainnav .subitems    { text-align: center; padding: 0; }
         .m-mainnav .subitems ul { .border(0 0 0 1px, solid, @hexb); clear: both; }
         .m-mainnav .subitems .title { text-align: center; display: inline-block; }
@@ -705,3 +730,6 @@
       overflow: hidden;
       color:#fff !important;
     }
+
+    .modals.dynamic > .popup .contents { height: auto; padding-bottom: 58px; }
+    .modals.dynamic > .popup .scroll-y { margin: 10px 0; }

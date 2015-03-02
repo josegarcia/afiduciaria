@@ -13,7 +13,7 @@ main
                         a(href="#") Saldos históricos
     section.text-frame
         .panel.primary.full
-            h1.heading.primary Movimientos
+            h1.heading.primary Movimientossss
             form.form.filters
                 ul.grid.split-2.separate
                     li
@@ -109,8 +109,7 @@ main
                         a(href="#")  Excel
                         |  | 
                         a(href="#") PDF 
-    .modals.hide
-        .popup.active
+    .modals.hidepopup2.active2.hide
             .overlay
             .contents
                 h2.heading.primary Detalle
@@ -136,3 +135,77 @@ main
                             div 15.000.000
                 .button-group
                     button(type="button").button.primary.btn-close Cerrar
+    .modals.dynamic.hidepopup.hide
+      .popup.active
+        .overlay
+        .contents
+          h2.heading.primary.ng-binding Resumen de permisos
+          strong Nombre de agente:  
+          input.ng-pristine.ng-valid(type='text', ng-style='estiloSombreado', ng-readonly='true', ng-disabled='true', ng-model='agente.nombreUsuario', readonly='readonly', disabled='disabled')   
+          .scroll-y
+            .message.primary.info.js-close
+                p El agente empresarial aún no tiene permisos asignados
+        .contents.hide
+          h2.heading.primary.ng-binding Resumen de permisos
+          strong Nombre de agente: 
+          input.ng-pristine.ng-valid(type='text', ng-style='estiloSombreado', ng-readonly='true', ng-disabled='true', ng-model='agente.nombreUsuario', readonly='readonly', disabled='disabled')     
+          .scroll-y
+            .panel.aside
+              .permisos.ng-scope(ng-repeat='encargo in encargosResumen')
+                strong.ng-binding 10020007558               
+                ul
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Inscripci&oacute;n
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Pagos masivos
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Transferencias y retiros
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Consulta
+              .permisos.ng-scope(ng-repeat='encargo in encargosResumen')
+                strong.ng-binding 45030000007              
+                ul
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Consulta
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Inscripci&oacute;n
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Transferencias y retiros
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Pagos masivos
+              .permisos.ng-scope(ng-repeat='encargo in encargosResumen')
+                strong.ng-binding 95030000012                  
+                ul
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Consulta
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Inscripci&oacute;n
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Transferencias y retiros
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Pagos masivos
+              .permisos.ng-scope(ng-repeat='encargo in encargosResumen')
+                strong.ng-binding 10020007590                   
+                ul
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Pagos masivos
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Inscripci&oacute;n
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Transferencias y retiros
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Consulta
+              .permisos.ng-scope(ng-repeat='encargo in encargosResumen')
+                strong.ng-binding 58020000001              
+                ul
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Consulta
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Transferencias y retiros
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Inscripci&oacute;n
+                  li.ng-scope(ng-repeat='permiso in encargo.permisos')
+                    p.ng-binding Pagos masivos
+          .button-group
+            button.button.primary.btn-close(ng-click='resumenPermisosVisible = false; cerrar()', type='button') Cerrar
+

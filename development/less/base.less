@@ -499,12 +499,16 @@
             & li:hover > ul     { display: block; z-index: 2; }
             & ul ul             { display: none; }
         }
+
+        @media all and (min-width: 1025px) {
         &.dropdown              {
             & li                { width: auto; }
-            & ul ul             { display: none; position: absolute; top: 100%; left: 0; }
-            & ul ul ul          { position: absolute; top: 0; left: 100%; }
-            & li:hover > ul     { position: absolute; bottom: 0; display: block; z-index: 2; }
+            & .subnav                { display: none; } // new
+            & .subnav ul             { display: none; position: absolute; top: 100%; left: 0; }
+            & .subnav ul ul          { position: absolute; top: 0; left: 100%; }
+            & li:hover > .subnav     { position: absolute; display: block; z-index: 9; } // bottom: 0; DO OPTION: mainnav bottom:0 (default); mainnav bottom: 0; (this theme);
         }
+    }
         &.rightalign            {
             & li                { width: 100%; }
             & ul ul             { display: none; position: absolute; top: 0; left: 100%; }

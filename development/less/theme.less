@@ -133,6 +133,12 @@
         & a                     { color: @primary; }
     }
 
+    .c-nav .active,
+    .c-nav .active:hover {
+        &                       { .border(0 0 3px 0, solid, @primary); }
+        & a                     { color: @primary; }
+    }
+
 //  Page Components
 
     .button-group,
@@ -202,10 +208,16 @@
         }
     }
 
-    .navbar.primary             {
-        & li a                  { .font-size(1.6em); color: @hex4;  padding: 10px 0; }
-        & li a:hover            {  color: @primary; } 
-        & li ul li a            { .font-size(1em); } 
+    @media all and (min-width: 1025px) {
+        .navbar.primary             {
+            // & li ul li a            { width: auto; }
+            & .subnav               { border: 1px solid #ddd; .shadow(0 2px 4px, #ccc, .6); width: 120%; }
+            & .subnav li            { width: 100%; background-color: #fff; }
+            & .subnav li.separator  { border-bottom: 1px dotted #bbb; }
+            & .subnav li:hover a    { background-color: #ddd; }
+            & .subnav li a          { padding: 4px 5px; .font-size(.9em); line-height: 1.2; display: block;width: 100%; }
+            // & li a:hover            {  color: @primary; } 
+        }
     }
 
     .pagination.primary         {

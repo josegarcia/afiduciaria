@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--[if IE 8]>     <html lang="es" class="ie ie8"> <![endif]-->
 <!--[if IE 9]>     <html lang="es" class="ie ie9"> <![endif]-->
 <!--[if gt IE 9]>  <html lang="es"> <![endif]-->
-<!--[if !IE]><!--> <html lang="es"> <!--<![endif]-->
+<!--[if !IE]><!--> <html ng-app lang="es"> <!--<![endif]-->
 <head>
   <title>Alianza Fiduciaria</title>
   <meta charset="utf-8">
@@ -25,7 +25,8 @@
       <div class="m-brand">
         <h1 class="brand fiduciaria"><a href="../index.html"><img src="../images/logo-fiduciaria.png"><strong> Alianza Fiduciaria</strong></a></h1>
       </div>
-      <div class="m-user-options"><a href="#" class="options"><i class="fa fa-cog"></i></a>
+      <div class="m-user-group">
+        <div class="options"><a href="#" data-hint="Actualizar IPs válidas" class="tooltip left primary"><i class="fa fa-filter"></i></a><a href="#" data-hint="Cambiar Contraseña" class="tooltip left primary"><i class="fa fa-lock"></i></a><a href="#" data-hint="Cerrar Sesión" class="tooltip left primary"><i class="fa fa-sign-out"></i></a></div>
         <div class="option-box hide"><a href="#" class="to-left">Actualizar datos</a>
           <div class="name">Liliana Patricia Delgado</div>
           <div class="email">liliana.delgado@gmail.com</div>
@@ -39,17 +40,27 @@
   </header>
   <nav>
     <section class="text-frame">
-      <div class="m-mainnav">
+      <div class="m-mainnav navbar primary dropdown">
         <ul>
           <li><a href="#" class="inicio">Inicio</a></li>
           <li class="subitems"> 
             <div class="title">Inversiones</div>
             <ul>
-              <li><a href="#" class="pensiones">Pensiones</a></li>
-              <li><a href="#" class="fondos">Fondos</a></li>
+              <li> <a href="#" class="pensiones">Pensiones</a></li>
+              <li> <a href="#" class="fondos">Fondos</a></li>
             </ul>
           </li>
-          <li><a href="#" class="fideicomisos">Fideicomisos</a></li>
+          <li><a href="#" class="fideicomisos">Fideicomisos</a>
+            <ul class="subnav">
+              <li><a href="#">Inscripciones</a></li>
+              <li><a href="#">Transferencias</a></li>
+              <li><a href="#">Retiros</a></li>
+              <li class="separator"><a href="#">Programación de pagos</a></li>
+              <li><a href="#">Pagos masivos</a></li>
+              <li class="separator"><a href="#">Alianza express</a></li>
+              <li><a href="#">Consulta de estados</a></li>
+            </ul>
+          </li>
           <li><a href="#" class="certificados">Certificados</a></li>
           <li><a href="#" class="transacciones">Transacciones</a></li>
         </ul>
@@ -71,7 +82,7 @@
     </div>
     <section class="text-frame">
       <div class="panel primary full">
-        <h1 class="heading primary">Movimientos</h1>
+        <h1 class="heading primary">Movimientossss</h1>
         <form class="form filters">
           <ul class="grid split-2 separate">
             <li><strong>Periodo:</strong>
@@ -183,35 +194,138 @@
         </div>
       </div>
     </section>
-    <div class="modals hide">
+    <div class="modals hidepopup2 active2 hide">
+      <div class="overlay"></div>
+      <div class="contents">
+        <h2 class="heading primary">Detalle</h2>
+        <div class="form primary scroll-y">
+          <ul>
+            <li><strong>Tipo de operación:</strong>
+              <div>Retiro</div>
+            </li>
+            <li><strong>Fecha:</strong>
+              <div>14/12/2014</div>
+            </li>
+            <li><strong>Aporte:</strong>
+              <div>150.000.000</div>
+            </li>
+            <li><strong>Valor:</strong>
+              <div>150.000.000</div>
+            </li>
+            <li><strong>Retención de rendimientos:</strong>
+              <div>20.000.000</div>
+            </li>
+            <li><strong>Retención de contingente:</strong>
+              <div>15.000.000</div>
+            </li>
+          </ul>
+        </div>
+        <div class="button-group">
+          <button type="button" class="button primary btn-close">Cerrar</button>
+        </div>
+      </div>
+    </div>
+    <div class="modals dynamic hidepopup hide">
       <div class="popup active">
         <div class="overlay"></div>
         <div class="contents">
-          <h2 class="heading primary">Detalle</h2>
-          <div class="form primary scroll-y">
-            <ul>
-              <li><strong>Tipo de operación:</strong>
-                <div>Retiro</div>
-              </li>
-              <li><strong>Fecha:</strong>
-                <div>14/12/2014</div>
-              </li>
-              <li><strong>Aporte:</strong>
-                <div>150.000.000</div>
-              </li>
-              <li><strong>Valor:</strong>
-                <div>150.000.000</div>
-              </li>
-              <li><strong>Retención de rendimientos:</strong>
-                <div>20.000.000</div>
-              </li>
-              <li><strong>Retención de contingente:</strong>
-                <div>15.000.000</div>
-              </li>
-            </ul>
+          <h2 class="heading primary ng-binding">Resumen de permisos</h2><strong>Nombre de agente:  </strong>
+          <input type="text" ng-style="estiloSombreado" ng-readonly="true" ng-disabled="true" ng-model="agente.nombreUsuario" readonly="readonly" disabled="disabled" class="ng-pristine ng-valid">
+          <div class="scroll-y">
+            <div class="message primary info js-close">
+              <p>El agente empresarial aún no tiene permisos asignados</p>
+            </div>
+          </div>
+        </div>
+        <div class="contents hide">
+          <h2 class="heading primary ng-binding">Resumen de permisos</h2><strong>Nombre de agente: </strong>
+          <input type="text" ng-style="estiloSombreado" ng-readonly="true" ng-disabled="true" ng-model="agente.nombreUsuario" readonly="readonly" disabled="disabled" class="ng-pristine ng-valid">
+          <div class="scroll-y">
+            <div class="panel aside">
+              <div ng-repeat="encargo in encargosResumen" class="permisos ng-scope"><strong class="ng-binding">10020007558               </strong>
+                <ul>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Inscripci&oacute;n</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Pagos masivos</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Transferencias y retiros</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Consulta</p>
+                  </li>
+                </ul>
+              </div>
+              <div ng-repeat="encargo in encargosResumen" class="permisos ng-scope"><strong class="ng-binding">45030000007              </strong>
+                <ul>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Consulta</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Inscripci&oacute;n</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Transferencias y retiros</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Pagos masivos</p>
+                  </li>
+                </ul>
+              </div>
+              <div ng-repeat="encargo in encargosResumen" class="permisos ng-scope"><strong class="ng-binding">95030000012                  </strong>
+                <ul>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Consulta</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Inscripci&oacute;n</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Transferencias y retiros</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Pagos masivos</p>
+                  </li>
+                </ul>
+              </div>
+              <div ng-repeat="encargo in encargosResumen" class="permisos ng-scope"><strong class="ng-binding">10020007590                   </strong>
+                <ul>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Pagos masivos</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Inscripci&oacute;n</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Transferencias y retiros</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Consulta</p>
+                  </li>
+                </ul>
+              </div>
+              <div ng-repeat="encargo in encargosResumen" class="permisos ng-scope"><strong class="ng-binding">58020000001              </strong>
+                <ul>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Consulta</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Transferencias y retiros</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Inscripci&oacute;n</p>
+                  </li>
+                  <li ng-repeat="permiso in encargo.permisos" class="ng-scope">
+                    <p class="ng-binding">Pagos masivos</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="button-group">
-            <button type="button" class="button primary btn-close">Cerrar</button>
+            <button ng-click="resumenPermisosVisible = false; cerrar()" type="button" class="button primary btn-close">Cerrar</button>
           </div>
         </div>
       </div>
@@ -219,7 +333,7 @@
   </main>
   <footer>
     <section class="text-frame">
-      <div class="m-legal copy"><span class="fiduciaria"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
+      <div class="m-legal copy"><span class="valores"><a href="http://www.alianza.com.co/">Alianza fiduciaria</a></span><span class="sura"><a href="#">Términos y condiciones</a> | <a href="#">Políticas de privacidad</a></span><span class="seven4n"> Powered by <a href="http://s4n.co">Seven4n</a></span></div>
     </section>
   </footer>
   <script src="../javascript/scripts.js"></script>
@@ -270,14 +384,14 @@
         $('.modals > .popup .contents').addClass('animate fadeIn'); //1
         $('.modals').show(); //2
         //- });
-        
+    
         event.preventDefault();
     });
     
     $('.modals .btn-close, .modals .overlay').on('click', function(event) {
         $('.modals > .popup .contents').removeClass('animate fadeIn');
         $('.modals').hide();
-        
+    
         event.preventDefault();
     });
   </script>
